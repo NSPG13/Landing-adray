@@ -142,6 +142,28 @@ body {
   animation: marquee 30s linear infinite;
 }
 
+/* Testimonial marquee — slower, wider cards */
+.animate-marquee-testimonial {
+  animation: marquee 40s linear infinite;
+}
+
+/* Nav link underline */
+.nav-link-underline {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #ffffff;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.group:hover .nav-link-underline {
+  transform: scaleX(1);
+}
+
 /* Fade in up */
 @keyframes fadeInUp {
   from {

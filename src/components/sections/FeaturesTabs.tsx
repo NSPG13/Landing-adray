@@ -1,21 +1,24 @@
 "use client";
 
 import React, { useState } from "react";
-import { Cpu, Globe, Database } from "lucide-react";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
-import Button from "@/components/ui/Button";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 
 const tabs = [
     {
         id: "usage",
         label: "Usage",
-        icon: Cpu,
-        title: "AI Agent for work",
+        iconSvg: "01d6Xos4x3sbU293TmKaFduYFAc.svg",
+        title: "AI Solution",
         description:
             "Connect to your business systems, understand your data and workflows, and activate agentic.",
-        tags: ["Healthcare", "Tech Assistance", "Support", "Marketer"],
+        tags: [
+            { label: "Healthcare", sub: "AI-powered clinical support" },
+            { label: "Tech Assistance", sub: "Intelligent IT help desk" },
+            { label: "Support", sub: "Automated customer care" },
+            { label: "Marketer", sub: "Campaign optimization" },
+        ],
         cta: { label: "See Uses", href: "/ai-solutions" },
         image:
             "https://framerusercontent.com/images/DKhCP3xiqB8m3zBp2E6ysooT3SY.webp",
@@ -23,11 +26,16 @@ const tabs = [
     {
         id: "technology",
         label: "Technology",
-        icon: Globe,
+        iconSvg: "DzDW9qxLWt1R7V7DL7f89IPJfk.svg",
         title: "Alpha Technology",
         description:
             "Create valuable AI agents and agentic workflows with confidence and ongoing control.",
-        tags: ["Multi-Agent", "Latest Model", "Dialog GPT", "Supervisor Agents"],
+        tags: [
+            { label: "Multi-Agent", sub: "Collaborative AI systems" },
+            { label: "Latest Model", sub: "State-of-the-art LLM" },
+            { label: "Dialog GPT", sub: "Conversational intelligence" },
+            { label: "Supervisor Agents", sub: "Orchestration layer" },
+        ],
         cta: { label: "Explore Tech", href: "/ai-solutions" },
         image:
             "https://framerusercontent.com/images/4ABnXaFshXBVkaMyEU2NjeeqE.webp",
@@ -35,11 +43,16 @@ const tabs = [
     {
         id: "data",
         label: "Data",
-        icon: Database,
-        title: "Enterprise data sources",
+        iconSvg: "Akgvq4ROltzdkv9bMr9wLtsd5c.svg",
+        title: "Enterprise",
         description:
             "Our design approach is ecosystem agnostic, allowing you to choose how you connect data.",
-        tags: ["SharePoint", "SAP", "Slack", "Confluence"],
+        tags: [
+            { label: "SharePoint", sub: "Microsoft integration" },
+            { label: "SAP", sub: "ERP connectivity" },
+            { label: "Slack", sub: "Team collaboration" },
+            { label: "Confluence", sub: "Knowledge base sync" },
+        ],
         cta: { label: "Start Setup", href: "/integration" },
         image:
             "https://framerusercontent.com/images/rYyqmKb6ZW8scPMDoDnkLicukfc.png",
@@ -56,7 +69,15 @@ export default function FeaturesTabs() {
                 <AnimatedSection>
                     <SectionHeading
                         tag="FEATURES"
-                        tagIcon={<Cpu size={18} />}
+                        tagIcon={
+                            // eslint-disable-next-line @next/next/no-img-element
+                            <img
+                                src="https://framerusercontent.com/images/GFmvU3dWENS60V2v8Jglw0qJ7zY.svg"
+                                alt=""
+                                width={24}
+                                height={24}
+                            />
+                        }
                         title="All-in-one AI for enterprise"
                         subtitle="Simplify, accelerate, and transform with one connected AI ecosystem."
                     />
@@ -71,19 +92,28 @@ export default function FeaturesTabs() {
                                 onClick={() => setActiveTab(i)}
                                 className={`flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-300 cursor-pointer text-left w-full ${activeTab === i
                                         ? "bg-white-7 text-white-100 border border-blue-10"
-                                        : "text-light-blue hover:text-white-90"
+                                        : "text-light-blue hover:text-white-90 opacity-50 hover:opacity-80"
                                     }`}
                             >
-                                <tab.icon size={18} />
-                                <span className="t-p-medium">{tab.label}</span>
+                                {/* eslint-disable-next-line @next/next/no-img-element */}
+                                <img
+                                    src={`https://framerusercontent.com/images/${tab.iconSvg}`}
+                                    alt=""
+                                    width={18}
+                                    height={18}
+                                    className="flex-shrink-0"
+                                />
+                                <span className="t-p-sm font-medium">{tab.label}</span>
                             </button>
                         ))}
                         {/* Progress line */}
-                        <div className="hidden lg:block h-1 lg:h-auto lg:w-1 rounded-full bg-blue-20 overflow-hidden mt-2 lg:mt-0 lg:ml-4">
+                        <div className="hidden lg:block w-full h-1 rounded-full overflow-hidden mt-4" style={{ background: "#2F3950" }}>
                             <div
-                                className="h-full w-full rounded-full animate-progress"
+                                key={activeTab}
+                                className="h-full rounded-full animate-progress"
                                 style={{
-                                    background: "linear-gradient(180deg, #FFCD7D, #0175FF)",
+                                    background:
+                                        "linear-gradient(90deg, #FFCD7D, #0175FF)",
                                 }}
                             />
                         </div>
@@ -91,26 +121,34 @@ export default function FeaturesTabs() {
 
                     {/* Tab content */}
                     <AnimatedSection key={current.id} className="flex-1">
-                        <div className="card p-6 md:p-8 flex flex-col md:flex-row gap-8 items-center">
+                        <div className="card p-6 md:p-8 flex flex-col md:flex-row gap-8 items-start">
                             {/* Text */}
                             <div className="flex-1">
-                                <h3 className="t-h4 text-white-100 mb-3">{current.title}</h3>
+                                <h3 className="t-h4 text-white-100 mb-3">
+                                    {current.title}
+                                </h3>
                                 <p className="t-p text-light-blue mb-6">
                                     {current.description}
                                 </p>
                                 <div className="flex flex-wrap gap-2 mb-6">
                                     {current.tags.map((tag) => (
                                         <span
-                                            key={tag}
+                                            key={tag.label}
                                             className="px-3 py-1.5 rounded-full t-p-sm bg-white-7 text-white-90 border border-blue-10"
                                         >
-                                            {tag}
+                                            {tag.label}{" "}
+                                            <span className="text-light-blue">
+                                                — {tag.sub}
+                                            </span>
                                         </span>
                                     ))}
                                 </div>
-                                <Button variant="secondary" href={current.cta.href}>
-                                    {current.cta.label}
-                                </Button>
+                                <a
+                                    href={current.cta.href}
+                                    className="inline-flex items-center gap-2 text-gradient t-p-sm font-semibold hover:opacity-80 transition-opacity"
+                                >
+                                    {current.cta.label} →
+                                </a>
                             </div>
 
                             {/* Image */}

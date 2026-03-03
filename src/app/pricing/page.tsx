@@ -4,7 +4,7 @@ import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
 import AnimatedSection from "@/components/ui/AnimatedSection";
-import { Check, DollarSign } from "lucide-react";
+import { Check } from "lucide-react";
 import { useState } from "react";
 
 const plans = [
@@ -14,10 +14,10 @@ const plans = [
         description:
             "Designed for small teams and startups exploring the potential of intelligent AI agents.",
         features: [
-            "Up to 5 AI Agents",
-            "1,000 automated tasks per month",
+            "Access to core AI Agents",
+            "Workflow automation for teams",
             "Basic analytics dashboard",
-            "Email support (48h response)",
+            "Community support access",
             "5 pre-built integrations",
         ],
         image:
@@ -29,11 +29,11 @@ const plans = [
         description:
             "Built for growing businesses that need advanced AI capabilities, automation, and support.",
         features: [
-            "Up to 25 AI Agents",
-            "10,000 tasks per month",
-            "Advanced analytics & AI insights",
-            "Priority support (12h response)",
-            "50+ integrations + custom API access",
+            "Advanced AI Agent customization",
+            "Priority support & SLA",
+            "Advanced analytics & reporting",
+            "Custom API access",
+            "50+ integrations",
         ],
         popular: true,
         image:
@@ -45,11 +45,11 @@ const plans = [
         description:
             "Tailored for large organizations that demand unlimited scale, enterprise-grade security, and dedicated support.",
         features: [
-            "Unlimited AI Agents",
-            "Unlimited automated tasks",
+            "Unlimited AI Agents & tasks",
+            "Dedicated account manager",
             "Enterprise analytics + custom reports",
-            "24/7 dedicated support + SLA",
-            "200+ integrations + webhooks + SSO",
+            "24/7 premium support + SLA",
+            "200+ integrations + SSO",
         ],
         image:
             "https://framerusercontent.com/images/jLKr5Ic8zfN5Dh1ksJhLjkXdUI.png",
@@ -110,7 +110,10 @@ export default function PricingPage() {
                     <AnimatedSection>
                         <SectionHeading
                             tag="PRICING"
-                            tagIcon={<DollarSign size={18} />}
+                            tagIcon={
+                                // eslint-disable-next-line @next/next/no-img-element
+                                <img src="https://framerusercontent.com/images/3UovOTKirX07vhyWYJGSliEt1E4.svg" alt="" width={18} height={18} />
+                            }
                             title="Plans & Pricing"
                             subtitle="Start free, scale as you grow. No hidden fees, no surprises."
                         />
@@ -218,7 +221,10 @@ export default function PricingPage() {
                     <AnimatedSection>
                         <SectionHeading
                             tag="FAQ"
-                            tagIcon={<DollarSign size={18} />}
+                            tagIcon={
+                                // eslint-disable-next-line @next/next/no-img-element
+                                <img src="https://framerusercontent.com/images/mH5OKmjNShfPxiFuUqwazYgcLNQ.svg" alt="" width={18} height={18} />
+                            }
                             title="Frequently asked questions"
                             subtitle="Everything you need to know about Adray pricing and plans."
                         />

@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { CheckCircle } from "lucide-react";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import AnimatedSection from "@/components/ui/AnimatedSection";
@@ -55,7 +54,15 @@ export default function Steps() {
                 <AnimatedSection>
                     <SectionHeading
                         tag="STEPS TO USE"
-                        tagIcon={<CheckCircle size={18} />}
+                        tagIcon={
+                            // eslint-disable-next-line @next/next/no-img-element
+                            <img
+                                src="https://framerusercontent.com/images/lwNa4WCrpY0HtXMtN0IteQrJig.svg"
+                                alt=""
+                                width={24}
+                                height={24}
+                            />
+                        }
                         title="3 Steps to Kickstart"
                         subtitle="From setup to measurable success made effortless in three steps."
                     />

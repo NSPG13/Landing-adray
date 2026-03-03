@@ -15,6 +15,39 @@ const partnerLogos = [
     "https://framerusercontent.com/images/FkPCvWLJEloyx0AnJETPfPfMx4.png",
 ];
 
+// Split text into characters, preserving spaces
+function BlurRevealText({
+    text,
+    className,
+    startDelay = 0,
+}: {
+    text: string;
+    className?: string;
+    startDelay?: number;
+}) {
+    const chars = text.split("");
+    return (
+        <span className={className}>
+            {chars.map((char, i) => (
+                <motion.span
+                    key={i}
+                    className="inline-block"
+                    style={{ whiteSpace: char === " " ? "pre" : undefined }}
+                    initial={{ opacity: 0.001, filter: "blur(10px)", y: 10 }}
+                    animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+                    transition={{
+                        duration: 0.4,
+                        delay: startDelay + i * 0.025,
+                        ease: [0.21, 0.47, 0.32, 0.98],
+                    }}
+                >
+                    {char === " " ? "\u00A0" : char}
+                </motion.span>
+            ))}
+        </span>
+    );
+}
+
 export default function Hero() {
     return (
         <section className="relative min-h-screen flex flex-col overflow-hidden pt-24 bg-black-100">
@@ -44,20 +77,14 @@ export default function Hero() {
                     <Badge>Beta Version is launching on 12th September</Badge>
                 </motion.div>
 
-                <motion.h1
-                    className="mt-8 t-h1 text-white-100 tracking-tight"
-                    initial={{ opacity: 0, filter: "blur(10px)", y: 10 }}
-                    animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
-                    transition={{
-                        duration: 0.8,
-                        delay: 0.15,
-                        ease: [0.21, 0.47, 0.32, 0.98],
-                    }}
-                >
-                    Next-gen enterprise
+                <h1 className="mt-8 t-h1 text-white-100 tracking-tight">
+                    <BlurRevealText text="Next-gen enterprise" startDelay={0.15} />
                     <br />
-                    with <span className="text-gradient">AI Agents</span>
-                </motion.h1>
+                    <BlurRevealText text="with " startDelay={0.6} />
+                    <span className="text-gradient">
+                        <BlurRevealText text="AI Agents" startDelay={0.75} />
+                    </span>
+                </h1>
 
                 <motion.p
                     className="mt-6 t-p-lg text-light-blue max-w-2xl mx-auto"

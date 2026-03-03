@@ -49,9 +49,10 @@ export default function Navbar() {
                             <Link
                                 key={link.href}
                                 href={link.href}
-                                className="t-p-sm text-white-90 hover:text-white-100 transition-colors duration-200"
+                                className="relative group t-p-sm text-white-90 hover:text-white-100 transition-colors duration-200 py-1"
                             >
                                 {link.label}
+                                <span className="nav-link-underline" />
                             </Link>
                         ))}
                     </nav>

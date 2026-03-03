@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { Shield } from "lucide-react";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import AnimatedSection from "@/components/ui/AnimatedSection";
@@ -26,7 +25,15 @@ export default function DataPrivacy() {
                 <AnimatedSection>
                     <SectionHeading
                         tag="DATA AND PRIVACY"
-                        tagIcon={<Shield size={18} />}
+                        tagIcon={
+                            // eslint-disable-next-line @next/next/no-img-element
+                            <img
+                                src="https://framerusercontent.com/images/TRt8OkZ1B4j7B4TuuIPjZZ0f8.svg"
+                                alt=""
+                                width={24}
+                                height={24}
+                            />
+                        }
                         title="Multi-Layer Security"
                         subtitle="Protect your enterprise with multi-layered AI security. From data encryption to behavior monitoring, every layer works together."
                     />

@@ -5,6 +5,9 @@ import FeaturesTabs from "@/components/sections/FeaturesTabs";
 import Steps from "@/components/sections/Steps";
 import DataPrivacy from "@/components/sections/DataPrivacy";
 import Testimonials from "@/components/sections/Testimonials";
+import HomePricing from "@/components/sections/HomePricing";
+import HomeFAQ from "@/components/sections/HomeFAQ";
+import HomeIntegration from "@/components/sections/HomeIntegration";
 
 export default function Home() {
   return (
@@ -16,6 +19,9 @@ export default function Home() {
       <Steps />
       <DataPrivacy />
       <Testimonials />
+      <HomePricing />
+      <HomeFAQ />
+      <HomeIntegration />
     </>
   );
 }
