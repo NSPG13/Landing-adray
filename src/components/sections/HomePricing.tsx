@@ -88,43 +88,39 @@ export default function HomePricing() {
                     />
                 </AnimatedSection>
 
-                {/* Toggle */}
-                <div className="flex items-center justify-center gap-4 mb-12">
-                    <span
-                        className={`t-p-sm cursor-pointer transition-colors ${!yearly ? "text-white-100" : "text-light-blue"
-                            }`}
-                        onClick={() => setYearly(false)}
+                {/* Toggle — Framer pill-tab selector */}
+                <div className="flex items-center justify-center mb-12">
+                    <div
+                        className="relative inline-flex items-center rounded-2xl border border-blue-10"
+                        style={{ background: "rgba(255,255,255,0.1)", padding: "4px" }}
                     >
-                        Monthly
-                    </span>
-                    <button
-                        onClick={() => setYearly(!yearly)}
-                        className={`relative w-12 h-6 rounded-full transition-colors cursor-pointer ${yearly ? "bg-sky-blue" : "bg-blue-20"
-                            }`}
-                    >
-                        <span
-                            className={`absolute top-0.5 left-0.5 w-5 h-5 rounded-full bg-white-100 transition-transform duration-200 ${yearly ? "translate-x-6" : ""
-                                }`}
-                        />
-                    </button>
-                    <span
-                        className={`t-p-sm cursor-pointer transition-colors ${yearly ? "text-white-100" : "text-light-blue"
-                            }`}
-                        onClick={() => setYearly(true)}
-                    >
-                        Yearly
-                    </span>
-                    {yearly && (
-                        <span
-                            className="px-2 py-0.5 rounded-md text-xs font-semibold"
+                        {/* Sliding white selector */}
+                        <div
+                            className="absolute top-1 bottom-1 rounded-[4px] bg-white-100 transition-all duration-300"
                             style={{
-                                background: "rgba(255,172,10,0.15)",
-                                color: "rgb(255,172,10)",
+                                width: "calc(50% - 4px)",
+                                left: yearly ? "calc(50% + 2px)" : "4px",
                             }}
+                        />
+                        <button
+                            onClick={() => setYearly(false)}
+                            className={`relative z-10 px-6 py-2.5 t-p-sm font-medium rounded-[4px] transition-colors duration-200 cursor-pointer ${!yearly ? "text-black-100" : "text-white-90"}`}
                         >
-                            30%off
-                        </span>
-                    )}
+                            Monthly
+                        </button>
+                        <button
+                            onClick={() => setYearly(true)}
+                            className={`relative z-10 px-6 py-2.5 t-p-sm font-medium rounded-[4px] transition-colors duration-200 cursor-pointer flex items-center gap-2 ${yearly ? "text-black-100" : "text-white-90"}`}
+                        >
+                            Yearly
+                            <span
+                                className="px-1.5 py-0.5 rounded text-xs font-semibold"
+                                style={{ background: "rgba(255,172,10,0.2)", color: "rgb(255,172,10)" }}
+                            >
+                                30%off
+                            </span>
+                        </button>
+                    </div>
                 </div>
 
                 {/* Cards */}
@@ -136,14 +132,14 @@ export default function HomePricing() {
                                 <img
                                     src={plan.bgImage}
                                     alt=""
-                                    className="absolute inset-0 w-full h-full object-cover opacity-40 pointer-events-none"
+                                    className="absolute inset-0 w-full h-full object-cover opacity-50 pointer-events-none"
                                 />
                                 <div className="relative z-10 p-8 flex flex-col h-full">
                                     <h3 className="t-h4 text-white-100">{plan.name}</h3>
 
                                     {plan.monthlyPrice !== null ? (
                                         <div className="mt-3 flex items-baseline gap-1">
-                                            <span className="text-4xl font-bold text-white-100">
+                                            <span className="text-4xl font-bold text-white-90">
                                                 ${getPrice(plan.monthlyPrice)}
                                             </span>
                                             <span className="text-light-blue t-p-sm">

@@ -125,9 +125,9 @@ export default function Steps() {
                 </AnimatedSection>
 
                 {/* Desktop: 2-column (sticky numbers left, cards right) */}
-                <div className="hidden lg:flex gap-12">
+                <div className="hidden lg:flex gap-20">
                     {/* Left: sticky numbers sidebar */}
-                    <div className="w-[200px] flex-shrink-0 sticky top-[120px] self-start">
+                    <div className="w-[22%] flex-shrink-0 sticky top-[120px] self-start">
                         <div className="flex items-center">
                             {steps.map((step, i) => (
                                 <span

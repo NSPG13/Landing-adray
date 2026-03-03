@@ -49,7 +49,7 @@ function AccordionItem({ q, a }: { q: string; a: string }) {
 
     return (
         <div
-            className="rounded-[24px] border border-blue-10 bg-dark-blue overflow-hidden transition-all duration-300"
+            className="rounded-[24px] border border-blue-10 bg-blue-90 overflow-hidden transition-all duration-300"
         >
             <button
                 onClick={() => setOpen(!open)}

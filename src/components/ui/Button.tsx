@@ -34,8 +34,8 @@ export default function Button({
 
     const sizes = {
         sm: "px-4 py-2 text-sm",
-        md: "px-6 py-3 text-sm",
-        lg: "px-8 py-4 text-base",
+        md: "px-6 py-3 text-sm tracking-[-0.02em]",
+        lg: "px-6 py-3.5 text-base tracking-[-0.02em]",
     };
 
     const classes = cn(base, variants[variant], sizes[size], className);

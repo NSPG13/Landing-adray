@@ -39,14 +39,14 @@ export default function HighlightedText() {
                 </div>
 
                 {/* Illustration — rotating gradient + cycling logo */}
-                <div className="flex-shrink-0 relative w-[280px] h-[280px] md:w-[340px] md:h-[340px]">
+                <div className="flex-shrink-0 relative w-[340px] h-[340px] md:w-[400px] md:h-[400px]">
                     {/* Gradient circle background */}
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                         src="https://framerusercontent.com/images/emEabgUGaj1mrFtUh9nCcNLOsk.webp"
                         alt=""
                         className="absolute inset-0 w-full h-full object-contain animate-rotate"
-                        style={{ animationDuration: "20s" }}
+                        style={{ animationDuration: "8s", filter: "brightness(1.33)" }}
                     />
                     {/* Cycling logos */}
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-[68px] flex items-center justify-center">

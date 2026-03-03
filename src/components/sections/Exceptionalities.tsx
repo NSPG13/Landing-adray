@@ -68,8 +68,56 @@ export default function Exceptionalities() {
                                 <img
                                     src={card.bgImage}
                                     alt=""
-                                    className="absolute inset-0 w-full h-full object-cover opacity-30 pointer-events-none"
+                                    className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+                                    style={i === 0 ? { filter: "brightness(1.33)", opacity: 0.35 } : { opacity: 0.3 }}
                                 />
+
+                                {/* Speed card decorations */}
+                                {i === 0 && (
+                                    <>
+                                        {/* SVG wireframe overlay */}
+                                        <svg
+                                            viewBox="0 0 578 462"
+                                            fill="none"
+                                            className="absolute inset-0 w-full h-full pointer-events-none"
+                                            style={{ opacity: 0.5 }}
+                                            preserveAspectRatio="none"
+                                        >
+                                            <path
+                                                d="M 0 144 L 222 0 L 577.5 162.5 L 325.5 461.5 L 0 245 L 119 0 L 577.5 95.5 L 0 199 L 577.5 419 L 69.5 0 L 119 461.5 L 428 0 L 487.5 461.5"
+                                                stroke="rgba(255,255,255,0.15)"
+                                                strokeWidth="1"
+                                            />
+                                        </svg>
+                                        {/* Animated gradient lines */}
+                                        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+                                            {[
+                                                { deg: 12, color: "rgb(1,117,255)" },
+                                                { deg: 82, color: "rgb(1,117,255)" },
+                                                { deg: 147, color: "rgb(1,117,255)" },
+                                                { deg: 39, color: "rgb(1,117,255)" },
+                                                { deg: -9, color: "rgb(255,172,10)" },
+                                                { deg: -97, color: "rgb(255,172,10)" },
+                                                { deg: 26, color: "rgb(255,172,10)" },
+                                                { deg: -56, color: "rgb(255,172,10)" },
+                                            ].map((line, li) => (
+                                                <div
+                                                    key={li}
+                                                    className="absolute"
+                                                    style={{
+                                                        width: 14,
+                                                        height: 2,
+                                                        filter: "blur(2px)",
+                                                        background: `linear-gradient(${line.deg}deg, ${line.color}, rgb(255,255,255))`,
+                                                        top: `${15 + li * 10}%`,
+                                                        left: `${10 + li * 11}%`,
+                                                        animation: `speed-line-float ${3 + li * 0.4}s ease-in-out infinite alternate`,
+                                                    }}
+                                                />
+                                            ))}
+                                        </div>
+                                    </>
+                                )}
 
                                 {/* Content */}
                                 <div className="relative z-10">

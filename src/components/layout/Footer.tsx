@@ -67,7 +67,7 @@ export default function Footer() {
                     </div>
 
                     {/* Large wordmark display */}
-                    <div className="mt-20 flex items-center justify-center gap-8">
+                    <div className="mt-20 flex items-center justify-center gap-8" style={{ mixBlendMode: "difference" }}>
                         <span
                             className="text-[32px] md:text-[40px] font-bold tracking-[-0.02em] text-white-100 opacity-20 select-none"
                             style={{ fontFamily: '"Inter Display", Inter, sans-serif' }}

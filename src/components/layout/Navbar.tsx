@@ -23,7 +23,7 @@ export default function Navbar() {
     }, []);
 
     return (
-        <header className="fixed top-0 left-0 right-0 z-50">
+        <header className="fixed top-0 left-0 right-0 z-50 animate-slide-down">
             <div className="mx-auto max-w-[1200px] px-5 md:px-10 pt-4">
                 {/* Desktop: 3 separate pills side by side */}
                 <div className="hidden md:flex items-center justify-between">
