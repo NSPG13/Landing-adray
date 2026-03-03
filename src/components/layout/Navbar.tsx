@@ -23,28 +23,34 @@ export default function Navbar() {
     }, []);
 
     return (
-        <header className="fixed top-0 left-0 right-0 z-50 animate-slide-down">
+        <header className="fixed top-0 left-0 right-0 z-50">
             <div className="mx-auto max-w-[1200px] px-5 md:px-10 pt-4">
-                <div
-                    className={cn(
-                        "flex items-center justify-between rounded-full px-4 md:px-6 py-3 transition-all duration-300",
-                        scrolled
-                            ? "glass border border-blue-10 shadow-lg shadow-black/20"
-                            : "glass border border-blue-10"
-                    )}
-                >
-                    {/* Logo */}
-                    <Link href="/" className="flex items-center gap-2 flex-shrink-0">
+                {/* Desktop: 3 separate pills side by side */}
+                <div className="hidden md:flex items-center justify-between">
+                    {/* Logo pill */}
+                    <Link
+                        href="/"
+                        className="flex items-center px-3 py-2 rounded-full"
+                        style={{ backdropFilter: "blur(10px)", WebkitBackdropFilter: "blur(10px)" }}
+                    >
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
                             src="https://framerusercontent.com/images/9KnJwOszoExl1mcOPudDLQaGg.svg"
                             alt="Adray"
-                            className="h-6 md:h-7 w-auto"
+                            className="h-6 w-auto"
+                            style={{ objectFit: "contain" }}
                         />
                     </Link>
 
-                    {/* Desktop Nav — glassmorphism pill */}
-                    <nav className="hidden md:flex items-center gap-6 lg:gap-8">
+                    {/* Links pill */}
+                    <nav
+                        className="relative flex items-center gap-7 px-6 py-4 rounded-full"
+                        style={{
+                            backdropFilter: "blur(8px)",
+                            WebkitBackdropFilter: "blur(8px)",
+                            boxShadow: "inset -3px -2px 8px 0px rgba(255, 255, 255, 0.07)",
+                        }}
+                    >
                         {navLinks.map((link) => (
                             <Link
                                 key={link.href}
@@ -55,21 +61,44 @@ export default function Navbar() {
                                 <span className="nav-link-underline" />
                             </Link>
                         ))}
+                        {/* Masked gradient border overlay */}
+                        <div
+                            className="absolute inset-0 rounded-full pointer-events-none"
+                            style={{
+                                border: "0.5px solid rgb(255, 255, 255)",
+                                borderRadius: "999px",
+                                mask: "linear-gradient(160deg, #000 0%, transparent 39%, transparent 69%, #000 100%)",
+                                WebkitMask: "linear-gradient(160deg, #000 0%, transparent 39%, transparent 69%, #000 100%)",
+                            }}
+                        />
                     </nav>
 
-                    {/* CTA */}
-                    <div className="hidden md:block">
-                        <a
-                            href="/pricing"
-                            className="inline-flex items-center justify-center px-5 py-2.5 t-p-sm font-semibold rounded-[15px] bg-black-100 text-white-100 border border-white-40 glow-btn hover:scale-105 transition-transform duration-300"
-                        >
-                            Get Started
-                        </a>
-                    </div>
+                    {/* CTA button */}
+                    <a
+                        href="/pricing"
+                        className="inline-flex items-center justify-center px-5 py-2.5 t-p-sm font-semibold rounded-[15px] bg-black-100 text-white-100 border border-white-40 glow-btn hover:scale-105 transition-transform duration-300"
+                    >
+                        Get Started
+                    </a>
+                </div>
 
-                    {/* Mobile Toggle */}
+                {/* Mobile: single pill with hamburger */}
+                <div
+                    className={cn(
+                        "flex md:hidden items-center justify-between rounded-full px-4 py-3 transition-all duration-300",
+                        "glass border border-blue-10"
+                    )}
+                >
+                    <Link href="/" className="flex items-center gap-2 flex-shrink-0">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img
+                            src="https://framerusercontent.com/images/9KnJwOszoExl1mcOPudDLQaGg.svg"
+                            alt="Adray"
+                            className="h-6 w-auto"
+                        />
+                    </Link>
                     <button
-                        className="md:hidden text-white-100 p-2"
+                        className="text-white-100 p-2"
                         onClick={() => setMobileOpen(!mobileOpen)}
                         aria-label="Toggle menu"
                     >

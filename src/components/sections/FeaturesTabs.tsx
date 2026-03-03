@@ -10,16 +10,16 @@ const tabs = [
         id: "usage",
         label: "Usage",
         iconSvg: "01d6Xos4x3sbU293TmKaFduYFAc.svg",
-        title: "AI Solution",
+        title: "AI Agent for work",
         description:
             "Connect to your business systems, understand your data and workflows, and activate agentic.",
         tags: [
-            { label: "Healthcare", sub: "AI-powered clinical support" },
-            { label: "Tech Assistance", sub: "Intelligent IT help desk" },
-            { label: "Support", sub: "Automated customer care" },
-            { label: "Marketer", sub: "Campaign optimization" },
+            { label: "Healthcare" },
+            { label: "Tech Assistance" },
+            { label: "Support" },
+            { label: "Marketer" },
         ],
-        cta: { label: "See Uses", href: "/ai-solutions" },
+        cta: { label: "See Uses", href: "/ai-solutions/ai-for-work" },
         image:
             "https://framerusercontent.com/images/DKhCP3xiqB8m3zBp2E6ysooT3SY.webp",
     },
@@ -31,12 +31,12 @@ const tabs = [
         description:
             "Create valuable AI agents and agentic workflows with confidence and ongoing control.",
         tags: [
-            { label: "Multi-Agent", sub: "Collaborative AI systems" },
-            { label: "Latest Model", sub: "State-of-the-art LLM" },
-            { label: "Dialog GPT", sub: "Conversational intelligence" },
-            { label: "Supervisor Agents", sub: "Orchestration layer" },
+            { label: "Multi-Agent" },
+            { label: "Latest Model" },
+            { label: "Dialog GPT" },
+            { label: "Supervisor Agents" },
         ],
-        cta: { label: "Explore Tech", href: "/ai-solutions" },
+        cta: { label: "Explore Tech", href: "/ai-solutions/ai-for-service" },
         image:
             "https://framerusercontent.com/images/4ABnXaFshXBVkaMyEU2NjeeqE.webp",
     },
@@ -44,14 +44,14 @@ const tabs = [
         id: "data",
         label: "Data",
         iconSvg: "Akgvq4ROltzdkv9bMr9wLtsd5c.svg",
-        title: "Enterprise",
+        title: "Enterprise data sources",
         description:
             "Our design approach is ecosystem agnostic, allowing you to choose how you connect data.",
         tags: [
-            { label: "SharePoint", sub: "Microsoft integration" },
-            { label: "SAP", sub: "ERP connectivity" },
-            { label: "Slack", sub: "Team collaboration" },
-            { label: "Confluence", sub: "Knowledge base sync" },
+            { label: "SharePoint" },
+            { label: "SAP" },
+            { label: "Slack" },
+            { label: "Confluence" },
         ],
         cta: { label: "Start Setup", href: "/integration" },
         image:
@@ -91,8 +91,8 @@ export default function FeaturesTabs() {
                                 key={tab.id}
                                 onClick={() => setActiveTab(i)}
                                 className={`flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-300 cursor-pointer text-left w-full ${activeTab === i
-                                        ? "bg-white-7 text-white-100 border border-blue-10"
-                                        : "text-light-blue hover:text-white-90 opacity-50 hover:opacity-80"
+                                    ? "bg-white-7 text-white-100 border border-blue-10"
+                                    : "text-light-blue hover:text-white-90 opacity-50 hover:opacity-80"
                                     }`}
                             >
                                 {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -136,10 +136,7 @@ export default function FeaturesTabs() {
                                             key={tag.label}
                                             className="px-3 py-1.5 rounded-full t-p-sm bg-white-7 text-white-90 border border-blue-10"
                                         >
-                                            {tag.label}{" "}
-                                            <span className="text-light-blue">
-                                                — {tag.sub}
-                                            </span>
+                                            {tag.label}
                                         </span>
                                     ))}
                                 </div>

@@ -61,10 +61,11 @@ export default function DataPrivacy() {
                                 key={i}
                                 className="relative flex-1 max-w-[200px]"
                                 style={{
+                                    opacity: i === 0 ? 1 : 0.5,
                                     maskImage:
-                                        "linear-gradient(to bottom, black 60%, transparent 100%)",
+                                        "linear-gradient(0deg, rgba(0,0,0,0.37) 6%, rgb(0,0,0) 17%, rgba(0,0,0,1) 100%)",
                                     WebkitMaskImage:
-                                        "linear-gradient(to bottom, black 60%, transparent 100%)",
+                                        "linear-gradient(0deg, rgba(0,0,0,0.37) 6%, rgb(0,0,0) 17%, rgba(0,0,0,1) 100%)",
                                 }}
                             >
                                 {/* eslint-disable-next-line @next/next/no-img-element */}

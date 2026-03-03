@@ -28,7 +28,7 @@ export default function Hero() {
                 className="absolute inset-0 w-full h-full object-cover opacity-30"
             >
                 <source
-                    src="https://pikaso.cdnpk.net/private/production/1120627992/render_with_bg.mp4?token=exp=1782201600~hmac=e88e7bdb40f3b6efd3e4fde6c925a1805e13e77d68d370bbec66ec16d94c3d16"
+                    src="https://pikaso.cdnpk.net/private/production/2290455794/59751519-c5a8-4e4b-b8dd-94ffbfa08aa8-0.mp4?token=exp=1775001600~hmac=946fe13b73c600580de2f6d03194555735d752048382e42b0ebe1dcdf4a376b6"
                     type="video/mp4"
                 />
             </video>

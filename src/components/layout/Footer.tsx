@@ -122,7 +122,15 @@ export default function Footer() {
                             All rights reserved for @Adray
                         </p>
                         <p className="t-p-sm text-blue-20">
-                            Built with Next.js & Tailwind CSS
+                            Designed by{" "}
+                            <a
+                                href="https://fremix.design"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="hover:text-light-blue transition-colors"
+                            >
+                                Jitu Raut @fremix.design
+                            </a>
                         </p>
                     </div>
                 </Container>

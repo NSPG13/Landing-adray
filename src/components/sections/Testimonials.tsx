@@ -119,6 +119,7 @@ export default function Testimonials() {
                         "linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%)",
                     WebkitMaskImage:
                         "linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%)",
+                    perspective: "1200px",
                 }}
             >
                 <div className="flex gap-12 animate-marquee-testimonial">
