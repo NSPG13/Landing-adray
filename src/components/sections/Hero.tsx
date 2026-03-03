@@ -32,18 +32,27 @@ export default function Hero() {
                     WebkitMask: "linear-gradient(#000 0% 85.6929%, #0000 100%)",
                 }}
             >
-                {/* Layer 0 — video */}
+                {/* Layer 0 — video (hue-rotated to purple palette) */}
                 <motion.video
                     autoPlay
                     loop
                     muted
                     playsInline
                     className="absolute inset-0 w-full h-full object-cover"
-                    style={{ zIndex: 0 }}
+                    style={{ zIndex: 0, filter: "hue-rotate(70deg) saturate(1.3)" }}
                     initial={{ opacity: 0, y: 80, scale: 1.1 }}
                     animate={{ opacity: 1, y: 0, scale: 1 }}
                     transition={{ duration: 1.2, ease }}
                     src="https://pikaso.cdnpk.net/private/production/2290455794/59751519-c5a8-4e4b-b8dd-94ffbfa08aa8-0.mp4?token=exp=1775001600~hmac=946fe13b73c600580de2f6d03194555735d752048382e42b0ebe1dcdf4a376b6"
+                />
+                {/* Layer 0b — purple tint overlay for color accuracy */}
+                <div
+                    className="absolute inset-0"
+                    style={{
+                        zIndex: 0,
+                        background: "radial-gradient(ellipse at 50% 60%, rgba(202,138,229,0.15) 0%, rgba(62,40,111,0.1) 50%, transparent 80%)",
+                        mixBlendMode: "screen",
+                    }}
                 />
                 {/* Layer 1 — Frost/glass overlay */}
                 <motion.div
