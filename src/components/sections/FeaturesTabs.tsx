@@ -91,8 +91,8 @@ export default function FeaturesTabs() {
                                 key={tab.id}
                                 onClick={() => setActiveTab(i)}
                                 className={`flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-300 cursor-pointer text-left w-full ${activeTab === i
-                                    ? "bg-white-7 text-white-100 border border-blue-10"
-                                    : "text-light-blue hover:text-white-90 opacity-50 hover:opacity-80"
+                                    ? "bg-white-7 text-white-100 border border-ad-border"
+                                    : "text-ad-muted hover:text-white-90 opacity-50 hover:opacity-80"
                                     }`}
                             >
                                 {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -107,13 +107,13 @@ export default function FeaturesTabs() {
                             </button>
                         ))}
                         {/* Progress line */}
-                        <div className="hidden lg:block w-full h-1 rounded-full overflow-hidden mt-4" style={{ background: "#2F3950" }}>
+                        <div className="hidden lg:block w-full h-1 rounded-full overflow-hidden mt-4" style={{ background: "#3E286F" }}>
                             <div
                                 key={activeTab}
                                 className="h-full rounded-full animate-progress"
                                 style={{
                                     background:
-                                        "linear-gradient(90deg, #FFCD7D, #0175FF)",
+                                        "linear-gradient(90deg, #B55CFF, #CA8AE5)",
                                 }}
                             />
                         </div>
@@ -127,14 +127,14 @@ export default function FeaturesTabs() {
                                 <h3 className="t-h4 text-white-100 mb-3">
                                     {current.title}
                                 </h3>
-                                <p className="t-p text-light-blue mb-6">
+                                <p className="t-p text-ad-muted mb-6">
                                     {current.description}
                                 </p>
                                 <div className="flex flex-wrap gap-2 mb-6">
                                     {current.tags.map((tag) => (
                                         <span
                                             key={tag.label}
-                                            className="px-3 py-1.5 rounded-full t-p-sm bg-white-7 text-white-90 border border-blue-10"
+                                            className="px-3 py-1.5 rounded-full t-p-sm bg-white-7 text-white-90 border border-ad-border"
                                         >
                                             {tag.label}
                                         </span>

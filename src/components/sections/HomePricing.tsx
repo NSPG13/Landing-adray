@@ -91,7 +91,7 @@ export default function HomePricing() {
                 {/* Toggle — Framer pill-tab selector */}
                 <div className="flex items-center justify-center mb-12">
                     <div
-                        className="relative inline-flex items-center rounded-2xl border border-blue-10"
+                        className="relative inline-flex items-center rounded-2xl border border-ad-border"
                         style={{ background: "rgba(255,255,255,0.1)", padding: "4px" }}
                     >
                         {/* Sliding white selector */}
@@ -115,7 +115,7 @@ export default function HomePricing() {
                             Yearly
                             <span
                                 className="px-1.5 py-0.5 rounded text-xs font-semibold"
-                                style={{ background: "rgba(255,172,10,0.2)", color: "rgb(255,172,10)" }}
+                                style={{ background: "rgba(34,197,94,0.2)", color: "rgb(34,197,94)" }}
                             >
                                 30%off
                             </span>
@@ -142,7 +142,7 @@ export default function HomePricing() {
                                             <span className="text-4xl font-bold text-white-90">
                                                 ${getPrice(plan.monthlyPrice)}
                                             </span>
-                                            <span className="text-light-blue t-p-sm">
+                                            <span className="text-ad-muted t-p-sm">
                                                 {getPeriod(plan.monthlyPrice)}
                                             </span>
                                         </div>
@@ -153,7 +153,7 @@ export default function HomePricing() {
                                     )}
 
                                     {plan.subtitle && (
-                                        <p className="mt-2 t-p-sm text-light-blue">
+                                        <p className="mt-2 t-p-sm text-ad-muted">
                                             {plan.subtitle}
                                         </p>
                                     )}
@@ -186,7 +186,7 @@ export default function HomePricing() {
                                     </ul>
 
                                     {plan.trust && (
-                                        <p className="mt-6 t-p-sm text-light-blue text-center">
+                                        <p className="mt-6 t-p-sm text-ad-muted text-center">
                                             {plan.trust}
                                         </p>
                                     )}

@@ -32,27 +32,27 @@
 }
 
 :root {
-  /* ── Framer Color Tokens (18) ── */
+  /* ── Adray Color Tokens ── */
   --white-100: #FFFFFF;
-  --white-90: #D1D4E3;
+  --white-90: #E1D8F3;
   --white-80: #CCCCCC;
   --white-40: rgba(255, 255, 255, 0.4);
   --white-10: rgba(255, 255, 255, 0.1);
   --white-7: rgba(255, 255, 255, 0.07);
   --white-0: rgba(255, 254, 250, 0);
   --black-100: #000000;
-  --blue-90: #06070A;
+  --ad-dark: #100C12;
   --black-0: rgba(0, 0, 0, 0);
-  --blue-10: rgba(125, 164, 255, 0.16);
-  --blue-20: #2F3950;
-  --dark-blue: #0C0F16;
-  --light-blue: #9BA9C4;
-  --tag-blue: #8491AB;
-  --subtitle-blue: #B0BED9;
-  --sky-blue: #0175FF;
+  --ad-border: rgba(62, 40, 111, 0.35);
+  --ad-deep: #3E286F;
+  --ad-surface: #0F0B14;
+  --ad-muted: #B0A4C4;
+  --ad-tag: #8A7DA8;
+  --ad-subtitle: #C4B5E0;
+  --ad-primary: #CA8AE5;
   --red: #FF2244;
-  --dark-yellow: #B39119;
-  --light-yellow: #FFCD7D;
+  --ad-deep-accent: #3E286F;
+  --ad-accent: #B55CFF;
 
   --background: #000000;
   --foreground: #FFFFFF;
@@ -69,18 +69,18 @@
   --color-white-7: var(--white-7);
   --color-white-0: var(--white-0);
   --color-black-100: var(--black-100);
-  --color-blue-90: var(--blue-90);
+  --color-ad-dark: var(--ad-dark);
   --color-black-0: var(--black-0);
-  --color-blue-10: var(--blue-10);
-  --color-blue-20: var(--blue-20);
-  --color-dark-blue: var(--dark-blue);
-  --color-light-blue: var(--light-blue);
-  --color-tag-blue: var(--tag-blue);
-  --color-subtitle-blue: var(--subtitle-blue);
-  --color-sky-blue: var(--sky-blue);
+  --color-ad-border: var(--ad-border);
+  --color-ad-deep: var(--ad-deep);
+  --color-ad-surface: var(--ad-surface);
+  --color-ad-muted: var(--ad-muted);
+  --color-ad-tag: var(--ad-tag);
+  --color-ad-subtitle: var(--ad-subtitle);
+  --color-ad-primary: var(--ad-primary);
   --color-red: var(--red);
-  --color-dark-yellow: var(--dark-yellow);
-  --color-light-yellow: var(--light-yellow);
+  --color-ad-deep-accent: var(--ad-deep-accent);
+  --color-ad-accent: var(--ad-accent);
   --font-sans: var(--font-inter);
 
   /* Framer breakpoints: phone ≤809, tablet 810–1199, desktop ≥1200 */
@@ -97,7 +97,7 @@
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: var(--blue-20) transparent;
+  scrollbar-color: var(--ad-deep) transparent;
 }
 
 html {
@@ -112,7 +112,7 @@ body {
 }
 
 ::selection {
-  background: rgba(1, 117, 255, 0.3);
+  background: rgba(202, 138, 229, 0.3);
   color: #FFFFFF;
 }
 
@@ -120,10 +120,10 @@ body {
    Component Classes
    ═══════════════════════════════════════════ */
 
-/* Card base — matches Framer: bg #06070A, border rgba(125,164,255,0.16), radius 24px */
+/* Card base — bg #100C12, border rgba(62,40,111,0.35), radius 24px */
 .card {
-  background-color: var(--blue-90);
-  border: 1px solid var(--blue-10);
+  background-color: var(--ad-dark);
+  border: 1px solid var(--ad-border);
   border-radius: 24px;
 }
 
@@ -142,13 +142,13 @@ body {
     0px 4.96px 4.96px -2.25px rgba(0, 0, 0, 0.17),
     0px 11px 11px -3px rgba(0, 0, 0, 0.14),
     0px 28px 28px -3.75px rgba(0, 0, 0, 0.06),
-    inset -4px 3px 9px 0px rgb(1, 117, 255),
-    inset 3px -2px 8px 0px rgb(255, 205, 125);
+    inset -4px 3px 9px 0px rgb(202, 138, 229),
+    inset 3px -2px 8px 0px rgb(181, 92, 255);
 }
 
-/* Gradient text — blue → gold */
+/* Gradient text — ice → purple (cold → warm) */
 .text-gradient {
-  background: linear-gradient(91deg, #0175FF 0%, #FFCD7D 100%);
+  background: linear-gradient(91deg, #E1D8F3 0%, #CA8AE5 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -157,7 +157,7 @@ body {
 /* Section tag line — thin divider after tag label */
 .tag-line {
   height: 1px;
-  background: var(--blue-10);
+  background: var(--ad-border);
   flex: 1;
 }
 

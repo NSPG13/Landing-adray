@@ -57,7 +57,7 @@ export default function Footer() {
                             <br />
                             <BlurRevealText text="The Future of Intelligent Agents" triggerOnScroll startDelay={0.4} />
                         </h2>
-                        <p className="t-p-lg text-light-blue max-w-xl mx-auto mb-10">
+                        <p className="t-p-lg text-ad-muted max-w-xl mx-auto mb-10">
                             Everything your team needs, in one simple workspace. Stay focused,
                             stay in sync.
                         </p>
@@ -91,7 +91,7 @@ export default function Footer() {
             </div>
 
             {/* Footer Links */}
-            <div className="border-t border-blue-10">
+            <div className="border-t border-ad-border">
                 <Container className="py-12">
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                         {Object.entries(footerLinks).map(([title, links]) => (
@@ -102,7 +102,7 @@ export default function Footer() {
                                         <li key={link.label}>
                                             <Link
                                                 href={link.href}
-                                                className="t-p-sm text-light-blue hover:text-white-100 transition-colors duration-200"
+                                                className="t-p-sm text-ad-muted hover:text-white-100 transition-colors duration-200"
                                                 {...(link.href.startsWith("http")
                                                     ? { target: "_blank", rel: "noopener noreferrer" }
                                                     : {})}
@@ -117,17 +117,17 @@ export default function Footer() {
                     </div>
 
                     {/* Bottom bar */}
-                    <div className="mt-12 pt-8 border-t border-blue-10 flex flex-col sm:flex-row justify-between items-center gap-4">
-                        <p className="t-p-sm text-light-blue">
+                    <div className="mt-12 pt-8 border-t border-ad-border flex flex-col sm:flex-row justify-between items-center gap-4">
+                        <p className="t-p-sm text-ad-muted">
                             All rights reserved for @Adray
                         </p>
-                        <p className="t-p-sm text-blue-20">
+                        <p className="t-p-sm text-ad-deep">
                             Designed by{" "}
                             <a
                                 href="https://fremix.design"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="hover:text-light-blue transition-colors"
+                                className="hover:text-ad-muted transition-colors"
                             >
                                 Jitu Raut @fremix.design
                             </a>

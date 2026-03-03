@@ -45,7 +45,7 @@ export default function DataPrivacy() {
                         {featureTags.map((tag) => (
                             <span
                                 key={tag}
-                                className="px-4 py-2 rounded-full t-p-sm bg-white-7 text-white-90 border border-blue-10"
+                                className="px-4 py-2 rounded-full t-p-sm bg-white-7 text-white-90 border border-ad-border"
                             >
                                 {tag}
                             </span>

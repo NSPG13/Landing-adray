@@ -58,8 +58,8 @@ export default function LaunchingSoonPage() {
             <Container className="relative z-10 text-center py-20">
                 <AnimatedSection>
                     <div className="flex justify-center mb-8">
-                        <div className="w-20 h-20 rounded-2xl bg-sky-blue/10 border border-sky-blue/20 flex items-center justify-center">
-                            <Rocket size={36} className="text-sky-blue" />
+                        <div className="w-20 h-20 rounded-2xl bg-ad-primary/10 border border-ad-primary/20 flex items-center justify-center">
+                            <Rocket size={36} className="text-ad-primary" />
                         </div>
                     </div>
 
@@ -69,7 +69,7 @@ export default function LaunchingSoonPage() {
                         <span className="text-gradient">launching soon</span>
                     </h1>
 
-                    <p className="text-light-blue text-lg max-w-xl mx-auto mb-12">
+                    <p className="text-ad-muted text-lg max-w-xl mx-auto mb-12">
                         We&apos;re putting the finishing touches on something incredible. Be the
                         first to know when we launch.
                     </p>
@@ -88,7 +88,7 @@ export default function LaunchingSoonPage() {
                                         {String(item.value).padStart(2, "0")}
                                     </span>
                                 </div>
-                                <span className="text-xs text-light-blue">{item.label}</span>
+                                <span className="text-xs text-ad-muted">{item.label}</span>
                             </div>
                         ))}
                     </div>
@@ -103,7 +103,7 @@ export default function LaunchingSoonPage() {
                             required
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
-                            className="flex-1 px-4 py-3 rounded-full bg-blue-90 border border-blue-10 text-white text-sm placeholder:text-light-blue/50 focus:border-sky-blue focus:outline-none transition-colors"
+                            className="flex-1 px-4 py-3 rounded-full bg-ad-dark border border-ad-border text-white text-sm placeholder:text-ad-muted/50 focus:border-ad-primary focus:outline-none transition-colors"
                             placeholder="Enter your email"
                         />
                         <Button variant="primary" size="md" type="submit">

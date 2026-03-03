@@ -43,7 +43,7 @@ function TestimonialCard({
     return (
         <div className="flex-shrink-0 w-[600px] max-w-[85vw]">
             <div
-                className="rounded-[24px] border border-blue-10 p-6 h-full flex items-stretch gap-6"
+                className="rounded-[24px] border border-ad-border p-6 h-full flex items-stretch gap-6"
                 style={{
                     background: "rgba(255,255,255,0.07)",
                     backdropFilter: "blur(10px)",
@@ -59,7 +59,7 @@ function TestimonialCard({
                 />
 
                 {/* Separator */}
-                <div className="w-px bg-blue-10 flex-shrink-0" />
+                <div className="w-px bg-ad-border flex-shrink-0" />
 
                 {/* Content */}
                 <div className="flex flex-col justify-between py-1">
@@ -70,7 +70,7 @@ function TestimonialCard({
                         <div className="t-p-sm font-medium text-white-100">
                             {t.author}
                         </div>
-                        <div className="t-p-sm text-light-blue">{t.role}</div>
+                        <div className="t-p-sm text-ad-muted">{t.role}</div>
                     </div>
                 </div>
             </div>

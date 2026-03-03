@@ -28,7 +28,7 @@ export default function HighlightedText() {
                 <div className="flex-1">
                     <ScrollTextColor
                         content="We help enterprises reimagine business growth with our AI Platform, Work Solutions, and Intelligent Marketplace. Unlock efficiency, automation, and innovation across every workflow."
-                        colorStart="#2F3950"
+                        colorStart="#3E286F"
                         colorEnd="#FFFFFF"
                         trigger="layer-in-view"
                         animationStart="bottom"

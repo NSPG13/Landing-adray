@@ -86,7 +86,7 @@ export default function Navbar() {
                 <div
                     className={cn(
                         "flex md:hidden items-center justify-between rounded-full px-4 py-3 transition-all duration-300",
-                        "glass border border-blue-10"
+                        "glass border border-ad-border"
                     )}
                 >
                     <Link href="/" className="flex items-center gap-2 flex-shrink-0">
@@ -114,7 +114,7 @@ export default function Navbar() {
                     mobileOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
                 )}
             >
-                <nav className="glass border border-blue-10 mx-5 mt-2 rounded-2xl p-6 flex flex-col gap-4">
+                <nav className="glass border border-ad-border mx-5 mt-2 rounded-2xl p-6 flex flex-col gap-4">
                     {navLinks.map((link) => (
                         <Link
                             key={link.href}

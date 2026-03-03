@@ -29,9 +29,9 @@ export default function SectionHeading({
             {tag && (
                 <div className="flex items-center gap-3 mb-6 w-full">
                     {tagIcon && (
-                        <span className="w-6 h-6 text-tag-blue flex-shrink-0 opacity-80">{tagIcon}</span>
+                        <span className="w-6 h-6 text-ad-tag flex-shrink-0 opacity-80">{tagIcon}</span>
                     )}
-                    <span className="t-p-sm uppercase tracking-widest text-tag-blue">
+                    <span className="t-p-sm uppercase tracking-widest text-ad-tag">
                         {tag}
                     </span>
                     <div className="tag-line" />
@@ -42,7 +42,7 @@ export default function SectionHeading({
                 dangerouslySetInnerHTML={{ __html: title }}
             />
             {subtitle && (
-                <p className="mt-4 t-p-lg text-subtitle-blue">
+                <p className="mt-4 t-p-lg text-ad-subtitle">
                     {subtitle}
                 </p>
             )}

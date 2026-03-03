@@ -25,11 +25,11 @@ export default function Button({
         primary:
             "bg-black-100 text-white-100 border border-white-40 glow-btn hover:scale-105",
         secondary:
-            "bg-dark-blue text-white-100 border border-blue-20 hover:border-light-blue/40 hover:scale-105",
+            "bg-ad-surface text-white-100 border border-ad-deep hover:border-ad-muted/40 hover:scale-105",
         ghost:
             "bg-transparent text-gradient hover:opacity-80",
         outline:
-            "bg-transparent border border-blue-20 text-white-90 hover:border-light-blue hover:text-white-100 hover:scale-105",
+            "bg-transparent border border-ad-deep text-white-90 hover:border-ad-muted hover:text-white-100 hover:scale-105",
     };
 
     const sizes = {

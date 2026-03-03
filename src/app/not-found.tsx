@@ -12,7 +12,7 @@ export default function NotFound() {
                 <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
                     Page not found
                 </h1>
-                <p className="text-light-blue text-lg max-w-md mx-auto mb-10">
+                <p className="text-ad-muted text-lg max-w-md mx-auto mb-10">
                     The page you&apos;re looking for doesn&apos;t exist or has been moved. Let&apos;s
                     get you back on track.
                 </p>

@@ -54,7 +54,7 @@ function StepCard({ step }: { step: (typeof steps)[0] }) {
             {/* Text content */}
             <div className="flex-1 p-6 md:p-8">
                 <h3 className="t-h4 text-white-100 mb-4">{step.title}</h3>
-                <p className="t-p text-light-blue mb-6">{step.description}</p>
+                <p className="t-p text-ad-muted mb-6">{step.description}</p>
                 <ul className="space-y-3">
                     {step.bullets.map((bullet) => (
                         <li key={bullet} className="flex items-start gap-3">
@@ -132,7 +132,7 @@ export default function Steps() {
                             {steps.map((step, i) => (
                                 <span
                                     key={step.number}
-                                    className={`flex-1 text-center t-h3-lg font-bold ${i === 0 ? "text-gradient" : "text-blue-20"
+                                    className={`flex-1 text-center t-h3-lg font-bold ${i === 0 ? "text-gradient" : "text-ad-deep"
                                         }`}
                                 >
                                     {step.number}.
@@ -140,12 +140,12 @@ export default function Steps() {
                             ))}
                         </div>
                         {/* Beam line */}
-                        <div className="relative h-[2px] mt-4 overflow-hidden rounded-full" style={{ background: "rgba(125, 164, 255, 0.16)" }}>
+                        <div className="relative h-[2px] mt-4 overflow-hidden rounded-full" style={{ background: "rgba(62, 40, 111, 0.35)" }}>
                             <motion.div
                                 className="absolute inset-y-0 w-1/3"
                                 style={{
                                     x: beamX,
-                                    background: "linear-gradient(90deg, #ffac0a 0%, #0175ff 100%)",
+                                    background: "linear-gradient(90deg, #b55cff 0%, #ca8ae5 100%)",
                                     height: "2px",
                                 }}
                             />
@@ -170,7 +170,7 @@ export default function Steps() {
                                 <span className="t-h3-lg text-gradient font-bold">
                                     {step.number}.
                                 </span>
-                                <div className="h-px flex-1 bg-blue-10 relative overflow-hidden">
+                                <div className="h-px flex-1 bg-ad-border relative overflow-hidden">
                                     <div
                                         className="absolute inset-y-0 left-0 w-16 animate-beam"
                                         style={{

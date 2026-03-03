@@ -49,14 +49,14 @@ function AccordionItem({ q, a }: { q: string; a: string }) {
 
     return (
         <div
-            className="rounded-[24px] border border-blue-10 bg-blue-90 overflow-hidden transition-all duration-300"
+            className="rounded-[24px] border border-ad-border bg-ad-dark overflow-hidden transition-all duration-300"
         >
             <button
                 onClick={() => setOpen(!open)}
                 className="w-full flex items-center justify-between p-6 text-left cursor-pointer"
             >
                 <span className="t-p font-medium text-white-100 pr-4">{q}</span>
-                <span className="w-8 h-8 rounded-full bg-white-7 border border-blue-10 flex items-center justify-center flex-shrink-0">
+                <span className="w-8 h-8 rounded-full bg-white-7 border border-ad-border flex items-center justify-center flex-shrink-0">
                     {open ? (
                         <Minus size={14} className="text-white-90" />
                     ) : (
@@ -68,7 +68,7 @@ function AccordionItem({ q, a }: { q: string; a: string }) {
                 className={`overflow-hidden transition-all duration-300 ${open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
                     }`}
             >
-                <p className="px-6 pb-6 t-p-sm text-light-blue leading-relaxed">
+                <p className="px-6 pb-6 t-p-sm text-ad-muted leading-relaxed">
                     {a}
                 </p>
             </div>
@@ -100,7 +100,7 @@ export default function HomeFAQ() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {/* Part 01 */}
                     <div>
-                        <p className="t-p-sm text-light-blue uppercase tracking-widest mb-6">
+                        <p className="t-p-sm text-ad-muted uppercase tracking-widest mb-6">
                             Part 01
                         </p>
                         <div className="space-y-4">
@@ -114,7 +114,7 @@ export default function HomeFAQ() {
 
                     {/* Part 02 */}
                     <div>
-                        <p className="t-p-sm text-light-blue uppercase tracking-widest mb-6">
+                        <p className="t-p-sm text-ad-muted uppercase tracking-widest mb-6">
                             Part 02
                         </p>
                         <div className="space-y-4">

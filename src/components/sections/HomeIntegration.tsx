@@ -56,11 +56,11 @@ export default function HomeIntegration() {
                                 className="w-20 h-20 rounded-[24px] flex items-center justify-center"
                                 style={{
                                     background:
-                                        "linear-gradient(40deg, rgb(255,205,125) 0%, rgb(12,15,22) 45%, rgb(1,117,255) 100%)",
-                                    boxShadow: "0px 6px 24px 0px rgba(255,179,73,0.25)",
+                                        "linear-gradient(40deg, rgb(181,92,255) 0%, rgb(15,11,20) 45%, rgb(202,138,229) 100%)",
+                                    boxShadow: "0px 6px 24px 0px rgba(181,92,255,0.25)",
                                 }}
                             >
-                                <div className="w-[72px] h-[72px] rounded-[20px] bg-dark-blue flex items-center justify-center">
+                                <div className="w-[72px] h-[72px] rounded-[20px] bg-ad-surface flex items-center justify-center">
                                     {/* eslint-disable-next-line @next/next/no-img-element */}
                                     <img
                                         src={`https://framerusercontent.com/images/${icon.src}`}

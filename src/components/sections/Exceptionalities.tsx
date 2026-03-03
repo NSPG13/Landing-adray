@@ -92,14 +92,14 @@ export default function Exceptionalities() {
                                         {/* Animated gradient lines */}
                                         <div className="absolute inset-0 pointer-events-none overflow-hidden">
                                             {[
-                                                { deg: 12, color: "rgb(1,117,255)" },
-                                                { deg: 82, color: "rgb(1,117,255)" },
-                                                { deg: 147, color: "rgb(1,117,255)" },
-                                                { deg: 39, color: "rgb(1,117,255)" },
-                                                { deg: -9, color: "rgb(255,172,10)" },
-                                                { deg: -97, color: "rgb(255,172,10)" },
-                                                { deg: 26, color: "rgb(255,172,10)" },
-                                                { deg: -56, color: "rgb(255,172,10)" },
+                                                { deg: 12, color: "rgb(202,138,229)" },
+                                                { deg: 82, color: "rgb(202,138,229)" },
+                                                { deg: 147, color: "rgb(202,138,229)" },
+                                                { deg: 39, color: "rgb(202,138,229)" },
+                                                { deg: -9, color: "rgb(181,92,255)" },
+                                                { deg: -97, color: "rgb(181,92,255)" },
+                                                { deg: 26, color: "rgb(181,92,255)" },
+                                                { deg: -56, color: "rgb(181,92,255)" },
                                             ].map((line, li) => (
                                                 <div
                                                     key={li}
@@ -122,7 +122,7 @@ export default function Exceptionalities() {
                                 {/* Content */}
                                 <div className="relative z-10">
                                     <h3 className="t-h4 text-white-100 mb-3">{card.title}</h3>
-                                    <p className="t-p text-light-blue">{card.description}</p>
+                                    <p className="t-p text-ad-muted">{card.description}</p>
                                 </div>
                             </Card>
                         </AnimatedSection>
@@ -135,7 +135,7 @@ export default function Exceptionalities() {
                         <h3 className="t-h4 text-white-100 mb-2">
                             Ready to get started?
                         </h3>
-                        <p className="t-p text-light-blue mb-8">
+                        <p className="t-p text-ad-muted mb-8">
                             Let&apos;s make this happen. We&apos;re ready when you are.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
