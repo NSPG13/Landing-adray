@@ -27,7 +27,7 @@ export default function LogoMarquee({ className }: LogoMarqueeProps) {
                         key={i}
                         className="mx-8 flex items-center justify-center min-w-[120px]"
                     >
-                        <span className="text-ad-muted-text/40 text-xl font-bold tracking-wider uppercase select-none">
+                        <span className="text-light-blue/40 text-xl font-bold tracking-wider uppercase select-none">
                             {logo}
                         </span>
                     </div>

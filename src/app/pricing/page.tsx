@@ -1,73 +1,58 @@
-import { Metadata } from "next";
+"use client";
+
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
 import AnimatedSection from "@/components/ui/AnimatedSection";
-import GradientBlob from "@/components/ui/GradientBlob";
-import { Check, X } from "lucide-react";
-
-export const metadata: Metadata = {
-    title: "Pricing",
-    description:
-        "Simple, transparent pricing for Adray AI platform. Choose the plan that fits your enterprise needs.",
-};
+import { Check, DollarSign } from "lucide-react";
+import { useState } from "react";
 
 const plans = [
     {
-        name: "Starter",
-        price: "$49",
-        period: "/month",
-        description: "Perfect for small teams getting started with AI automation.",
+        name: "Sonic",
+        monthlyPrice: 49,
+        description:
+            "Designed for small teams and startups exploring the potential of intelligent AI agents.",
         features: [
-            { text: "Up to 5 AI Agents", included: true },
-            { text: "1,000 tasks/month", included: true },
-            { text: "Basic analytics", included: true },
-            { text: "Email support", included: true },
-            { text: "5 integrations", included: true },
-            { text: "API access", included: false },
-            { text: "Custom workflows", included: false },
-            { text: "Dedicated account manager", included: false },
+            "Up to 5 AI Agents",
+            "1,000 automated tasks per month",
+            "Basic analytics dashboard",
+            "Email support (48h response)",
+            "5 pre-built integrations",
         ],
-        cta: "Start Free Trial",
-        popular: false,
+        image:
+            "https://framerusercontent.com/images/n4TP2GIMIYnwG8phVpbQRmVlxU.png",
     },
     {
-        name: "Professional",
-        price: "$199",
-        period: "/month",
+        name: "Supersonic",
+        monthlyPrice: 99,
         description:
-            "For growing businesses that need advanced AI capabilities and support.",
+            "Built for growing businesses that need advanced AI capabilities, automation, and support.",
         features: [
-            { text: "Up to 25 AI Agents", included: true },
-            { text: "10,000 tasks/month", included: true },
-            { text: "Advanced analytics + AI insights", included: true },
-            { text: "Priority support", included: true },
-            { text: "50 integrations", included: true },
-            { text: "Full API access", included: true },
-            { text: "Custom workflows", included: true },
-            { text: "Dedicated account manager", included: false },
+            "Up to 25 AI Agents",
+            "10,000 tasks per month",
+            "Advanced analytics & AI insights",
+            "Priority support (12h response)",
+            "50+ integrations + custom API access",
         ],
-        cta: "Start Free Trial",
         popular: true,
+        image:
+            "https://framerusercontent.com/images/dPCNk9mR1ADMP6nJMBnz9vNmEA.png",
     },
     {
-        name: "Enterprise",
-        price: "Custom",
-        period: "",
+        name: "HyperSonic",
+        monthlyPrice: null,
         description:
-            "For large organizations needing unlimited scale, security, and tailored solutions.",
+            "Tailored for large organizations that demand unlimited scale, enterprise-grade security, and dedicated support.",
         features: [
-            { text: "Unlimited AI Agents", included: true },
-            { text: "Unlimited tasks", included: true },
-            { text: "Enterprise analytics + custom reports", included: true },
-            { text: "24/7 dedicated support", included: true },
-            { text: "200+ integrations", included: true },
-            { text: "Full API access + webhooks", included: true },
-            { text: "Custom workflows + templates", included: true },
-            { text: "Dedicated account manager", included: true },
+            "Unlimited AI Agents",
+            "Unlimited automated tasks",
+            "Enterprise analytics + custom reports",
+            "24/7 dedicated support + SLA",
+            "200+ integrations + webhooks + SSO",
         ],
-        cta: "Contact Sales",
-        popular: false,
+        image:
+            "https://framerusercontent.com/images/jLKr5Ic8zfN5Dh1ksJhLjkXdUI.png",
     },
 ];
 
@@ -75,7 +60,7 @@ const faqs = [
     {
         question: "Can I switch plans at any time?",
         answer:
-            "Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we'll prorate the difference.",
+            "Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we\u2019ll prorate the difference.",
     },
     {
         question: "Is there a free trial?",
@@ -85,12 +70,12 @@ const faqs = [
     {
         question: "What happens when I exceed my task limit?",
         answer:
-            "We'll notify you when you're approaching your limit. You can upgrade your plan or purchase additional task packs.",
+            "We\u2019ll notify you when you\u2019re approaching your limit. You can upgrade your plan or purchase additional task packs.",
     },
     {
         question: "Do you offer annual billing?",
         answer:
-            "Yes, annual billing comes with a 20% discount on all plans. Contact our sales team for details.",
+            "Yes, annual billing comes with a 30% discount on all plans. Simply toggle to yearly on the pricing section above.",
     },
     {
         question: "What security certifications do you have?",
@@ -100,101 +85,126 @@ const faqs = [
     {
         question: "Can I customize AI agents for my specific use case?",
         answer:
-            "Absolutely. Professional and Enterprise plans include custom workflow builders. Enterprise customers also get dedicated AI training.",
+            "Absolutely. Supersonic and HyperSonic plans include custom workflow builders. HyperSonic customers also get dedicated AI training.",
     },
 ];
 
 export default function PricingPage() {
+    const [yearly, setYearly] = useState(false);
+
+    const getPrice = (monthly: number | null) => {
+        if (monthly === null) return "Custom";
+        return yearly ? `$${Math.round(monthly * 12 * 0.7)}` : `$${monthly}`;
+    };
+
+    const getPeriod = (monthly: number | null) => {
+        if (monthly === null) return "";
+        return yearly ? "/year" : "/month";
+    };
+
     return (
         <>
             {/* Hero */}
-            <section className="relative pt-32 pb-20 gradient-hero overflow-hidden">
-                <GradientBlob
-                    color="accent"
-                    size="xl"
-                    className="top-0 left-1/2 -translate-x-1/2"
-                />
+            <section className="relative pt-32 pb-12 overflow-hidden">
                 <Container className="relative z-10">
                     <AnimatedSection>
                         <SectionHeading
-                            badge="Pricing"
-                            title="Simple, transparent <span class='text-gradient'>pricing</span>"
+                            tag="PRICING"
+                            tagIcon={<DollarSign size={18} />}
+                            title="Plans & Pricing"
                             subtitle="Start free, scale as you grow. No hidden fees, no surprises."
                         />
                     </AnimatedSection>
+
+                    {/* Billing toggle */}
+                    <div className="flex items-center justify-center gap-4 mt-8">
+                        <span
+                            className={`t-p-sm cursor-pointer transition-colors ${!yearly ? "text-white-100" : "text-light-blue"
+                                }`}
+                            onClick={() => setYearly(false)}
+                        >
+                            Monthly
+                        </span>
+                        <button
+                            onClick={() => setYearly(!yearly)}
+                            className={`relative w-12 h-6 rounded-full transition-colors cursor-pointer ${yearly ? "bg-sky-blue" : "bg-blue-20"
+                                }`}
+                        >
+                            <span
+                                className={`absolute top-0.5 left-0.5 w-5 h-5 rounded-full bg-white-100 transition-transform ${yearly ? "translate-x-6" : ""
+                                    }`}
+                            />
+                        </button>
+                        <span
+                            className={`t-p-sm cursor-pointer transition-colors ${yearly ? "text-white-100" : "text-light-blue"
+                                }`}
+                            onClick={() => setYearly(true)}
+                        >
+                            Yearly
+                        </span>
+                        {yearly && (
+                            <span className="px-2 py-0.5 rounded-md bg-dark-yellow/20 text-light-yellow text-xs font-semibold">
+                                30% off
+                            </span>
+                        )}
+                    </div>
                 </Container>
             </section>
 
             {/* Plans */}
-            <section className="py-24">
+            <section className="py-12 pb-24">
                 <Container>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         {plans.map((plan, i) => (
                             <AnimatedSection key={plan.name} delay={i * 0.15}>
-                                <div
-                                    className={`rounded-2xl p-8 h-full flex flex-col relative transition-all duration-300 ${plan.popular
-                                            ? "gradient-card border-ad-accent/40 glow-purple scale-105"
-                                            : "gradient-card"
-                                        }`}
-                                >
-                                    {plan.popular && (
-                                        <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                                            <span className="px-4 py-1 rounded-full text-xs font-semibold bg-ad-accent text-white">
+                                <div className="card relative overflow-hidden h-full flex flex-col">
+                                    {/* Background image */}
+                                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                                    <img
+                                        src={plan.image}
+                                        alt=""
+                                        className="absolute inset-0 w-full h-full object-cover opacity-40 pointer-events-none"
+                                    />
+                                    <div className="relative z-10 p-8 flex flex-col h-full">
+                                        {plan.popular && (
+                                            <span className="inline-flex self-start px-3 py-1 rounded-full text-xs font-semibold bg-sky-blue/20 text-sky-blue border border-sky-blue/30 mb-4">
                                                 Most Popular
                                             </span>
-                                        </div>
-                                    )}
-                                    <div className="mb-6">
-                                        <h3 className="text-xl font-semibold text-white">
-                                            {plan.name}
-                                        </h3>
-                                        <div className="mt-4 flex items-baseline gap-1">
-                                            <span className="text-4xl font-bold text-white">
-                                                {plan.price}
+                                        )}
+                                        <h3 className="t-h4 text-white-100">{plan.name}</h3>
+                                        <div className="mt-3 flex items-baseline gap-1">
+                                            <span className="text-4xl font-bold text-white-100">
+                                                {getPrice(plan.monthlyPrice)}
                                             </span>
-                                            <span className="text-ad-muted-text text-sm">
-                                                {plan.period}
+                                            <span className="text-light-blue t-p-sm">
+                                                {getPeriod(plan.monthlyPrice)}
                                             </span>
                                         </div>
-                                        <p className="mt-3 text-sm text-ad-muted-text">
+                                        <p className="mt-3 t-p-sm text-light-blue">
                                             {plan.description}
                                         </p>
-                                    </div>
 
-                                    <ul className="space-y-3 flex-1 mb-8">
-                                        {plan.features.map((feat) => (
-                                            <li key={feat.text} className="flex items-center gap-3">
-                                                {feat.included ? (
+                                        <ul className="space-y-3 flex-1 mt-6 mb-8">
+                                            {plan.features.map((feat) => (
+                                                <li key={feat} className="flex items-start gap-3">
                                                     <Check
                                                         size={16}
-                                                        className="text-ad-accent flex-shrink-0"
+                                                        className="text-sky-blue flex-shrink-0 mt-0.5"
                                                     />
-                                                ) : (
-                                                    <X
-                                                        size={16}
-                                                        className="text-ad-muted-text/30 flex-shrink-0"
-                                                    />
-                                                )}
-                                                <span
-                                                    className={`text-sm ${feat.included
-                                                            ? "text-ad-ice"
-                                                            : "text-ad-muted-text/40"
-                                                        }`}
-                                                >
-                                                    {feat.text}
-                                                </span>
-                                            </li>
-                                        ))}
-                                    </ul>
+                                                    <span className="t-p-sm text-white-90">{feat}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
 
-                                    <Button
-                                        variant={plan.popular ? "primary" : "outline"}
-                                        size="md"
-                                        href="/contact"
-                                        className="w-full"
-                                    >
-                                        {plan.cta}
-                                    </Button>
+                                        <Button
+                                            variant={plan.popular ? "primary" : "outline"}
+                                            size="md"
+                                            href="/contact"
+                                            className="w-full"
+                                        >
+                                            Contact Us
+                                        </Button>
+                                    </div>
                                 </div>
                             </AnimatedSection>
                         ))}
@@ -203,23 +213,24 @@ export default function PricingPage() {
             </section>
 
             {/* FAQ */}
-            <section className="py-24 gradient-section">
+            <section className="py-24">
                 <Container>
                     <AnimatedSection>
                         <SectionHeading
-                            badge="FAQ"
-                            title="Frequently asked <span class='text-gradient'>questions</span>"
+                            tag="FAQ"
+                            tagIcon={<DollarSign size={18} />}
+                            title="Frequently asked questions"
                             subtitle="Everything you need to know about Adray pricing and plans."
                         />
                     </AnimatedSection>
-                    <div className="max-w-3xl mx-auto grid gap-6">
+                    <div className="max-w-3xl mx-auto grid gap-4">
                         {faqs.map((faq, i) => (
                             <AnimatedSection key={faq.question} delay={i * 0.08}>
-                                <div className="gradient-card rounded-xl p-6">
-                                    <h4 className="text-white font-semibold mb-2">
+                                <div className="card p-6">
+                                    <h4 className="text-white-100 font-semibold mb-2">
                                         {faq.question}
                                     </h4>
-                                    <p className="text-ad-muted-text text-sm leading-relaxed">
+                                    <p className="text-light-blue t-p-sm leading-relaxed">
                                         {faq.answer}
                                     </p>
                                 </div>

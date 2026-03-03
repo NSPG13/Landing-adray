@@ -5,7 +5,6 @@ import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
 import AnimatedSection from "@/components/ui/AnimatedSection";
-import GradientBlob from "@/components/ui/GradientBlob";
 import { Mail, MapPin, Phone, Send } from "lucide-react";
 
 export default function ContactPage() {
@@ -27,17 +26,12 @@ export default function ContactPage() {
     return (
         <>
             {/* Hero */}
-            <section className="relative pt-32 pb-20 gradient-hero overflow-hidden">
-                <GradientBlob
-                    color="accent"
-                    size="xl"
-                    className="top-0 left-1/2 -translate-x-1/2"
-                />
+            <section className="relative pt-32 pb-20 overflow-hidden">
                 <Container className="relative z-10">
                     <AnimatedSection>
                         <SectionHeading
-                            badge="Contact Us"
-                            title="Get in <span class='text-gradient'>touch</span>"
+                            tag="Contact Us"
+                            title="Get in touch"
                             subtitle="Have a question or want to learn more? We'd love to hear from you."
                         />
                     </AnimatedSection>
@@ -54,7 +48,7 @@ export default function ContactPage() {
                                 <h3 className="text-2xl font-bold text-white mb-6">
                                     Let&apos;s start a conversation
                                 </h3>
-                                <p className="text-ad-muted-text mb-8 leading-relaxed">
+                                <p className="text-light-blue mb-8 leading-relaxed">
                                     Whether you&apos;re interested in a demo, have a technical question,
                                     or want to explore partnership opportunities — our team is here
                                     to help.
@@ -62,40 +56,40 @@ export default function ContactPage() {
 
                                 <div className="space-y-6">
                                     <div className="flex items-start gap-4">
-                                        <div className="w-10 h-10 rounded-xl bg-ad-accent/10 border border-ad-accent/20 flex items-center justify-center flex-shrink-0">
-                                            <Mail size={18} className="text-ad-accent" />
+                                        <div className="w-10 h-10 rounded-xl bg-sky-blue/10 border border-sky-blue/20 flex items-center justify-center flex-shrink-0">
+                                            <Mail size={18} className="text-sky-blue" />
                                         </div>
                                         <div>
                                             <div className="text-white font-medium text-sm">
                                                 Email
                                             </div>
-                                            <div className="text-ad-muted-text text-sm">
+                                            <div className="text-light-blue text-sm">
                                                 hello@adray.ai
                                             </div>
                                         </div>
                                     </div>
                                     <div className="flex items-start gap-4">
-                                        <div className="w-10 h-10 rounded-xl bg-ad-accent/10 border border-ad-accent/20 flex items-center justify-center flex-shrink-0">
-                                            <Phone size={18} className="text-ad-accent" />
+                                        <div className="w-10 h-10 rounded-xl bg-sky-blue/10 border border-sky-blue/20 flex items-center justify-center flex-shrink-0">
+                                            <Phone size={18} className="text-sky-blue" />
                                         </div>
                                         <div>
                                             <div className="text-white font-medium text-sm">
                                                 Phone
                                             </div>
-                                            <div className="text-ad-muted-text text-sm">
+                                            <div className="text-light-blue text-sm">
                                                 +1 (555) 123-4567
                                             </div>
                                         </div>
                                     </div>
                                     <div className="flex items-start gap-4">
-                                        <div className="w-10 h-10 rounded-xl bg-ad-accent/10 border border-ad-accent/20 flex items-center justify-center flex-shrink-0">
-                                            <MapPin size={18} className="text-ad-accent" />
+                                        <div className="w-10 h-10 rounded-xl bg-sky-blue/10 border border-sky-blue/20 flex items-center justify-center flex-shrink-0">
+                                            <MapPin size={18} className="text-sky-blue" />
                                         </div>
                                         <div>
                                             <div className="text-white font-medium text-sm">
                                                 Office
                                             </div>
-                                            <div className="text-ad-muted-text text-sm">
+                                            <div className="text-light-blue text-sm">
                                                 100 Innovation Drive
                                                 <br />
                                                 San Francisco, CA 94105
@@ -111,11 +105,11 @@ export default function ContactPage() {
                             <AnimatedSection delay={0.2}>
                                 <form
                                     onSubmit={handleSubmit}
-                                    className="gradient-card rounded-2xl p-8"
+                                    className="card rounded-2xl p-8"
                                 >
                                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
                                         <div>
-                                            <label className="block text-sm text-ad-ice mb-2">
+                                            <label className="block text-sm text-white-90 mb-2">
                                                 Name
                                             </label>
                                             <input
@@ -125,12 +119,12 @@ export default function ContactPage() {
                                                 onChange={(e) =>
                                                     setFormData({ ...formData, name: e.target.value })
                                                 }
-                                                className="w-full px-4 py-3 rounded-xl bg-ad-surface border border-ad-muted-border text-white text-sm placeholder:text-ad-muted-text/50 focus:border-ad-accent focus:outline-none transition-colors"
+                                                className="w-full px-4 py-3 rounded-xl bg-blue-90 border border-blue-10 text-white text-sm placeholder:text-light-blue/50 focus:border-sky-blue focus:outline-none transition-colors"
                                                 placeholder="Your name"
                                             />
                                         </div>
                                         <div>
-                                            <label className="block text-sm text-ad-ice mb-2">
+                                            <label className="block text-sm text-white-90 mb-2">
                                                 Email
                                             </label>
                                             <input
@@ -140,14 +134,14 @@ export default function ContactPage() {
                                                 onChange={(e) =>
                                                     setFormData({ ...formData, email: e.target.value })
                                                 }
-                                                className="w-full px-4 py-3 rounded-xl bg-ad-surface border border-ad-muted-border text-white text-sm placeholder:text-ad-muted-text/50 focus:border-ad-accent focus:outline-none transition-colors"
+                                                className="w-full px-4 py-3 rounded-xl bg-blue-90 border border-blue-10 text-white text-sm placeholder:text-light-blue/50 focus:border-sky-blue focus:outline-none transition-colors"
                                                 placeholder="you@company.com"
                                             />
                                         </div>
                                     </div>
                                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
                                         <div>
-                                            <label className="block text-sm text-ad-ice mb-2">
+                                            <label className="block text-sm text-white-90 mb-2">
                                                 Company
                                             </label>
                                             <input
@@ -156,12 +150,12 @@ export default function ContactPage() {
                                                 onChange={(e) =>
                                                     setFormData({ ...formData, company: e.target.value })
                                                 }
-                                                className="w-full px-4 py-3 rounded-xl bg-ad-surface border border-ad-muted-border text-white text-sm placeholder:text-ad-muted-text/50 focus:border-ad-accent focus:outline-none transition-colors"
+                                                className="w-full px-4 py-3 rounded-xl bg-blue-90 border border-blue-10 text-white text-sm placeholder:text-light-blue/50 focus:border-sky-blue focus:outline-none transition-colors"
                                                 placeholder="Company name"
                                             />
                                         </div>
                                         <div>
-                                            <label className="block text-sm text-ad-ice mb-2">
+                                            <label className="block text-sm text-white-90 mb-2">
                                                 Subject
                                             </label>
                                             <input
@@ -171,13 +165,13 @@ export default function ContactPage() {
                                                 onChange={(e) =>
                                                     setFormData({ ...formData, subject: e.target.value })
                                                 }
-                                                className="w-full px-4 py-3 rounded-xl bg-ad-surface border border-ad-muted-border text-white text-sm placeholder:text-ad-muted-text/50 focus:border-ad-accent focus:outline-none transition-colors"
+                                                className="w-full px-4 py-3 rounded-xl bg-blue-90 border border-blue-10 text-white text-sm placeholder:text-light-blue/50 focus:border-sky-blue focus:outline-none transition-colors"
                                                 placeholder="How can we help?"
                                             />
                                         </div>
                                     </div>
                                     <div className="mb-6">
-                                        <label className="block text-sm text-ad-ice mb-2">
+                                        <label className="block text-sm text-white-90 mb-2">
                                             Message
                                         </label>
                                         <textarea
@@ -187,7 +181,7 @@ export default function ContactPage() {
                                             onChange={(e) =>
                                                 setFormData({ ...formData, message: e.target.value })
                                             }
-                                            className="w-full px-4 py-3 rounded-xl bg-ad-surface border border-ad-muted-border text-white text-sm placeholder:text-ad-muted-text/50 focus:border-ad-accent focus:outline-none transition-colors resize-none"
+                                            className="w-full px-4 py-3 rounded-xl bg-blue-90 border border-blue-10 text-white text-sm placeholder:text-light-blue/50 focus:border-sky-blue focus:outline-none transition-colors resize-none"
                                             placeholder="Tell us more about your needs..."
                                         />
                                     </div>

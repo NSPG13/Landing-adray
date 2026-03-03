@@ -4,7 +4,6 @@ import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Card from "@/components/ui/Card";
 import AnimatedSection from "@/components/ui/AnimatedSection";
-import GradientBlob from "@/components/ui/GradientBlob";
 import { ArrowRight, Clock } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -74,17 +73,12 @@ export default function BlogPage() {
     return (
         <>
             {/* Hero */}
-            <section className="relative pt-32 pb-20 gradient-hero overflow-hidden">
-                <GradientBlob
-                    color="accent"
-                    size="lg"
-                    className="top-0 left-1/3"
-                />
+            <section className="relative pt-32 pb-20 overflow-hidden">
                 <Container className="relative z-10">
                     <AnimatedSection>
                         <SectionHeading
-                            badge="Blog"
-                            title="Insights & <span class='text-gradient'>updates</span>"
+                            tag="Blog"
+                            title="Insights & updates"
                             subtitle="The latest on AI, enterprise automation, product updates, and industry trends from the Adray team."
                         />
                     </AnimatedSection>
@@ -97,20 +91,20 @@ export default function BlogPage() {
                     <AnimatedSection>
                         <Link
                             href={`/blog/${posts[0].slug}`}
-                            className="block gradient-card rounded-2xl p-8 md:p-12 hover:shadow-lg hover:shadow-ad-accent/10 transition-all duration-300 group"
+                            className="block card rounded-2xl p-8 md:p-12 hover:shadow-lg hover:shadow-sky-blue/10 transition-all duration-300 group"
                         >
                             <div className="flex flex-col md:flex-row gap-8 items-center">
                                 <div className="flex-1">
-                                    <span className="px-3 py-1 rounded-full text-xs font-medium bg-ad-accent/10 text-ad-accent border border-ad-accent/20">
+                                    <span className="px-3 py-1 rounded-full text-xs font-medium bg-sky-blue/10 text-sky-blue border border-sky-blue/20">
                                         {posts[0].category}
                                     </span>
-                                    <h2 className="mt-4 text-2xl md:text-3xl font-bold text-white group-hover:text-ad-primary transition-colors">
+                                    <h2 className="mt-4 text-2xl md:text-3xl font-bold text-white group-hover:text-white-100 transition-colors">
                                         {posts[0].title}
                                     </h2>
-                                    <p className="mt-3 text-ad-muted-text leading-relaxed">
+                                    <p className="mt-3 text-light-blue leading-relaxed">
                                         {posts[0].excerpt}
                                     </p>
-                                    <div className="mt-4 flex items-center gap-4 text-sm text-ad-muted-text">
+                                    <div className="mt-4 flex items-center gap-4 text-sm text-light-blue">
                                         <span>{posts[0].date}</span>
                                         <span className="flex items-center gap-1">
                                             <Clock size={14} />
@@ -118,8 +112,8 @@ export default function BlogPage() {
                                         </span>
                                     </div>
                                 </div>
-                                <div className="w-full md:w-1/3 aspect-[4/3] gradient-card rounded-xl flex items-center justify-center">
-                                    <div className="text-ad-accent/20 text-6xl font-bold">AI</div>
+                                <div className="w-full md:w-1/3 aspect-[4/3] card rounded-xl flex items-center justify-center">
+                                    <div className="text-sky-blue/20 text-6xl font-bold">AI</div>
                                 </div>
                             </div>
                         </Link>
@@ -138,21 +132,21 @@ export default function BlogPage() {
                                     className="block h-full group"
                                 >
                                     <Card className="h-full flex flex-col">
-                                        <div className="aspect-[16/9] gradient-card rounded-xl mb-4 flex items-center justify-center -mx-2 -mt-2">
-                                            <div className="text-ad-accent/20 text-3xl font-bold">
+                                        <div className="aspect-[16/9] card rounded-xl mb-4 flex items-center justify-center -mx-2 -mt-2">
+                                            <div className="text-sky-blue/20 text-3xl font-bold">
                                                 {post.category.slice(0, 2).toUpperCase()}
                                             </div>
                                         </div>
-                                        <span className="px-2.5 py-0.5 rounded-full text-xs font-medium bg-ad-deep/30 text-ad-primary w-fit">
+                                        <span className="px-2.5 py-0.5 rounded-full text-xs font-medium bg-dark-blue/30 text-white-90 w-fit">
                                             {post.category}
                                         </span>
-                                        <h3 className="mt-3 text-lg font-semibold text-white group-hover:text-ad-primary transition-colors line-clamp-2">
+                                        <h3 className="mt-3 text-lg font-semibold text-white group-hover:text-white-100 transition-colors line-clamp-2">
                                             {post.title}
                                         </h3>
-                                        <p className="mt-2 text-ad-muted-text text-sm line-clamp-2 flex-1">
+                                        <p className="mt-2 text-light-blue text-sm line-clamp-2 flex-1">
                                             {post.excerpt}
                                         </p>
-                                        <div className="mt-4 flex items-center justify-between text-xs text-ad-muted-text">
+                                        <div className="mt-4 flex items-center justify-between text-xs text-light-blue">
                                             <div className="flex items-center gap-3">
                                                 <span>{post.date}</span>
                                                 <span className="flex items-center gap-1">
@@ -162,7 +156,7 @@ export default function BlogPage() {
                                             </div>
                                             <ArrowRight
                                                 size={14}
-                                                className="text-ad-accent group-hover:translate-x-1 transition-transform"
+                                                className="text-sky-blue group-hover:translate-x-1 transition-transform"
                                             />
                                         </div>
                                     </Card>

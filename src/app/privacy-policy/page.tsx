@@ -16,11 +16,11 @@ export default function PrivacyPolicyPage() {
                     <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
                         Privacy Policy
                     </h1>
-                    <p className="text-ad-muted-text text-sm mb-12">
+                    <p className="text-light-blue text-sm mb-12">
                         Last updated: March 1, 2026
                     </p>
 
-                    <div className="space-y-8 text-ad-muted-text leading-relaxed">
+                    <div className="space-y-8 text-light-blue leading-relaxed">
                         <section>
                             <h2 className="text-xl font-semibold text-white mb-3">
                                 1. Introduction
@@ -143,7 +143,7 @@ export default function PrivacyPolicyPage() {
                                 us at{" "}
                                 <a
                                     href="mailto:privacy@adray.ai"
-                                    className="text-ad-accent hover:text-ad-primary transition-colors"
+                                    className="text-sky-blue hover:text-white-100 transition-colors"
                                 >
                                     privacy@adray.ai
                                 </a>{" "}

@@ -2,7 +2,6 @@ import { Metadata } from "next";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import AnimatedSection from "@/components/ui/AnimatedSection";
-import GradientBlob from "@/components/ui/GradientBlob";
 import { Sparkles, Bug, Zap, Wrench } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -27,7 +26,7 @@ interface Release {
 }
 
 const typeConfig: Record<ChangeType, { icon: typeof Sparkles; color: string; label: string }> = {
-    feature: { icon: Sparkles, color: "text-ad-accent bg-ad-accent/10", label: "Feature" },
+    feature: { icon: Sparkles, color: "text-sky-blue bg-sky-blue/10", label: "Feature" },
     fix: { icon: Bug, color: "text-green-400 bg-green-400/10", label: "Fix" },
     improvement: { icon: Zap, color: "text-yellow-400 bg-yellow-400/10", label: "Improvement" },
     breaking: { icon: Wrench, color: "text-red-400 bg-red-400/10", label: "Breaking" },
@@ -107,17 +106,12 @@ export default function ChangelogPage() {
     return (
         <>
             {/* Hero */}
-            <section className="relative pt-32 pb-20 gradient-hero overflow-hidden">
-                <GradientBlob
-                    color="accent"
-                    size="lg"
-                    className="top-0 right-1/4"
-                />
+            <section className="relative pt-32 pb-20 overflow-hidden">
                 <Container className="relative z-10">
                     <AnimatedSection>
                         <SectionHeading
-                            badge="Changelog"
-                            title="What&apos;s new in <span class='text-gradient'>Adray</span>"
+                            tag="Changelog"
+                            title="What&apos;s new in Adray"
                             subtitle="Stay up to date with the latest features, improvements, and fixes."
                         />
                     </AnimatedSection>
@@ -130,16 +124,16 @@ export default function ChangelogPage() {
                     <div className="max-w-3xl mx-auto">
                         {releases.map((release, i) => (
                             <AnimatedSection key={release.version} delay={i * 0.1}>
-                                <div className="relative pl-8 pb-16 last:pb-0 border-l border-ad-muted-border/30">
+                                <div className="relative pl-8 pb-16 last:pb-0 border-l border-blue-10/30">
                                     {/* Timeline dot */}
-                                    <div className="absolute left-[-5px] top-0 w-2.5 h-2.5 rounded-full bg-ad-accent" />
+                                    <div className="absolute left-[-5px] top-0 w-2.5 h-2.5 rounded-full bg-sky-blue" />
 
                                     {/* Version badge */}
                                     <div className="flex items-center gap-3 mb-3">
-                                        <span className="px-3 py-1 rounded-full text-xs font-semibold bg-ad-accent/10 text-ad-accent border border-ad-accent/20">
+                                        <span className="px-3 py-1 rounded-full text-xs font-semibold bg-sky-blue/10 text-sky-blue border border-sky-blue/20">
                                             v{release.version}
                                         </span>
-                                        <span className="text-sm text-ad-muted-text">
+                                        <span className="text-sm text-light-blue">
                                             {release.date}
                                         </span>
                                     </div>
@@ -147,7 +141,7 @@ export default function ChangelogPage() {
                                     <h3 className="text-xl font-semibold text-white mb-2">
                                         {release.title}
                                     </h3>
-                                    <p className="text-ad-muted-text text-sm mb-6">
+                                    <p className="text-light-blue text-sm mb-6">
                                         {release.description}
                                     </p>
 
@@ -167,7 +161,7 @@ export default function ChangelogPage() {
                                                         <Icon size={12} />
                                                         {config.label}
                                                     </span>
-                                                    <span className="text-ad-ice">{change.text}</span>
+                                                    <span className="text-white-90">{change.text}</span>
                                                 </div>
                                             );
                                         })}

@@ -15,8 +15,8 @@ export default function Card({
     return (
         <div
             className={cn(
-                "rounded-2xl p-6 gradient-card transition-all duration-300",
-                hover && "hover:shadow-lg hover:shadow-ad-accent/5 hover:-translate-y-1",
+                "card p-6 transition-all duration-300",
+                hover && "hover:-translate-y-1",
                 className
             )}
         >

@@ -4,7 +4,6 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import Card from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
 import AnimatedSection from "@/components/ui/AnimatedSection";
-import GradientBlob from "@/components/ui/GradientBlob";
 import {
     Bot,
     LineChart,
@@ -120,22 +119,12 @@ export default function AISolutionsPage() {
     return (
         <>
             {/* Hero */}
-            <section className="relative pt-32 pb-20 gradient-hero overflow-hidden">
-                <GradientBlob
-                    color="accent"
-                    size="xl"
-                    className="top-[-100px] right-[-200px]"
-                />
-                <GradientBlob
-                    color="deep"
-                    size="lg"
-                    className="bottom-0 left-[-100px]"
-                />
+            <section className="relative pt-32 pb-20 overflow-hidden">
                 <Container className="relative z-10">
                     <AnimatedSection>
                         <SectionHeading
-                            badge="AI Solutions"
-                            title="Enterprise AI that <span class='text-gradient'>actually works</span>"
+                            tag="AI Solutions"
+                            title="Enterprise AI that actually works"
                             subtitle="From autonomous agents to intelligent analytics — a complete AI platform designed for enterprise-scale operations."
                         />
                     </AnimatedSection>
@@ -159,22 +148,22 @@ export default function AISolutionsPage() {
                         {solutions.map((solution, i) => (
                             <AnimatedSection key={solution.title} delay={i * 0.1}>
                                 <Card className="h-full flex flex-col">
-                                    <div className="w-14 h-14 rounded-2xl bg-ad-accent/10 border border-ad-accent/20 flex items-center justify-center mb-6">
-                                        <solution.icon size={26} className="text-ad-accent" />
+                                    <div className="w-14 h-14 rounded-2xl bg-sky-blue/10 border border-sky-blue/20 flex items-center justify-center mb-6">
+                                        <solution.icon size={26} className="text-sky-blue" />
                                     </div>
                                     <h3 className="text-xl font-semibold text-white mb-3">
                                         {solution.title}
                                     </h3>
-                                    <p className="text-ad-muted-text text-sm leading-relaxed mb-6 flex-1">
+                                    <p className="text-light-blue text-sm leading-relaxed mb-6 flex-1">
                                         {solution.description}
                                     </p>
                                     <ul className="space-y-2">
                                         {solution.capabilities.map((cap) => (
                                             <li
                                                 key={cap}
-                                                className="flex items-center gap-2 text-xs text-ad-ice"
+                                                className="flex items-center gap-2 text-xs text-white-90"
                                             >
-                                                <div className="w-1 h-1 rounded-full bg-ad-accent" />
+                                                <div className="w-1 h-1 rounded-full bg-sky-blue" />
                                                 {cap}
                                             </li>
                                         ))}
@@ -187,12 +176,12 @@ export default function AISolutionsPage() {
             </section>
 
             {/* How it works */}
-            <section className="py-24 gradient-section">
+            <section className="py-24">
                 <Container>
                     <AnimatedSection>
                         <SectionHeading
-                            badge="How It Works"
-                            title="Go live in <span class='text-gradient'>three simple steps</span>"
+                            tag="How It Works"
+                            title="Go live in three simple steps"
                             subtitle="From setup to value delivery in days, not months."
                         />
                     </AnimatedSection>
@@ -225,7 +214,7 @@ export default function AISolutionsPage() {
                                     <h3 className="text-xl font-semibold text-white mb-2">
                                         {step.title}
                                     </h3>
-                                    <p className="text-ad-muted-text text-sm">
+                                    <p className="text-light-blue text-sm">
                                         {step.description}
                                     </p>
                                 </div>
@@ -240,8 +229,8 @@ export default function AISolutionsPage() {
                 <Container>
                     <AnimatedSection>
                         <SectionHeading
-                            badge="Use Cases"
-                            title="AI solutions for <span class='text-gradient'>every department</span>"
+                            tag="Use Cases"
+                            title="AI solutions for every department"
                             subtitle="See how enterprises across industries use Adray to transform their operations."
                         />
                     </AnimatedSection>
@@ -249,13 +238,13 @@ export default function AISolutionsPage() {
                         {useCases.map((uc, i) => (
                             <AnimatedSection key={uc.title} delay={i * 0.1}>
                                 <Card className="h-full">
-                                    <div className="w-12 h-12 rounded-xl bg-ad-accent/10 border border-ad-accent/20 flex items-center justify-center mb-5">
-                                        <uc.icon size={22} className="text-ad-accent" />
+                                    <div className="w-12 h-12 rounded-xl bg-sky-blue/10 border border-sky-blue/20 flex items-center justify-center mb-5">
+                                        <uc.icon size={22} className="text-sky-blue" />
                                     </div>
                                     <h3 className="text-lg font-semibold text-white mb-3">
                                         {uc.title}
                                     </h3>
-                                    <p className="text-sm text-ad-muted-text leading-relaxed">
+                                    <p className="text-sm text-light-blue leading-relaxed">
                                         {uc.description}
                                     </p>
                                 </Card>
@@ -269,13 +258,13 @@ export default function AISolutionsPage() {
             <section className="py-24">
                 <Container>
                     <AnimatedSection>
-                        <div className="gradient-card rounded-3xl p-12 md:p-16 text-center glow-purple relative overflow-hidden">
-                            <div className="absolute inset-0 bg-gradient-to-br from-ad-accent/5 via-transparent to-ad-deep/10" />
+                        <div className="card rounded-3xl p-12 md:p-16 text-center relative overflow-hidden">
+                            <div className="absolute inset-0 bg-gradient-to-br from-sky-blue/5 via-transparent to-dark-blue/10" />
                             <div className="relative z-10">
                                 <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
                                     Ready to see Adray in action?
                                 </h2>
-                                <p className="text-ad-muted-text max-w-lg mx-auto mb-8">
+                                <p className="text-light-blue max-w-lg mx-auto mb-8">
                                     Schedule a personalized demo and discover how AI agents can
                                     transform your enterprise operations.
                                 </p>

@@ -10,13 +10,11 @@ export default function Badge({ children, className }: BadgeProps) {
     return (
         <span
             className={cn(
-                "inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-medium",
-                "bg-ad-deep/40 text-ad-primary border border-ad-muted-border",
-                "backdrop-blur-sm",
+                "inline-flex items-center gap-2 px-4 py-2 rounded-full t-p-sm",
+                "bg-white-7 text-white-90",
                 className
             )}
         >
-            <span className="w-1.5 h-1.5 rounded-full bg-ad-accent animate-pulse" />
             {children}
         </span>
     );

@@ -98,18 +98,18 @@ export default async function BlogPostPage({ params }: PageProps) {
                     <AnimatedSection>
                         <Link
                             href="/blog"
-                            className="inline-flex items-center gap-2 text-ad-muted-text hover:text-ad-accent transition-colors text-sm mb-8"
+                            className="inline-flex items-center gap-2 text-light-blue hover:text-sky-blue transition-colors text-sm mb-8"
                         >
                             <ArrowLeft size={16} />
                             Back to Blog
                         </Link>
 
                         <div className="flex items-center gap-3 mb-4">
-                            <span className="px-3 py-1 rounded-full text-xs font-medium bg-ad-accent/10 text-ad-accent border border-ad-accent/20">
+                            <span className="px-3 py-1 rounded-full text-xs font-medium bg-sky-blue/10 text-sky-blue border border-sky-blue/20">
                                 {post.category}
                             </span>
-                            <span className="text-sm text-ad-muted-text">{post.date}</span>
-                            <span className="text-sm text-ad-muted-text flex items-center gap-1">
+                            <span className="text-sm text-light-blue">{post.date}</span>
+                            <span className="text-sm text-light-blue flex items-center gap-1">
                                 <Clock size={14} />
                                 {post.readTime}
                             </span>
@@ -120,21 +120,21 @@ export default async function BlogPostPage({ params }: PageProps) {
                         </h1>
 
                         {/* Author */}
-                        <div className="flex items-center justify-between pb-8 mb-8 border-b border-ad-muted-border/30">
+                        <div className="flex items-center justify-between pb-8 mb-8 border-b border-blue-10/30">
                             <div className="flex items-center gap-3">
-                                <div className="w-10 h-10 rounded-full bg-ad-deep flex items-center justify-center text-ad-primary text-xs font-bold">
+                                <div className="w-10 h-10 rounded-full bg-dark-blue flex items-center justify-center text-white-90 text-xs font-bold">
                                     AT
                                 </div>
                                 <div>
                                     <div className="text-white text-sm font-medium">
                                         Adray Team
                                     </div>
-                                    <div className="text-ad-muted-text text-xs">
+                                    <div className="text-light-blue text-xs">
                                         Content & Research
                                     </div>
                                 </div>
                             </div>
-                            <button className="flex items-center gap-2 text-ad-muted-text hover:text-ad-accent transition-colors text-sm">
+                            <button className="flex items-center gap-2 text-light-blue hover:text-sky-blue transition-colors text-sm">
                                 <Share2 size={16} />
                                 Share
                             </button>
@@ -145,7 +145,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                             {post.content.map((paragraph, i) => (
                                 <p
                                     key={i}
-                                    className="text-ad-muted-text leading-relaxed text-base"
+                                    className="text-light-blue leading-relaxed text-base"
                                 >
                                     {paragraph}
                                 </p>
@@ -153,17 +153,17 @@ export default async function BlogPostPage({ params }: PageProps) {
                         </div>
 
                         {/* Bottom CTA */}
-                        <div className="mt-16 gradient-card rounded-2xl p-8 text-center">
+                        <div className="mt-16 card rounded-2xl p-8 text-center">
                             <h3 className="text-xl font-bold text-white mb-2">
                                 Ready to get started with Adray?
                             </h3>
-                            <p className="text-ad-muted-text text-sm mb-6">
+                            <p className="text-light-blue text-sm mb-6">
                                 Join 500+ enterprises already using AI agents to transform their
                                 operations.
                             </p>
                             <a
                                 href="/contact"
-                                className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-ad-accent hover:bg-ad-primary text-white font-semibold text-sm transition-all duration-300 hover:scale-105"
+                                className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-sky-blue hover:bg-sky-blue text-white font-semibold text-sm transition-all duration-300 hover:scale-105"
                             >
                                 Start Free Trial
                             </a>

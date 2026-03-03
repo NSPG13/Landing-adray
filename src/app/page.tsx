@@ -1,23 +1,21 @@
 import Hero from "@/components/sections/Hero";
-import DashboardPreview from "@/components/sections/DashboardPreview";
-import LogoBar from "@/components/sections/LogoBar";
-import Features from "@/components/sections/Features";
-import Solutions from "@/components/sections/Solutions";
-import Stats from "@/components/sections/Stats";
+import HighlightedText from "@/components/sections/HighlightedText";
+import Exceptionalities from "@/components/sections/Exceptionalities";
+import FeaturesTabs from "@/components/sections/FeaturesTabs";
+import Steps from "@/components/sections/Steps";
+import DataPrivacy from "@/components/sections/DataPrivacy";
 import Testimonials from "@/components/sections/Testimonials";
-import CTA from "@/components/sections/CTA";
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <DashboardPreview />
-      <LogoBar />
-      <Features />
-      <Solutions />
-      <Stats />
+      <HighlightedText />
+      <Exceptionalities />
+      <FeaturesTabs />
+      <Steps />
+      <DataPrivacy />
       <Testimonials />
-      <CTA />
     </>
   );
 }

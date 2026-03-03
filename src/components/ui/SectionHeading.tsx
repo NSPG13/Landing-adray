@@ -2,7 +2,8 @@ import React from "react";
 import { cn } from "@/lib/utils";
 
 interface SectionHeadingProps {
-    badge?: string;
+    tag?: string;
+    tagIcon?: React.ReactNode;
     title: string;
     subtitle?: string;
     className?: string;
@@ -10,7 +11,8 @@ interface SectionHeadingProps {
 }
 
 export default function SectionHeading({
-    badge,
+    tag,
+    tagIcon,
     title,
     subtitle,
     className,
@@ -24,18 +26,25 @@ export default function SectionHeading({
                 className
             )}
         >
-            {badge && (
-                <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-medium bg-ad-deep/40 text-ad-primary border border-ad-muted-border backdrop-blur-sm mb-6">
-                    <span className="w-1.5 h-1.5 rounded-full bg-ad-accent animate-pulse" />
-                    {badge}
-                </span>
+            {tag && (
+                <div className={cn(
+                    "flex items-center gap-3 mb-6",
+                    align === "center" && "justify-center"
+                )}>
+                    {tagIcon && (
+                        <span className="w-6 h-6 text-light-blue flex-shrink-0">{tagIcon}</span>
+                    )}
+                    <span className="t-p-sm uppercase tracking-widest text-light-blue">
+                        {tag}
+                    </span>
+                </div>
             )}
             <h2
-                className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white leading-tight"
+                className="t-h2 text-white-100"
                 dangerouslySetInnerHTML={{ __html: title }}
             />
             {subtitle && (
-                <p className="mt-4 text-base sm:text-lg text-ad-muted-text leading-relaxed">
+                <p className="mt-4 t-p-lg text-light-blue">
                     {subtitle}
                 </p>
             )}

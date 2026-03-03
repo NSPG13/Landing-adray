@@ -22,7 +22,7 @@
   --light-yellow: #FFCD7D;
 
   --background: #000000;
-  --foreground: #E1D8F3;
+  --foreground: #FFFFFF;
 }
 
 @theme inline {
@@ -46,12 +46,16 @@
   --color-red: var(--red);
   --color-dark-yellow: var(--dark-yellow);
   --color-light-yellow: var(--light-yellow);
-  --font-sans: var(--font-montserrat);
+  --font-sans: var(--font-inter);
 }
+
+/* ═══════════════════════════════════════════
+   Base
+   ═══════════════════════════════════════════ */
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: var(--ad-deep) transparent;
+  scrollbar-color: var(--blue-20) transparent;
 }
 
 html {
@@ -66,60 +70,64 @@ body {
 }
 
 ::selection {
-  background: rgba(181, 92, 255, 0.3);
-  color: #E1D8F3;
+  background: rgba(1, 117, 255, 0.3);
+  color: #FFFFFF;
 }
 
-/* Gradient backgrounds */
-.gradient-hero {
-  background:
-    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(181, 92, 255, 0.3), transparent),
-    radial-gradient(ellipse 60% 40% at 80% 50%, rgba(62, 40, 111, 0.4), transparent),
-    radial-gradient(ellipse 60% 40% at 20% 60%, rgba(138, 79, 219, 0.2), transparent),
-    #000000;
+/* ═══════════════════════════════════════════
+   Component Classes
+   ═══════════════════════════════════════════ */
+
+/* Card base — matches Framer: bg #06070A, border rgba(125,164,255,0.16), radius 24px */
+.card {
+  background-color: var(--blue-90);
+  border: 1px solid var(--blue-10);
+  border-radius: 24px;
 }
 
-.gradient-section {
-  background:
-    radial-gradient(ellipse 70% 50% at 30% 50%, rgba(62, 40, 111, 0.25), transparent),
-    radial-gradient(ellipse 50% 40% at 70% 50%, rgba(181, 92, 255, 0.1), transparent);
-}
-
-.gradient-card {
-  background: linear-gradient(135deg, rgba(26, 22, 37, 0.8), rgba(15, 11, 20, 0.9));
-  border: 1px solid rgba(202, 138, 229, 0.15);
-}
-
-.gradient-card:hover {
-  border-color: rgba(202, 138, 229, 0.3);
-}
-
+/* Glass / frosted — navbar pill, testimonial cards */
 .glass {
-  background: rgba(15, 11, 20, 0.6);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(202, 138, 229, 0.12);
+  background: var(--white-7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
-.glow-purple {
-  box-shadow: 0 0 40px rgba(181, 92, 255, 0.15), 0 0 80px rgba(181, 92, 255, 0.05);
+/* Primary button glow — blue+gold inset */
+.glow-btn {
+  box-shadow:
+    inset -4px 3px 9px 0px rgb(1, 117, 255),
+    inset 3px -2px 8px 0px rgb(255, 205, 125);
 }
 
+/* Gradient text — blue → gold */
 .text-gradient {
-  background: linear-gradient(135deg, #E1D8F3 0%, #CA8AE5 50%, #B55CFF 100%);
+  background: linear-gradient(91deg, #0175FF 0%, #FFCD7D 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-.text-gradient-accent {
-  background: linear-gradient(135deg, #B55CFF, #CA8AE5, #E7D6FF);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+/* Section tag line — thin divider after tag label */
+.tag-line {
+  height: 1px;
+  background: var(--blue-10);
+  flex: 1;
 }
 
-/* Marquee animation */
+/* Noise overlay texture */
+.noise-overlay {
+  background-image: url("https://framerusercontent.com/images/6mcf62RlDfRfU61Yg5vb2pefpi4.png");
+  background-size: 128px;
+  background-repeat: repeat;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+/* ═══════════════════════════════════════════
+   Animations
+   ═══════════════════════════════════════════ */
+
+/* Marquee — infinite horizontal scroll */
 @keyframes marquee {
   0% {
     transform: translateX(0);
@@ -134,7 +142,7 @@ body {
   animation: marquee 30s linear infinite;
 }
 
-/* Fade in up animation */
+/* Fade in up */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -151,24 +159,73 @@ body {
   animation: fadeInUp 0.6s ease-out forwards;
 }
 
-/* Pulse glow */
-@keyframes pulseGlow {
+/* Beam line — horizontal glow sweep for steps */
+@keyframes beamLine {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(200%);
+  }
+}
+
+.animate-beam {
+  animation: beamLine 3s ease-in-out infinite;
+}
+
+/* Rotating gradient — for speed card */
+@keyframes rotateGradient {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-rotate {
+  animation: rotateGradient 8s linear infinite;
+}
+
+/* Shine dot pulse — for deep capabilities card */
+@keyframes shineDot {
 
   0%,
   100% {
-    opacity: 0.5;
+    opacity: 0.3;
+    transform: scale(1);
   }
 
   50% {
     opacity: 1;
+    transform: scale(1.5);
   }
 }
 
-.animate-pulse-glow {
-  animation: pulseGlow 3s ease-in-out infinite;
+.animate-shine {
+  animation: shineDot 2s ease-in-out infinite;
 }
 
-/* Float animation */
+/* Slide down entrance — navbar */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-down {
+  animation: slideDown 0.8s ease-out forwards;
+}
+
+/* Float */
 @keyframes float {
 
   0%,
@@ -185,11 +242,24 @@ body {
   animation: float 6s ease-in-out infinite;
 }
 
+/* Progress line fill — for feature tabs */
+@keyframes progressFill {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+.animate-progress {
+  animation: progressFill 5s linear forwards;
+}
+
 /* ═══════════════════════════════════════════
    Typography — Framer Design Tokens (exact)
    ═══════════════════════════════════════════ */
-
-/* ── Headings ── */
 
 /* H1 · 72 - Medium · 82px / 1.2 */
 .t-h1 {
@@ -240,8 +310,6 @@ body {
   line-height: 1.2;
 }
 
-/* ── Paragraphs ── */
-
 /* P · 18 - Medium · 18px / 1.4 */
 .t-p-lg-medium {
   font-size: 18px;
@@ -282,4 +350,44 @@ body {
   font-size: 14px;
   font-weight: 400;
   line-height: 1.4;
+}
+
+/* ═══════════════════════════════════════════
+   Responsive typography overrides
+   ═══════════════════════════════════════════ */
+
+@media (max-width: 809px) {
+  .t-h1 {
+    font-size: 40px;
+  }
+
+  .t-h2 {
+    font-size: 32px;
+  }
+
+  .t-h3 {
+    font-size: 24px;
+  }
+
+  .t-h3-lg {
+    font-size: 30px;
+  }
+
+  .t-h4 {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 810px) and (max-width: 1199px) {
+  .t-h1 {
+    font-size: 56px;
+  }
+
+  .t-h2 {
+    font-size: 44px;
+  }
+
+  .t-h3-lg {
+    font-size: 40px;
+  }
 }

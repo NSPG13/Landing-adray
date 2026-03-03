@@ -19,17 +19,17 @@ export default function Button({
     ...props
 }: ButtonProps) {
     const base =
-        "inline-flex items-center justify-center font-semibold rounded-full transition-all duration-300 cursor-pointer";
+        "inline-flex items-center justify-center font-semibold rounded-[15px] transition-all duration-300 cursor-pointer";
 
     const variants = {
         primary:
-            "bg-ad-accent hover:bg-ad-primary text-white shadow-lg shadow-ad-accent/20 hover:shadow-ad-accent/40 hover:scale-105",
+            "bg-black-100 text-white-100 border border-white-40 glow-btn hover:scale-105",
         secondary:
-            "bg-ad-surface-light hover:bg-ad-deep text-ad-ice border border-ad-muted-border hover:border-ad-primary/40 hover:scale-105",
+            "bg-dark-blue text-white-100 border border-blue-20 hover:border-light-blue/40 hover:scale-105",
         ghost:
-            "bg-transparent hover:bg-ad-surface-light text-ad-ice hover:text-white",
+            "bg-transparent text-gradient hover:opacity-80",
         outline:
-            "bg-transparent border border-ad-muted-border hover:border-ad-accent text-ad-ice hover:text-white hover:scale-105",
+            "bg-transparent border border-blue-20 text-white-90 hover:border-light-blue hover:text-white-100 hover:scale-105",
     };
 
     const sizes = {

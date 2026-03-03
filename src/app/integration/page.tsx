@@ -4,7 +4,6 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import Card from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
 import AnimatedSection from "@/components/ui/AnimatedSection";
-import GradientBlob from "@/components/ui/GradientBlob";
 
 export const metadata: Metadata = {
     title: "Integrations",
@@ -86,17 +85,12 @@ export default function IntegrationPage() {
     return (
         <>
             {/* Hero */}
-            <section className="relative pt-32 pb-20 gradient-hero overflow-hidden">
-                <GradientBlob
-                    color="accent"
-                    size="xl"
-                    className="top-0 left-1/4"
-                />
+            <section className="relative pt-32 pb-20 overflow-hidden">
                 <Container className="relative z-10">
                     <AnimatedSection>
                         <SectionHeading
-                            badge="Integrations"
-                            title="Connect with <span class='text-gradient'>200+ tools</span>"
+                            tag="Integrations"
+                            title="Connect with 200+ tools"
                             subtitle="Seamlessly integrate Adray with your existing tech stack. No code required for most integrations."
                         />
                     </AnimatedSection>
@@ -111,14 +105,14 @@ export default function IntegrationPage() {
                             <AnimatedSection key={cat.category} delay={i * 0.1}>
                                 <div>
                                     <h3 className="text-xl font-semibold text-white mb-6 flex items-center gap-3">
-                                        <div className="w-2 h-2 rounded-full bg-ad-accent" />
+                                        <div className="w-2 h-2 rounded-full bg-sky-blue" />
                                         {cat.category}
                                     </h3>
                                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                                         {cat.tools.map((tool) => (
                                             <Card key={tool.name} className="flex items-start gap-4">
-                                                <div className="w-12 h-12 rounded-xl bg-ad-deep/50 flex items-center justify-center flex-shrink-0">
-                                                    <span className="text-ad-primary font-bold text-sm">
+                                                <div className="w-12 h-12 rounded-xl bg-dark-blue/50 flex items-center justify-center flex-shrink-0">
+                                                    <span className="text-white-90 font-bold text-sm">
                                                         {tool.name.slice(0, 2).toUpperCase()}
                                                     </span>
                                                 </div>
@@ -126,7 +120,7 @@ export default function IntegrationPage() {
                                                     <h4 className="text-white font-medium text-sm">
                                                         {tool.name}
                                                     </h4>
-                                                    <p className="text-ad-muted-text text-xs mt-1">
+                                                    <p className="text-light-blue text-xs mt-1">
                                                         {tool.description}
                                                     </p>
                                                 </div>
@@ -141,12 +135,12 @@ export default function IntegrationPage() {
             </section>
 
             {/* API Section */}
-            <section className="py-24 gradient-section">
+            <section className="py-24">
                 <Container>
                     <AnimatedSection>
                         <SectionHeading
-                            badge="Developer API"
-                            title="Build anything with our <span class='text-gradient'>powerful API</span>"
+                            tag="Developer API"
+                            title="Build anything with our powerful API"
                             subtitle="Full programmatic access to every Adray capability. Build custom integrations and extensions."
                         />
                     </AnimatedSection>
@@ -157,7 +151,7 @@ export default function IntegrationPage() {
                                     <h4 className="text-lg font-semibold text-white mb-2">
                                         {feat.title}
                                     </h4>
-                                    <p className="text-ad-muted-text text-sm leading-relaxed">
+                                    <p className="text-light-blue text-sm leading-relaxed">
                                         {feat.description}
                                     </p>
                                 </Card>
@@ -167,16 +161,16 @@ export default function IntegrationPage() {
 
                     {/* Code preview */}
                     <AnimatedSection delay={0.3}>
-                        <div className="mt-12 max-w-3xl mx-auto gradient-card rounded-2xl overflow-hidden">
-                            <div className="flex items-center gap-2 px-4 py-3 border-b border-ad-muted-border/30">
+                        <div className="mt-12 max-w-3xl mx-auto card rounded-2xl overflow-hidden">
+                            <div className="flex items-center gap-2 px-4 py-3 border-b border-blue-10/30">
                                 <div className="w-3 h-3 rounded-full bg-red-500/60" />
                                 <div className="w-3 h-3 rounded-full bg-yellow-500/60" />
                                 <div className="w-3 h-3 rounded-full bg-green-500/60" />
-                                <span className="ml-2 text-xs text-ad-muted-text">
+                                <span className="ml-2 text-xs text-light-blue">
                                     api-example.ts
                                 </span>
                             </div>
-                            <pre className="p-6 text-sm text-ad-ice overflow-x-auto">
+                            <pre className="p-6 text-sm text-white-90 overflow-x-auto">
                                 <code>{`import { Adray } from '@adray/sdk';
 
 const client = new Adray({
@@ -211,7 +205,7 @@ console.log(result.insights);`}</code>
                             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
                                 Don&apos;t see your tool?
                             </h2>
-                            <p className="text-ad-muted-text max-w-lg mx-auto mb-8">
+                            <p className="text-light-blue max-w-lg mx-auto mb-8">
                                 We&apos;re constantly adding new integrations. Request an integration
                                 or build your own with our API.
                             </p>

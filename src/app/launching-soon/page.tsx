@@ -4,7 +4,6 @@ import React, { useState, useEffect } from "react";
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
 import AnimatedSection from "@/components/ui/AnimatedSection";
-import GradientBlob from "@/components/ui/GradientBlob";
 import { Rocket } from "lucide-react";
 
 function useCountdown(targetDate: Date) {
@@ -54,23 +53,13 @@ export default function LaunchingSoonPage() {
     };
 
     return (
-        <section className="min-h-screen flex items-center justify-center relative overflow-hidden gradient-hero">
-            <GradientBlob
-                color="accent"
-                size="xl"
-                className="top-[-200px] left-1/2 -translate-x-1/2"
-            />
-            <GradientBlob
-                color="deep"
-                size="lg"
-                className="bottom-[-100px] right-[-100px]"
-            />
+        <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
 
             <Container className="relative z-10 text-center py-20">
                 <AnimatedSection>
                     <div className="flex justify-center mb-8">
-                        <div className="w-20 h-20 rounded-2xl bg-ad-accent/10 border border-ad-accent/20 flex items-center justify-center">
-                            <Rocket size={36} className="text-ad-accent" />
+                        <div className="w-20 h-20 rounded-2xl bg-sky-blue/10 border border-sky-blue/20 flex items-center justify-center">
+                            <Rocket size={36} className="text-sky-blue" />
                         </div>
                     </div>
 
@@ -80,7 +69,7 @@ export default function LaunchingSoonPage() {
                         <span className="text-gradient">launching soon</span>
                     </h1>
 
-                    <p className="text-ad-muted-text text-lg max-w-xl mx-auto mb-12">
+                    <p className="text-light-blue text-lg max-w-xl mx-auto mb-12">
                         We&apos;re putting the finishing touches on something incredible. Be the
                         first to know when we launch.
                     </p>
@@ -94,12 +83,12 @@ export default function LaunchingSoonPage() {
                             { value: timeLeft.seconds, label: "Seconds" },
                         ].map((item) => (
                             <div key={item.label} className="text-center">
-                                <div className="w-16 h-16 sm:w-20 sm:h-20 gradient-card rounded-xl flex items-center justify-center mb-2 glow-purple">
+                                <div className="w-16 h-16 sm:w-20 sm:h-20 card rounded-xl flex items-center justify-center mb-2">
                                     <span className="text-2xl sm:text-3xl font-bold text-white">
                                         {String(item.value).padStart(2, "0")}
                                     </span>
                                 </div>
-                                <span className="text-xs text-ad-muted-text">{item.label}</span>
+                                <span className="text-xs text-light-blue">{item.label}</span>
                             </div>
                         ))}
                     </div>
@@ -114,7 +103,7 @@ export default function LaunchingSoonPage() {
                             required
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
-                            className="flex-1 px-4 py-3 rounded-full bg-ad-surface border border-ad-muted-border text-white text-sm placeholder:text-ad-muted-text/50 focus:border-ad-accent focus:outline-none transition-colors"
+                            className="flex-1 px-4 py-3 rounded-full bg-blue-90 border border-blue-10 text-white text-sm placeholder:text-light-blue/50 focus:border-sky-blue focus:outline-none transition-colors"
                             placeholder="Enter your email"
                         />
                         <Button variant="primary" size="md" type="submit">

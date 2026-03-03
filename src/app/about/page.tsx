@@ -3,7 +3,6 @@ import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Card from "@/components/ui/Card";
 import AnimatedSection from "@/components/ui/AnimatedSection";
-import GradientBlob from "@/components/ui/GradientBlob";
 import { Target, Eye, Heart, Users, Award, Lightbulb } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -94,17 +93,12 @@ export default function AboutPage() {
     return (
         <>
             {/* Hero */}
-            <section className="relative pt-32 pb-20 gradient-hero overflow-hidden">
-                <GradientBlob
-                    color="accent"
-                    size="xl"
-                    className="top-0 right-[-200px]"
-                />
+            <section className="relative pt-32 pb-20 overflow-hidden">
                 <Container className="relative z-10">
                     <AnimatedSection>
                         <SectionHeading
-                            badge="About Adray"
-                            title="Building the future of <span class='text-gradient'>enterprise AI</span>"
+                            tag="About Adray"
+                            title="Building the future of enterprise AI"
                             subtitle="We're a team of AI researchers, engineers, and business leaders united by a single mission: making enterprise AI that actually works."
                         />
                     </AnimatedSection>
@@ -117,13 +111,13 @@ export default function AboutPage() {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                         <AnimatedSection>
                             <div>
-                                <span className="text-ad-accent text-sm font-semibold uppercase tracking-wider">
+                                <span className="text-sky-blue text-sm font-semibold uppercase tracking-wider">
                                     Our Story
                                 </span>
                                 <h3 className="mt-4 text-3xl sm:text-4xl font-bold text-white">
                                     From research lab to enterprise platform
                                 </h3>
-                                <div className="mt-6 space-y-4 text-ad-muted-text leading-relaxed">
+                                <div className="mt-6 space-y-4 text-light-blue leading-relaxed">
                                     <p>
                                         Adray was founded in 2023 by a team of AI researchers who
                                         saw a critical gap: while AI capabilities were advancing
@@ -144,35 +138,35 @@ export default function AboutPage() {
                             </div>
                         </AnimatedSection>
                         <AnimatedSection delay={0.2}>
-                            <div className="gradient-card rounded-2xl p-8 glow-purple aspect-square flex items-center justify-center relative overflow-hidden">
-                                <div className="absolute inset-0 bg-gradient-to-br from-ad-accent/10 via-transparent to-ad-deep/20" />
+                            <div className="card rounded-2xl p-8 aspect-square flex items-center justify-center relative overflow-hidden">
+                                <div className="absolute inset-0 bg-gradient-to-br from-sky-blue/10 via-transparent to-dark-blue/20" />
                                 <div className="relative text-center">
                                     <div className="text-6xl font-bold text-gradient mb-4">
                                         2023
                                     </div>
-                                    <div className="text-ad-muted-text">Founded</div>
+                                    <div className="text-light-blue">Founded</div>
                                     <div className="mt-8 grid grid-cols-2 gap-6">
                                         <div>
                                             <div className="text-2xl font-bold text-white">500+</div>
-                                            <div className="text-xs text-ad-muted-text">
+                                            <div className="text-xs text-light-blue">
                                                 Enterprises
                                             </div>
                                         </div>
                                         <div>
                                             <div className="text-2xl font-bold text-white">40+</div>
-                                            <div className="text-xs text-ad-muted-text">
+                                            <div className="text-xs text-light-blue">
                                                 Countries
                                             </div>
                                         </div>
                                         <div>
                                             <div className="text-2xl font-bold text-white">150+</div>
-                                            <div className="text-xs text-ad-muted-text">
+                                            <div className="text-xs text-light-blue">
                                                 Team Members
                                             </div>
                                         </div>
                                         <div>
                                             <div className="text-2xl font-bold text-white">$50M+</div>
-                                            <div className="text-xs text-ad-muted-text">
+                                            <div className="text-xs text-light-blue">
                                                 Raised
                                             </div>
                                         </div>
@@ -185,12 +179,12 @@ export default function AboutPage() {
             </section>
 
             {/* Values */}
-            <section className="py-24 gradient-section">
+            <section className="py-24">
                 <Container>
                     <AnimatedSection>
                         <SectionHeading
-                            badge="Our Values"
-                            title="What drives us <span class='text-gradient'>every day</span>"
+                            tag="Our Values"
+                            title="What drives us every day"
                             subtitle="The principles that guide our decisions, shape our culture, and define how we build AI for the enterprise."
                         />
                     </AnimatedSection>
@@ -198,13 +192,13 @@ export default function AboutPage() {
                         {values.map((value, i) => (
                             <AnimatedSection key={value.title} delay={i * 0.1}>
                                 <Card className="h-full">
-                                    <div className="w-12 h-12 rounded-xl bg-ad-accent/10 border border-ad-accent/20 flex items-center justify-center mb-5">
-                                        <value.icon size={22} className="text-ad-accent" />
+                                    <div className="w-12 h-12 rounded-xl bg-sky-blue/10 border border-sky-blue/20 flex items-center justify-center mb-5">
+                                        <value.icon size={22} className="text-sky-blue" />
                                     </div>
                                     <h3 className="text-lg font-semibold text-white mb-3">
                                         {value.title}
                                     </h3>
-                                    <p className="text-sm text-ad-muted-text leading-relaxed">
+                                    <p className="text-sm text-light-blue leading-relaxed">
                                         {value.description}
                                     </p>
                                 </Card>
@@ -219,8 +213,8 @@ export default function AboutPage() {
                 <Container>
                     <AnimatedSection>
                         <SectionHeading
-                            badge="Our Team"
-                            title="Meet the people behind <span class='text-gradient'>Adray</span>"
+                            tag="Our Team"
+                            title="Meet the people behind Adray"
                             subtitle="A world-class team from Google, OpenAI, Salesforce, AWS, DeepMind, and more."
                         />
                     </AnimatedSection>
@@ -228,14 +222,14 @@ export default function AboutPage() {
                         {team.map((member, i) => (
                             <AnimatedSection key={member.name} delay={i * 0.1}>
                                 <Card className="text-center">
-                                    <div className="w-20 h-20 rounded-full bg-ad-deep mx-auto flex items-center justify-center text-ad-primary text-xl font-bold mb-4">
+                                    <div className="w-20 h-20 rounded-full bg-dark-blue mx-auto flex items-center justify-center text-white-90 text-xl font-bold mb-4">
                                         {member.initials}
                                     </div>
                                     <h3 className="text-lg font-semibold text-white">
                                         {member.name}
                                     </h3>
-                                    <p className="text-ad-accent text-sm mt-1">{member.role}</p>
-                                    <p className="text-ad-muted-text text-sm mt-3">
+                                    <p className="text-sky-blue text-sm mt-1">{member.role}</p>
+                                    <p className="text-light-blue text-sm mt-3">
                                         {member.bio}
                                     </p>
                                 </Card>
