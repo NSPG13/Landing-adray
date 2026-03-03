@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Container from "@/components/ui/Container";
 import Badge from "@/components/ui/Badge";
 import Button from "@/components/ui/Button";
+import BlurRevealText from "@/components/ui/BlurRevealText";
 
 const partnerLogos = [
     "https://framerusercontent.com/images/eTOvR4ZuGGQENAaE3zs5ZqZxtks.png",
@@ -14,39 +15,6 @@ const partnerLogos = [
     "https://framerusercontent.com/images/WzG2yfwdF7vdqrjvFu4j7tyJ3Gs.png",
     "https://framerusercontent.com/images/FkPCvWLJEloyx0AnJETPfPfMx4.png",
 ];
-
-// Split text into characters, preserving spaces
-function BlurRevealText({
-    text,
-    className,
-    startDelay = 0,
-}: {
-    text: string;
-    className?: string;
-    startDelay?: number;
-}) {
-    const chars = text.split("");
-    return (
-        <span className={className}>
-            {chars.map((char, i) => (
-                <motion.span
-                    key={i}
-                    className="inline-block"
-                    style={{ whiteSpace: char === " " ? "pre" : undefined }}
-                    initial={{ opacity: 0.001, filter: "blur(10px)", y: 10 }}
-                    animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
-                    transition={{
-                        duration: 0.4,
-                        delay: startDelay + i * 0.025,
-                        ease: [0.21, 0.47, 0.32, 0.98],
-                    }}
-                >
-                    {char === " " ? "\u00A0" : char}
-                </motion.span>
-            ))}
-        </span>
-    );
-}
 
 export default function Hero() {
     return (

@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
-import AnimatedSection from "@/components/ui/AnimatedSection";
+import BlurRevealText from "@/components/ui/BlurRevealText";
 
 const footerLinks = {
     Navigation: [
@@ -17,7 +17,7 @@ const footerLinks = {
         { label: "Blogs", href: "/blog" },
         { label: "Changelog", href: "/changelog" },
         { label: "Privacy Policy", href: "/privacy-policy" },
-        { label: "Terms and Conditions", href: "/privacy-policy" },
+        { label: "Terms and Conditions", href: "/privacy-policy/terms-and-conditions" },
     ],
     "Other Pages": [
         { label: "Launching Soon", href: "/launching-soon" },
@@ -51,11 +51,11 @@ export default function Footer() {
                 />
 
                 <Container className="relative z-10 text-center">
-                    <AnimatedSection>
+                    <div>
                         <h2 className="t-h2 text-white-100 mb-6">
-                            Step Into Adray
+                            <BlurRevealText text="Step Into Adray" triggerOnScroll startDelay={0} />
                             <br />
-                            The Future of Intelligent Agents
+                            <BlurRevealText text="The Future of Intelligent Agents" triggerOnScroll startDelay={0.4} />
                         </h2>
                         <p className="t-p-lg text-light-blue max-w-xl mx-auto mb-10">
                             Everything your team needs, in one simple workspace. Stay focused,
@@ -64,28 +64,28 @@ export default function Footer() {
                         <Button variant="primary" size="lg" href="/pricing">
                             Get Started
                         </Button>
-                    </AnimatedSection>
+                    </div>
 
-                    {/* Large logo display */}
+                    {/* Large wordmark display */}
                     <div className="mt-20 flex items-center justify-center gap-8">
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img
-                            src="https://framerusercontent.com/images/9KnJwOszoExl1mcOPudDLQaGg.svg"
-                            alt=""
-                            className="h-8 md:h-10 w-auto opacity-20"
-                        />
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img
-                            src="https://framerusercontent.com/images/9KnJwOszoExl1mcOPudDLQaGg.svg"
-                            alt="Adray"
-                            className="h-12 md:h-16 w-auto"
-                        />
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img
-                            src="https://framerusercontent.com/images/9KnJwOszoExl1mcOPudDLQaGg.svg"
-                            alt=""
-                            className="h-8 md:h-10 w-auto opacity-20"
-                        />
+                        <span
+                            className="text-[32px] md:text-[40px] font-bold tracking-[-0.02em] text-white-100 opacity-20 select-none"
+                            style={{ fontFamily: '"Inter Display", Inter, sans-serif' }}
+                        >
+                            ADRAY
+                        </span>
+                        <span
+                            className="text-[48px] md:text-[64px] font-bold tracking-[-0.02em] text-white-100 select-none"
+                            style={{ fontFamily: '"Inter Display", Inter, sans-serif' }}
+                        >
+                            ADRAY
+                        </span>
+                        <span
+                            className="text-[32px] md:text-[40px] font-bold tracking-[-0.02em] text-white-100 opacity-20 select-none"
+                            style={{ fontFamily: '"Inter Display", Inter, sans-serif' }}
+                        >
+                            ADRAY
+                        </span>
                     </div>
                 </Container>
             </div>
