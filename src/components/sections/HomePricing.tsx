@@ -69,7 +69,7 @@ export default function HomePricing() {
     };
 
     return (
-        <section className="py-24 relative">
+        <section className="py-20 relative">
             <Container>
                 <AnimatedSection>
                     <SectionHeading

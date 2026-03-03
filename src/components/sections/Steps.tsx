@@ -105,7 +105,7 @@ export default function Steps() {
     const beamX = useTransform(scrollYProgress, [0, 1], ["-100%", "200%"]);
 
     return (
-        <section className="py-24 relative" ref={sectionRef}>
+        <section className="py-20 relative" ref={sectionRef}>
             <Container>
                 <AnimatedSection>
                     <SectionHeading

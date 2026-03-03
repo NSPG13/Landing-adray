@@ -40,7 +40,7 @@ const cards = [
 
 export default function Exceptionalities() {
     return (
-        <section className="py-24 relative">
+        <section className="py-20 relative">
             <Container>
                 <AnimatedSection>
                     <SectionHeading

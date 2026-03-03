@@ -18,7 +18,7 @@ const partnerLogos = [
 
 export default function Hero() {
     return (
-        <section className="relative min-h-screen flex flex-col overflow-hidden pt-24 bg-black-100">
+        <section className="relative min-h-screen flex flex-col overflow-hidden pt-40 bg-black-100">
             {/* Background video */}
             <video
                 autoPlay

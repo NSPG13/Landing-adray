@@ -17,7 +17,7 @@ const integrationIcons = [
 
 export default function HomeIntegration() {
     return (
-        <section className="py-24 relative overflow-hidden">
+        <section className="py-20 relative overflow-hidden">
             {/* Background masking gradient */}
             <div
                 className="absolute inset-0 opacity-40 pointer-events-none"

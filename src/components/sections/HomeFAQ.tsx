@@ -78,7 +78,7 @@ function AccordionItem({ q, a }: { q: string; a: string }) {
 
 export default function HomeFAQ() {
     return (
-        <section className="py-24 relative">
+        <section className="py-20 relative">
             <Container>
                 <AnimatedSection>
                     <SectionHeading

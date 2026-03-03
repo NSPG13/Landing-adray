@@ -22,7 +22,7 @@ export default function HighlightedText() {
     }, []);
 
     return (
-        <section className="py-24 md:py-32 relative">
+        <section className="py-20 relative">
             <Container className="flex flex-col lg:flex-row items-center gap-16">
                 {/* Text — scroll-animated color */}
                 <div className="flex-1">

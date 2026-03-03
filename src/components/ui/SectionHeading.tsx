@@ -21,22 +21,20 @@ export default function SectionHeading({
     return (
         <div
             className={cn(
-                "max-w-3xl mb-12 md:mb-16",
+                "max-w-3xl mb-20",
                 align === "center" && "mx-auto text-center",
                 className
             )}
         >
             {tag && (
-                <div className={cn(
-                    "flex items-center gap-3 mb-6",
-                    align === "center" && "justify-center"
-                )}>
+                <div className="flex items-center gap-3 mb-6 w-full">
                     {tagIcon && (
-                        <span className="w-6 h-6 text-light-blue flex-shrink-0">{tagIcon}</span>
+                        <span className="w-6 h-6 text-tag-blue flex-shrink-0 opacity-80">{tagIcon}</span>
                     )}
-                    <span className="t-p-sm uppercase tracking-widest text-light-blue">
+                    <span className="t-p-sm uppercase tracking-widest text-tag-blue">
                         {tag}
                     </span>
+                    <div className="tag-line" />
                 </div>
             )}
             <h2
@@ -44,7 +42,7 @@ export default function SectionHeading({
                 dangerouslySetInnerHTML={{ __html: title }}
             />
             {subtitle && (
-                <p className="mt-4 t-p-lg text-light-blue">
+                <p className="mt-4 t-p-lg text-subtitle-blue">
                     {subtitle}
                 </p>
             )}

@@ -64,7 +64,7 @@ export default function FeaturesTabs() {
     const current = tabs[activeTab];
 
     return (
-        <section className="py-24 relative">
+        <section className="py-20 relative">
             <Container>
                 <AnimatedSection>
                     <SectionHeading

@@ -80,7 +80,7 @@ function TestimonialCard({
 
 export default function Testimonials() {
     return (
-        <section className="py-24 relative overflow-hidden">
+        <section className="py-20 relative overflow-hidden">
             {/* Background gradient */}
             <div
                 className="absolute inset-0 opacity-30"
