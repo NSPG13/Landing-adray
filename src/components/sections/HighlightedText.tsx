@@ -31,8 +31,8 @@ export default function HighlightedText() {
                         colorStart="#3E286F"
                         colorEnd="#FFFFFF"
                         trigger="layer-in-view"
-                        animationStart="bottom"
-                        animationEnd="center"
+                        animationStart="center"
+                        animationEnd="bottom"
                         className="t-h3-lg tracking-[-0.03em]"
                         style={{ fontFamily: '"Inter Display", var(--font-inter), Inter, sans-serif' }}
                     />
