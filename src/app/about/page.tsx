@@ -6,38 +6,39 @@ import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import Button from "@/components/ui/Button";
+import BlurRevealText from "@/components/ui/BlurRevealText";
 
 /* ── Data ── */
 const values = [
     {
-        title: "Pioneering",
+        title: "Pioneering Smarter Enterprise Solutions",
         description:
-            "We lead with bold ideas, constantly pushing the boundaries of what AI can achieve for businesses worldwide.",
-        icon: "https://framerusercontent.com/images/oy9JJgqQoJmcnZPSNiNcPKB5Ig.svg",
+            "We push the boundaries of AI to create smarter, faster, and more efficient enterprise solutions.",
+        gradient: "https://framerusercontent.com/images/SEwIHyt9NYJZFvnl5EfirpMYVE.png",
     },
     {
-        title: "Trust",
+        title: "Driven by Trust and Transparency",
         description:
-            "Enterprise-grade security, transparency, and reliability are at the core of every solution we build.",
-        icon: "https://framerusercontent.com/images/hkm6Dj8bW8kfsHv25c6tUxDVgU.svg",
+            "We act with honesty, transparency, and accountability, ensuring reliability and excellence.",
+        gradient: "https://framerusercontent.com/images/Jecsu2g820ZvCsU3axIprDjA.png",
     },
     {
-        title: "Measurable Results",
+        title: "Delivering Measurable Business Results",
         description:
-            "We're relentlessly focused on outcomes — delivering AI that drives real, visible business impact every day.",
-        icon: "https://framerusercontent.com/images/DejHPVR2dB07F59rWuIeqnZs6HI.svg",
+            "Our AI Agents deliver measurable, lasting results that transform the way businesses operate and grow.",
+        gradient: "https://framerusercontent.com/images/YeudDKQ2dKYEjVeYoqqOI1QRgY.png",
     },
 ];
 
 const team = [
-    { name: "Ethan Cole", role: "Chief Executive Officer", img: "https://framerusercontent.com/images/RYXfuWpH8clmHYjvLSVy1QMaQ.jpg" },
-    { name: "Sofia Andersson", role: "Chief Technology Officer", img: "https://framerusercontent.com/images/08xexKu3Y8knIVLxlLMGJuWpRkI.jpg" },
-    { name: "Aisha Patel", role: "VP of Product", img: "https://framerusercontent.com/images/9FJK2lqlHHbzsBwxAzHrODwbCwI.jpg" },
-    { name: "James Nakamura", role: "VP of Engineering", img: "https://framerusercontent.com/images/NJ6WPKrK1bpNDJfkVB4ORRgew.jpg" },
-    { name: "Clara Müller", role: "Chief Data Officer", img: "https://framerusercontent.com/images/kVLdvblJpIBamNGTqaqvUz2R8.jpg" },
-    { name: "Daniel Osei", role: "Head of AI Research", img: "https://framerusercontent.com/images/cw9h4eAEchcVyL5APDU8oi1kw.jpg" },
-    { name: "Lena Kowalski", role: "Chief Marketing Officer", img: "https://framerusercontent.com/images/01DcF8MIoxYPYxBg8DFSKi8EiU.jpg" },
-    { name: "Marco Ferreira", role: "Chief Revenue Officer", img: "https://framerusercontent.com/images/tFWnBsLBbSHWH4rCgP5l2SSHBY.jpg" },
+    { name: "Ethan Cole", role: "CEO", img: "https://framerusercontent.com/images/0RzulRwff33IEQYq44WadnRO9w.png" },
+    { name: "Sofia Andersson", role: "CTO", img: "https://framerusercontent.com/images/pogDSBBcXE1ARRGZ4ymWiMN9k3s.png" },
+    { name: "Liam Johnson", role: "Head of Design", img: "https://framerusercontent.com/images/zH9OJGqbKlLQPDJpmS5CTGnk3U.png" },
+    { name: "Noah Fischer", role: "Lead AI Engineer", img: "https://framerusercontent.com/images/AFl7pP4fZDdOrB3xrVWc5X5Fq8.png" },
+    { name: "Ava Mitchell", role: "Marketing", img: "https://framerusercontent.com/images/hcKl6XFv59NYLhRNg4S5hDt8Lpc.png" },
+    { name: "Lucas Meyer", role: "Senior Developer", img: "https://framerusercontent.com/images/GLqOvHvSsnYGyLNRwMTRwaoSPI.png" },
+    { name: "Benjamin Scott", role: "Backend Architect", img: "https://framerusercontent.com/images/IvWc2PsMQE78uKKsltwGy1fMBRY.png" },
+    { name: "Oliver Novak", role: "Operations & Partnerships", img: "https://framerusercontent.com/images/Ls5ITWuivoY17COVCArif8vmQU.png" },
 ];
 
 const ease = [0.21, 0.47, 0.32, 0.98] as const;
@@ -47,47 +48,76 @@ export default function AboutPage() {
         <>
             {/* ── Hero ── */}
             <section className="relative pt-40 pb-20 overflow-hidden">
+                {/* Gradient bg */}
                 <div
-                    className="absolute inset-0 opacity-30"
+                    className="absolute inset-0 pointer-events-none"
                     style={{
                         backgroundImage:
-                            "url(https://framerusercontent.com/images/3ez5Goty6KdEzujpWDVyu8Um6Ns.webp)",
+                            "url(https://framerusercontent.com/images/H3Q7Up1GD9JyEYygvN5U7fWpqYQ.webp)",
                         backgroundSize: "cover",
-                        backgroundPosition: "center",
-                        maskImage:
-                            "linear-gradient(to bottom, transparent, black 30%, black 70%, transparent)",
-                        WebkitMaskImage:
-                            "linear-gradient(to bottom, transparent, black 30%, black 70%, transparent)",
+                        backgroundPosition: "center top",
+                        opacity: 0.5,
                     }}
                 />
-                <Container className="relative z-10 text-center">
-                    <motion.p
-                        className="t-p-sm uppercase tracking-widest text-ad-tag mb-4"
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, ease }}
-                    >
-                        ABOUT US
-                    </motion.p>
+                <Container className="relative z-10">
+                    <div className="flex items-center gap-3 mb-6">
+                        <img
+                            src="https://framerusercontent.com/images/eWJcm0cKj3Rsxetaz4suNQKuW8o.svg"
+                            alt=""
+                            width={24}
+                            height={24}
+                            className="opacity-80"
+                        />
+                        <span className="t-p-sm uppercase tracking-widest text-ad-tag">
+                            ABOUT
+                        </span>
+                        <div className="tag-line" />
+                    </div>
+
                     <motion.h1
                         className="t-h1 text-white-100 mb-6"
                         initial={{ opacity: 0, y: 40 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.1, ease }}
                     >
-                        Shaping the Future
-                        <br />
-                        of Enterprise
+                        <BlurRevealText text="Shaping the Future of Enterprise" startDelay={0.15} />
                     </motion.h1>
                     <motion.p
-                        className="t-p-lg text-ad-subtitle max-w-2xl mx-auto"
+                        className="t-p-lg text-ad-subtitle max-w-2xl mb-12"
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.7, delay: 0.25, ease }}
                     >
-                        We believe AI should be more than a tool — it should be a partner in
-                        transforming how enterprises operate, innovate, and grow.
+                        Connect any app or system pre-built or custom with ease and flexibility.
                     </motion.p>
+
+                    {/* Hero image */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 40 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.35, ease }}
+                    >
+                        <img
+                            src="https://framerusercontent.com/images/QideC8FgAh77VffdlgsnsQ7AarU.png"
+                            alt="Adray Dashboard"
+                            className="w-full h-auto rounded-2xl"
+                            style={{ aspectRatio: "3336/1577" }}
+                        />
+                    </motion.div>
+                </Container>
+            </section>
+
+            {/* ── Mission scroll text ── */}
+            <section className="py-20 relative">
+                <Container className="max-w-4xl">
+                    <AnimatedSection>
+                        <p className="text-[clamp(1.25rem,2.5vw,1.75rem)] font-medium leading-relaxed text-white-90 text-center">
+                            At Adray, we build intelligent AI Agents that empower businesses
+                            to work smarter, faster, and more efficiently. Our mission is to
+                            transform enterprise workflows, service, and processes through
+                            innovation, collaboration, and cutting-edge AI technology.
+                        </p>
+                    </AnimatedSection>
                 </Container>
             </section>
 
@@ -99,28 +129,35 @@ export default function AboutPage() {
                             tag="OUR VALUES"
                             tagIcon={
                                 <img
-                                    src="https://framerusercontent.com/images/3UovOTKirX07vhyWYJGSliEt1E4.svg"
+                                    src="https://framerusercontent.com/images/eS5b9sHb3EsbFgcgHgtjc8FZ1Y.svg"
                                     alt=""
                                     width={24}
                                     height={24}
                                 />
                             }
-                            title="What Drives Us Forward"
-                            subtitle="Our core values shape every product decision, every AI model, and every enterprise partnership we forge."
+                            title="We are committed"
+                            subtitle="Driven by innovation, integrity, and impact in every solution we build."
                         />
                     </AnimatedSection>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         {values.map((v, i) => (
                             <AnimatedSection key={v.title} delay={i * 0.12}>
-                                <div className="card p-8 h-full flex flex-col items-start">
-                                    <div className="w-12 h-12 rounded-2xl bg-white-7 border border-ad-border flex items-center justify-center mb-6">
-                                        <img src={v.icon} alt="" width={24} height={24} />
+                                <div className="card relative overflow-hidden h-full flex flex-col">
+                                    <img
+                                        src={v.gradient}
+                                        alt=""
+                                        className="absolute inset-0 w-full h-full object-cover opacity-50 pointer-events-none"
+                                    />
+                                    <div className="relative z-10 p-8 flex flex-col h-full">
+                                        <span className="t-p-sm text-ad-tag uppercase tracking-widest mb-4">
+                                            {String(i + 1).padStart(2, "0")}
+                                        </span>
+                                        <h3 className="t-h4 text-white-100 mb-3">{v.title}</h3>
+                                        <p className="t-p-sm text-ad-muted leading-relaxed mt-auto">
+                                            {v.description}
+                                        </p>
                                     </div>
-                                    <h3 className="t-h4 text-white-100 mb-3">{v.title}</h3>
-                                    <p className="t-p-sm text-ad-muted leading-relaxed">
-                                        {v.description}
-                                    </p>
                                 </div>
                             </AnimatedSection>
                         ))}
@@ -132,25 +169,39 @@ export default function AboutPage() {
             <section className="py-20 relative">
                 <Container>
                     <AnimatedSection>
-                        <div className="card p-10 md:p-16 flex flex-col items-center text-center max-w-3xl mx-auto">
-                            <img
-                                src="https://framerusercontent.com/images/3UovOTKirX07vhyWYJGSliEt1E4.svg"
-                                alt=""
-                                width={32}
-                                height={32}
-                                className="mb-6 opacity-60"
-                            />
-                            <blockquote className="t-p-lg text-white-90 italic leading-relaxed mb-8">
-                                &ldquo;Our mission is to build intelligent systems that don&apos;t
-                                just automate tasks, but fundamentally elevate how enterprises
-                                think, decide, and grow.&rdquo;
-                            </blockquote>
-                            <div>
-                                <p className="t-p-semibold text-white-100">Ethan Cole</p>
-                                <p className="t-p-sm text-ad-muted">
-                                    Founder &amp; CEO, Adray
-                                </p>
+                        <SectionHeading
+                            tag="OUR FOUNDER"
+                            tagIcon={
+                                <img
+                                    src="https://framerusercontent.com/images/JkTqK8jhgMOxUyl4OCizgeYU.svg"
+                                    alt=""
+                                    width={24}
+                                    height={24}
+                                />
+                            }
+                            title="From the Founder"
+                            subtitle="Vision, innovation, and a commitment to transforming enterprise with AI."
+                        />
+                    </AnimatedSection>
+
+                    <AnimatedSection delay={0.15}>
+                        <div className="grid grid-cols-1 md:grid-cols-[1fr_1.2fr] gap-10 items-center">
+                            <div className="rounded-3xl overflow-hidden">
+                                <img
+                                    src="https://framerusercontent.com/images/80PNQ5gECTFURxvZw2l9ozs7c.webp"
+                                    alt="Founder"
+                                    className="w-full h-auto object-cover"
+                                    style={{ aspectRatio: "1202/1487" }}
+                                />
                             </div>
+                            <blockquote className="t-p-lg text-white-90 italic leading-relaxed">
+                                &ldquo;When we started Adray, our goal was simple — to create AI
+                                Agents that truly empower businesses. Every innovation, every
+                                solution we build is designed to make enterprises smarter, faster,
+                                and more effective. Our mission is not just to automate, but to
+                                redefine how work, service, and processes are done at scale. I
+                                invite you to join us on this journey of transformation.&rdquo;
+                            </blockquote>
                         </div>
                     </AnimatedSection>
                 </Container>
@@ -158,20 +209,30 @@ export default function AboutPage() {
 
             {/* ── Meet the Team (Pillars) ── */}
             <section className="py-20 relative">
-                <Container>
+                {/* Background gradient */}
+                <div
+                    className="absolute inset-0 pointer-events-none opacity-30"
+                    style={{
+                        backgroundImage:
+                            "url(https://framerusercontent.com/images/PEUUUxYckhxt8G82fn4Y0LPz5s.png)",
+                        backgroundSize: "cover",
+                        backgroundPosition: "center",
+                    }}
+                />
+                <Container className="relative z-10">
                     <AnimatedSection>
                         <SectionHeading
                             tag="PILLARS"
                             tagIcon={
                                 <img
-                                    src="https://framerusercontent.com/images/oy9JJgqQoJmcnZPSNiNcPKB5Ig.svg"
+                                    src="https://framerusercontent.com/images/QauTQfLJbX1ivAkVbcLLwuMoHQ.svg"
                                     alt=""
                                     width={24}
                                     height={24}
                                 />
                             }
                             title="Meet the Adray Minds"
-                            subtitle="The visionaries, builders, and innovators behind the AI enterprise platform."
+                            subtitle="Experts in AI and enterprise innovation, shaping the future of business."
                         />
                     </AnimatedSection>
 
@@ -202,20 +263,65 @@ export default function AboutPage() {
                 </Container>
             </section>
 
-            {/* ── Join Us CTA ── */}
+            {/* ── Join Us ── */}
             <section className="py-20 relative">
-                <Container className="text-center">
+                <Container>
                     <AnimatedSection>
-                        <h2 className="t-h2 text-white-100 mb-4">
-                            Join the Future of Enterprise AI
-                        </h2>
-                        <p className="t-p-lg text-ad-subtitle max-w-xl mx-auto mb-10">
-                            We&apos;re always looking for brilliant minds to join our team.
-                            Explore careers at Adray.
-                        </p>
-                        <Button variant="primary" size="lg" href="/contact">
-                            Get in Touch
-                        </Button>
+                        <SectionHeading
+                            tag="JOIN US"
+                            tagIcon={
+                                <img
+                                    src="https://framerusercontent.com/images/3UiRUIAjek5XnV6oCtR4F5HwgOU.svg"
+                                    alt=""
+                                    width={24}
+                                    height={24}
+                                />
+                            }
+                            title="Join us as we build tomorrow&rsquo;s enterprise."
+                            subtitle="Be a part of a company that is reimagining the future of business, building AI Agents that are effective and impactful for large enterprises. At Adray, you'll collaborate with some of the brightest minds in AI, driving innovation at scale."
+                        />
+                    </AnimatedSection>
+
+                    <AnimatedSection delay={0.15}>
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+                            <div className="rounded-2xl overflow-hidden row-span-1">
+                                <img
+                                    src="https://framerusercontent.com/images/Jp1l6nfzIznnFpz8xA77dr6ShY.jpg"
+                                    alt=""
+                                    className="w-full h-full object-cover"
+                                />
+                            </div>
+                            <div className="rounded-2xl overflow-hidden">
+                                <img
+                                    src="https://framerusercontent.com/images/G2e7HlhrS4QOvLT8fLk72DmOr5A.webp"
+                                    alt=""
+                                    className="w-full h-full object-cover"
+                                />
+                            </div>
+                            <div className="rounded-2xl overflow-hidden">
+                                <img
+                                    src="https://framerusercontent.com/images/oXO7T72nyamuKTgGVuI0pWw26Ns.webp"
+                                    alt=""
+                                    className="w-full h-full object-cover"
+                                />
+                            </div>
+                            <div className="rounded-2xl overflow-hidden">
+                                <img
+                                    src="https://framerusercontent.com/images/j31VAapLRCe7cdp82p8kZi7nBS8.png"
+                                    alt=""
+                                    className="w-full h-full object-cover"
+                                />
+                            </div>
+                        </div>
+                        <div className="text-center">
+                            <Button
+                                variant="primary"
+                                size="lg"
+                                href="https://www.linkedin.com/jobs/"
+                            >
+                                Join Our Team
+                            </Button>
+                        </div>
                     </AnimatedSection>
                 </Container>
             </section>

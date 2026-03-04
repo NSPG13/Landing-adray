@@ -66,38 +66,54 @@ interface ComparisonRow {
 }
 
 const essentialFeatures: ComparisonRow[] = [
-    { feature: "Track keywords", basic: true, standard: true, enterprise: true },
-    { feature: "Weekly ranking", basic: true, standard: true, enterprise: true },
-    { feature: "Basic reporting", basic: true, standard: true, enterprise: true },
+    { feature: "Track up to 100 keywords", basic: true, standard: true, enterprise: true },
+    { feature: "Weekly ranking updates", basic: true, standard: true, enterprise: true },
+    { feature: "Basic reporting and alerts", basic: false, standard: true, enterprise: true },
     { feature: "AI lead generation", basic: false, standard: true, enterprise: true },
-    { feature: "Real-time ranking", basic: false, standard: false, enterprise: true },
+    { feature: "Real-time ranking updates", basic: false, standard: true, enterprise: true },
 ];
 
 const advancedFeatures: ComparisonRow[] = [
-    { feature: "Competitor analysis", basic: "5", standard: "20", enterprise: "100" },
-    { feature: "Customize interface", basic: false, standard: true, enterprise: true },
-    { feature: "24/7 support", basic: false, standard: true, enterprise: true },
-    { feature: "Full API access", basic: false, standard: false, enterprise: true },
-    { feature: "White-label reporting", basic: false, standard: false, enterprise: true },
+    { feature: "Competitor analysis for", basic: "5", standard: "20", enterprise: "100" },
+    { feature: "Customize interface", basic: true, standard: true, enterprise: true },
+    { feature: "24/7 priority support", basic: false, standard: true, enterprise: true },
+    { feature: "Full API access", basic: false, standard: true, enterprise: true },
+    { feature: "White-label reporting", basic: false, standard: true, enterprise: true },
 ];
 
 /* ── FAQ ── */
 const faqs = [
     {
-        q: "Can I switch plans later?",
-        a: "Yes, you can upgrade or downgrade your plan at any time. Changes take effect at the start of the next billing cycle.",
+        q: "What is Adray?",
+        a: "Adray is an AI-powered enterprise platform that deploys intelligent agents to automate workflows, enhance customer service, and drive business growth across your organization.",
     },
     {
-        q: "Do you offer a free trial?",
-        a: "We offer a 14-day free trial on our Sonic and Supersonic plans, with full access to all features. No credit card required to start.",
+        q: "How are AI Agents different from automation tools?",
+        a: "Unlike traditional automation tools that follow rigid rules, Adray\u2019s AI Agents learn, adapt, and make intelligent decisions. They understand context, handle complex scenarios, and improve over time \u2014 going far beyond simple if-then workflows.",
     },
     {
-        q: "What payment methods do you accept?",
-        a: "We accept all major credit cards, wire transfers, and invoicing for enterprise accounts.",
+        q: "Can Adray integrate with our existing systems?",
+        a: "Yes. Adray supports 200+ integrations out of the box, including Salesforce, SAP, Slack, HubSpot, SharePoint, and more. Custom API connectors are also available on Supersonic and HyperSonic plans.",
     },
     {
-        q: "Is there a setup fee?",
-        a: "No. There are no setup fees for any of our plans. You only pay your subscription cost.",
+        q: "Is Adray secure for enterprise use?",
+        a: "Absolutely. Adray is SOC 2 Type II certified, GDPR compliant, and supports HIPAA for healthcare customers. All data is encrypted at rest and in transit with enterprise-grade security protocols.",
+    },
+    {
+        q: "How quickly can Adray be implemented?",
+        a: "Most teams are up and running within days. Our guided onboarding, pre-built templates, and dedicated support team ensure a smooth and fast deployment \u2014 no complex setup required.",
+    },
+    {
+        q: "Can AI Agents replace human employees?",
+        a: "Adray\u2019s AI Agents are designed to augment your team, not replace them. They handle repetitive, time-consuming tasks so your people can focus on strategic, high-value work.",
+    },
+    {
+        q: "How does Adray improve customer service?",
+        a: "AI Agents resolve customer queries instantly and accurately, 24/7. They understand intent, access knowledge bases, and escalate complex issues to human agents seamlessly \u2014 improving satisfaction and response times.",
+    },
+    {
+        q: "Is Adray scalable for global operations?",
+        a: "Yes. Adray is built for enterprise scale \u2014 supporting multi-region deployments, multilingual agents, unlimited workflows, and thousands of concurrent AI actions with guaranteed uptime SLAs.",
     },
 ];
 
@@ -163,7 +179,7 @@ export default function PricingPage() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.1, ease }}
                     >
-                        Flexible Plans for Every
+                        Flexible Plans for Every Enterprise
                     </motion.h1>
                     <motion.p
                         className="t-p-lg text-ad-subtitle max-w-2xl mx-auto"
@@ -171,7 +187,7 @@ export default function PricingPage() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.7, delay: 0.25, ease }}
                     >
-                        Choose the plan that fits your team and scales with your business.
+                        From startups to global enterprises, Adray offers AI-powered solutions.
                     </motion.p>
                 </Container>
             </section>
@@ -179,6 +195,21 @@ export default function PricingPage() {
             {/* ── Toggle + Cards ── */}
             <section className="py-10 relative">
                 <Container>
+                    <AnimatedSection>
+                        <SectionHeading
+                            tag="PLANS"
+                            title=""
+                            tagIcon={
+                                <img
+                                    src="https://framerusercontent.com/images/jQJ8TgGax14f2upuHQKSjpr1jmg.svg"
+                                    alt=""
+                                    width={24}
+                                    height={24}
+                                />
+                            }
+                        />
+                    </AnimatedSection>
+
                     {/* Toggle */}
                     <div className="flex items-center justify-center mb-12">
                         <div
@@ -281,14 +312,14 @@ export default function PricingPage() {
                             tag="COMPARISON"
                             tagIcon={
                                 <img
-                                    src="https://framerusercontent.com/images/DejHPVR2dB07F59rWuIeqnZs6HI.svg"
+                                    src="https://framerusercontent.com/images/X5M3y8eb51ZE3hAx5kOkcLqc83U.svg"
                                     alt=""
                                     width={24}
                                     height={24}
                                 />
                             }
                             title="Choose Smarter Plans"
-                            subtitle="Compare features across plans to find the perfect fit for your team."
+                            subtitle="See what each plan offers and find the perfect fit for you."
                         />
                     </AnimatedSection>
 
@@ -362,8 +393,8 @@ export default function PricingPage() {
                                     height={24}
                                 />
                             }
-                            title="Pricing Questions?"
-                            subtitle="Quick answers to common billing and plan questions."
+                            title="Frequently Asked Questions"
+                            subtitle="Quick answers to help you get started with Adray."
                         />
                     </AnimatedSection>
 

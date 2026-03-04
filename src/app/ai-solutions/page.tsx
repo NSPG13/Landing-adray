@@ -3,37 +3,34 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 import Container from "@/components/ui/Container";
 import AnimatedSection from "@/components/ui/AnimatedSection";
+import BlurRevealText from "@/components/ui/BlurRevealText";
 
 const solutions = [
     {
         title: "AI for Work",
+        description: "Search silos, automate workflows, and govern confidently.",
         headline: "Productivity at scale",
-        description:
-            "Empower your workforce with intelligent automation that adapts, learns, and accelerates execution across every department.",
-        tags: ["Smart Scheduling", "Task Automation", "Knowledge Search", "Meeting Insights"],
+        features: ["Enterprise Search", "AI Agent Builder", "Intelligent Orchestrator", "Admin Controls"],
         href: "/ai-solutions/ai-for-work",
-        image: "https://framerusercontent.com/images/XXSw2JqvtikgOcaexTTozzVsO54.webp",
+        gradient: "https://framerusercontent.com/images/ixSlHBj93cQxMvRKBPxUGuiwRE.png",
     },
     {
         title: "AI for Service",
+        description: "Leverage AI agents to empower customers and personalize.",
         headline: "Redefine the CX",
-        description:
-            "Deliver instant, intelligent, and empathetic customer experiences with AI agents that understand context and resolve issues 24/7.",
-        tags: ["Smart Routing", "Sentiment Analysis", "Real-Time Resolve", "Omnichannel"],
+        features: ["Agentic Contact Center", "Agent AI Assistance", "Quality Assurance", "Outbound Campaigns"],
         href: "/ai-solutions/ai-for-service",
-        image: "https://framerusercontent.com/images/4fEwCxLuKCW6ZaczMzoeCElmzBg.webp",
+        gradient: "https://framerusercontent.com/images/pSxYz80kLUKNMKdnW99z0alJYJ0.png",
     },
     {
         title: "AI for Process",
+        description: "Simplify complex business processes with autonomous AI agents.",
         headline: "Process Intelligence",
-        description:
-            "Unlock end-to-end visibility across complex workflows. Detect bottlenecks, predict failures, and drive continuous improvement with AI.",
-        tags: ["Workflow Mining", "Anomaly Detection", "Auto-Optimize", "Compliance"],
+        features: ["Process automation", "AI analytics + monitoring", "Pre-built process templates", "Seamless System Integration"],
         href: "/ai-solutions/ai-for-process",
-        image: "https://framerusercontent.com/images/K53jEm1inmwk6lcSyDVU5W7rvLM.webp",
+        gradient: "https://framerusercontent.com/images/yxLTC9cANtOH1hhf7cA7mlRT8.png",
     },
 ];
 
@@ -45,36 +42,37 @@ export default function AISolutionsPage() {
             {/* ── Hero ── */}
             <section className="relative pt-40 pb-20 overflow-hidden">
                 <div
-                    className="absolute inset-0 opacity-30"
+                    className="absolute inset-0 pointer-events-none"
                     style={{
                         backgroundImage:
-                            "url(https://framerusercontent.com/images/3ez5Goty6KdEzujpWDVyu8Um6Ns.webp)",
+                            "url(https://framerusercontent.com/images/H3Q7Up1GD9JyEYygvN5U7fWpqYQ.webp)",
                         backgroundSize: "cover",
-                        backgroundPosition: "center",
-                        maskImage:
-                            "linear-gradient(to bottom, transparent, black 30%, black 70%, transparent)",
-                        WebkitMaskImage:
-                            "linear-gradient(to bottom, transparent, black 30%, black 70%, transparent)",
+                        backgroundPosition: "center top",
+                        opacity: 0.5,
                     }}
                 />
                 <Container className="relative z-10 text-center">
-                    <motion.p
-                        className="t-p-sm uppercase tracking-widest text-ad-tag mb-4"
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
+                    <motion.div
+                        className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white-7 text-white-100 t-p-sm mb-6"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
                         transition={{ duration: 0.6, ease }}
                     >
-                        AI SOLUTIONS
-                    </motion.p>
+                        <img
+                            src="https://framerusercontent.com/images/kSe62iNOdnrgkLKL07t29GUEak.svg"
+                            alt=""
+                            width={24}
+                            height={24}
+                        />
+                        SOLUTIONS
+                    </motion.div>
                     <motion.h1
                         className="t-h1 text-white-100 mb-6"
                         initial={{ opacity: 0, y: 40 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.1, ease }}
                     >
-                        Discover the Power
-                        <br />
-                        of Adray
+                        <BlurRevealText text="Discover the Power of Adray" startDelay={0.15} />
                     </motion.h1>
                     <motion.p
                         className="t-p-lg text-ad-subtitle max-w-2xl mx-auto"
@@ -82,8 +80,7 @@ export default function AISolutionsPage() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.7, delay: 0.25, ease }}
                     >
-                        Purpose-built AI solutions for every layer of your enterprise — from
-                        the people who power it to the processes that drive it.
+                        Explore our suite of AI-driven solutions designed to redefine work.
                     </motion.p>
                 </Container>
             </section>
@@ -94,42 +91,48 @@ export default function AISolutionsPage() {
                     <div className="flex flex-col gap-8">
                         {solutions.map((s, i) => (
                             <AnimatedSection key={s.title} delay={i * 0.12}>
-                                <div className="card relative overflow-hidden rounded-3xl">
-                                    <img
-                                        src={s.image}
-                                        alt=""
-                                        className="absolute inset-0 w-full h-full object-cover opacity-40 pointer-events-none"
-                                    />
-                                    <div className="relative z-10 p-8 md:p-12 flex flex-col md:flex-row md:items-center gap-8">
-                                        <div className="flex-1">
-                                            <p className="t-p-sm text-ad-tag uppercase tracking-widest mb-2">
-                                                {s.title}
-                                            </p>
-                                            <h2 className="t-h2 text-white-100 mb-3">
-                                                {s.headline}
-                                            </h2>
-                                            <p className="t-p text-ad-muted leading-relaxed mb-6 max-w-lg">
-                                                {s.description}
-                                            </p>
-                                            <div className="flex flex-wrap gap-2 mb-6">
-                                                {s.tags.map((tag) => (
-                                                    <span
-                                                        key={tag}
-                                                        className="px-3 py-1 rounded-full text-xs font-medium bg-white-7 text-ad-subtitle border border-ad-border"
-                                                    >
-                                                        {tag}
-                                                    </span>
-                                                ))}
+                                <div className="card overflow-hidden rounded-3xl">
+                                    <div className="p-8 md:p-12">
+                                        {/* Top: title + description + CTA */}
+                                        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6 mb-8">
+                                            <div className="flex-1">
+                                                <h3 className="t-h4 text-white-100 mb-2">
+                                                    {s.title}
+                                                </h3>
+                                                <p className="t-p text-ad-muted leading-relaxed max-w-md">
+                                                    {s.description}
+                                                </p>
                                             </div>
                                             <Link
                                                 href={s.href}
-                                                className="inline-flex items-center gap-2 t-p-sm font-semibold text-ad-primary hover:text-white-100 transition-colors"
+                                                className="inline-flex items-center gap-2 t-p-sm font-semibold text-gradient shrink-0"
                                             >
-                                                Learn More
-                                                <ArrowRight size={16} />
+                                                Learn More →
                                             </Link>
                                         </div>
+
+                                        {/* Features heading + pills */}
+                                        <p className="t-p-sm text-ad-tag uppercase tracking-widest mb-4">
+                                            {s.headline}
+                                        </p>
+                                        <div className="flex flex-wrap gap-2 mb-8">
+                                            {s.features.map((f) => (
+                                                <span
+                                                    key={f}
+                                                    className="px-4 py-2 rounded-full text-sm font-medium bg-white-7 text-ad-subtitle border border-ad-border"
+                                                >
+                                                    {f}
+                                                </span>
+                                            ))}
+                                        </div>
                                     </div>
+
+                                    {/* Bottom gradient image strip */}
+                                    <img
+                                        src={s.gradient}
+                                        alt=""
+                                        className="w-full h-auto"
+                                    />
                                 </div>
                             </AnimatedSection>
                         ))}
