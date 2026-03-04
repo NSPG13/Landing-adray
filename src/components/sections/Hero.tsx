@@ -32,25 +32,25 @@ export default function Hero() {
                     WebkitMask: "linear-gradient(#000 0% 85.6929%, #0000 100%)",
                 }}
             >
-                {/* Layer 0 — video (hue-rotated to purple palette) */}
+                {/* Layer 0 — video (forced into purple monochrome via filter chain) */}
                 <motion.video
                     autoPlay
                     loop
                     muted
                     playsInline
                     className="absolute inset-0 w-full h-full object-cover"
-                    style={{ zIndex: 0, filter: "hue-rotate(70deg) saturate(1.3)" }}
+                    style={{ zIndex: 0, filter: "grayscale(1) sepia(0.8) hue-rotate(230deg) saturate(1.6) brightness(0.75)" }}
                     initial={{ opacity: 0, y: 80, scale: 1.1 }}
                     animate={{ opacity: 1, y: 0, scale: 1 }}
                     transition={{ duration: 1.2, ease }}
                     src="https://pikaso.cdnpk.net/private/production/2290455794/59751519-c5a8-4e4b-b8dd-94ffbfa08aa8-0.mp4?token=exp=1775001600~hmac=946fe13b73c600580de2f6d03194555735d752048382e42b0ebe1dcdf4a376b6"
                 />
-                {/* Layer 0b — purple tint overlay for color accuracy */}
+                {/* Layer 0b — purple tint overlay reinforcing Adray palette */}
                 <div
                     className="absolute inset-0"
                     style={{
                         zIndex: 0,
-                        background: "radial-gradient(ellipse at 50% 60%, rgba(202,138,229,0.15) 0%, rgba(62,40,111,0.1) 50%, transparent 80%)",
+                        background: "radial-gradient(ellipse at 50% 55%, rgba(202,138,229,0.25) 0%, rgba(62,40,111,0.35) 55%, rgba(16,12,18,0.6) 100%)",
                         mixBlendMode: "screen",
                     }}
                 />
