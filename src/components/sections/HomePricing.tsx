@@ -115,7 +115,7 @@ export default function HomePricing() {
                             Yearly
                             <span
                                 className="px-1.5 py-0.5 rounded text-xs font-semibold"
-                                style={{ background: "rgba(34,197,94,0.2)", color: "rgb(34,197,94)" }}
+                                style={{ background: "rgba(62,40,111,0.4)", color: "#CA8AE5" }}
                             >
                                 30%off
                             </span>
