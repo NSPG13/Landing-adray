@@ -1,0 +1,231 @@
+"use client";
+
+import React, { useState } from "react";
+import Container from "@/components/ui/Container";
+import SectionHeading from "@/components/ui/SectionHeading";
+import AnimatedSection from "@/components/ui/AnimatedSection";
+
+/* ── tab data ─────────────────────────────────────────── */
+const tabs = [
+    {
+        label: "Automation",
+        title: "Process Automation",
+        description:
+            "Streamline complex workflows with intelligent AI agents that enhance efficiency, accuracy, and speed across your enterprise.",
+        bullets: [
+            "Automate Tasks — Reduce manual effort",
+            "Optimize Workflows — Boost productivity",
+            "Stay Compliant — Ensure accuracy",
+        ],
+        image:
+            "https://framerusercontent.com/images/7vqU2Ppdy0G0UGP9mrAcNuH6Lo.png",
+    },
+    {
+        label: "Banking",
+        title: "Smart Banking Solutions",
+        description:
+            "Transform financial operations with AI-powered agents that deliver real-time insights, fraud detection, and seamless transactions.",
+        bullets: [
+            "Detect Fraud — Real-time monitoring",
+            "Automate Transactions — Faster processing",
+            "Analyze Data — Actionable insights",
+        ],
+        image:
+            "https://framerusercontent.com/images/7vqU2Ppdy0G0UGP9mrAcNuH6Lo.png",
+    },
+    {
+        label: "Recruitment",
+        title: "Intelligent Recruitment",
+        description:
+            "Find and hire top talent faster with AI agents that screen candidates, match skills, and automate the hiring pipeline.",
+        bullets: [
+            "Screen Candidates — Save hours daily",
+            "Match Skills — Find perfect fits",
+            "Automate Hiring — Speed up onboarding",
+        ],
+        image:
+            "https://framerusercontent.com/images/7vqU2Ppdy0G0UGP9mrAcNuH6Lo.png",
+    },
+];
+
+/* ── product cards ────────────────────────────────────── */
+const products = [
+    {
+        name: "Healthcare",
+        description: "Boost sales with smart automation tools.",
+        icon: "https://framerusercontent.com/images/UhzKcwOlsFcygmiTZBSV1TlJWI.svg",
+    },
+    {
+        name: "Marketing",
+        description: "Optimize campaigns with intelligent automation.",
+        icon: "https://framerusercontent.com/images/xjQCmHyjo6JeuuaTw7eNj6Rnz0.svg",
+    },
+    {
+        name: "Ecommerce",
+        description: "Accelerate coding and improve complex workflows.",
+        icon: "https://framerusercontent.com/images/g03jLOH8iFVEwvrXTl5O92yNWI.svg",
+    },
+    {
+        name: "Development",
+        description: "Improve patient care with intelligent automation.",
+        icon: "https://framerusercontent.com/images/s0leRkmxKn90KJPse58Uwi0gmwA.svg",
+    },
+];
+
+/* ── Checkmark SVG ────────────────────────────────────── */
+function CheckIcon() {
+    return (
+        <svg width="15" height="11" viewBox="0 0 15 11" fill="none">
+            <path
+                d="M1.5 5.5L5.5 9.5L13.5 1.5"
+                stroke="black"
+                strokeWidth="1.8"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+        </svg>
+    );
+}
+
+/* ── Component ────────────────────────────────────────── */
+export default function Products() {
+    const [active, setActive] = useState(0);
+    const tab = tabs[active];
+
+    return (
+        <section className="py-20 relative overflow-hidden">
+            {/* Background gradient */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+                src="https://framerusercontent.com/images/PEUUUxYckhxt8G82fn4Y0LPz5s.png"
+                alt=""
+                className="absolute inset-0 w-full h-full object-contain pointer-events-none"
+                style={{ opacity: 0.6, zIndex: 0, minWidth: "2058px", left: "50%", transform: "translateX(-50%)" }}
+            />
+
+            <Container className="relative z-10">
+                <AnimatedSection>
+                    <SectionHeading
+                        tag="PRODUCTS"
+                        tagIcon={
+                            // eslint-disable-next-line @next/next/no-img-element
+                            <img
+                                src="https://framerusercontent.com/images/MRmuOBoDk7tTbd9wZjGly9VAk.svg"
+                                alt=""
+                                width={24}
+                                height={24}
+                            />
+                        }
+                        title="Multiple Products"
+                        subtitle="Covers all major verticals in the tech industry with top intelligence."
+                    />
+                </AnimatedSection>
+
+                {/* ── Tabbed content panel ─────────────────── */}
+                <AnimatedSection delay={0.15}>
+                    {/* Pill tabs */}
+                    <div className="flex justify-center mb-8">
+                        <div className="inline-flex gap-2 p-1 rounded-2xl">
+                            {tabs.map((t, i) => (
+                                <button
+                                    key={t.label}
+                                    onClick={() => setActive(i)}
+                                    className={`px-5 py-2.5 rounded-full border text-sm font-medium transition-all duration-200 cursor-pointer
+                                        ${i === active
+                                            ? "bg-white-100 text-black-100 border-ad-border"
+                                            : "bg-white-7 text-white-100 border-ad-border hover:bg-white-10"
+                                        }`}
+                                >
+                                    {t.label}
+                                </button>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Content card */}
+                    <div
+                        className="rounded-3xl border border-ad-border overflow-hidden flex flex-col lg:flex-row"
+                        style={{ background: "transparent" }}
+                    >
+                        {/* Left: text */}
+                        <div className="flex-1 p-6 md:p-8 lg:p-10 flex flex-col justify-center">
+                            <h4 className="t-h4 text-white-100 mb-3">{tab.title}</h4>
+                            <p className="t-p text-ad-subtitle mb-8">{tab.description}</p>
+
+                            <div className="flex flex-col gap-3">
+                                {tab.bullets.map((bullet) => (
+                                    <div
+                                        key={bullet}
+                                        className="flex items-center gap-3 rounded-xl border border-ad-border px-4 py-3"
+                                    >
+                                        <span className="t-p text-white-90 flex-1">{bullet}</span>
+                                        <span
+                                            className="w-7 h-7 rounded-[10px] flex items-center justify-center flex-shrink-0"
+                                            style={{
+                                                background: "rgba(255,255,255,0.1)",
+                                                boxShadow: "inset 0px 0px 4px 0px rgba(255,255,255,0.31)",
+                                            }}
+                                        >
+                                            <CheckIcon />
+                                        </span>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Right: dashboard image */}
+                        <div className="flex-1 relative min-h-[220px] lg:min-h-[380px] flex items-center justify-center">
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img
+                                src={tab.image}
+                                alt={tab.title}
+                                className="w-full h-full object-contain"
+                                style={{
+                                    filter: "drop-shadow(-16px 11px 7px rgba(0,0,0,0.18))",
+                                }}
+                            />
+                        </div>
+                    </div>
+                </AnimatedSection>
+
+                {/* ── Product cards ────────────────────────── */}
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
+                    {products.map((product, i) => (
+                        <AnimatedSection key={product.name} delay={0.1 + i * 0.08}>
+                            <div className="flex flex-col md:flex-row items-start md:items-center gap-4 p-5">
+                                {/* Icon with gradient border */}
+                                <div
+                                    className="rounded-3xl p-[1px] flex-shrink-0"
+                                    style={{
+                                        background:
+                                            "linear-gradient(40deg, rgb(202,138,229) 0%, rgb(15,11,20) 45%, rgb(181,92,255) 100%)",
+                                        boxShadow: "0px 6px 24px 0px rgba(181,92,255,0.25)",
+                                    }}
+                                >
+                                    <div
+                                        className="rounded-3xl p-3 flex items-center justify-center"
+                                        style={{ backgroundColor: "var(--ad-dark)" }}
+                                    >
+                                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                                        <img
+                                            src={product.icon}
+                                            alt={product.name}
+                                            width={24}
+                                            height={24}
+                                            className="block"
+                                        />
+                                    </div>
+                                </div>
+                                {/* Text */}
+                                <div className="flex flex-col gap-1">
+                                    <h4 className="text-white-100 font-semibold text-sm">{product.name}</h4>
+                                    <p className="text-ad-tag text-xs leading-relaxed">{product.description}</p>
+                                </div>
+                            </div>
+                        </AnimatedSection>
+                    ))}
+                </div>
+            </Container>
+        </section>
+    );
+}

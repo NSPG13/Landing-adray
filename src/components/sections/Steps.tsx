@@ -60,9 +60,15 @@ function StepCard({ step }: { step: (typeof steps)[0] }) {
                         <li key={bullet} className="flex items-start gap-3">
                             <div className="w-5 h-5 rounded-full bg-white-10 flex items-center justify-center flex-shrink-0 mt-0.5">
                                 <svg width="10" height="8" viewBox="0 0 10 8" fill="none">
+                                    <defs>
+                                        <linearGradient id="checkGrad" x1="0" y1="0" x2="10" y2="8" gradientUnits="userSpaceOnUse">
+                                            <stop stopColor="#B55CFF" />
+                                            <stop offset="1" stopColor="#CA8AE5" />
+                                        </linearGradient>
+                                    </defs>
                                     <path
                                         d="M1 4L3.5 6.5L9 1"
-                                        stroke="white"
+                                        stroke="url(#checkGrad)"
                                         strokeWidth="1.5"
                                         strokeLinecap="round"
                                         strokeLinejoin="round"
@@ -174,7 +180,7 @@ export default function Steps() {
                                     <div
                                         className="absolute inset-y-0 left-0 w-16 animate-beam"
                                         style={{
-                                            background: "linear-gradient(90deg, transparent, #0175FF, transparent)",
+                                            background: "linear-gradient(90deg, transparent, #CA8AE5, transparent)",
                                         }}
                                     />
                                 </div>
