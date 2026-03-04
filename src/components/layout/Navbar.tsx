@@ -12,7 +12,6 @@ const aiSolutionsSub = [
 ];
 
 const navLinks = [
-    { label: "Home", href: "/" },
     { label: "About", href: "/about" },
     { label: "Integration", href: "/integration" },
     { label: "Contact", href: "/contact" },

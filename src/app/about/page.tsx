@@ -7,6 +7,7 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import Button from "@/components/ui/Button";
 import BlurRevealText from "@/components/ui/BlurRevealText";
+import ScrollTextColor from "@/components/ui/ScrollTextColor";
 
 /* ── Data ── */
 const values = [
@@ -110,14 +111,16 @@ export default function AboutPage() {
             {/* ── Mission scroll text ── */}
             <section className="py-20 relative">
                 <Container className="max-w-4xl">
-                    <AnimatedSection>
-                        <p className="text-[clamp(1.25rem,2.5vw,1.75rem)] font-medium leading-relaxed text-white-90 text-center">
-                            At Adray, we build intelligent AI Agents that empower businesses
-                            to work smarter, faster, and more efficiently. Our mission is to
-                            transform enterprise workflows, service, and processes through
-                            innovation, collaboration, and cutting-edge AI technology.
-                        </p>
-                    </AnimatedSection>
+                    <ScrollTextColor
+                        content="At Adray, we build intelligent AI Agents that empower businesses to work smarter, faster, and more efficiently. Our mission is to transform enterprise workflows, service, and processes through innovation, collaboration, and cutting-edge AI technology."
+                        colorStart="#CA8AE5"
+                        colorEnd="#FFFFFF"
+                        trigger="layer-in-view"
+                        animationStart="center"
+                        animationEnd="bottom"
+                        className="text-[clamp(1.25rem,2.5vw,1.75rem)] font-medium leading-relaxed text-center"
+                        style={{ fontFamily: '"Inter Display", var(--font-inter), Inter, sans-serif' }}
+                    />
                 </Container>
             </section>
 
@@ -150,9 +153,6 @@ export default function AboutPage() {
                                         className="absolute inset-0 w-full h-full object-cover opacity-50 pointer-events-none"
                                     />
                                     <div className="relative z-10 p-8 flex flex-col h-full">
-                                        <span className="t-p-sm text-ad-tag uppercase tracking-widest mb-4">
-                                            {String(i + 1).padStart(2, "0")}
-                                        </span>
                                         <h3 className="t-h4 text-white-100 mb-3">{v.title}</h3>
                                         <p className="t-p-sm text-ad-muted leading-relaxed mt-auto">
                                             {v.description}
@@ -195,7 +195,7 @@ export default function AboutPage() {
                                 />
                             </div>
                             <blockquote className="t-p-lg text-white-90 italic leading-relaxed">
-                                &ldquo;When we started Adray, our goal was simple — to create AI
+                                &ldquo;When we started Adray, our goal was simple to create AI
                                 Agents that truly empower businesses. Every innovation, every
                                 solution we build is designed to make enterprises smarter, faster,
                                 and more effective. Our mission is not just to automate, but to
@@ -243,7 +243,7 @@ export default function AboutPage() {
                                     <img
                                         src={m.img}
                                         alt={m.name}
-                                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 grayscale"
                                     />
                                     <div
                                         className="absolute inset-0"
@@ -283,34 +283,40 @@ export default function AboutPage() {
                     </AnimatedSection>
 
                     <AnimatedSection delay={0.15}>
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
-                            <div className="rounded-2xl overflow-hidden row-span-1">
-                                <img
-                                    src="https://framerusercontent.com/images/Jp1l6nfzIznnFpz8xA77dr6ShY.jpg"
-                                    alt=""
-                                    className="w-full h-full object-cover"
-                                />
+                        <div className="grid grid-cols-2 gap-4 mb-10">
+                            {/* Left column */}
+                            <div className="flex flex-col gap-4">
+                                <div className="rounded-2xl overflow-hidden flex-[5]">
+                                    <img
+                                        src="https://framerusercontent.com/images/Jp1l6nfzIznnFpz8xA77dr6ShY.jpg"
+                                        alt=""
+                                        className="w-full h-full object-cover"
+                                    />
+                                </div>
+                                <div className="rounded-2xl overflow-hidden flex-[1]">
+                                    <img
+                                        src="https://framerusercontent.com/images/G2e7HlhrS4QOvLT8fLk72DmOr5A.webp"
+                                        alt=""
+                                        className="w-full h-full object-cover"
+                                    />
+                                </div>
                             </div>
-                            <div className="rounded-2xl overflow-hidden">
-                                <img
-                                    src="https://framerusercontent.com/images/G2e7HlhrS4QOvLT8fLk72DmOr5A.webp"
-                                    alt=""
-                                    className="w-full h-full object-cover"
-                                />
-                            </div>
-                            <div className="rounded-2xl overflow-hidden">
-                                <img
-                                    src="https://framerusercontent.com/images/oXO7T72nyamuKTgGVuI0pWw26Ns.webp"
-                                    alt=""
-                                    className="w-full h-full object-cover"
-                                />
-                            </div>
-                            <div className="rounded-2xl overflow-hidden">
-                                <img
-                                    src="https://framerusercontent.com/images/j31VAapLRCe7cdp82p8kZi7nBS8.png"
-                                    alt=""
-                                    className="w-full h-full object-cover"
-                                />
+                            {/* Right column */}
+                            <div className="flex flex-col gap-4">
+                                <div className="rounded-2xl overflow-hidden flex-[1]">
+                                    <img
+                                        src="https://framerusercontent.com/images/oXO7T72nyamuKTgGVuI0pWw26Ns.webp"
+                                        alt=""
+                                        className="w-full h-full object-cover"
+                                    />
+                                </div>
+                                <div className="rounded-2xl overflow-hidden flex-[5]">
+                                    <img
+                                        src="https://framerusercontent.com/images/j31VAapLRCe7cdp82p8kZi7nBS8.png"
+                                        alt=""
+                                        className="w-full h-full object-cover"
+                                    />
+                                </div>
                             </div>
                         </div>
                         <div className="text-center">
