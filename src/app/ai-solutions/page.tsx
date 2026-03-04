@@ -93,38 +93,40 @@ export default function AISolutionsPage() {
                             <AnimatedSection key={s.title} delay={i * 0.12}>
                                 <div className="card overflow-hidden rounded-3xl">
                                     <div className="p-8 md:p-12">
-                                        {/* Top: title + description + CTA */}
-                                        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6 mb-8">
-                                            <div className="flex-1">
-                                                <h3 className="t-h4 text-white-100 mb-2">
-                                                    {s.title}
-                                                </h3>
-                                                <p className="t-p text-ad-muted leading-relaxed max-w-md">
-                                                    {s.description}
-                                                </p>
-                                            </div>
-                                            <Link
-                                                href={s.href}
-                                                className="inline-flex items-center gap-2 t-p-sm font-semibold text-gradient shrink-0"
-                                            >
-                                                Learn More →
-                                            </Link>
-                                        </div>
+                                        {/* Title + description */}
+                                        <h3 className="t-h4 text-white-100 mb-2">
+                                            {s.title}
+                                        </h3>
+                                        <p className="t-p text-ad-muted leading-relaxed max-w-md mb-5">
+                                            {s.description}
+                                        </p>
 
-                                        {/* Features heading + pills */}
+                                        {/* CTA button */}
+                                        <Link
+                                            href={s.href}
+                                            className="inline-flex items-center px-5 py-2.5 rounded-[15px] bg-ad-dark border border-ad-border t-p-sm font-semibold text-gradient hover:brightness-125 transition-all mb-8"
+                                        >
+                                            Learn More
+                                        </Link>
+
+                                        {/* Divider */}
+                                        <div className="h-px w-full bg-ad-border mb-8" />
+
+                                        {/* Features heading + vertical dot list */}
                                         <p className="t-p-sm text-ad-tag uppercase tracking-widest mb-4">
                                             {s.headline}
                                         </p>
-                                        <div className="flex flex-wrap gap-2 mb-8">
+                                        <ul className="space-y-3 mb-8">
                                             {s.features.map((f) => (
-                                                <span
-                                                    key={f}
-                                                    className="px-4 py-2 rounded-full text-sm font-medium bg-white-7 text-ad-subtitle border border-ad-border"
-                                                >
-                                                    {f}
-                                                </span>
+                                                <li key={f} className="flex items-center gap-3">
+                                                    <span
+                                                        className="w-2 h-2 rounded-full flex-shrink-0"
+                                                        style={{ background: "linear-gradient(148deg, var(--ad-accent), var(--ad-primary))" }}
+                                                    />
+                                                    <span className="t-p text-ad-subtitle">{f}</span>
+                                                </li>
                                             ))}
-                                        </div>
+                                        </ul>
                                     </div>
 
                                     {/* Bottom gradient image strip */}

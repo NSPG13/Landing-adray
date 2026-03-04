@@ -12,10 +12,10 @@ const aiSolutionsSub = [
 ];
 
 const navLinks = [
-    { label: "About", href: "/about" },
-    { label: "Integration", href: "/integration" },
-    { label: "Contact", href: "/contact" },
     { label: "AI Solutions", href: "/ai-solutions", hasDropdown: true },
+    { label: "About", href: "/about" },
+    { label: "Pricing", href: "/pricing" },
+    { label: "Contact", href: "/contact" },
 ];
 
 export default function Navbar() {
