@@ -2,14 +2,21 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 
+const aiSolutionsSub = [
+    { label: "AI for Work", href: "/ai-solutions/ai-for-work" },
+    { label: "AI for Service", href: "/ai-solutions/ai-for-service" },
+    { label: "AI for Process", href: "/ai-solutions/ai-for-process" },
+];
+
 const navLinks = [
-    { label: "AI Solutions", href: "/ai-solutions" },
+    { label: "Home", href: "/" },
     { label: "About", href: "/about" },
-    { label: "Pricing", href: "/pricing" },
+    { label: "Integration", href: "/integration" },
     { label: "Contact", href: "/contact" },
+    { label: "AI Solutions", href: "/ai-solutions", hasDropdown: true },
 ];
 
 export default function Navbar() {
@@ -52,14 +59,31 @@ export default function Navbar() {
                         }}
                     >
                         {navLinks.map((link) => (
-                            <Link
-                                key={link.href}
-                                href={link.href}
-                                className="relative group t-p-sm text-white-90 hover:text-white-100 transition-colors duration-200 py-1"
-                            >
-                                {link.label}
-                                <span className="nav-link-underline" />
-                            </Link>
+                            <div key={link.href} className="relative group">
+                                <Link
+                                    href={link.href}
+                                    className="relative flex items-center gap-1 t-p-sm text-white-90 hover:text-white-100 transition-colors duration-200 py-1"
+                                >
+                                    {link.label}
+                                    {link.hasDropdown && <ChevronDown size={14} className="opacity-60" />}
+                                    <span className="nav-link-underline" />
+                                </Link>
+                                {link.hasDropdown && (
+                                    <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                                        <div className="glass border border-ad-border rounded-xl p-2 min-w-[180px]">
+                                            {aiSolutionsSub.map((sub) => (
+                                                <Link
+                                                    key={sub.href}
+                                                    href={sub.href}
+                                                    className="block px-4 py-2.5 rounded-lg t-p-sm text-white-90 hover:text-white-100 hover:bg-white-7 transition-colors"
+                                                >
+                                                    {sub.label}
+                                                </Link>
+                                            ))}
+                                        </div>
+                                    </div>
+                                )}
+                            </div>
                         ))}
                         {/* Masked gradient border overlay */}
                         <div

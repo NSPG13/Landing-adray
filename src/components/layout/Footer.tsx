@@ -24,10 +24,10 @@ const footerLinks = {
         { label: "404", href: "/404" },
     ],
     "Social Connect": [
-        { label: "Instagram", href: "https://instagram.com/" },
-        { label: "X / Twitter", href: "https://x.com/" },
-        { label: "LinkedIn", href: "https://linkedin.com/" },
-        { label: "Reddit", href: "https://reddit.com/" },
+        { label: "Instagram", href: "https://www.instagram.com/jitu.ux/" },
+        { label: "X / Twitter", href: "https://x.com/jituux" },
+        { label: "LinkedIn", href: "https://www.linkedin.com/in/jitendra-raut/" },
+        { label: "Reddit", href: "https://www.reddit.com/" },
     ],
 };
 

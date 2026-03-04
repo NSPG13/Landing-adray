@@ -29,7 +29,7 @@ const tabs = [
         iconSvg: "DzDW9qxLWt1R7V7DL7f89IPJfk.svg",
         title: "Alpha Technology",
         description:
-            "Create valuable AI agents and agentic workflows with confidence and ongoing control.",
+            "Connect to your business systems, understand your data and workflows, and activate agentic.",
         tags: [
             { label: "Multi-Agent" },
             { label: "Latest Model" },
@@ -46,14 +46,14 @@ const tabs = [
         iconSvg: "Akgvq4ROltzdkv9bMr9wLtsd5c.svg",
         title: "Enterprise data sources",
         description:
-            "Our design approach is ecosystem agnostic, allowing you to choose how you connect data.",
+            "Our design approach is ecosystem agnostic, allowing you to choose how you connect your enterprise.",
         tags: [
             { label: "SharePoint" },
             { label: "SAP" },
             { label: "Slack" },
             { label: "Confluence" },
         ],
-        cta: { label: "Start Setup", href: "/integration" },
+        cta: { label: "Start Setup", href: "/ai-solutions/ai-for-process" },
         image:
             "https://framerusercontent.com/images/rYyqmKb6ZW8scPMDoDnkLicukfc.png",
     },
