@@ -164,15 +164,28 @@ export default function PricingPage() {
         <>
             {/* ── Hero ── */}
             <section className="relative pt-40 pb-10 overflow-hidden">
+                {/* Background gradient */}
+                <img
+                    src="https://framerusercontent.com/images/H3Q7Up1GD9JyEYygvN5U7fWpqYQ.webp"
+                    alt=""
+                    className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+                />
                 <Container className="relative z-10 text-center">
-                    <motion.p
-                        className="t-p-sm uppercase tracking-widest text-ad-tag mb-4"
+                    <motion.div
+                        className="flex items-center gap-3 justify-center mb-4"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, ease }}
                     >
-                        PRICING
-                    </motion.p>
+                        <img
+                            src="https://framerusercontent.com/images/3UovOTKirX07vhyWYJGSliEt1E4.svg"
+                            alt=""
+                            width={24}
+                            height={24}
+                            className="opacity-80"
+                        />
+                        <span className="t-p-sm uppercase tracking-widest text-white-100">PRICING</span>
+                    </motion.div>
                     <motion.h1
                         className="t-h1 text-white-100 mb-6"
                         initial={{ opacity: 0, y: 40 }}
@@ -198,7 +211,8 @@ export default function PricingPage() {
                     <AnimatedSection>
                         <SectionHeading
                             tag="PLANS"
-                            title=""
+                            title="Flexible Plans for Every"
+                            subtitle="Choose the plan that fits your team and scales with your business."
                             tagIcon={
                                 <img
                                     src="https://framerusercontent.com/images/jQJ8TgGax14f2upuHQKSjpr1jmg.svg"
@@ -235,8 +249,8 @@ export default function PricingPage() {
                             >
                                 Yearly
                                 <span
-                                    className="px-1.5 py-0.5 rounded text-xs font-semibold"
-                                    style={{ background: "rgba(62,40,111,0.4)", color: "#CA8AE5" }}
+                                    className="text-xs font-semibold"
+                                    style={{ color: "rgb(255,172,10)" }}
                                 >
                                     30%off
                                 </span>
@@ -255,21 +269,23 @@ export default function PricingPage() {
                                         className="absolute inset-0 w-full h-full object-cover opacity-50 pointer-events-none"
                                     />
                                     <div className="relative z-10 p-8 flex flex-col h-full">
-                                        <h3 className="t-h4 text-white-100">{plan.name}</h3>
-
                                         {plan.monthlyPrice !== null ? (
-                                            <div className="mt-3 flex items-baseline gap-1">
-                                                <span className="text-4xl font-bold text-white-90">
-                                                    ${getPrice(plan.monthlyPrice)}
-                                                </span>
-                                                <span className="text-ad-muted t-p-sm">
-                                                    {getPeriod(plan.monthlyPrice)}
-                                                </span>
-                                            </div>
+                                            <>
+                                                <h3 className="t-h4 text-white-100">{plan.name}</h3>
+                                                <div className="mt-3 flex items-baseline gap-1">
+                                                    <span className="text-4xl font-bold text-white-90">
+                                                        ${getPrice(plan.monthlyPrice)}
+                                                    </span>
+                                                    <span className="text-ad-muted t-p-sm">
+                                                        {getPeriod(plan.monthlyPrice)}
+                                                    </span>
+                                                </div>
+                                            </>
                                         ) : (
-                                            <div className="mt-3">
+                                            <>
                                                 <p className="t-h4 text-gradient">Go for more power</p>
-                                            </div>
+                                                <h3 className="t-h3 text-white-100 mt-2">{plan.name}</h3>
+                                            </>
                                         )}
 
                                         {plan.subtitle && (
@@ -330,9 +346,9 @@ export default function PricingPage() {
                                     <thead>
                                         <tr className="border-b border-ad-border">
                                             <th className="p-6 t-p-sm text-ad-muted font-medium w-1/3">Feature</th>
-                                            <th className="p-6 t-p-sm text-white-100 font-semibold text-center">Basic</th>
-                                            <th className="p-6 t-p-sm text-white-100 font-semibold text-center">Standard</th>
-                                            <th className="p-6 t-p-sm text-white-100 font-semibold text-center">Enterprise</th>
+                                            <th className="p-6 t-p-sm text-white-100 font-semibold text-center">Basic plan</th>
+                                            <th className="p-6 t-p-sm text-white-100 font-semibold text-center">Standard plan</th>
+                                            <th className="p-6 t-p-sm text-white-100 font-semibold text-center">Enterprise plan</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -342,7 +358,7 @@ export default function PricingPage() {
                                                 colSpan={4}
                                                 className="px-6 pt-6 pb-3 t-p-sm uppercase tracking-widest text-ad-tag font-medium"
                                             >
-                                                Essential Features
+                                                Essential features
                                             </td>
                                         </tr>
                                         {essentialFeatures.map((row) => (
@@ -360,7 +376,7 @@ export default function PricingPage() {
                                                 colSpan={4}
                                                 className="px-6 pt-8 pb-3 t-p-sm uppercase tracking-widest text-ad-tag font-medium"
                                             >
-                                                Advanced Features
+                                                Advance features
                                             </td>
                                         </tr>
                                         {advancedFeatures.map((row) => (
@@ -379,6 +395,16 @@ export default function PricingPage() {
                 </Container>
             </section>
 
+            {/* ── Decorative gradient ── */}
+            <div className="relative w-full flex items-center justify-center overflow-hidden" style={{ height: 0 }}>
+                <img
+                    src="https://framerusercontent.com/images/PEUUUxYckhxt8G82fn4Y0LPz5s.png"
+                    alt=""
+                    className="absolute pointer-events-none"
+                    style={{ width: 3296, height: 2255, transform: "translate(-50%, -50%)", left: "50%", top: "50%" }}
+                />
+            </div>
+
             {/* ── FAQ ── */}
             <section className="py-20 relative">
                 <Container>
@@ -393,17 +419,26 @@ export default function PricingPage() {
                                     height={24}
                                 />
                             }
-                            title="Frequently Asked Questions"
-                            subtitle="Quick answers to help you get started with Adray."
+                            title="Curious About Adray?"
+                            subtitle="Answers to common questions about our AI-powered enterprise platform."
                         />
                     </AnimatedSection>
 
-                    <div className="max-w-2xl mx-auto space-y-4">
-                        {faqs.map((item) => (
-                            <AnimatedSection key={item.q}>
-                                <AccordionItem q={item.q} a={item.a} />
-                            </AnimatedSection>
-                        ))}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                        <div className="space-y-4">
+                            {faqs.slice(0, 4).map((item) => (
+                                <AnimatedSection key={item.q}>
+                                    <AccordionItem q={item.q} a={item.a} />
+                                </AnimatedSection>
+                            ))}
+                        </div>
+                        <div className="space-y-4">
+                            {faqs.slice(4, 8).map((item) => (
+                                <AnimatedSection key={item.q}>
+                                    <AccordionItem q={item.q} a={item.a} />
+                                </AnimatedSection>
+                            ))}
+                        </div>
                     </div>
                 </Container>
             </section>
