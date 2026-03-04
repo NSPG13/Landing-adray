@@ -11,11 +11,51 @@ import BlurRevealText from "@/components/ui/BlurRevealText";
 
 /* ── Offices ── */
 const offices = [
-    { city: "San Francisco", img: "https://framerusercontent.com/images/DmjBIPplEh6kPt1Q9YhkqNJc28k.jpg" },
-    { city: "Nagpur", img: "https://framerusercontent.com/images/fwpUl0wnfBPrN3FCLpzaVDsXYWo.jpg" },
-    { city: "London", img: "https://framerusercontent.com/images/RCVQKmWnCQxDINiuRXPLlVE5gE.jpg" },
-    { city: "Frankfurt", img: "https://framerusercontent.com/images/2sOt2oZTxvZtMNwZJcE5R0dEpI.jpg" },
-    { city: "Dubai", img: "https://framerusercontent.com/images/QWDnwFBhMoMqd27YO2AYSMhguk.jpg" },
+    {
+        city: "San Francisco",
+        country: "United States",
+        img: "https://framerusercontent.com/images/W8C39CdQlC7KEiy4TqYSYSFey1g.jpg",
+        company: "Adray Americas",
+        flag: "https://framerusercontent.com/images/EKJKz0Ea1JuAJx3wKCZDIGVfoQc.png",
+        description: "North American headquarters, driving innovation and customer success.",
+        mapUrl: "https://www.google.com/maps/place/San+Francisco,+CA,+USA/@37.7576928,-122.4787995,13z",
+    },
+    {
+        city: "Nagpur",
+        country: "India",
+        img: "https://framerusercontent.com/images/SKMm9pxh4pb8gdXnHmU5aOEdHS0.jpg",
+        company: "Adray India",
+        flag: "",
+        description: "Technology hub and engineering center of excellence.",
+        mapUrl: "https://www.google.com/maps/place/Nagpur,+Maharashtra,+India",
+    },
+    {
+        city: "London",
+        country: "United Kingdom",
+        img: "https://framerusercontent.com/images/z1IF17Tru5VgU6RFBAZQOr478.jpg",
+        company: "Adray UK",
+        flag: "",
+        description: "European client services and strategic partnerships.",
+        mapUrl: "https://www.google.com/maps/place/London,+UK",
+    },
+    {
+        city: "Frankfurt",
+        country: "Germany",
+        img: "https://framerusercontent.com/images/xn6XyGqCrTCriyl4zkDnRiyqTY.jpg",
+        company: "Adray Europe",
+        flag: "",
+        description: "Data compliance center serving the European market.",
+        mapUrl: "https://www.google.com/maps/place/Frankfurt,+Germany",
+    },
+    {
+        city: "Dubai",
+        country: "United Arab Emirates",
+        img: "https://framerusercontent.com/images/0do0bgsbBj8Xi5b8pXUWVvU4ADA.jpg",
+        company: "Adray MENA",
+        flag: "",
+        description: "Middle East and North Africa regional operations.",
+        mapUrl: "https://www.google.com/maps/place/Dubai,+UAE",
+    },
 ];
 
 /* ── FAQ (same as homepage) ── */
@@ -77,6 +117,8 @@ function AccordionItem({ q, a }: { q: string; a: string }) {
 }
 
 export default function ContactPage() {
+    const [selectedOffice, setSelectedOffice] = useState(0);
+
     return (
         <>
             {/* ── Hero ── */}
@@ -88,6 +130,13 @@ export default function ContactPage() {
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.6, ease }}
                     >
+                        <img
+                            src="https://framerusercontent.com/images/xDPyxO9KaHgkC204pqOjJmGbwk.svg"
+                            alt=""
+                            width={24}
+                            height={24}
+                            className="opacity-80"
+                        />
                         CONTACT
                     </motion.div>
                     <motion.h1
@@ -104,7 +153,7 @@ export default function ContactPage() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.7, delay: 0.25, ease }}
                     >
-                        Connect any app or system to build a unified enterprise intelligence layer.
+                        Connect any app or system pre-built or custom with ease and flexibility.
                     </motion.p>
                 </Container>
             </section>
@@ -124,14 +173,11 @@ export default function ContactPage() {
                                 <div className="p-8 flex flex-col flex-1">
                                     <h3 className="t-h4 text-white-100 mb-3">Connect with Expert Team</h3>
                                     <p className="t-p-sm text-ad-muted leading-relaxed mb-6 flex-1">
-                                        Talk to our AI solutions specialists to learn how Adray fits your business needs.
+                                        Get personalized guidance and see how Adray AI Agents can transform your enterprise workflows. Our experts will help you explore solutions
                                     </p>
-                                    <a
-                                        href="mailto:support@adray.com"
-                                        className="inline-flex items-center gap-2 t-p-sm font-semibold text-gradient"
-                                    >
-                                        Get Help →
-                                    </a>
+                                    <Button variant="primary" href="mailto:support@adray.com" className="w-full">
+                                        Get Help
+                                    </Button>
                                 </div>
                             </div>
                         </AnimatedSection>
@@ -140,48 +186,56 @@ export default function ContactPage() {
                         <div className="flex flex-col gap-6">
                             <AnimatedSection delay={0.1}>
                                 <div className="card p-8 flex items-start gap-6">
-                                    <img
-                                        src="https://framerusercontent.com/images/xHfPV4X6jypeMN7rcPFFyCwnhg.svg"
-                                        alt=""
-                                        width={40}
-                                        height={40}
-                                        className="flex-shrink-0"
-                                    />
+                                    <div className="relative flex-shrink-0 w-[40px] h-[40px] rounded-2xl bg-black overflow-hidden">
+                                        <img
+                                            src="https://framerusercontent.com/images/VZt72ssnuCqRvMzPSvHlDQ1iNU.png"
+                                            alt=""
+                                            className="absolute inset-0 w-full h-full object-cover"
+                                        />
+                                        <img
+                                            src="https://framerusercontent.com/images/xHfPV4X6jypeMN7rcPFFyCwnhg.svg"
+                                            alt=""
+                                            width={40}
+                                            height={40}
+                                            className="relative z-10"
+                                        />
+                                    </div>
                                     <div>
                                         <h3 className="t-h4 text-white-100 mb-2">Press &amp; Media Inquiries</h3>
                                         <p className="t-p-sm text-ad-muted leading-relaxed mb-4">
-                                            For press inquiries, media kits, and brand collaboration, reach out to our communications team.
+                                            For interviews, articles, and media requests.
                                         </p>
-                                        <a
-                                            href="mailto:support@adray.com"
-                                            className="inline-flex items-center gap-2 t-p-sm font-semibold text-gradient"
-                                        >
-                                            Write to us →
-                                        </a>
+                                        <Button variant="primary" href="mailto:support@adray.com" className="w-full">
+                                            Write to us
+                                        </Button>
                                     </div>
                                 </div>
                             </AnimatedSection>
 
                             <AnimatedSection delay={0.2}>
                                 <div className="card p-8 flex items-start gap-6">
-                                    <img
-                                        src="https://framerusercontent.com/images/zR2pRh2KGfrgsBHUSXxBBrc6Os.svg"
-                                        alt=""
-                                        width={40}
-                                        height={40}
-                                        className="flex-shrink-0"
-                                    />
+                                    <div className="relative flex-shrink-0 w-[40px] h-[40px] rounded-2xl bg-black overflow-hidden">
+                                        <img
+                                            src="https://framerusercontent.com/images/VZt72ssnuCqRvMzPSvHlDQ1iNU.png"
+                                            alt=""
+                                            className="absolute inset-0 w-full h-full object-cover"
+                                        />
+                                        <img
+                                            src="https://framerusercontent.com/images/zR2pRh2KGfrgsBHUSXxBBrc6Os.svg"
+                                            alt=""
+                                            width={40}
+                                            height={40}
+                                            className="relative z-10"
+                                        />
+                                    </div>
                                     <div>
                                         <h3 className="t-h4 text-white-100 mb-2">Partner &amp; Collaboration</h3>
                                         <p className="t-p-sm text-ad-muted leading-relaxed mb-4">
-                                            Explore partnership opportunities, integrations, and co-development programs.
+                                            Explore collaboration and integration opportunities.
                                         </p>
-                                        <a
-                                            href="mailto:support@adray.com"
-                                            className="inline-flex items-center gap-2 t-p-sm font-semibold text-gradient"
-                                        >
-                                            Let&apos;s Connect →
-                                        </a>
+                                        <Button variant="primary" href="mailto:support@adray.com" className="w-full">
+                                            Let&apos;s Connect
+                                        </Button>
                                     </div>
                                 </div>
                             </AnimatedSection>
@@ -193,120 +247,129 @@ export default function ContactPage() {
             {/* ── Support Form ── */}
             <section className="py-20 relative">
                 <Container>
-                    <AnimatedSection>
-                        <SectionHeading
-                            tag="SUPPORT"
-                            tagIcon={
-                                <img
-                                    src="https://framerusercontent.com/images/hkm6Dj8bW8kfsHv25c6tUxDVgU.svg"
-                                    alt=""
-                                    width={24}
-                                    height={24}
-                                />
-                            }
-                            title="We're Here to Help"
-                        />
-                    </AnimatedSection>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto mb-12">
+                        <AnimatedSection>
+                            <SectionHeading
+                                tag="SUPPORT"
+                                tagIcon={
+                                    <img
+                                        src="https://framerusercontent.com/images/ovrqK10uB6vuZpVvC1WLvsJNHFU.svg"
+                                        alt=""
+                                        width={24}
+                                        height={24}
+                                    />
+                                }
+                                title="We're Here to Help"
+                                subtitle="Have questions or need assistance? Reach out to our support team via the form, phone, or email."
+                                align="left"
+                                className="mb-0"
+                            />
+                        </AnimatedSection>
 
-                    <AnimatedSection delay={0.15}>
-                        <div className="grid grid-cols-1 md:grid-cols-[1fr_340px] gap-10 max-w-4xl mx-auto">
-                            {/* Form */}
-                            <form
-                                className="card p-8 space-y-6"
-                                onSubmit={(e) => e.preventDefault()}
-                            >
-                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                                    <div>
-                                        <label className="block t-p-sm text-ad-muted mb-2">
-                                            First Name
-                                        </label>
-                                        <input
-                                            type="text"
-                                            className="w-full px-4 py-3 rounded-xl bg-ad-surface border border-ad-border text-white-100 t-p-sm placeholder:text-ad-muted/40 focus:outline-none focus:border-ad-primary transition-colors"
-                                            placeholder="Jane"
-                                        />
-                                    </div>
-                                    <div>
-                                        <label className="block t-p-sm text-ad-muted mb-2">
-                                            Last Name
-                                        </label>
-                                        <input
-                                            type="text"
-                                            className="w-full px-4 py-3 rounded-xl bg-ad-surface border border-ad-border text-white-100 t-p-sm placeholder:text-ad-muted/40 focus:outline-none focus:border-ad-primary transition-colors"
-                                            placeholder="Smith"
-                                        />
-                                    </div>
-                                </div>
-                                <div>
-                                    <label className="block t-p-sm text-ad-muted mb-2">
-                                        Email
-                                    </label>
-                                    <input
-                                        type="email"
-                                        className="w-full px-4 py-3 rounded-xl bg-ad-surface border border-ad-border text-white-100 t-p-sm placeholder:text-ad-muted/40 focus:outline-none focus:border-ad-primary transition-colors"
-                                        placeholder="jane@framer.com"
-                                    />
-                                </div>
-                                <div>
-                                    <label className="block t-p-sm text-ad-muted mb-2">
-                                        Contact Number
-                                    </label>
-                                    <input
-                                        type="tel"
-                                        className="w-full px-4 py-3 rounded-xl bg-ad-surface border border-ad-border text-white-100 t-p-sm placeholder:text-ad-muted/40 focus:outline-none focus:border-ad-primary transition-colors"
-                                        placeholder="+1234567890"
-                                    />
-                                </div>
-                                <div>
-                                    <label className="block t-p-sm text-ad-muted mb-2">
-                                        Query
-                                    </label>
-                                    <textarea
-                                        rows={4}
-                                        className="w-full px-4 py-3 rounded-xl bg-ad-surface border border-ad-border text-white-100 t-p-sm placeholder:text-ad-muted/40 focus:outline-none focus:border-ad-primary transition-colors resize-none"
-                                        placeholder="Share your query"
-                                    />
-                                </div>
-                                <Button variant="primary" size="lg" className="w-full">
-                                    Submit
-                                </Button>
-                            </form>
-
-                            {/* Contact info sidebar */}
-                            <div className="flex flex-col gap-6">
-                                <div className="card p-6">
-                                    <p className="t-p-sm text-ad-muted mb-1">Phone</p>
-                                    <p className="t-p text-white-100">+1 844 924 8973</p>
-                                </div>
-                                <div className="card p-6">
-                                    <p className="t-p-sm text-ad-muted mb-1">Email</p>
-                                    <a href="mailto:support@adray.com" className="t-p text-white-100 hover:text-ad-primary transition-colors">
-                                        support@adray.com
+                        <AnimatedSection delay={0.1}>
+                            <div>
+                                <p className="t-p-sm uppercase tracking-widest text-ad-tag mb-6">GET SUPPORT</p>
+                                <div className="space-y-4">
+                                    <a href="tel:+18449248973" className="flex items-center gap-4 group">
+                                        <div className="relative flex-shrink-0 w-[34px] h-[34px] rounded-xl bg-black overflow-hidden">
+                                            <img
+                                                src="https://framerusercontent.com/images/VZt72ssnuCqRvMzPSvHlDQ1iNU.png"
+                                                alt=""
+                                                className="absolute inset-0 w-full h-full object-cover"
+                                            />
+                                            <img
+                                                src="https://framerusercontent.com/images/ZWTVawMwhcN0IIzbO291BWd5c.svg"
+                                                alt=""
+                                                width={34}
+                                                height={34}
+                                                className="relative z-10"
+                                            />
+                                        </div>
+                                        <span className="t-p text-white-100 group-hover:text-ad-primary transition-colors">+1 844 924 8973</span>
                                     </a>
-                                </div>
-                                <div className="card p-6">
-                                    <p className="t-p-sm text-ad-tag uppercase tracking-widest mb-2">
-                                        HQ
-                                    </p>
-                                    <p className="t-p-semibold text-white-100 mb-1">
-                                        Adray Americas
-                                    </p>
-                                    <p className="t-p-sm text-ad-muted leading-relaxed mb-4">
-                                        548 Market St, Suite 36879
-                                        <br />
-                                        San Francisco, CA 94104
-                                    </p>
-                                    <a
-                                        href="https://maps.google.com/?q=548+Market+St+San+Francisco+CA"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="inline-flex items-center gap-2 t-p-sm font-semibold text-gradient"
-                                    >
-                                        Get Directions →
+                                    <a href="mailto:support@adray.com" className="flex items-center gap-4 group">
+                                        <div className="relative flex-shrink-0 w-[34px] h-[34px] rounded-xl bg-black overflow-hidden">
+                                            <img
+                                                src="https://framerusercontent.com/images/VZt72ssnuCqRvMzPSvHlDQ1iNU.png"
+                                                alt=""
+                                                className="absolute inset-0 w-full h-full object-cover"
+                                            />
+                                            <img
+                                                src="https://framerusercontent.com/images/ochO9ePlZvXdFfWVus3LbO0Yw.svg"
+                                                alt=""
+                                                width={34}
+                                                height={34}
+                                                className="relative z-10"
+                                            />
+                                        </div>
+                                        <span className="t-p text-white-100 group-hover:text-ad-primary transition-colors">support@adray.com</span>
                                     </a>
                                 </div>
                             </div>
-                        </div>
+                        </AnimatedSection>
+                    </div>
+
+                    <AnimatedSection delay={0.15}>
+                        <form
+                            className="card p-8 space-y-6 max-w-5xl mx-auto"
+                            onSubmit={(e) => e.preventDefault()}
+                        >
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div>
+                                    <label className="block t-p-sm text-ad-muted mb-2">
+                                        First Name
+                                    </label>
+                                    <input
+                                        type="text"
+                                        className="w-full px-4 py-3 rounded-xl bg-ad-surface border border-ad-border text-white-100 t-p-sm placeholder:text-ad-muted/40 focus:outline-none focus:border-ad-primary transition-colors"
+                                        placeholder="Jane"
+                                    />
+                                </div>
+                                <div>
+                                    <label className="block t-p-sm text-ad-muted mb-2">
+                                        Last Name
+                                    </label>
+                                    <input
+                                        type="text"
+                                        className="w-full px-4 py-3 rounded-xl bg-ad-surface border border-ad-border text-white-100 t-p-sm placeholder:text-ad-muted/40 focus:outline-none focus:border-ad-primary transition-colors"
+                                        placeholder="Smith"
+                                    />
+                                </div>
+                            </div>
+                            <div>
+                                <label className="block t-p-sm text-ad-muted mb-2">
+                                    Email
+                                </label>
+                                <input
+                                    type="email"
+                                    className="w-full px-4 py-3 rounded-xl bg-ad-surface border border-ad-border text-white-100 t-p-sm placeholder:text-ad-muted/40 focus:outline-none focus:border-ad-primary transition-colors"
+                                    placeholder="jane@framer.com"
+                                />
+                            </div>
+                            <div>
+                                <label className="block t-p-sm text-ad-muted mb-2">
+                                    Contact Number
+                                </label>
+                                <input
+                                    type="tel"
+                                    className="w-full px-4 py-3 rounded-xl bg-ad-surface border border-ad-border text-white-100 t-p-sm placeholder:text-ad-muted/40 focus:outline-none focus:border-ad-primary transition-colors"
+                                    placeholder="+1234567890"
+                                />
+                            </div>
+                            <div>
+                                <label className="block t-p-sm text-ad-muted mb-2">
+                                    Query
+                                </label>
+                                <textarea
+                                    rows={4}
+                                    className="w-full px-4 py-3 rounded-xl bg-ad-surface border border-ad-border text-white-100 t-p-sm placeholder:text-ad-muted/40 focus:outline-none focus:border-ad-primary transition-colors resize-none"
+                                    placeholder="Share your query"
+                                />
+                            </div>
+                            <Button variant="primary" size="lg" className="w-full">
+                                Submit
+                            </Button>
+                        </form>
                     </AnimatedSection>
                 </Container>
             </section>
@@ -319,39 +382,74 @@ export default function ContactPage() {
                             tag="OFFICES"
                             tagIcon={
                                 <img
-                                    src="https://framerusercontent.com/images/3UovOTKirX07vhyWYJGSliEt1E4.svg"
+                                    src="https://framerusercontent.com/images/3UiRUIAjek5XnV6oCtR4F5HwgOU.svg"
                                     alt=""
                                     width={24}
                                     height={24}
                                 />
                             }
                             title="Our Global Presence"
+                            subtitle="Our strategic offices across key regions enable us to serve our clients."
                         />
                     </AnimatedSection>
 
-                    <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-                        {offices.map((o, i) => (
-                            <AnimatedSection key={o.city} delay={i * 0.08}>
-                                <div className="group relative rounded-2xl overflow-hidden aspect-[3/4]">
+                    <AnimatedSection delay={0.15}>
+                        <div className="grid grid-cols-1 md:grid-cols-[240px_1fr] gap-8">
+                            {/* Tab sidebar */}
+                            <div className="flex flex-col">
+                                {offices.map((o, i) => (
+                                    <button
+                                        key={o.city}
+                                        onClick={() => setSelectedOffice(i)}
+                                        className={`relative text-left px-4 py-4 transition-colors cursor-pointer ${
+                                            selectedOffice === i
+                                                ? "text-white-100"
+                                                : "text-ad-muted hover:text-white-90"
+                                        }`}
+                                    >
+                                        {selectedOffice === i && (
+                                            <motion.div
+                                                className="absolute left-0 top-0 bottom-0 w-[2px] bg-ad-primary"
+                                                layoutId="officeTab"
+                                                transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                                            />
+                                        )}
+                                        <p className="t-p font-medium">{o.city}</p>
+                                        <p className="t-p-sm text-ad-muted">{o.country}</p>
+                                    </button>
+                                ))}
+                            </div>
+
+                            {/* Content */}
+                            <div className="flex flex-col gap-6">
+                                <div className="relative rounded-2xl overflow-hidden aspect-[16/9]">
                                     <img
-                                        src={o.img}
-                                        alt={o.city}
-                                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                        src={offices[selectedOffice].img}
+                                        alt={offices[selectedOffice].city}
+                                        className="w-full h-full object-cover"
                                     />
-                                    <div
-                                        className="absolute inset-0"
-                                        style={{
-                                            background:
-                                                "linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 50%)",
-                                        }}
-                                    />
-                                    <div className="absolute bottom-0 left-0 right-0 p-4">
-                                        <p className="t-p-semibold text-white-100">{o.city}</p>
-                                    </div>
                                 </div>
-                            </AnimatedSection>
-                        ))}
-                    </div>
+
+                                {/* Detail panel */}
+                                <div className="card p-6 flex items-center gap-6">
+                                    {offices[selectedOffice].flag && (
+                                        <img
+                                            src={offices[selectedOffice].flag}
+                                            alt=""
+                                            className="w-[57px] h-[57px] rounded-full flex-shrink-0"
+                                        />
+                                    )}
+                                    <div className="flex-1">
+                                        <h4 className="t-p-semibold text-white-100 mb-1">{offices[selectedOffice].company}</h4>
+                                        <p className="t-p-sm text-ad-muted">{offices[selectedOffice].description}</p>
+                                    </div>
+                                    <Button variant="primary" href={offices[selectedOffice].mapUrl} className="flex-shrink-0">
+                                        Get Directions
+                                    </Button>
+                                </div>
+                            </div>
+                        </div>
+                    </AnimatedSection>
                 </Container>
             </section>
 
@@ -369,16 +467,26 @@ export default function ContactPage() {
                                     height={24}
                                 />
                             }
-                            title="Frequently Asked Questions"
+                            title="Curious About Adray?"
+                            subtitle="Answers to common questions about our AI-powered enterprise platform."
                         />
                     </AnimatedSection>
 
-                    <div className="max-w-2xl mx-auto space-y-4">
-                        {faqs.map((item) => (
-                            <AnimatedSection key={item.q}>
-                                <AccordionItem q={item.q} a={item.a} />
-                            </AnimatedSection>
-                        ))}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                        <div className="space-y-4">
+                            {faqs.slice(0, 4).map((item) => (
+                                <AnimatedSection key={item.q}>
+                                    <AccordionItem q={item.q} a={item.a} />
+                                </AnimatedSection>
+                            ))}
+                        </div>
+                        <div className="space-y-4">
+                            {faqs.slice(4, 8).map((item) => (
+                                <AnimatedSection key={item.q}>
+                                    <AccordionItem q={item.q} a={item.a} />
+                                </AnimatedSection>
+                            ))}
+                        </div>
                     </div>
                 </Container>
             </section>
