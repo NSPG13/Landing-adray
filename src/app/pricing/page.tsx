@@ -11,43 +11,45 @@ import Button from "@/components/ui/Button";
 /* ── Plans ── */
 const plans = [
     {
-        name: "Sonic",
-        monthlyPrice: 49,
+        name: "Free",
+        monthlyPrice: 0,
         features: [
-            "Access to core AI Agents",
-            "Workflow automation for teams",
-            "Basic integrations",
-            "Standard reporting & analytics",
-            "Email support",
-            "5,000 AI actions per month",
+            "Shopify app + auto-install pixel",
+            "Meta + Google ad connectors",
+            "MCP endpoint for ChatGPT, Claude, Gemini",
+            "Pre-built prompt templates",
+            "Limited attribution window",
+            "Community support",
         ],
-        trust: "300+ teams trusted this",
+        trust: "850+ merchants connected",
         bgImage:
             "https://framerusercontent.com/images/XXSw2JqvtikgOcaexTTozzVsO54.webp",
     },
     {
-        name: "Supersonic",
-        monthlyPrice: 99,
+        name: "Pro",
+        monthlyPrice: 49,
         features: [
-            "Everything in Sonic Monthly",
-            "Advanced AI Agents for workflows",
-            "Priority integrations",
-            "Enhanced dashboards",
-            "24/7 support via chat",
-            "20,000 AI actions per month",
+            "Everything in Free",
+            "Looker Studio connector + dashboards",
+            "Canva creative feed for smart ads",
+            "Unlimited attribution history",
+            "Priority email support",
+            "Direct onboarding path",
         ],
-        trust: "250+ growing enterprises",
+        trust: "For growing brands",
         bgImage:
             "https://framerusercontent.com/images/4fEwCxLuKCW6ZaczMzoeCElmzBg.webp",
     },
     {
-        name: "HyperSonic",
+        name: "Agent Stack",
         monthlyPrice: null,
-        subtitle: "Unlimited automation with dedicated enterprise support.",
+        subtitle: "AI agents that manage your ad spend. Priced on value delivered.",
         features: [
-            "Enterprise-grade AI Agent",
-            "Full custom API access",
-            "Unlimited workflows & automation",
+            "Budget reallocation agent",
+            "Creative fatigue detection agent",
+            "Anomaly detection + alerting",
+            "Weekly reporting agent",
+            "Runs on your own LLM key",
         ],
         trust: null,
         bgImage:
@@ -66,54 +68,54 @@ interface ComparisonRow {
 }
 
 const essentialFeatures: ComparisonRow[] = [
-    { feature: "Track up to 100 keywords", basic: true, standard: true, enterprise: true },
-    { feature: "Weekly ranking updates", basic: true, standard: true, enterprise: true },
-    { feature: "Basic reporting and alerts", basic: false, standard: true, enterprise: true },
-    { feature: "AI lead generation", basic: false, standard: true, enterprise: true },
-    { feature: "Real-time ranking updates", basic: false, standard: true, enterprise: true },
+    { feature: "Server-side pixel (auto-install)", basic: true, standard: true, enterprise: true },
+    { feature: "Meta + Google ad connectors", basic: true, standard: true, enterprise: true },
+    { feature: "MCP endpoint for LLMs", basic: true, standard: true, enterprise: true },
+    { feature: "Pre-built prompt templates", basic: true, standard: true, enterprise: true },
+    { feature: "Unlimited attribution history", basic: false, standard: true, enterprise: true },
 ];
 
 const advancedFeatures: ComparisonRow[] = [
-    { feature: "Competitor analysis for", basic: "5", standard: "20", enterprise: "100" },
-    { feature: "Customize interface", basic: true, standard: true, enterprise: true },
-    { feature: "24/7 priority support", basic: false, standard: true, enterprise: true },
-    { feature: "Full API access", basic: false, standard: true, enterprise: true },
-    { feature: "White-label reporting", basic: false, standard: true, enterprise: true },
+    { feature: "Looker Studio dashboards", basic: false, standard: true, enterprise: true },
+    { feature: "Canva creative feed", basic: false, standard: true, enterprise: true },
+    { feature: "Budget reallocation agent", basic: false, standard: false, enterprise: true },
+    { feature: "Creative fatigue detection", basic: false, standard: false, enterprise: true },
+    { feature: "Anomaly alerts + weekly reports", basic: false, standard: false, enterprise: true },
 ];
 
 /* ── FAQ ── */
 const faqs = [
     {
         q: "What is Adray?",
-        a: "Adray is an AI-powered enterprise platform that deploys intelligent agents to automate workflows, enhance customer service, and drive business growth across your organization.",
+        a: "Adray is a free ecommerce data layer that reconciles your Meta, Google, and Shopify data into one source of truth. Connect it to ChatGPT, Claude, or Gemini via MCP and get real attribution insights \u2014 no new dashboard to learn.",
     },
     {
-        q: "How are AI Agents different from automation tools?",
-        a: "Unlike traditional automation tools that follow rigid rules, Adray\u2019s AI Agents learn, adapt, and make intelligent decisions. They understand context, handle complex scenarios, and improve over time \u2014 going far beyond simple if-then workflows.",
+        q: "How is Adray different from Triple Whale or Northbeam?",
+        a: "Those tools are paid dashboards you have to learn and log into. Adray is free infrastructure \u2014 we own the data layer, and you analyze it with the AI tools you already use. No new UI, no monthly dashboard fee, and our server-side pixel captures 30\u201340% more events.",
     },
     {
-        q: "Can Adray integrate with our existing systems?",
-        a: "Yes. Adray supports 200+ integrations out of the box, including Salesforce, SAP, Slack, HubSpot, SharePoint, and more. Custom API connectors are also available on Supersonic and HyperSonic plans.",
+        q: "What platforms does Adray connect to?",
+        a: "Adray connects to Meta Ads, Google Ads, and Shopify out of the box. WooCommerce and BigCommerce connectors are coming soon. On the AI side, we support ChatGPT, Claude, and Gemini via MCP protocol.",
     },
     {
-        q: "Is Adray secure for enterprise use?",
-        a: "Absolutely. Adray is SOC 2 Type II certified, GDPR compliant, and supports HIPAA for healthcare customers. All data is encrypted at rest and in transit with enterprise-grade security protocols.",
+        q: "Is my ad data secure?",
+        a: "Yes. All data is collected server-side and encrypted at rest and in transit. Our pixel never touches the browser, making it immune to iOS privacy changes and ad blockers. Your data stays yours.",
     },
     {
-        q: "How quickly can Adray be implemented?",
-        a: "Most teams are up and running within days. Our guided onboarding, pre-built templates, and dedicated support team ensure a smooth and fast deployment \u2014 no complex setup required.",
+        q: "How quickly can I set up Adray?",
+        a: "Under 5 minutes. Install from the Shopify App Store, connect your ad accounts via OAuth, and your MCP endpoint is ready. No code, no JavaScript, no developer needed.",
     },
     {
-        q: "Can AI Agents replace human employees?",
-        a: "Adray\u2019s AI Agents are designed to augment your team, not replace them. They handle repetitive, time-consuming tasks so your people can focus on strategic, high-value work.",
+        q: "What are Adray marketing agents?",
+        a: "Marketing agents are AI-powered automations that act on your data \u2014 reallocating budgets, detecting creative fatigue, flagging anomalies, and generating weekly reports. They run on your own LLM key, so there\u2019s near-zero cost to Adray.",
     },
     {
-        q: "How does Adray improve customer service?",
-        a: "AI Agents resolve customer queries instantly and accurately, 24/7. They understand intent, access knowledge bases, and escalate complex issues to human agents seamlessly \u2014 improving satisfaction and response times.",
+        q: "What does the free plan include?",
+        a: "The free plan includes the Shopify app with auto-install pixel, Meta and Google connectors, an MCP endpoint for any major LLM, pre-built prompt templates, and a limited attribution window. No credit card required.",
     },
     {
-        q: "Is Adray scalable for global operations?",
-        a: "Yes. Adray is built for enterprise scale \u2014 supporting multi-region deployments, multilingual agents, unlimited workflows, and thousands of concurrent AI actions with guaranteed uptime SLAs.",
+        q: "What\u2019s the $49 Pro plan for?",
+        a: "Pro unlocks Looker Studio dashboards, Canva creative feed integration, unlimited attribution history, and priority support. It\u2019s built for merchants who want the full visualization and creative workflow on top of the free data layer.",
     },
 ];
 
@@ -192,7 +194,7 @@ export default function PricingPage() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.1, ease }}
                     >
-                        Flexible Plans for Every Enterprise
+                        Flexible Plans for Every Merchant
                     </motion.h1>
                     <motion.p
                         className="t-p-lg text-ad-subtitle max-w-2xl mx-auto"
@@ -200,7 +202,7 @@ export default function PricingPage() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.7, delay: 0.25, ease }}
                     >
-                        From startups to global enterprises, Adray offers AI-powered solutions.
+                        Free to start. $49 for the full workflow. Agents priced on value delivered.
                     </motion.p>
                 </Container>
             </section>
@@ -211,8 +213,8 @@ export default function PricingPage() {
                     <AnimatedSection>
                         <SectionHeading
                             tag="PLANS"
-                            title="Flexible Plans for Every"
-                            subtitle="Choose the plan that fits your team and scales with your business."
+                            title="Pick Your Plan"
+                            subtitle="Start free. Upgrade when you need the full workflow or agent stack."
                             tagIcon={
                                 <img
                                     src="https://framerusercontent.com/images/jQJ8TgGax14f2upuHQKSjpr1jmg.svg"
@@ -283,7 +285,7 @@ export default function PricingPage() {
                                             </>
                                         ) : (
                                             <>
-                                                <p className="t-h4 text-gradient">Go for more power</p>
+                                                <p className="t-h4 text-gradient">Per agent pricing</p>
                                                 <h3 className="t-h3 text-white-100 mt-2">{plan.name}</h3>
                                             </>
                                         )}
@@ -294,7 +296,7 @@ export default function PricingPage() {
 
                                         <div className="mt-6 mb-8">
                                             <Button variant="primary" href="/contact" className="w-full">
-                                                Contact Us
+                                                Get Started
                                             </Button>
                                         </div>
 
@@ -334,8 +336,8 @@ export default function PricingPage() {
                                     height={24}
                                 />
                             }
-                            title="Choose Smarter Plans"
-                            subtitle="See what each plan offers and find the perfect fit for you."
+                            title="Compare Plans"
+                            subtitle="See what each plan includes across data, visualization, and agents."
                         />
                     </AnimatedSection>
 
@@ -346,9 +348,9 @@ export default function PricingPage() {
                                     <thead>
                                         <tr className="border-b border-ad-border">
                                             <th className="p-6 t-p-sm text-ad-muted font-medium w-1/3">Feature</th>
-                                            <th className="p-6 t-p-sm text-white-100 font-semibold text-center">Basic plan</th>
-                                            <th className="p-6 t-p-sm text-white-100 font-semibold text-center">Standard plan</th>
-                                            <th className="p-6 t-p-sm text-white-100 font-semibold text-center">Enterprise plan</th>
+                                            <th className="p-6 t-p-sm text-white-100 font-semibold text-center">Free</th>
+                                            <th className="p-6 t-p-sm text-white-100 font-semibold text-center">Pro</th>
+                                            <th className="p-6 t-p-sm text-white-100 font-semibold text-center">Agent Stack</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -376,7 +378,7 @@ export default function PricingPage() {
                                                 colSpan={4}
                                                 className="px-6 pt-8 pb-3 t-p-sm uppercase tracking-widest text-ad-tag font-medium"
                                             >
-                                                Advance features
+                                                Pro + Agent features
                                             </td>
                                         </tr>
                                         {advancedFeatures.map((row) => (
@@ -420,7 +422,7 @@ export default function PricingPage() {
                                 />
                             }
                             title="Curious About Adray?"
-                            subtitle="Answers to common questions about our AI-powered enterprise platform."
+                            subtitle="Answers to common questions about our ecommerce data platform."
                         />
                     </AnimatedSection>
 
