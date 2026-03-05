@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import React, { useRef, useState } from "react";
+import { motion, useScroll, useTransform, useMotionValueEvent } from "framer-motion";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import AnimatedSection from "@/components/ui/AnimatedSection";
@@ -102,13 +102,20 @@ function StepCard({ step }: { step: (typeof steps)[0] }) {
 
 export default function Steps() {
     const sectionRef = useRef<HTMLDivElement>(null);
+    const [activeStep, setActiveStep] = useState(0);
     const { scrollYProgress } = useScroll({
         target: sectionRef,
         offset: ["start center", "end center"],
     });
 
-    // Beam slides from left to right across the 3 numbers
-    const beamX = useTransform(scrollYProgress, [0, 1], ["-100%", "200%"]);
+    // Derive active step index from scroll progress (0-0.33 → step 0, 0.33-0.66 → step 1, 0.66-1.0 → step 2)
+    useMotionValueEvent(scrollYProgress, "change", (v) => {
+        const idx = v < 0.33 ? 0 : v < 0.66 ? 1 : 2;
+        setActiveStep(idx);
+    });
+
+    // Beam slides to align with the active number (0%, 100%, 200%)
+    const beamX = useTransform(scrollYProgress, [0, 0.33, 0.34, 0.66, 0.67, 1], ["0%", "0%", "100%", "100%", "200%", "200%"]);
 
     return (
         <section className="py-20 relative" ref={sectionRef}>
@@ -138,7 +145,7 @@ export default function Steps() {
                             {steps.map((step, i) => (
                                 <span
                                     key={step.number}
-                                    className={`flex-1 text-center t-h3-lg font-bold ${i === 0 ? "text-gradient" : "text-ad-deep"
+                                    className={`flex-1 text-center t-h3-lg font-bold transition-all duration-500 ${i === activeStep ? "text-gradient" : "text-ad-deep"
                                         }`}
                                 >
                                     {step.number}.
