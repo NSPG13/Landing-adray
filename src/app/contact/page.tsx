@@ -427,7 +427,6 @@ export default function ContactPage() {
                                         src={offices[selectedOffice].img}
                                         alt={offices[selectedOffice].city}
                                         className="w-full h-full object-cover"
-                                        style={{ filter: "sepia(1) hue-rotate(230deg) saturate(2)" }}
                                     />
                                 </div>
 
