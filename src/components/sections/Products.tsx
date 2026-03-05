@@ -8,40 +8,40 @@ import AnimatedSection from "@/components/ui/AnimatedSection";
 /* ── tab data ─────────────────────────────────────────── */
 const tabs = [
     {
-        label: "Automation",
-        title: "Process Automation",
+        label: "Data Layer",
+        title: "Unified Data Layer",
         description:
-            "Streamline complex workflows with intelligent AI agents that enhance efficiency, accuracy, and speed across your enterprise.",
+            "Reconcile Meta, Google, and Shopify into a single source of truth. Deduplicate conversions, resolve attribution conflicts, and build cross-merchant intelligence.",
         bullets: [
-            "Automate Tasks — Reduce manual effort",
-            "Optimize Workflows — Boost productivity",
-            "Stay Compliant — Ensure accuracy",
+            "Reconcile Platforms \u2014 One source of truth",
+            "Deduplicate Sales \u2014 Accurate attribution",
+            "Cross-Merchant Intel \u2014 Benchmark your vertical",
         ],
         image:
             "https://framerusercontent.com/images/7vqU2Ppdy0G0UGP9mrAcNuH6Lo.png",
     },
     {
-        label: "Banking",
-        title: "Smart Banking Solutions",
+        label: "Visualization",
+        title: "Dashboards + Creative",
         description:
-            "Transform financial operations with AI-powered agents that deliver real-time insights, fraud detection, and seamless transactions.",
+            "Launch pre-built Looker Studio dashboards with one click. Push top-performing creative signals to Canva for smart ad creatives. Unlimited attribution history.",
         bullets: [
-            "Detect Fraud — Real-time monitoring",
-            "Automate Transactions — Faster processing",
-            "Analyze Data — Actionable insights",
+            "Looker Studio \u2014 One-click dashboards",
+            "Canva Feed \u2014 Smart creative signals",
+            "Unlimited History \u2014 Full attribution data",
         ],
         image:
             "https://framerusercontent.com/images/7vqU2Ppdy0G0UGP9mrAcNuH6Lo.png",
     },
     {
-        label: "Recruitment",
-        title: "Intelligent Recruitment",
+        label: "Agents",
+        title: "Marketing Agent Stack",
         description:
-            "Find and hire top talent faster with AI agents that screen candidates, match skills, and automate the hiring pipeline.",
+            "Deploy agents that manage your ad spend autonomously. Budget reallocation, creative fatigue detection, anomaly alerts, and automated weekly reports \u2014 all running on your own LLM key.",
         bullets: [
-            "Screen Candidates — Save hours daily",
-            "Match Skills — Find perfect fits",
-            "Automate Hiring — Speed up onboarding",
+            "Budget Agent \u2014 Reallocate spend in real time",
+            "Creative Agent \u2014 Detect fatigue early",
+            "Report Agent \u2014 Weekly insights on autopilot",
         ],
         image:
             "https://framerusercontent.com/images/7vqU2Ppdy0G0UGP9mrAcNuH6Lo.png",
@@ -51,23 +51,23 @@ const tabs = [
 /* ── product cards ────────────────────────────────────── */
 const products = [
     {
-        name: "Healthcare",
-        description: "Boost sales with smart automation tools.",
+        name: "Attribution",
+        description: "Know exactly which ads drive real revenue.",
         icon: "https://framerusercontent.com/images/UhzKcwOlsFcygmiTZBSV1TlJWI.svg",
     },
     {
-        name: "Marketing",
-        description: "Optimize campaigns with intelligent automation.",
+        name: "ROAS Tracking",
+        description: "See your true return on ad spend across platforms.",
         icon: "https://framerusercontent.com/images/xjQCmHyjo6JeuuaTw7eNj6Rnz0.svg",
     },
     {
-        name: "Ecommerce",
-        description: "Accelerate coding and improve complex workflows.",
+        name: "Ad Intelligence",
+        description: "Cross-platform insights for smarter ad decisions.",
         icon: "https://framerusercontent.com/images/g03jLOH8iFVEwvrXTl5O92yNWI.svg",
     },
     {
-        name: "Development",
-        description: "Improve patient care with intelligent automation.",
+        name: "Budget Optimization",
+        description: "AI agents that manage your ad spend 24/7.",
         icon: "https://framerusercontent.com/images/s0leRkmxKn90KJPse58Uwi0gmwA.svg",
     },
 ];
@@ -116,8 +116,8 @@ export default function Products() {
                                 height={24}
                             />
                         }
-                        title="Multiple Products"
-                        subtitle="Covers all major verticals in the tech industry with top intelligence."
+                        title="The Full Product Stack"
+                        subtitle="Five layers of ecommerce intelligence. You own the data. AI does the rest."
                     />
                 </AnimatedSection>
 

@@ -42,8 +42,8 @@ export default function HomeIntegration() {
                                 height={24}
                             />
                         }
-                        title="Smart Versatile Agent driven Integration"
-                        subtitle="Connect custom or pre-built connectors to your enterprise and third-party apps."
+                        title="Connect Everything, Analyze Anywhere"
+                        subtitle="Adray connects your ad platforms and ecommerce store \u2014 then feeds it all to the AI of your choice."
                     />
                 </AnimatedSection>
 
@@ -78,7 +78,7 @@ export default function HomeIntegration() {
                 <AnimatedSection delay={0.3}>
                     <div className="text-center">
                         <Button variant="primary" href="/integration">
-                            Know More
+                            See All Integrations
                         </Button>
                     </div>
                 </AnimatedSection>

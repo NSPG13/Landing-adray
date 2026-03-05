@@ -9,38 +9,38 @@ import AnimatedSection from "@/components/ui/AnimatedSection";
 const part1 = [
     {
         q: "What is Adray?",
-        a: "Adray is an AI-powered enterprise platform that deploys intelligent agents to automate workflows, enhance customer service, and drive business growth across your organization.",
+        a: "Adray is a free ecommerce data layer that reconciles your Meta, Google, and Shopify data into one source of truth. Connect it to ChatGPT, Claude, or Gemini via MCP and get real attribution insights \u2014 no new dashboard to learn.",
     },
     {
-        q: "How are AI Agents different from automation tools?",
-        a: "Unlike traditional automation tools that follow rigid rules, Adray\u2019s AI Agents learn, adapt, and make intelligent decisions. They understand context, handle complex scenarios, and improve over time \u2014 going far beyond simple if-then workflows.",
+        q: "How is Adray different from Triple Whale or Northbeam?",
+        a: "Those tools are paid dashboards you have to learn and log into. Adray is free infrastructure \u2014 we own the data layer, and you analyze it with the AI tools you already use. No new UI, no monthly dashboard fee, and our server-side pixel captures 30\u201340% more events.",
     },
     {
-        q: "Can Adray integrate with our existing systems?",
-        a: "Yes. Adray supports 200+ integrations out of the box, including Salesforce, SAP, Slack, HubSpot, SharePoint, and more. Custom API connectors are also available on Supersonic and HyperSonic plans.",
+        q: "What platforms does Adray connect to?",
+        a: "Adray connects to Meta Ads, Google Ads, and Shopify out of the box. WooCommerce and BigCommerce connectors are coming soon. On the AI side, we support ChatGPT, Claude, and Gemini via MCP protocol.",
     },
     {
-        q: "Is Adray secure for enterprise use?",
-        a: "Absolutely. Adray is SOC 2 Type II certified, GDPR compliant, and supports HIPAA for healthcare customers. All data is encrypted at rest and in transit with enterprise-grade security protocols.",
+        q: "Is my ad data secure?",
+        a: "Yes. All data is collected server-side and encrypted at rest and in transit. Our pixel never touches the browser, making it immune to iOS privacy changes and ad blockers. Your data stays yours.",
     },
 ];
 
 const part2 = [
     {
-        q: "How quickly can Adray be implemented?",
-        a: "Most teams are up and running within days. Our guided onboarding, pre-built templates, and dedicated support team ensure a smooth and fast deployment \u2014 no complex setup required.",
+        q: "How quickly can I set up Adray?",
+        a: "Under 5 minutes. Install from the Shopify App Store, connect your ad accounts via OAuth, and your MCP endpoint is ready. No code, no JavaScript, no developer needed.",
     },
     {
-        q: "Can AI Agents replace human employees?",
-        a: "Adray\u2019s AI Agents are designed to augment your team, not replace them. They handle repetitive, time-consuming tasks so your people can focus on strategic, high-value work.",
+        q: "What are Adray marketing agents?",
+        a: "Marketing agents are AI-powered automations that act on your data \u2014 reallocating budgets, detecting creative fatigue, flagging anomalies, and generating weekly reports. They run on your own LLM key, so there\u2019s near-zero cost to Adray.",
     },
     {
-        q: "How does Adray improve customer service?",
-        a: "AI Agents resolve customer queries instantly and accurately, 24/7. They understand intent, access knowledge bases, and escalate complex issues to human agents seamlessly \u2014 improving satisfaction and response times.",
+        q: "What does the free plan include?",
+        a: "The free plan includes the Shopify app with auto-install pixel, Meta and Google connectors, an MCP endpoint for any major LLM, pre-built prompt templates, and a limited attribution window. No credit card required.",
     },
     {
-        q: "Is Adray scalable for global operations?",
-        a: "Yes. Adray is built for enterprise scale \u2014 supporting multi-region deployments, multilingual agents, unlimited workflows, and thousands of concurrent AI actions with guaranteed uptime SLAs.",
+        q: "What\u2019s the $49 Pro plan for?",
+        a: "Pro unlocks Looker Studio dashboards, Canva creative feed integration, unlimited attribution history, and priority support. It\u2019s built for merchants who want the full visualization and creative workflow on top of the free data layer.",
     },
 ];
 
@@ -93,7 +93,7 @@ export default function HomeFAQ() {
                             />
                         }
                         title="Curious About Adray?"
-                        subtitle="Answers to common questions about our AI-powered enterprise platform."
+                        subtitle="Answers to common questions about our ecommerce data platform."
                     />
                 </AnimatedSection>
 

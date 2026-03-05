@@ -8,52 +8,52 @@ import AnimatedSection from "@/components/ui/AnimatedSection";
 const tabs = [
     {
         id: "usage",
-        label: "Usage",
+        label: "Collect",
         iconSvg: "01d6Xos4x3sbU293TmKaFduYFAc.svg",
-        title: "AI Agent for work",
+        title: "First-Party Pixel + Connectors",
         description:
-            "Connect to your business systems, understand your data and workflows, and activate agentic.",
+            "Auto-install a server-side pixel on Shopify. Connect Meta and Google ad accounts via OAuth. Capture every session, cart, and purchase \u2014 immune to iOS privacy and ad blockers.",
         tags: [
-            { label: "Healthcare" },
-            { label: "Tech Assistance" },
-            { label: "Support" },
-            { label: "Marketer" },
+            { label: "Shopify" },
+            { label: "Meta CAPI" },
+            { label: "Google Ads" },
+            { label: "Server-Side" },
         ],
-        cta: { label: "See Uses", href: "/ai-solutions/ai-for-work" },
+        cta: { label: "Learn More", href: "/ai-solutions/ai-for-work" },
         image:
             "https://framerusercontent.com/images/DKhCP3xiqB8m3zBp2E6ysooT3SY.webp",
     },
     {
         id: "technology",
-        label: "Technology",
+        label: "Analyze",
         iconSvg: "DzDW9qxLWt1R7V7DL7f89IPJfk.svg",
-        title: "Alpha Technology",
+        title: "AI-Powered Analysis",
         description:
-            "Connect to your business systems, understand your data and workflows, and activate agentic.",
+            "Get your MCP endpoint and connect it to ChatGPT, Claude, or Gemini. Use pre-built prompt templates to uncover real ROAS, attribution, and performance insights in seconds.",
         tags: [
-            { label: "Multi-Agent" },
-            { label: "Latest Model" },
-            { label: "Dialog GPT" },
-            { label: "Supervisor Agents" },
+            { label: "ChatGPT" },
+            { label: "Claude" },
+            { label: "Gemini" },
+            { label: "MCP Protocol" },
         ],
-        cta: { label: "Explore Tech", href: "/ai-solutions/ai-for-service" },
+        cta: { label: "Learn More", href: "/ai-solutions/ai-for-service" },
         image:
             "https://framerusercontent.com/images/4ABnXaFshXBVkaMyEU2NjeeqE.webp",
     },
     {
         id: "data",
-        label: "Data",
+        label: "Act",
         iconSvg: "Akgvq4ROltzdkv9bMr9wLtsd5c.svg",
-        title: "Enterprise data sources",
+        title: "Marketing Agent Stack",
         description:
-            "Our design approach is ecosystem agnostic, allowing you to choose how you connect your enterprise.",
+            "Deploy AI agents that act on your data \u2014 reallocate budgets, detect creative fatigue, flag anomalies, and generate weekly reports. Agents run on your own LLM key at near-zero cost.",
         tags: [
-            { label: "SharePoint" },
-            { label: "SAP" },
-            { label: "Slack" },
-            { label: "Confluence" },
+            { label: "Budget Agent" },
+            { label: "Creative Agent" },
+            { label: "Anomaly Alerts" },
+            { label: "Auto Reports" },
         ],
-        cta: { label: "Start Setup", href: "/ai-solutions/ai-for-process" },
+        cta: { label: "Learn More", href: "/ai-solutions/ai-for-process" },
         image:
             "https://framerusercontent.com/images/rYyqmKb6ZW8scPMDoDnkLicukfc.png",
     },
@@ -78,8 +78,8 @@ export default function FeaturesTabs() {
                                 height={24}
                             />
                         }
-                        title="All-in-one AI for enterprise"
-                        subtitle="Simplify, accelerate, and transform with one connected AI ecosystem."
+                        title="How Adray works"
+                        subtitle="From pixel to insight in under five minutes."
                     />
                 </AnimatedSection>
 

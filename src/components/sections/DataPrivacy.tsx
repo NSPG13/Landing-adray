@@ -6,9 +6,9 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 
 const featureTags = [
-    "Intelligent Protection",
-    "Real-Time Threat Detection",
-    "Seamless Compliance",
+    "Server-Side Collection",
+    "iOS 14+ Proof",
+    "Adblocker Immune",
 ];
 
 const layerImages = [
@@ -34,8 +34,8 @@ export default function DataPrivacy() {
                                 height={24}
                             />
                         }
-                        title="Multi-Layer Security"
-                        subtitle="Protect your enterprise with multi-layered AI security. From data encryption to behavior monitoring, every layer works together."
+                        title="Your Data, Fully Protected"
+                        subtitle="Server-side collection means your data never touches the browser. Encrypted at rest and in transit, with enterprise-grade privacy built into every layer."
                     />
                 </AnimatedSection>
 

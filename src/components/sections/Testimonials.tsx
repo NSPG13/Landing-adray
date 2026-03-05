@@ -9,25 +9,25 @@ import AnimatedSection from "@/components/ui/AnimatedSection";
 const testimonials = [
     {
         quote:
-            "With Adray\u2019s AI platform, our enterprise has gained speed, insight, and scalability. The intelligence behind their agents is unmatched \u2014 it\u2019s like having an expert team working 24/7 with consistency and accuracy. Adray continues to push the boundaries.",
+            "We were spending $50k a month on ads and had no idea what was actually working. Adray showed us our real ROAS for the first time \u2014 turns out Meta was overclaiming by 3x. We cut wasted spend by 40% in the first month.",
         author: "Priya Nair",
-        role: "Head of Innovation, Altara Global",
+        role: "Head of Growth, Altara Commerce",
         image:
             "https://framerusercontent.com/images/d4SpmpLmhUfMZkWsTOukrdAmhg.jpg",
     },
     {
         quote:
-            "Adray is the top-performing AI Agent we\u2019ve seen to date \u2014 resolving complex queries faster and more accurately than any human team could. It has not only enhanced our support operations but also improved client satisfaction across the board.",
+            "I connected Adray to ChatGPT and asked about last week\u2019s ROAS. For the first time, I got an answer that matched reality \u2014 not what Meta or Google wanted me to believe. Setup took under 5 minutes.",
         author: "Daniel Reyes",
-        role: "Chief Operations Officer, LuminaTech",
+        role: "Ecommerce Director, LuminaTech",
         image:
             "https://framerusercontent.com/images/BIY5osAhJGxk35JHUCh9nq0Wro.jpg",
     },
     {
         quote:
-            "Adray\u2019s AI Agents have completely transformed our workflow efficiency. What once took hours now takes minutes. Their adaptability and precision make them the most capable AI solution we\u2019ve ever implemented \u2014 truly redefining enterprise automation.",
+            "The budget reallocation agent paid for itself in the first week. It caught a creative fatigue issue we would have missed for days and automatically shifted spend to our best-performing campaigns.",
         author: "Sarah Mitchell",
-        role: "VP of Digital Transformation, Nexora",
+        role: "Marketing Lead, Nexora",
         image:
             "https://framerusercontent.com/images/oUkBi1c8nERocfQrJWNLxZ9Fipw.jpg",
     },
@@ -93,8 +93,8 @@ export default function Testimonials() {
                                 height={24}
                             />
                         }
-                        title="Trusted by customers"
-                        subtitle="Proven outcomes shared by industry leaders and innovators."
+                        title="Trusted by merchants"
+                        subtitle="Real results from ecommerce teams using Adray."
                     />
                 </AnimatedSection>
 

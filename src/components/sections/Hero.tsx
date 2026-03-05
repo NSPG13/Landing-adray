@@ -92,7 +92,7 @@ export default function Hero() {
                             animate={{ opacity: 1 }}
                             transition={{ duration: 0.6, ease }}
                         >
-                            <Badge>Beta Version is launching on 12th September</Badge>
+                            <Badge>Now live on the Shopify App Store</Badge>
                         </motion.div>
 
                         {/* Heading group — 24px gap between title/subtitle */}
@@ -104,16 +104,16 @@ export default function Hero() {
                                 transition={{ duration: 0.8, delay: 0.1, ease }}
                             >
                                 <h1 className="t-h1 text-white-100 text-center" style={{ maxWidth: "780px" }}>
-                                    <BlurRevealText text="Next-gen enterprise" startDelay={0.15} />
+                                    <BlurRevealText text="Your ad data, finally" startDelay={0.15} />
                                     <br />
-                                    <BlurRevealText text="with AI Agents" startDelay={0.6} />
+                                    <BlurRevealText text="telling the truth" startDelay={0.6} />
                                 </h1>
                             </motion.div>
 
                             {/* Subtitle — white, weight 500, blur reveal, text-shadow */}
                             <div style={{ maxWidth: "524px", textShadow: "0 1px 2px rgba(0,0,0,0.32)" }}>
                                 <BlurRevealText
-                                    text="Accelerate the speed of business with the Adray Platform and our AI solutions for work, service, and process."
+                                    text="Adray reconciles Meta, Google, and Shopify data into one source of truth — then lets you analyze it with ChatGPT, Claude, or Gemini."
                                     startDelay={0.4}
                                     className="t-p-lg-medium text-white-100 tracking-[-0.03em] text-center"
                                 />
@@ -128,7 +128,7 @@ export default function Hero() {
                         transition={{ duration: 0.7, delay: 0.5, ease }}
                     >
                         <Button variant="primary" size="lg" href="/pricing">
-                            Get Started
+                            Start Free
                         </Button>
                     </motion.div>
                 </div>

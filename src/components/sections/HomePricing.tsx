@@ -9,45 +9,47 @@ import AnimatedSection from "@/components/ui/AnimatedSection";
 
 const plans = [
     {
-        name: "Sonic",
-        monthlyPrice: 49,
+        name: "Free",
+        monthlyPrice: 0,
         subtitle: null,
         features: [
-            "Access to core AI Agents",
-            "Workflow automation for teams",
-            "Basic integrations",
-            "Standard reporting & analytics",
-            "Email support",
-            "5,000 AI actions per month",
+            "Shopify app + auto-install pixel",
+            "Meta + Google ad connectors",
+            "MCP endpoint for ChatGPT, Claude, Gemini",
+            "Pre-built prompt templates",
+            "Limited attribution window",
+            "Community support",
         ],
-        trust: "300+ teams trusted this",
+        trust: "850+ merchants connected",
         bgImage:
             "https://framerusercontent.com/images/XXSw2JqvtikgOcaexTTozzVsO54.webp",
     },
     {
-        name: "Supersonic",
-        monthlyPrice: 99,
+        name: "Pro",
+        monthlyPrice: 49,
         subtitle: null,
         features: [
-            "Everything in Sonic Monthly",
-            "Advanced AI Agents for workflows",
-            "Priority integrations",
-            "Enhanced dashboards",
-            "24/7 support via chat",
-            "20,000 AI actions per month",
+            "Everything in Free",
+            "Looker Studio connector + dashboards",
+            "Canva creative feed for smart ads",
+            "Unlimited attribution history",
+            "Priority email support",
+            "Direct onboarding path",
         ],
-        trust: "250+ growing enterprises",
+        trust: "For growing brands",
         bgImage:
             "https://framerusercontent.com/images/4fEwCxLuKCW6ZaczMzoeCElmzBg.webp",
     },
     {
-        name: "HyperSonic",
+        name: "Agent Stack",
         monthlyPrice: null,
-        subtitle: "Unlimited automation with dedicated enterprise support.",
+        subtitle: "AI agents that manage your ad spend. Priced on value delivered.",
         features: [
-            "Enterprise-grade AI Agent",
-            "Full custom API access",
-            "Unlimited workflows & automation",
+            "Budget reallocation agent",
+            "Creative fatigue detection agent",
+            "Anomaly detection + alerting",
+            "Weekly reporting agent",
+            "Runs on your own LLM key",
         ],
         trust: null,
         bgImage:
@@ -148,7 +150,7 @@ export default function HomePricing() {
                                         </div>
                                     ) : (
                                         <div className="mt-3">
-                                            <p className="t-h4 text-gradient">Go for more power</p>
+                                            <p className="t-h4 text-gradient">Per agent pricing</p>
                                         </div>
                                     )}
 
@@ -164,7 +166,7 @@ export default function HomePricing() {
                                             href="/contact"
                                             className="w-full"
                                         >
-                                            Contact Us
+                                            Get Started
                                         </Button>
                                     </div>
 

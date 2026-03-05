@@ -9,39 +9,39 @@ import AnimatedSection from "@/components/ui/AnimatedSection";
 const steps = [
     {
         number: "01",
-        title: "One account, endless sign-in choices",
+        title: "Install from the Shopify App Store",
         description:
-            "Choose from Google, Apple, GitHub, or create an account with email and passkey.",
+            "One-click install. Server-side pixel activates automatically via Shopify webhooks. No code, no JavaScript, fully automatic.",
         bullets: [
-            "Sign in instantly with Google or GitHub.",
-            "Create your own secure login credentials.",
-            "Connect through your company's sign-in.",
+            "One-click install from Shopify App Store.",
+            "Server-side pixel auto-installs silently.",
+            "Works for WooCommerce and BigCommerce too.",
         ],
         image:
             "https://framerusercontent.com/images/vUiGHc7SR4A4SrQMUODr2UXNbY.png",
     },
     {
         number: "02",
-        title: "Choose the Agent You Want to Deploy",
+        title: "Connect Meta + Google in 60 Seconds",
         description:
-            "From a vast universe of intelligent agents, pick the one that best fits your needs and serves your purpose.",
+            "Authorize your Meta and Google ad accounts via OAuth. Adray starts reconciling your data immediately \u2014 no configuration needed.",
         bullets: [
-            "Choose agents tailored to your specific tasks.",
-            "Access universe of pre-built intelligent.",
-            "Deploy agents that align with your goals.",
+            "Connect Meta Ads via secure OAuth flow.",
+            "Connect Google Ads in two clicks.",
+            "Data reconciliation begins automatically.",
         ],
         image:
             "https://framerusercontent.com/images/1h2g2AnKRHxZzmSq2umWuiBsSys.png",
     },
     {
         number: "03",
-        title: "Prompt or Set to Automation Mode",
+        title: "Ask Your AI About Real ROAS",
         description:
-            "You can manually guide and adjust the workflow, or let the agent handle everything automatically.",
+            "Copy your MCP endpoint, connect it to ChatGPT or Claude, and ask your first question. See the truth behind your ad spend in seconds.",
         bullets: [
-            "Prompt the agent and adjust workflows.",
-            "Let the agent handle tasks end-to-end.",
-            "Switch between manual and automated.",
+            "Copy your MCP endpoint from the Adray dashboard.",
+            "Connect to ChatGPT, Claude, or Gemini.",
+            "Ask anything about your real ad performance.",
         ],
         image:
             "https://framerusercontent.com/images/8KzDLcSNotT5Lxj1UyWAsRCZu3E.png",
@@ -125,8 +125,8 @@ export default function Steps() {
                                 height={24}
                             />
                         }
-                        title="3 Steps to Kickstart"
-                        subtitle="From setup to measurable success made effortless in three steps."
+                        title="3 Steps to Real Data"
+                        subtitle="From install to real ROAS in under five minutes."
                     />
                 </AnimatedSection>
 
