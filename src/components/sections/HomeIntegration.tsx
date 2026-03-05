@@ -26,6 +26,7 @@ export default function HomeIntegration() {
                         "url(https://framerusercontent.com/images/FMpJMmyNTqRd8oGYputAzs8cso.webp)",
                     backgroundSize: "cover",
                     backgroundPosition: "center",
+                    filter: "sepia(1) hue-rotate(230deg) saturate(2)",
                 }}
             />
 

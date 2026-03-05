@@ -58,6 +58,7 @@ export default function AboutPage() {
                         backgroundSize: "cover",
                         backgroundPosition: "center top",
                         opacity: 0.5,
+                        filter: "sepia(1) hue-rotate(230deg) saturate(2)",
                     }}
                 />
                 <Container className="relative z-10">
@@ -220,6 +221,7 @@ export default function AboutPage() {
                             "url(https://framerusercontent.com/images/PEUUUxYckhxt8G82fn4Y0LPz5s.png)",
                         backgroundSize: "cover",
                         backgroundPosition: "center",
+                        filter: "sepia(1) hue-rotate(230deg) saturate(2)",
                     }}
                 />
                 <Container className="relative z-10">

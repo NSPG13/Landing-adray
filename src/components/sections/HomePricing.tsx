@@ -135,6 +135,7 @@ export default function HomePricing() {
                                     src={plan.bgImage}
                                     alt=""
                                     className="absolute inset-0 w-full h-full object-cover opacity-50 pointer-events-none"
+                                    style={{ filter: "sepia(1) hue-rotate(230deg) saturate(2)" }}
                                 />
                                 <div className="relative z-10 p-8 flex flex-col h-full">
                                     <h3 className="t-h4 text-white-100">{plan.name}</h3>

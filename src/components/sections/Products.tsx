@@ -100,7 +100,7 @@ export default function Products() {
                 src="https://framerusercontent.com/images/PEUUUxYckhxt8G82fn4Y0LPz5s.png"
                 alt=""
                 className="absolute inset-0 w-full h-full object-contain pointer-events-none"
-                style={{ opacity: 0.6, zIndex: 0, minWidth: "2058px", left: "50%", transform: "translateX(-50%)" }}
+                style={{ opacity: 0.6, zIndex: 0, minWidth: "2058px", left: "50%", transform: "translateX(-50%)", filter: "sepia(1) hue-rotate(230deg) saturate(2)" }}
             />
 
             <Container className="relative z-10">

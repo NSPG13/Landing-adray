@@ -171,6 +171,7 @@ export default function PricingPage() {
                     src="https://framerusercontent.com/images/H3Q7Up1GD9JyEYygvN5U7fWpqYQ.webp"
                     alt=""
                     className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+                    style={{ filter: "sepia(1) hue-rotate(230deg) saturate(2)" }}
                 />
                 <Container className="relative z-10 text-center">
                     <motion.div
@@ -269,6 +270,7 @@ export default function PricingPage() {
                                         src={plan.bgImage}
                                         alt=""
                                         className="absolute inset-0 w-full h-full object-cover opacity-50 pointer-events-none"
+                                        style={{ filter: "sepia(1) hue-rotate(230deg) saturate(2)" }}
                                     />
                                     <div className="relative z-10 p-8 flex flex-col h-full">
                                         {plan.monthlyPrice !== null ? (
@@ -403,7 +405,7 @@ export default function PricingPage() {
                     src="https://framerusercontent.com/images/PEUUUxYckhxt8G82fn4Y0LPz5s.png"
                     alt=""
                     className="absolute pointer-events-none"
-                    style={{ width: 3296, height: 2255, transform: "translate(-50%, -50%)", left: "50%", top: "50%" }}
+                    style={{ width: 3296, height: 2255, transform: "translate(-50%, -50%)", left: "50%", top: "50%", filter: "sepia(1) hue-rotate(230deg) saturate(2)" }}
                 />
             </div>
 

@@ -57,6 +57,7 @@ export default function AIForProcessPage() {
                             "linear-gradient(to bottom, transparent, black 30%, black 70%, transparent)",
                         WebkitMaskImage:
                             "linear-gradient(to bottom, transparent, black 30%, black 70%, transparent)",
+                        filter: "sepia(1) hue-rotate(230deg) saturate(2)",
                     }}
                 />
                 <Container className="relative z-10 text-center">

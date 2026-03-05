@@ -46,7 +46,7 @@ export default function HighlightedText() {
                         src="https://framerusercontent.com/images/emEabgUGaj1mrFtUh9nCcNLOsk.webp"
                         alt=""
                         className="absolute inset-0 w-full h-full object-contain animate-rotate"
-                        style={{ animationDuration: "8s", filter: "brightness(1.33)" }}
+                        style={{ animationDuration: "8s", filter: "brightness(1.33) sepia(1) hue-rotate(230deg) saturate(2)" }}
                     />
                     {/* Cycling logos */}
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-[68px] flex items-center justify-center">

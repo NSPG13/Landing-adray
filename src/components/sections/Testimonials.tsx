@@ -77,6 +77,7 @@ export default function Testimonials() {
                         "url(https://framerusercontent.com/images/i8sq3FWUDAbUH2kTIeqGIMeGrwE.webp)",
                     backgroundSize: "cover",
                     backgroundPosition: "center",
+                    filter: "sepia(1) hue-rotate(230deg) saturate(2)",
                 }}
             />
 

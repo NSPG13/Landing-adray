@@ -69,7 +69,7 @@ export default function Exceptionalities() {
                                     src={card.bgImage}
                                     alt=""
                                     className="absolute inset-0 w-full h-full object-cover pointer-events-none"
-                                    style={i === 0 ? { filter: "brightness(1.33)", opacity: 0.35 } : { opacity: 0.3 }}
+                                    style={i === 0 ? { filter: "brightness(1.33) sepia(1) hue-rotate(230deg) saturate(2)", opacity: 0.35 } : { filter: "sepia(1) hue-rotate(230deg) saturate(2)", opacity: 0.3 }}
                                 />
 
                                 {/* Speed card decorations */}

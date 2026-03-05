@@ -98,7 +98,7 @@ export default function BlogPage() {
                     src="https://framerusercontent.com/images/H3Q7Up1GD9JyEYygvN5U7fWpqYQ.webp"
                     alt=""
                     className="w-full object-cover"
-                    style={{ marginTop: "-40px", maskImage: "linear-gradient(#000 0% 66.98%, transparent 100%)", WebkitMaskImage: "linear-gradient(#000 0% 66.98%, transparent 100%)" }}
+                    style={{ marginTop: "-40px", maskImage: "linear-gradient(#000 0% 66.98%, transparent 100%)", WebkitMaskImage: "linear-gradient(#000 0% 66.98%, transparent 100%)", filter: "sepia(1) hue-rotate(230deg) saturate(2)" }}
                 />
             </div>
 
@@ -142,7 +142,7 @@ export default function BlogPage() {
                         src="https://framerusercontent.com/images/PEUUUxYckhxt8G82fn4Y0LPz5s.png"
                         alt=""
                         className="absolute"
-                        style={{ width: 3296, height: 2255, transform: "translate(-50%, -50%)", left: "50%", top: "50%" }}
+                        style={{ width: 3296, height: 2255, transform: "translate(-50%, -50%)", left: "50%", top: "50%", filter: "sepia(1) hue-rotate(230deg) saturate(2)" }}
                     />
                 </div>
                 <Container className="relative z-10">

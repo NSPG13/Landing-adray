@@ -49,6 +49,7 @@ export default function AISolutionsPage() {
                         backgroundSize: "cover",
                         backgroundPosition: "center top",
                         opacity: 0.5,
+                        filter: "sepia(1) hue-rotate(230deg) saturate(2)",
                     }}
                 />
                 <Container className="relative z-10 text-center">

@@ -47,6 +47,7 @@ export default function Footer() {
                         maskImage: "linear-gradient(to bottom, transparent, black 30%, black 70%, transparent)",
                         WebkitMaskImage:
                             "linear-gradient(to bottom, transparent, black 30%, black 70%, transparent)",
+                        filter: "sepia(1) hue-rotate(230deg) saturate(2)",
                     }}
                 />
 
