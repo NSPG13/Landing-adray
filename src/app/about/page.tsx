@@ -297,7 +297,6 @@ export default function AboutPage() {
                                         src="https://framerusercontent.com/images/Jp1l6nfzIznnFpz8xA77dr6ShY.jpg"
                                         alt=""
                                         className="w-full h-full object-cover"
-                                        style={{ filter: "sepia(1) hue-rotate(230deg) saturate(2)" }}
                                     />
                                 </div>
                                 <div className="rounded-2xl overflow-hidden flex-[1]">
