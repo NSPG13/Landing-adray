@@ -152,6 +152,7 @@ export default function AboutPage() {
                                         src={v.gradient}
                                         alt=""
                                         className="absolute inset-0 w-full h-full object-cover opacity-50 pointer-events-none"
+                                        style={{ filter: "sepia(1) hue-rotate(230deg) saturate(2)" }}
                                     />
                                     <div className="relative z-10 p-8 flex flex-col h-full">
                                         <h3 className="t-h4 text-white-100 mb-3">{v.title}</h3>
@@ -296,6 +297,7 @@ export default function AboutPage() {
                                         src="https://framerusercontent.com/images/Jp1l6nfzIznnFpz8xA77dr6ShY.jpg"
                                         alt=""
                                         className="w-full h-full object-cover"
+                                        style={{ filter: "sepia(1) hue-rotate(230deg) saturate(2)" }}
                                     />
                                 </div>
                                 <div className="rounded-2xl overflow-hidden flex-[1]">
@@ -303,6 +305,7 @@ export default function AboutPage() {
                                         src="https://framerusercontent.com/images/G2e7HlhrS4QOvLT8fLk72DmOr5A.webp"
                                         alt=""
                                         className="w-full h-full object-cover"
+                                        style={{ filter: "sepia(1) hue-rotate(230deg) saturate(2)" }}
                                     />
                                 </div>
                             </div>
@@ -313,6 +316,7 @@ export default function AboutPage() {
                                         src="https://framerusercontent.com/images/oXO7T72nyamuKTgGVuI0pWw26Ns.webp"
                                         alt=""
                                         className="w-full h-full object-cover"
+                                        style={{ filter: "sepia(1) hue-rotate(230deg) saturate(2)" }}
                                     />
                                 </div>
                                 <div className="rounded-2xl overflow-hidden flex-[5]">
@@ -320,6 +324,7 @@ export default function AboutPage() {
                                         src="https://framerusercontent.com/images/j31VAapLRCe7cdp82p8kZi7nBS8.png"
                                         alt=""
                                         className="w-full h-full object-cover"
+                                        style={{ filter: "sepia(1) hue-rotate(230deg) saturate(2)" }}
                                     />
                                 </div>
                             </div>

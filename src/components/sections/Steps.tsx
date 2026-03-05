@@ -93,7 +93,7 @@ function StepCard({ step }: { step: (typeof steps)[0] }) {
                     src={step.image}
                     alt={step.title}
                     className="w-full h-full object-cover"
-                    style={{ filter: "brightness(1.5)" }}
+                    style={{ filter: "brightness(1.5) sepia(1) hue-rotate(230deg) saturate(2)" }}
                 />
             </div>
         </div>

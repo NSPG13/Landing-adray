@@ -169,6 +169,7 @@ export default function ContactPage() {
                                     src="https://framerusercontent.com/images/77v7OsCWhXM6Xy0eey2iJbdberY.webp"
                                     alt="Get Onboarding Help"
                                     className="w-full h-48 object-cover"
+                                    style={{ filter: "sepia(1) hue-rotate(230deg) saturate(2)" }}
                                 />
                                 <div className="p-8 flex flex-col flex-1">
                                     <h3 className="t-h4 text-white-100 mb-3">Get Onboarding Help</h3>
@@ -426,6 +427,7 @@ export default function ContactPage() {
                                         src={offices[selectedOffice].img}
                                         alt={offices[selectedOffice].city}
                                         className="w-full h-full object-cover"
+                                        style={{ filter: "sepia(1) hue-rotate(230deg) saturate(2)" }}
                                     />
                                 </div>
 
@@ -436,6 +438,7 @@ export default function ContactPage() {
                                             src={offices[selectedOffice].flag}
                                             alt=""
                                             className="w-[57px] h-[57px] rounded-full flex-shrink-0"
+                                            style={{ filter: "sepia(1) hue-rotate(230deg) saturate(2)" }}
                                         />
                                     )}
                                     <div className="flex-1">
