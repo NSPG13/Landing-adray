@@ -12,21 +12,21 @@ import ScrollTextColor from "@/components/ui/ScrollTextColor";
 /* ── Data ── */
 const values = [
     {
-        title: "Pioneering Smarter Enterprise Solutions",
+        title: "Own the Data, Not the Dashboard",
         description:
-            "We push the boundaries of AI to create smarter, faster, and more efficient enterprise solutions.",
+            "We believe the data layer is worth more than any UI built on top of it. We own collection and reconciliation — merchants choose the tools.",
         gradient: "https://framerusercontent.com/images/SEwIHyt9NYJZFvnl5EfirpMYVE.png",
     },
     {
-        title: "Driven by Trust and Transparency",
+        title: "Free at Scale Beats Paid with Better Features",
         description:
-            "We act with honesty, transparency, and accountability, ensuring reliability and excellence.",
+            "Our free tier scales to 100k merchants at near-zero cost. Every connected pixel strengthens the network for everyone.",
         gradient: "https://framerusercontent.com/images/Jecsu2g820ZvCsU3axIprDjA.png",
     },
     {
-        title: "Delivering Measurable Business Results",
+        title: "Invisible Infrastructure, Real Results",
         description:
-            "Our AI Agents deliver measurable, lasting results that transform the way businesses operate and grow.",
+            "The best outcome is a merchant who never thinks about us — they just know their AI gives accurate answers and their agents run reliably.",
         gradient: "https://framerusercontent.com/images/YeudDKQ2dKYEjVeYoqqOI1QRgY.png",
     },
 ];
@@ -81,7 +81,7 @@ export default function AboutPage() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.1, ease }}
                     >
-                        <BlurRevealText text="Shaping the Future of Enterprise" startDelay={0.15} />
+                        <BlurRevealText text="The Data Layer Behind Ecommerce" startDelay={0.15} />
                     </motion.h1>
                     <motion.p
                         className="t-p-lg text-ad-subtitle max-w-2xl mb-12"
@@ -89,7 +89,7 @@ export default function AboutPage() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.7, delay: 0.25, ease }}
                     >
-                        Connect any app or system pre-built or custom with ease and flexibility.
+                        We reconcile Meta, Google, and Shopify into one source of truth — so merchants finally know what&apos;s actually driving revenue.
                     </motion.p>
 
                     {/* Hero image */}
@@ -112,7 +112,7 @@ export default function AboutPage() {
             <section className="py-20 relative">
                 <Container className="max-w-4xl">
                     <ScrollTextColor
-                        content="At Adray, we build intelligent AI Agents that empower businesses to work smarter, faster, and more efficiently. Our mission is to transform enterprise workflows, service, and processes through innovation, collaboration, and cutting-edge AI technology."
+                        content="Every ad platform tells a different story. Merchants deserve a single source of truth. We built Adray to be the invisible data layer that reconciles it all — then hands it to the AI tools merchants already use."
                         colorStart="#CA8AE5"
                         colorEnd="#FFFFFF"
                         trigger="layer-in-view"
@@ -139,7 +139,7 @@ export default function AboutPage() {
                                 />
                             }
                             title="We are committed"
-                            subtitle="Driven by innovation, integrity, and impact in every solution we build."
+                            subtitle="The principles that guide how we build Adray."
                         />
                     </AnimatedSection>
 
@@ -180,7 +180,7 @@ export default function AboutPage() {
                                 />
                             }
                             title="From the Founder"
-                            subtitle="Vision, innovation, and a commitment to transforming enterprise with AI."
+                            subtitle="Why we pivoted from dashboard to data infrastructure."
                         />
                     </AnimatedSection>
 
@@ -195,12 +195,15 @@ export default function AboutPage() {
                                 />
                             </div>
                             <blockquote className="t-p-lg text-white-90 italic leading-relaxed">
-                                &ldquo;When we started Adray, our goal was simple to create AI
-                                Agents that truly empower businesses. Every innovation, every
-                                solution we build is designed to make enterprises smarter, faster,
-                                and more effective. Our mission is not just to automate, but to
-                                redefine how work, service, and processes are done at scale. I
-                                invite you to join us on this journey of transformation.&rdquo;
+                                &ldquo;We started building a dashboard — then realized the real
+                                value was underneath it. Every ad platform tells merchants a
+                                different story. Meta says 40x ROAS. Google says 8x. Shopify
+                                shows 12 orders. Nobody knows what&apos;s real. We stopped
+                                competing with AI interfaces and became the data layer they
+                                depend on. Today, Adray reconciles the truth across platforms
+                                and hands it to the AI tools merchants already use. The best
+                                infrastructure is invisible — and that&apos;s exactly what we&apos;re
+                                building.&rdquo;
                             </blockquote>
                         </div>
                     </AnimatedSection>
@@ -232,7 +235,7 @@ export default function AboutPage() {
                                 />
                             }
                             title="Meet the Adray Minds"
-                            subtitle="Experts in AI and enterprise innovation, shaping the future of business."
+                            subtitle="A team of ecommerce data engineers, growth operators, and AI builders."
                         />
                     </AnimatedSection>
 
@@ -277,8 +280,8 @@ export default function AboutPage() {
                                     height={24}
                                 />
                             }
-                            title="Join us as we build tomorrow&rsquo;s enterprise."
-                            subtitle="Be a part of a company that is reimagining the future of business, building AI Agents that are effective and impactful for large enterprises. At Adray, you'll collaborate with some of the brightest minds in AI, driving innovation at scale."
+                            title="Join us as we build ecommerce&rsquo;s data layer."
+                            subtitle="We&rsquo;re on a mission to connect 100k stores to the truth behind their ad spend. If you care about data infrastructure, ecommerce, and making AI actually useful — we want to hear from you."
                         />
                     </AnimatedSection>
 
