@@ -73,6 +73,7 @@ export default function DataPrivacy() {
                                     src={src}
                                     alt={`Security Layer ${i + 1}`}
                                     className="w-full h-auto rounded-2xl"
+                                    style={{ filter: "sepia(1) hue-rotate(230deg) saturate(2)" }}
                                 />
                             </div>
                         ))}
