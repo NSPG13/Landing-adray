@@ -41,7 +41,7 @@ export default function Navbar() {
                     >
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
-                            src="https://framerusercontent.com/images/9KnJwOszoExl1mcOPudDLQaGg.svg"
+                            src="/adray-logo.svg"
                             alt="Adray"
                             className="h-6 w-auto"
                             style={{ objectFit: "contain" }}
@@ -115,7 +115,7 @@ export default function Navbar() {
                     <Link href="/" className="flex items-center gap-2 flex-shrink-0">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
-                            src="https://framerusercontent.com/images/9KnJwOszoExl1mcOPudDLQaGg.svg"
+                            src="/adray-logo.svg"
                             alt="Adray"
                             className="h-6 w-auto"
                         />

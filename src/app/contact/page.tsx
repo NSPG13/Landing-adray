@@ -402,8 +402,8 @@ export default function ContactPage() {
                                         key={o.city}
                                         onClick={() => setSelectedOffice(i)}
                                         className={`relative text-left px-4 py-4 transition-colors cursor-pointer ${selectedOffice === i
-                                                ? "text-white-100"
-                                                : "text-ad-muted hover:text-white-90"
+                                            ? "text-white-100"
+                                            : "text-ad-muted hover:text-white-90"
                                             }`}
                                     >
                                         {selectedOffice === i && (
