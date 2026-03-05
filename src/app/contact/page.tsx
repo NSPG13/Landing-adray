@@ -17,7 +17,7 @@ const offices = [
         img: "https://framerusercontent.com/images/W8C39CdQlC7KEiy4TqYSYSFey1g.jpg",
         company: "Adray Americas",
         flag: "https://framerusercontent.com/images/EKJKz0Ea1JuAJx3wKCZDIGVfoQc.png",
-        description: "North American headquarters, driving innovation and customer success.",
+        description: "North American HQ — merchant onboarding, partnerships, and customer success.",
         mapUrl: "https://www.google.com/maps/place/San+Francisco,+CA,+USA/@37.7576928,-122.4787995,13z",
     },
     {
@@ -26,7 +26,7 @@ const offices = [
         img: "https://framerusercontent.com/images/SKMm9pxh4pb8gdXnHmU5aOEdHS0.jpg",
         company: "Adray India",
         flag: "",
-        description: "Technology hub and engineering center of excellence.",
+        description: "Core engineering — pixel infrastructure, data pipeline, and AI agent development.",
         mapUrl: "https://www.google.com/maps/place/Nagpur,+Maharashtra,+India",
     },
     {
@@ -35,7 +35,7 @@ const offices = [
         img: "https://framerusercontent.com/images/z1IF17Tru5VgU6RFBAZQOr478.jpg",
         company: "Adray UK",
         flag: "",
-        description: "European client services and strategic partnerships.",
+        description: "European merchant services and agency partnerships.",
         mapUrl: "https://www.google.com/maps/place/London,+UK",
     },
     {
@@ -44,7 +44,7 @@ const offices = [
         img: "https://framerusercontent.com/images/xn6XyGqCrTCriyl4zkDnRiyqTY.jpg",
         company: "Adray Europe",
         flag: "",
-        description: "Data compliance center serving the European market.",
+        description: "GDPR compliance center and EU data residency operations.",
         mapUrl: "https://www.google.com/maps/place/Frankfurt,+Germany",
     },
     {
@@ -53,7 +53,7 @@ const offices = [
         img: "https://framerusercontent.com/images/0do0bgsbBj8Xi5b8pXUWVvU4ADA.jpg",
         company: "Adray MENA",
         flag: "",
-        description: "Middle East and North Africa regional operations.",
+        description: "MENA regional operations and cross-border ecommerce support.",
         mapUrl: "https://www.google.com/maps/place/Dubai,+UAE",
     },
 ];
@@ -61,36 +61,36 @@ const offices = [
 /* ── FAQ (same as homepage) ── */
 const faqs = [
     {
-        q: "What is Adray?",
-        a: "Adray is an AI-powered enterprise platform that deploys intelligent agents to automate workflows, enhance customer service, and drive business growth across your organization.",
+        q: "What exactly does Adray do?",
+        a: "Adray is a free ecommerce data infrastructure layer. It installs a server-side pixel on your store, connects your Meta, Google, and Shopify data into one unified source of truth, and exposes it via an MCP endpoint so you can query it from ChatGPT, Claude, or Gemini.",
     },
     {
-        q: "How are AI Agents different from automation tools?",
-        a: "Unlike traditional automation tools that follow rigid rules, Adray\u2019s AI Agents learn, adapt, and make intelligent decisions. They understand context, handle complex scenarios, and improve over time \u2014 going far beyond simple if-then workflows.",
+        q: "Is Adray really free?",
+        a: "Yes. The core data layer — including the server-side pixel, platform connectors, MCP endpoint, and basic attribution — is completely free with no merchant limit. Pro is $49/mo for Looker Studio dashboards, Canva templates, and unlimited history.",
     },
     {
-        q: "Can Adray integrate with our existing systems?",
-        a: "Yes. Adray supports 200+ integrations out of the box, including Salesforce, SAP, Slack, HubSpot, SharePoint, and more. Custom API connectors are also available on Supersonic and HyperSonic plans.",
+        q: "How does the server-side pixel work?",
+        a: "Our pixel fires from your server, not the browser. That means it bypasses iOS 14+ restrictions, ad blockers, and cookie consent gaps — capturing 30-40% more conversion events than client-side tags.",
     },
     {
-        q: "Is Adray secure for enterprise use?",
-        a: "Absolutely. Adray is SOC 2 Type II certified, GDPR compliant, and supports HIPAA for healthcare customers. All data is encrypted at rest and in transit with enterprise-grade security protocols.",
+        q: "What platforms does Adray connect?",
+        a: "Currently Meta Ads, Google Ads, and Shopify. TikTok Ads support is on the roadmap. All data is normalized and reconciled so you see one consistent picture across every platform.",
     },
     {
-        q: "How quickly can Adray be implemented?",
-        a: "Most teams are up and running within days. Our guided onboarding, pre-built templates, and dedicated support team ensure a smooth and fast deployment \u2014 no complex setup required.",
+        q: "What is the MCP endpoint?",
+        a: "MCP (Model Context Protocol) lets any AI — ChatGPT, Claude, Gemini — read your store and ad data directly. Just ask questions like 'What was my blended ROAS last week?' in natural language. No new UI to learn.",
     },
     {
-        q: "Can AI Agents replace human employees?",
-        a: "Adray\u2019s AI Agents are designed to augment your team, not replace them. They handle repetitive, time-consuming tasks so your people can focus on strategic, high-value work.",
+        q: "How long does setup take?",
+        a: "About five minutes. Install the Shopify app, connect your Meta and Google accounts, and data starts flowing immediately. No developer or agency needed.",
     },
     {
-        q: "How does Adray improve customer service?",
-        a: "AI Agents resolve customer queries instantly and accurately, 24/7. They understand intent, access knowledge bases, and escalate complex issues to human agents seamlessly \u2014 improving satisfaction and response times.",
+        q: "What are Adray Agents?",
+        a: "Optional AI agents that run on your own LLM API key — budget pacing, creative fatigue detection, anomaly alerts, and auto-reporting. They cost per-agent and carry zero compute cost on our side.",
     },
     {
-        q: "Is Adray scalable for global operations?",
-        a: "Yes. Adray is built for enterprise scale \u2014 supporting multi-region deployments, multilingual agents, unlimited workflows, and thousands of concurrent AI actions with guaranteed uptime SLAs.",
+        q: "Is my data safe?",
+        a: "Your data stays yours. We collect first-party conversion events server-side, store them encrypted, and never sell or share merchant data. The pixel runs on your domain — fully GDPR and privacy compliant.",
     },
 ];
 
@@ -145,7 +145,7 @@ export default function ContactPage() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.1, ease }}
                     >
-                        <BlurRevealText text="Need Smarter AI Solutions?" startDelay={0.15} />
+                        <BlurRevealText text="Questions About Your Data?" startDelay={0.15} />
                     </motion.h1>
                     <motion.p
                         className="t-p-lg text-ad-subtitle max-w-2xl mx-auto"
@@ -153,7 +153,7 @@ export default function ContactPage() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.7, delay: 0.25, ease }}
                     >
-                        Connect any app or system pre-built or custom with ease and flexibility.
+                        Whether you need onboarding help, want to explore a partnership, or just have a question — we’re here.
                     </motion.p>
                 </Container>
             </section>
@@ -167,13 +167,13 @@ export default function ContactPage() {
                             <div className="card overflow-hidden h-full flex flex-col">
                                 <img
                                     src="https://framerusercontent.com/images/77v7OsCWhXM6Xy0eey2iJbdberY.webp"
-                                    alt="Connect with Expert Team"
+                                    alt="Get Onboarding Help"
                                     className="w-full h-48 object-cover"
                                 />
                                 <div className="p-8 flex flex-col flex-1">
-                                    <h3 className="t-h4 text-white-100 mb-3">Connect with Expert Team</h3>
+                                    <h3 className="t-h4 text-white-100 mb-3">Get Onboarding Help</h3>
                                     <p className="t-p-sm text-ad-muted leading-relaxed mb-6 flex-1">
-                                        Get personalized guidance and see how Adray AI Agents can transform your enterprise workflows. Our experts will help you explore solutions
+                                        Need a hand connecting your Shopify store, Meta, or Google Ads? Our team will walk you through setup and make sure your data is flowing.
                                     </p>
                                     <Button variant="primary" href="mailto:support@adray.com" className="w-full">
                                         Get Help
@@ -229,9 +229,9 @@ export default function ContactPage() {
                                         />
                                     </div>
                                     <div>
-                                        <h3 className="t-h4 text-white-100 mb-2">Partner &amp; Collaboration</h3>
+                                        <h3 className="t-h4 text-white-100 mb-2">Agency &amp; Integration Partners</h3>
                                         <p className="t-p-sm text-ad-muted leading-relaxed mb-4">
-                                            Explore collaboration and integration opportunities.
+                                            Run an agency or build ecommerce tools? Let’s explore how Adray’s data layer fits your stack.
                                         </p>
                                         <Button variant="primary" href="mailto:support@adray.com" className="w-full">
                                             Let&apos;s Connect
@@ -260,7 +260,7 @@ export default function ContactPage() {
                                     />
                                 }
                                 title="We're Here to Help"
-                                subtitle="Have questions or need assistance? Reach out to our support team via the form, phone, or email."
+                                subtitle="Need help with your pixel, data sync, or agent setup? Reach out via the form, phone, or email."
                                 align="left"
                                 className="mb-0"
                             />
@@ -343,7 +343,7 @@ export default function ContactPage() {
                                 <input
                                     type="email"
                                     className="w-full px-4 py-3 rounded-xl bg-ad-surface border border-ad-border text-white-100 t-p-sm placeholder:text-ad-muted/40 focus:outline-none focus:border-ad-primary transition-colors"
-                                    placeholder="jane@framer.com"
+                                    placeholder="jane@yourstore.com"
                                 />
                             </div>
                             <div>
@@ -389,7 +389,7 @@ export default function ContactPage() {
                                 />
                             }
                             title="Our Global Presence"
-                            subtitle="Our strategic offices across key regions enable us to serve our clients."
+                            subtitle="Regional offices supporting merchants, agencies, and partners worldwide."
                         />
                     </AnimatedSection>
 
@@ -467,7 +467,7 @@ export default function ContactPage() {
                                 />
                             }
                             title="Curious About Adray?"
-                            subtitle="Answers to common questions about our AI-powered enterprise platform."
+                            subtitle="Answers to common questions about our ecommerce data infrastructure."
                         />
                     </AnimatedSection>
 
