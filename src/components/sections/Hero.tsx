@@ -132,11 +132,11 @@ export default function Hero() {
                             <Button variant="primary" size="lg" href="/pricing">
                                 Get Started Free
                             </Button>
-                            <a href="#how-it-works" className="t-p-sm font-semibold text-white-90 hover:text-white-100 transition-colors">
+                            <a href="#how-it-works" className="t-p-sm font-semibold text-white-100 hover:text-white-100 transition-colors">
                                 See How It Works ↓
                             </a>
                         </div>
-                        <p className="t-p-sm text-ad-muted">Free forever · No credit card · Works on any website · Now live</p>
+                        <p className="t-p-sm text-white-70">Free forever · No credit card · Works on any website · Now live</p>
                     </motion.div>
                 </div>
 
