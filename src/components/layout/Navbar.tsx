@@ -47,7 +47,7 @@ export default function Navbar() {
                         style={{
                             backdropFilter: "blur(24px) saturate(1.6)",
                             WebkitBackdropFilter: "blur(24px) saturate(1.6)",
-                            background: "rgba(30, 20, 50, 0.55)",
+                            background: "rgba(15, 10, 25, 0.85)",
                             boxShadow: "inset -3px -2px 8px 0px rgba(255, 255, 255, 0.07)",
                         }}
                     >
