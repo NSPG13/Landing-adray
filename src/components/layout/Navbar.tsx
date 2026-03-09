@@ -45,9 +45,9 @@ export default function Navbar() {
                     <nav
                         className="relative flex items-center gap-7 px-6 py-4 rounded-full"
                         style={{
-                            backdropFilter: "blur(16px) saturate(1.4)",
-                            WebkitBackdropFilter: "blur(16px) saturate(1.4)",
-                            background: "rgba(255, 255, 255, 0.08)",
+                            backdropFilter: "blur(24px) saturate(1.6)",
+                            WebkitBackdropFilter: "blur(24px) saturate(1.6)",
+                            background: "rgba(30, 20, 50, 0.55)",
                             boxShadow: "inset -3px -2px 8px 0px rgba(255, 255, 255, 0.07)",
                         }}
                     >
@@ -55,7 +55,7 @@ export default function Navbar() {
                             <div key={link.href} className="relative group">
                                 <Link
                                     href={link.href}
-                                    className="relative flex items-center gap-1 t-p-sm text-white-90 hover:text-white-100 transition-colors duration-200 py-1"
+                                    className="relative flex items-center gap-1 t-p-sm font-semibold text-white-100 hover:text-white-100 transition-colors duration-200 py-1"
                                 >
                                     {link.label}
                                     <span className="nav-link-underline" />
