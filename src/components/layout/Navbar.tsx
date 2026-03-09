@@ -2,20 +2,13 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-const aiSolutionsSub = [
-    { label: "AI for Work", href: "/ai-solutions/ai-for-work" },
-    { label: "AI for Service", href: "/ai-solutions/ai-for-service" },
-    { label: "AI for Process", href: "/ai-solutions/ai-for-process" },
-];
-
 const navLinks = [
-    { label: "AI Solutions", href: "/ai-solutions", hasDropdown: true },
-    { label: "About", href: "/about" },
+    { label: "How It Works", href: "#how-it-works" },
     { label: "Pricing", href: "/pricing" },
-    { label: "Contact", href: "/contact" },
+    { label: "For Agencies", href: "/contact" },
 ];
 
 export default function Navbar() {
@@ -64,24 +57,8 @@ export default function Navbar() {
                                     className="relative flex items-center gap-1 t-p-sm text-white-90 hover:text-white-100 transition-colors duration-200 py-1"
                                 >
                                     {link.label}
-                                    {link.hasDropdown && <ChevronDown size={14} className="opacity-60" />}
                                     <span className="nav-link-underline" />
                                 </Link>
-                                {link.hasDropdown && (
-                                    <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                                        <div className="glass border border-ad-border rounded-xl p-2 min-w-[180px]">
-                                            {aiSolutionsSub.map((sub) => (
-                                                <Link
-                                                    key={sub.href}
-                                                    href={sub.href}
-                                                    className="block px-4 py-2.5 rounded-lg t-p-sm text-white-90 hover:text-white-100 hover:bg-white-7 transition-colors"
-                                                >
-                                                    {sub.label}
-                                                </Link>
-                                            ))}
-                                        </div>
-                                    </div>
-                                )}
                             </div>
                         ))}
                         {/* Masked gradient border overlay */}
@@ -101,7 +78,7 @@ export default function Navbar() {
                         href="/pricing"
                         className="inline-flex items-center justify-center px-5 py-2.5 t-p-sm font-semibold rounded-[15px] bg-black-100 text-white-100 border border-white-40 glow-btn hover:scale-105 transition-transform duration-300"
                     >
-                        Get Started
+                        Get Started Free
                     </a>
                 </div>
 
@@ -152,7 +129,7 @@ export default function Navbar() {
                         href="/pricing"
                         className="mt-2 inline-flex items-center justify-center px-6 py-3 t-p-sm font-semibold rounded-[15px] bg-black-100 text-white-100 border border-white-40 glow-btn"
                     >
-                        Get Started
+                        Get Started Free
                     </a>
                 </nav>
             </div>

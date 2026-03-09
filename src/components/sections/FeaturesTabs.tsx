@@ -7,53 +7,53 @@ import AnimatedSection from "@/components/ui/AnimatedSection";
 
 const tabs = [
     {
-        id: "usage",
-        label: "Collect",
+        id: "precomputed",
+        label: "Precomputed",
         iconSvg: "01d6Xos4x3sbU293TmKaFduYFAc.svg",
-        title: "First-Party Pixel + Connectors",
+        title: "Precomputed, AI-Ready Snapshots",
         description:
-            "Auto-install a server-side pixel on Shopify. Connect Meta and Google ad accounts via OAuth. Capture every session, cart, and purchase \u2014 immune to iOS privacy and ad blockers.",
+            "Not raw API dumps. Structured, normalized, compressed data your AI can actually work with — resulting in better outputs, fewer wasted tokens, and more accurate answers.",
         tags: [
-            { label: "Shopify" },
-            { label: "Meta CAPI" },
-            { label: "Google Ads" },
-            { label: "Server-Side" },
+            { label: "Structured" },
+            { label: "Normalized" },
+            { label: "Compressed" },
+            { label: "AI-Ready" },
         ],
-        cta: { label: "Learn More", href: "/ai-solutions/ai-for-work" },
+        cta: { label: "Get Started", href: "/pricing" },
         image:
             "https://framerusercontent.com/images/DKhCP3xiqB8m3zBp2E6ysooT3SY.webp",
     },
     {
-        id: "technology",
-        label: "Analyze",
+        id: "normalized",
+        label: "Normalized",
         iconSvg: "DzDW9qxLWt1R7V7DL7f89IPJfk.svg",
-        title: "AI-Powered Analysis",
+        title: "Cross-Platform Normalization",
         description:
-            "Get your MCP endpoint and connect it to ChatGPT, Claude, or Gemini. Use pre-built prompt templates to uncover real ROAS, attribution, and performance insights in seconds.",
+            "Meta, Google, GA4, and Shopify speaking the same language before your AI sees a single number. No more conflicting metrics or platform bias.",
         tags: [
-            { label: "ChatGPT" },
-            { label: "Claude" },
-            { label: "Gemini" },
-            { label: "MCP Protocol" },
+            { label: "Meta" },
+            { label: "Google" },
+            { label: "GA4" },
+            { label: "Shopify" },
         ],
-        cta: { label: "Learn More", href: "/ai-solutions/ai-for-service" },
+        cta: { label: "Get Started", href: "/pricing" },
         image:
             "https://framerusercontent.com/images/4ABnXaFshXBVkaMyEU2NjeeqE.webp",
     },
     {
-        id: "data",
-        label: "Act",
+        id: "enriched",
+        label: "Enriched",
         iconSvg: "Akgvq4ROltzdkv9bMr9wLtsd5c.svg",
-        title: "Marketing Agent Stack",
+        title: "The Adray Intelligence Pixel",
         description:
-            "Deploy AI agents that act on your data \u2014 reallocate budgets, detect creative fatigue, flag anomalies, and generate weekly reports. Agents run on your own LLM key at near-zero cost.",
+            "Want even richer data? The pixel is an enrichment layer — not a requirement. Install it and your attribution gets significantly deeper. Works on any website. Install via Google Tag Manager in two clicks, or paste a single script.",
         tags: [
-            { label: "Budget Agent" },
-            { label: "Creative Agent" },
-            { label: "Anomaly Alerts" },
-            { label: "Auto Reports" },
+            { label: "Server-Side" },
+            { label: "First-Party" },
+            { label: "Deduplication" },
+            { label: "Session Stitching" },
         ],
-        cta: { label: "Learn More", href: "/ai-solutions/ai-for-process" },
+        cta: { label: "Get Started", href: "/pricing" },
         image:
             "https://framerusercontent.com/images/rYyqmKb6ZW8scPMDoDnkLicukfc.png",
     },
@@ -68,7 +68,7 @@ export default function FeaturesTabs() {
             <Container>
                 <AnimatedSection>
                     <SectionHeading
-                        tag="FEATURES"
+                        tag="WHY IT WORKS"
                         tagIcon={
                             // eslint-disable-next-line @next/next/no-img-element
                             <img
@@ -78,8 +78,8 @@ export default function FeaturesTabs() {
                                 height={24}
                             />
                         }
-                        title="How Adray works"
-                        subtitle="From pixel to insight in under five minutes."
+                        title="Everyone else gives AI your data. We give AI the truth."
+                        subtitle="Any connector can move raw numbers from your ad platforms into an LLM. Adray precomputes your marketing data before it ever reaches an AI."
                     />
                 </AnimatedSection>
 

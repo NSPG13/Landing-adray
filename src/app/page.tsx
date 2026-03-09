@@ -1,9 +1,8 @@
 import Hero from "@/components/sections/Hero";
 import HighlightedText from "@/components/sections/HighlightedText";
-import Exceptionalities from "@/components/sections/Exceptionalities";
-import FeaturesTabs from "@/components/sections/FeaturesTabs";
-import Products from "@/components/sections/Products";
 import Steps from "@/components/sections/Steps";
+import FeaturesTabs from "@/components/sections/FeaturesTabs";
+import Exceptionalities from "@/components/sections/Exceptionalities";
 import DataPrivacy from "@/components/sections/DataPrivacy";
 import Testimonials from "@/components/sections/Testimonials";
 import HomePricing from "@/components/sections/HomePricing";
@@ -15,10 +14,9 @@ export default function Home() {
     <>
       <Hero />
       <HighlightedText />
-      <Exceptionalities />
-      <FeaturesTabs />
-      <Products />
       <Steps />
+      <FeaturesTabs />
+      <Exceptionalities />
       <DataPrivacy />
       <Testimonials />
       <HomePricing />

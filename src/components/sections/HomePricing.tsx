@@ -13,45 +13,46 @@ const plans = [
         monthlyPrice: 0,
         subtitle: null,
         features: [
-            "Shopify app + auto-install pixel",
-            "Meta + Google ad connectors",
-            "MCP endpoint for ChatGPT, Claude, Gemini",
+            "Meta, Google, GA4 & Shopify connectors",
+            "Secure portable data link",
+            "Works in any AI",
             "Pre-built prompt templates",
-            "Limited attribution window",
-            "Community support",
+            "60-day rolling data window",
         ],
-        trust: "850+ merchants connected",
+        trust: null,
+        cta: "Get Started Free",
         bgImage:
             "https://framerusercontent.com/images/XXSw2JqvtikgOcaexTTozzVsO54.webp",
     },
     {
         name: "Pro",
         monthlyPrice: 49,
-        subtitle: null,
+        subtitle: "+ 0.3% of ad spend (capped at $1,250/mo)",
         features: [
             "Everything in Free",
-            "Looker Studio connector + dashboards",
-            "Canva creative feed for smart ads",
-            "Unlimited attribution history",
-            "Priority email support",
-            "Direct onboarding path",
+            "Unlimited data history",
+            "Priority support",
+            "Early MCP access (Q2 2026)",
+            "Additional workspaces: $25/mo each",
         ],
-        trust: "For growing brands",
+        trust: null,
+        cta: "Start Pro",
         bgImage:
             "https://framerusercontent.com/images/4fEwCxLuKCW6ZaczMzoeCElmzBg.webp",
     },
     {
-        name: "Agent Stack",
+        name: "Enterprise",
         monthlyPrice: null,
-        subtitle: "AI agents that manage your ad spend. Priced on value delivered.",
+        subtitle: "Custom pricing for teams at scale.",
         features: [
-            "Budget reallocation agent",
-            "Creative fatigue detection agent",
-            "Anomaly detection + alerting",
-            "Weekly reporting agent",
-            "Runs on your own LLM key",
+            "Custom onboarding",
+            "30–60 day invoicing",
+            "Dedicated support",
+            "SLA",
+            "Volume pricing",
         ],
         trust: null,
+        cta: "Talk to Us",
         bgImage:
             "https://framerusercontent.com/images/K53jEm1inmwk6lcSyDVU5W7rvLM.webp",
     },
@@ -85,8 +86,8 @@ export default function HomePricing() {
                                 height={24}
                             />
                         }
-                        title="Flexible Plans for Every"
-                        subtitle="Choose the plan that fits your team and scales with your business."
+                        title="Free to start. Built to scale."
+                        subtitle="No dashboards to pay for. Just your data, ready for AI."
                     />
                 </AnimatedSection>
 
@@ -151,7 +152,7 @@ export default function HomePricing() {
                                         </div>
                                     ) : (
                                         <div className="mt-3">
-                                            <p className="t-h4 text-gradient">Per agent pricing</p>
+                                            <p className="t-h4 text-gradient">Custom</p>
                                         </div>
                                     )}
 
@@ -167,7 +168,7 @@ export default function HomePricing() {
                                             href="/contact"
                                             className="w-full"
                                         >
-                                            Get Started
+                                            {plan.cta}
                                         </Button>
                                     </div>
 

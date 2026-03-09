@@ -54,17 +54,24 @@ export default function Footer() {
                 <Container className="relative z-10 text-center">
                     <div>
                         <h2 className="t-h2 text-white-100 mb-6">
-                            <BlurRevealText text="Step Into Adray" triggerOnScroll startDelay={0} />
+                            <BlurRevealText text="Your AI is ready." triggerOnScroll startDelay={0} />
                             <br />
-                            <BlurRevealText text="The Future of Intelligent Agents" triggerOnScroll startDelay={0.4} />
+                            <BlurRevealText text="Give it something real to work with." triggerOnScroll startDelay={0.4} />
                         </h2>
                         <p className="t-p-lg text-ad-muted max-w-xl mx-auto mb-10">
-                            Everything your team needs, in one simple workspace. Stay focused,
-                            stay in sync.
+                            Install free. Connect in 2 minutes. Ask your first real question.
                         </p>
-                        <Button variant="primary" size="lg" href="/pricing">
-                            Get Started
-                        </Button>
+                        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                            <Button variant="primary" size="lg" href="/pricing">
+                                Get Started Free
+                            </Button>
+                            <Button variant="ghost" size="lg" href="/contact">
+                                Talk to Our Team
+                            </Button>
+                        </div>
+                        <p className="mt-4 t-p-sm text-ad-muted">
+                            Free forever &middot; No credit card &middot; Works on any website
+                        </p>
                     </div>
 
                     {/* Large wordmark display */}
@@ -120,7 +127,7 @@ export default function Footer() {
                     {/* Bottom bar */}
                     <div className="mt-12 pt-8 border-t border-ad-border flex flex-col sm:flex-row justify-between items-center gap-4">
                         <p className="t-p-sm text-ad-muted">
-                            All rights reserved for @Adray
+                            Marketing data analytics for the generative era. &middot; All rights reserved.
                         </p>
                         <p className="t-p-sm text-ad-deep">
                             Designed by{" "}

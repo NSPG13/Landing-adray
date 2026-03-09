@@ -9,39 +9,39 @@ import AnimatedSection from "@/components/ui/AnimatedSection";
 const steps = [
     {
         number: "01",
-        title: "Install from the Shopify App Store",
+        title: "Create your account",
         description:
-            "One-click install. Server-side pixel activates automatically via Shopify webhooks. No code, no JavaScript, fully automatic.",
+            "Sign up free. No credit card. Done in seconds.",
         bullets: [
-            "One-click install from Shopify App Store.",
-            "Server-side pixel auto-installs silently.",
-            "Works for WooCommerce and BigCommerce too.",
+            "Free forever — no credit card needed.",
+            "Account ready in under 30 seconds.",
+            "Start connecting platforms immediately.",
         ],
         image:
             "https://framerusercontent.com/images/vUiGHc7SR4A4SrQMUODr2UXNbY.png",
     },
     {
         number: "02",
-        title: "Connect Meta + Google in 60 Seconds",
+        title: "Connect your stack",
         description:
-            "Authorize your Meta and Google ad accounts via OAuth. Adray starts reconciling your data immediately \u2014 no configuration needed.",
+            "Authorize Meta, Google, GA4, and Shopify via OAuth. No code. No credentials to copy-paste. Every platform connected in under 2 minutes.",
         bullets: [
-            "Connect Meta Ads via secure OAuth flow.",
-            "Connect Google Ads in two clicks.",
-            "Data reconciliation begins automatically.",
+            "Connect Meta, Google, GA4, and Shopify via OAuth.",
+            "No code, no credentials to copy-paste.",
+            "Your secure data link is generated instantly.",
         ],
         image:
             "https://framerusercontent.com/images/1h2g2AnKRHxZzmSq2umWuiBsSys.png",
     },
     {
         number: "03",
-        title: "Ask Your AI About Real ROAS",
+        title: "Drop your link into any AI",
         description:
-            "Copy your MCP endpoint, connect it to ChatGPT or Claude, and ask your first question. See the truth behind your ad spend in seconds.",
+            "Paste your Adray link into ChatGPT, Claude, Gemini — or any AI you already use. Your AI will have full context. Ask anything.",
         bullets: [
-            "Copy your MCP endpoint from the Adray dashboard.",
-            "Connect to ChatGPT, Claude, or Gemini.",
-            "Ask anything about your real ad performance.",
+            "\"What\u2019s my real ROAS on Meta this month?\"",
+            "\"Which campaign is actually driving revenue?\"",
+            "\"Where should I cut spend right now?\"",
         ],
         image:
             "https://framerusercontent.com/images/8KzDLcSNotT5Lxj1UyWAsRCZu3E.png",
@@ -118,11 +118,11 @@ export default function Steps() {
     const beamX = useTransform(scrollYProgress, [0, 0.33, 0.34, 0.66, 0.67, 1], ["0%", "0%", "100%", "100%", "200%", "200%"]);
 
     return (
-        <section className="py-20 relative" ref={sectionRef}>
+        <section className="py-20 relative" id="how-it-works" ref={sectionRef}>
             <Container>
                 <AnimatedSection>
                     <SectionHeading
-                        tag="STEPS TO USE"
+                        tag="HOW IT WORKS"
                         tagIcon={
                             // eslint-disable-next-line @next/next/no-img-element
                             <img
@@ -132,8 +132,8 @@ export default function Steps() {
                                 height={24}
                             />
                         }
-                        title="3 Steps to Real Data"
-                        subtitle="From install to real ROAS in under five minutes."
+                        title="Three steps. One link. Any AI."
+                        subtitle=""
                     />
                 </AnimatedSection>
 
@@ -196,6 +196,12 @@ export default function Steps() {
                         </AnimatedSection>
                     ))}
                 </div>
+
+                <AnimatedSection delay={0.3}>
+                    <p className="text-center t-p-sm text-ad-muted mt-12">
+                        🔌 Native MCP connectors for Claude, ChatGPT &amp; Gemini — arriving Q2 2026
+                    </p>
+                </AnimatedSection>
             </Container>
         </section>
     );

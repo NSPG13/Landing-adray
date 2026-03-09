@@ -92,7 +92,7 @@ export default function Hero() {
                             animate={{ opacity: 1 }}
                             transition={{ duration: 0.6, ease }}
                         >
-                            <Badge>Now live on the Shopify App Store</Badge>
+                            <Badge>Marketing data analytics for the generative era.</Badge>
                         </motion.div>
 
                         {/* Heading group — 24px gap between title/subtitle */}
@@ -104,16 +104,16 @@ export default function Hero() {
                                 transition={{ duration: 0.8, delay: 0.1, ease }}
                             >
                                 <h1 className="t-h1 text-white-100 text-center" style={{ maxWidth: "780px" }}>
-                                    <BlurRevealText text="Your ad data, finally" startDelay={0.15} />
+                                    <BlurRevealText text="The first marketing data" startDelay={0.15} />
                                     <br />
-                                    <BlurRevealText text="telling the truth" startDelay={0.6} />
+                                    <BlurRevealText text="system built for AI." startDelay={0.6} />
                                 </h1>
                             </motion.div>
 
                             {/* Subtitle — white, weight 500, blur reveal, text-shadow */}
-                            <div style={{ maxWidth: "524px", textShadow: "0 1px 2px rgba(0,0,0,0.32)" }}>
+                            <div style={{ maxWidth: "640px", textShadow: "0 1px 2px rgba(0,0,0,0.32)" }}>
                                 <BlurRevealText
-                                    text="Adray reconciles Meta, Google, and Shopify data into one source of truth — then lets you analyze it with ChatGPT, Claude, or Gemini."
+                                    text="Power your AI with your full marketing stack — Meta, Google, GA4, Shopify — packed into one secure, portable link. Drop it in ChatGPT, Claude, Gemini, or any AI you already use. No dashboard. No new UI. No clumsy connections."
                                     startDelay={0.4}
                                     className="t-p-lg-medium text-white-100 tracking-[-0.03em] text-center"
                                 />
@@ -126,10 +126,17 @@ export default function Hero() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.7, delay: 0.5, ease }}
+                        className="flex flex-col items-center gap-4"
                     >
-                        <Button variant="primary" size="lg" href="/pricing">
-                            Start Free
-                        </Button>
+                        <div className="flex flex-col sm:flex-row items-center gap-4">
+                            <Button variant="primary" size="lg" href="/pricing">
+                                Get Started Free
+                            </Button>
+                            <a href="#how-it-works" className="t-p-sm font-semibold text-white-90 hover:text-white-100 transition-colors">
+                                See How It Works ↓
+                            </a>
+                        </div>
+                        <p className="t-p-sm text-ad-muted">Free forever · No credit card · Works on any website · Now live</p>
                     </motion.div>
                 </div>
 

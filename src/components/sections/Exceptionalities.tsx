@@ -9,30 +9,30 @@ import AnimatedSection from "@/components/ui/AnimatedSection";
 
 const cards = [
     {
-        title: "Zero-Friction Setup",
+        title: "AI-Native by Design",
         description:
-            "Install from the Shopify App Store, connect Meta and Google in 60 seconds, and get your MCP endpoint instantly.",
+            "No dashboard. Your AI chat is the interface. Ask questions in plain language, get answers backed by precomputed, reconciled data.",
         bgImage:
             "https://framerusercontent.com/images/AroYsG98cecxdfVar1RpE3QmpjY.webp",
     },
     {
-        title: "Cross-Platform Truth",
+        title: "Works on Any Website",
         description:
-            "Reconcile conflicting ROAS, deduplicate conversions, and resolve attribution conflicts across Meta, Google, and Shopify.",
+            "Shopify, WooCommerce, custom builds, B2B. If you\u2019re running digital ads, Adray works for you.",
         bgImage:
             "https://framerusercontent.com/images/yW0YwfEjj3XVmK9OpcRWpCha3k.png",
     },
     {
-        title: "Server-Side Pixel",
+        title: "Portable Everywhere",
         description:
-            "First-party data collection that\u2019s immune to iOS privacy changes, ad blockers, and browser tracking prevention.",
+            "One secure link. Works in any AI \u2014 ChatGPT, Claude, Gemini, or wherever you already work. Refreshes automatically every day.",
         bgImage:
             "https://framerusercontent.com/images/UoZeXgrLVIo07yWMmdM4MO8F0.webp",
     },
     {
-        title: "Use Any AI",
+        title: "Instant Value",
         description:
-            "Analyze your data with ChatGPT, Claude, or Gemini. No new tools to learn \u2014 your AI, your workflow.",
+            "Your data link is ready the moment your first platform connects. You don\u2019t need a complete setup to get started.",
         bgImage:
             "https://framerusercontent.com/images/TdhDQYxz25yRgOwLKeC05FZVk.webp",
     },
@@ -44,7 +44,7 @@ export default function Exceptionalities() {
             <Container>
                 <AnimatedSection>
                     <SectionHeading
-                        tag="EXCEPTIONALITIES"
+                        tag="FEATURES"
                         tagIcon={
                             // eslint-disable-next-line @next/next/no-img-element
                             <img
@@ -54,8 +54,8 @@ export default function Exceptionalities() {
                                 height={24}
                             />
                         }
-                        title="What sets Adray apart"
-                        subtitle="The only free ecommerce data layer that reconciles your ad platforms."
+                        title="Built different. From the data layer up."
+                        subtitle=""
                     />
                 </AnimatedSection>
 
@@ -133,14 +133,14 @@ export default function Exceptionalities() {
                 <AnimatedSection delay={0.4}>
                     <Card className="mt-6 text-center py-12">
                         <h3 className="t-h4 text-white-100 mb-2">
-                            Ready to see your real ROAS?
+                            Zero new tools to learn.
                         </h3>
                         <p className="t-p text-ad-muted mb-8">
-                            Install free from the Shopify App Store. Under 5 minutes to your first real insight.
+                            No new UI. No weekly logins. No clunky integrations. Your AI does the work.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <Button variant="primary" href="/pricing">
-                                Start Free
+                                Get Started Free
                             </Button>
                             <Button variant="ghost" href="/contact">
                                 Get in touch

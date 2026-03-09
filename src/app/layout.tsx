@@ -12,23 +12,26 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Adray — Next-gen Enterprise AI Agents",
+    default: "Adray — Marketing data analytics for the generative era.",
     template: "%s | Adray",
   },
   description:
-    "Accelerate the speed of business with the Adray Platform and our AI solutions for work, service, and process.",
+    "Power your AI with your full marketing stack — Meta, Google, GA4, Shopify — packed into one secure, portable link.",
   keywords: [
     "AI",
-    "enterprise",
-    "agents",
-    "automation",
-    "platform",
+    "marketing",
+    "analytics",
+    "data",
+    "Meta",
+    "Google",
+    "Shopify",
+    "ecommerce",
     "Adray",
   ],
   openGraph: {
-    title: "Adray — Next-gen Enterprise AI Agents",
+    title: "Adray — Marketing data analytics for the generative era.",
     description:
-      "Accelerate the speed of business with the Adray Platform and our AI solutions for work, service, and process.",
+      "Power your AI with your full marketing stack — Meta, Google, GA4, Shopify — packed into one secure, portable link.",
     type: "website",
     locale: "en_US",
   },

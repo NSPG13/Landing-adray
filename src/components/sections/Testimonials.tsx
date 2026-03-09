@@ -84,7 +84,7 @@ export default function Testimonials() {
             <Container className="relative z-10">
                 <AnimatedSection>
                     <SectionHeading
-                        tag="TESTIMONIALS"
+                        tag="REAL RESULTS"
                         tagIcon={
                             // eslint-disable-next-line @next/next/no-img-element
                             <img
@@ -94,8 +94,8 @@ export default function Testimonials() {
                                 height={24}
                             />
                         }
-                        title="Trusted by merchants"
-                        subtitle="Real results from ecommerce teams using Adray."
+                        title="Merchants who stopped guessing."
+                        subtitle=""
                     />
                 </AnimatedSection>
 

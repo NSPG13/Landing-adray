@@ -44,7 +44,7 @@ export default function HomeIntegration() {
                             />
                         }
                         title="Connect Everything, Analyze Anywhere"
-                        subtitle="Adray connects your ad platforms and ecommerce store \u2014 then feeds it all to the AI of your choice."
+                        subtitle="Adray connects your ad platforms and ecommerce store \u2014 then packs it into a portable link for any AI."
                     />
                 </AnimatedSection>
 
@@ -79,7 +79,7 @@ export default function HomeIntegration() {
                 <AnimatedSection delay={0.3}>
                     <div className="text-center">
                         <Button variant="primary" href="/integration">
-                            See All Integrations
+                            Get Started Free
                         </Button>
                     </div>
                 </AnimatedSection>

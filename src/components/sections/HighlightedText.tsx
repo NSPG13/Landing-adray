@@ -27,7 +27,7 @@ export default function HighlightedText() {
                 {/* Text — scroll-animated color */}
                 <div className="flex-1">
                     <ScrollTextColor
-                        content="Every ad platform tells a different story. Meta claims 40x ROAS. Google says 8x. Shopify shows 12 orders. Adray reconciles the truth so you finally know what’s actually driving revenue."
+                        content="Your AI chat is now your marketing analytics. No new tool to learn. No dashboard to log into. Just your data — reconciled, packed, and ready — wherever you already work."
                         colorStart="#3E286F"
                         colorEnd="#FFFFFF"
                         trigger="layer-in-view"

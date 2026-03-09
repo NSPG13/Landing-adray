@@ -9,38 +9,38 @@ import AnimatedSection from "@/components/ui/AnimatedSection";
 const part1 = [
     {
         q: "What is Adray?",
-        a: "Adray is a free ecommerce data layer that reconciles your Meta, Google, and Shopify data into one source of truth. Connect it to ChatGPT, Claude, or Gemini via MCP and get real attribution insights \u2014 no new dashboard to learn.",
+        a: "The first AI-native marketing data system. We reconcile your Meta, Google, GA4, and Shopify data into precomputed, AI-ready snapshots \u2014 then pack them into a secure portable link you drop into any AI. No dashboard. No new tool. Just your AI chat, with data it can actually work with. Native MCP connectors for Claude, ChatGPT, and Gemini \u2014 for real-time, conversational queries \u2014 arriving Q2 2026.",
     },
     {
-        q: "How is Adray different from Triple Whale or Northbeam?",
-        a: "Those tools are paid dashboards you have to learn and log into. Adray is free infrastructure \u2014 we own the data layer, and you analyze it with the AI tools you already use. No new UI, no monthly dashboard fee, and our server-side pixel captures 30\u201340% more events.",
+        q: "Who is Adray for?",
+        a: "Any business running digital ads \u2014 ecommerce brands, B2B companies, marketing agencies. If you\u2019re spending on Meta or Google and want your AI to help you make better decisions, Adray works for you. It runs on any website \u2014 Shopify, WooCommerce, custom builds, anything.",
     },
     {
-        q: "What platforms does Adray connect to?",
-        a: "Adray connects to Meta Ads, Google Ads, and Shopify out of the box. WooCommerce and BigCommerce connectors are coming soon. On the AI side, we support ChatGPT, Claude, and Gemini via MCP protocol.",
+        q: "How is this different from Triple Whale?",
+        a: "Triple Whale is a dashboard \u2014 you log in, read charts, and leave. Adray is infrastructure \u2014 we pack your data into a portable link you drop into the AI you\u2019re already using. No new interface to learn. No monthly dashboard fee to justify. And because Adray precomputes and normalizes your data before it reaches any AI, you get better answers than you\u2019d ever get by connecting raw platform data. Different paradigm entirely.",
     },
     {
-        q: "Is my ad data secure?",
-        a: "Yes. All data is collected server-side and encrypted at rest and in transit. Our pixel never touches the browser, making it immune to iOS privacy changes and ad blockers. Your data stays yours.",
+        q: "How is this different from Windsor.ai?",
+        a: "Windsor connects your ad platforms to AI \u2014 so does Adray. The difference is what happens before the AI sees your data. Windsor passes through raw platform numbers. Adray precomputes, normalizes, and reconciles them first \u2014 resolving conflicts between what Meta claims, what Google claims, and what actually happened. The result: your AI gives you answers you can act on, not just numbers to interpret. And with Adray\u2019s portable link, your data travels with you to any AI \u2014 you\u2019re not locked into one interface.",
     },
 ];
 
 const part2 = [
     {
-        q: "How quickly can I set up Adray?",
-        a: "Under 5 minutes. Install from the Shopify App Store, connect your ad accounts via OAuth, and your MCP endpoint is ready. No code, no JavaScript, no developer needed.",
+        q: "How does the data link work?",
+        a: "The moment you connect your first platform, Adray generates a secure portable snapshot of your marketing data. Paste it into any AI and ask questions in plain language. Refreshes with every sync. Native MCP connectors \u2014 one-click deep integration \u2014 arriving Q2 2026.",
     },
     {
-        q: "What are Adray marketing agents?",
-        a: "Marketing agents are AI-powered automations that act on your data \u2014 reallocating budgets, detecting creative fatigue, flagging anomalies, and generating weekly reports. They run on your own LLM key, so there\u2019s near-zero cost to Adray.",
+        q: "Do I need to install the pixel to get value?",
+        a: "No. Connect your ad platforms via OAuth and your data link is ready immediately. The pixel is an enrichment layer \u2014 install it and you unlock deeper attribution: reconciliation, deduplication, session-to-order stitching. But you don\u2019t need it to start.",
     },
     {
-        q: "What does the free plan include?",
-        a: "The free plan includes the Shopify app with auto-install pixel, Meta and Google connectors, an MCP endpoint for any major LLM, pre-built prompt templates, and a limited attribution window. No credit card required.",
+        q: "How does the pixel install work?",
+        a: "Via Google Tag Manager \u2014 Adray\u2019s agent installs the tag for you, you click Publish. Or paste a single script directly into your site. Works on any platform. No developer required.",
     },
     {
-        q: "What\u2019s the $49 Pro plan for?",
-        a: "Pro unlocks Looker Studio dashboards, Canva creative feed integration, unlimited attribution history, and priority support. It\u2019s built for merchants who want the full visualization and creative workflow on top of the free data layer.",
+        q: "How fast is setup?",
+        a: "Under 2 minutes to your first data link. Connect Meta, Google, GA4, or Shopify via OAuth \u2014 your link is ready as soon as the first one connects.",
     },
 ];
 
@@ -92,8 +92,8 @@ export default function HomeFAQ() {
                                 height={24}
                             />
                         }
-                        title="Curious About Adray?"
-                        subtitle="Answers to common questions about our ecommerce data platform."
+                        title="Commonly asked questions"
+                        subtitle=""
                     />
                 </AnimatedSection>
 
