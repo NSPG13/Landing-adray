@@ -113,7 +113,7 @@ export default function Hero() {
                             {/* Subtitle — white, weight 500, blur reveal, text-shadow */}
                             <div style={{ maxWidth: "640px", textShadow: "0 1px 2px rgba(0,0,0,0.32)" }}>
                                 <BlurRevealText
-                                    text="Power your AI with your full marketing stack — Meta, Google, GA4, Shopify — packed into one secure, portable link. Drop it in ChatGPT, Claude, Gemini, or any AI you already use. No dashboard. No new UI. No clumsy connections."
+                                    text="Power your AI with your full marketing stack — Meta, Google, GA4, Shopify — packed into one secure, portable link. Drop it in ChatGPT, Claude, Gemini, or any AI you already use. Your AI will have full context. No dashboard. No new UI. No clumsy connections."
                                     startDelay={0.4}
                                     className="t-p-lg-medium text-white-100 tracking-[-0.03em] text-center"
                                 />

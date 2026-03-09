@@ -24,7 +24,7 @@ const steps = [
         number: "02",
         title: "Connect your stack",
         description:
-            "Authorize Meta, Google, GA4, and Shopify via OAuth. No code. No credentials to copy-paste. Every platform connected in under 2 minutes.",
+            "Authorize Meta, Google, GA4, and Shopify via OAuth. No code. No credentials to copy-paste. Every platform connected in under 2 minutes. Your secure data link is generated the moment your first source connects \u2014 you don\u2019t need to wait for everything.",
         bullets: [
             "Connect Meta, Google, GA4, and Shopify via OAuth.",
             "No code, no credentials to copy-paste.",

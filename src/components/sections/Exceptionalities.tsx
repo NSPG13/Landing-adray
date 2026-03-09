@@ -25,7 +25,7 @@ const cards = [
     {
         title: "Portable Everywhere",
         description:
-            "One secure link. Works in any AI \u2014 ChatGPT, Claude, Gemini, or wherever you already work. Refreshes automatically every day.",
+            "One secure link. Works in any AI \u2014 ChatGPT, Claude, Gemini, WhatsApp Meta AI, Grok, Manus, Copilot, Perplexity, or wherever you already work. Refreshes automatically every day.",
         bgImage:
             "https://framerusercontent.com/images/UoZeXgrLVIo07yWMmdM4MO8F0.webp",
     },
