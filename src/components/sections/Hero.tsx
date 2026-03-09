@@ -106,7 +106,7 @@ export default function Hero() {
                                 <h1 className="t-h1 text-white-100 text-center" style={{ maxWidth: "780px" }}>
                                     <BlurRevealText text="The first marketing" startDelay={0.15} />
                                     <br />
-                                    <BlurRevealText text="data system built for AI." startDelay={0.6} />
+                                    <BlurRevealText text="data system built for AI" startDelay={0.6} />
                                 </h1>
                             </motion.div>
 

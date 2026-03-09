@@ -45,8 +45,9 @@ export default function Navbar() {
                     <nav
                         className="relative flex items-center gap-7 px-6 py-4 rounded-full"
                         style={{
-                            backdropFilter: "blur(8px)",
-                            WebkitBackdropFilter: "blur(8px)",
+                            backdropFilter: "blur(16px) saturate(1.4)",
+                            WebkitBackdropFilter: "blur(16px) saturate(1.4)",
+                            background: "rgba(255, 255, 255, 0.08)",
                             boxShadow: "inset -3px -2px 8px 0px rgba(255, 255, 255, 0.07)",
                         }}
                     >
