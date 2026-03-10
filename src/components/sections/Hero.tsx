@@ -111,11 +111,15 @@ export default function Hero() {
                             </motion.div>
 
                             {/* Subtitle — white, weight 500, blur reveal, text-shadow */}
-                            <div style={{ maxWidth: "640px", textShadow: "0 1px 2px rgba(0,0,0,0.32)" }}>
+                            <div style={{ maxWidth: "640px", textShadow: "0 1px 2px rgba(0,0,0,0.32)" }} className="t-p-lg-medium text-white-100 tracking-[-0.03em] text-center">
                                 <BlurRevealText
-                                    text="Power your AI with your full marketing stack — Meta, Google, GA4, Shopify — packed into one secure, portable link. Drop it in ChatGPT, Claude, Gemini, or any AI you already use. Your AI will have full context. No dashboard. No new UI. No clumsy connections."
+                                    text="Your full marketing stack: Meta, Google, GA4, Shopify in one secure link."
                                     startDelay={0.4}
-                                    className="t-p-lg-medium text-white-100 tracking-[-0.03em] text-center"
+                                />
+                                <br />
+                                <BlurRevealText
+                                    text="Drop it in any AI. Full context, instantly."
+                                    startDelay={0.6}
                                 />
                             </div>
                         </div>
@@ -128,15 +132,15 @@ export default function Hero() {
                         transition={{ duration: 0.7, delay: 0.5, ease }}
                         className="flex flex-col items-center gap-4"
                     >
-                        <div className="flex flex-col sm:flex-row items-center gap-4">
-                            <Button variant="primary" size="lg" href="/pricing">
-                                Get Started Free
-                            </Button>
-                            <a href="#how-it-works" className="t-p-sm font-semibold text-white-100 hover:text-white-100 transition-colors">
-                                See How It Works ↓
-                            </a>
-                        </div>
+                        <Button variant="primary" size="lg" href="/pricing">
+                            Get Started Free
+                        </Button>
                         <p className="t-p-sm text-white-70">Free forever · No credit card · Works on any website · Now live</p>
+                        <a href="#how-it-works">
+                            <Badge className="text-white-70 hover:text-white-100 transition-colors cursor-pointer">
+                                See How It Works ↓
+                            </Badge>
+                        </a>
                     </motion.div>
                 </div>
 

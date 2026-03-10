@@ -10,8 +10,7 @@ const steps = [
     {
         number: "01",
         title: "Create your account",
-        description:
-            "Sign up free. No credit card. Done in seconds.",
+        description: "",
         bullets: [
             "Free forever — no credit card needed.",
             "Account ready in under 30 seconds.",
@@ -23,10 +22,9 @@ const steps = [
     {
         number: "02",
         title: "Connect your stack",
-        description:
-            "Authorize Meta, Google, GA4, and Shopify via OAuth. No code. No credentials to copy-paste. Every platform connected in under 2 minutes. Your secure data link is generated the moment your first source connects \u2014 you don\u2019t need to wait for everything.",
+        description: "",
         bullets: [
-            "Connect Meta, Google, GA4, and Shopify via OAuth.",
+            "Connect Meta, Google, GA4, and Shopify.",
             "No code, no credentials to copy-paste.",
             "Your secure data link is generated instantly.",
         ],
@@ -36,8 +34,7 @@ const steps = [
     {
         number: "03",
         title: "Drop your link into any AI",
-        description:
-            "Paste your Adray link into ChatGPT, Claude, Gemini — or any AI you already use. Your AI will have full context. Ask anything.",
+        description: "",
         bullets: [
             "\"What\u2019s my real ROAS on Meta this month?\"",
             "\"Which campaign is actually driving revenue?\"",
@@ -54,7 +51,7 @@ function StepCard({ step }: { step: (typeof steps)[0] }) {
             {/* Text content */}
             <div className="flex-1 p-6 md:p-8">
                 <h3 className="t-h4 text-white-100 mb-4">{step.title}</h3>
-                <p className="t-p text-ad-muted mb-6">{step.description}</p>
+                {step.description && <p className="t-p text-ad-muted mb-6">{step.description}</p>}
                 <ul className="space-y-3">
                     {step.bullets.map((bullet) => (
                         <li key={bullet} className="flex items-start gap-3">

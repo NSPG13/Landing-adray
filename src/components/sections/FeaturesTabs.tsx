@@ -70,16 +70,13 @@ export default function FeaturesTabs() {
                     <SectionHeading
                         tag="WHY IT WORKS"
                         tagIcon={
-                            // eslint-disable-next-line @next/next/no-img-element
-                            <img
-                                src="https://framerusercontent.com/images/GFmvU3dWENS60V2v8Jglw0qJ7zY.svg"
-                                alt=""
-                                width={24}
-                                height={24}
-                            />
+                            <svg width="24" height="24" viewBox="0 0 256 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M117.25 157.92a60 60 0 0 1-34.17-34.17L24 140.25V216h76.25ZM138.75 98.08a60 60 0 0 1 34.17 34.17L232 115.75V40h-76.25Z" opacity=".2" />
+                                <path d="M176 100a59.77 59.77 0 0 0-21.59 4L130.08 72H176a8 8 0 0 0 0-16H120a8 8 0 0 0-6.92 4L96 88.63 78.92 60A8 8 0 0 0 72 56H32a8 8 0 0 0 0 16h35.08l18.46 31.9A60 60 0 1 0 118 175.35L128 192h-8a8 8 0 0 0 0 16h16a8 8 0 0 0 6.92-4L160 175.37l17.08 28.6A8 8 0 0 0 184 208h40a8 8 0 0 0 0-16h-35.08L160 141.07A59.88 59.88 0 0 0 176 100ZM80 144a44 44 0 1 1 44-44 44.05 44.05 0 0 1-44 44Zm96 56a44 44 0 1 1 44-44 44.05 44.05 0 0 1-44 44Z" />
+                            </svg>
                         }
-                        title="Everyone else gives AI your data. We give AI the truth."
-                        subtitle="Any connector can move raw numbers from your ad platforms into an LLM. Adray precomputes your marketing data before it ever reaches an AI."
+                        title="Using your marketing data in AI is painful. We fixed that."
+                        subtitle="Adray gives you a secure, preformatted data link in one click. Connect your platforms, get your link, drop it in any AI. Done."
                     />
                 </AnimatedSection>
 

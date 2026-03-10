@@ -7,12 +7,60 @@ import Button from "@/components/ui/Button";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 
 const integrationIcons = [
-    { src: "DU8DKlxTsbVIEUdhYPL0FdSSqDY.svg", w: 40, h: 40 },
-    { src: "aap1xSJQbafVrLaeVhlLfdpwNZg.svg", w: 60, h: 60 },
-    { src: "FQP31xwbbI4n1vs2r24mfuxRGQI.svg", w: 49, h: 40 },
-    { src: "EvRpOn9wuYvQYZzCfYwtnS65jRE.svg", w: 40, h: 40 },
-    { src: "hdYPy2J7QbpyCYtFC4VUGW13ytI.svg", w: 51, h: 40 },
-    { src: "QaeKao8eibxNDl43Zp0JVaFeI.svg", w: 49, h: 48 },
+    {
+        label: "OpenAI",
+        svg: (
+            <svg viewBox="0 0 24 24" width="36" height="36" fill="white">
+                <path d="M22.28 9.37a5.93 5.93 0 0 0-.51-4.89 6.01 6.01 0 0 0-6.47-2.9A5.93 5.93 0 0 0 10.83 0a6.01 6.01 0 0 0-5.73 4.14 5.93 5.93 0 0 0-3.97 2.88 6.01 6.01 0 0 0 .74 7.04 5.93 5.93 0 0 0 .51 4.89 6.01 6.01 0 0 0 6.47 2.9A5.93 5.93 0 0 0 13.32 24a6.01 6.01 0 0 0 5.73-4.14 5.93 5.93 0 0 0 3.97-2.88 6.01 6.01 0 0 0-.74-7.04ZM13.32 22.5a4.47 4.47 0 0 1-2.87-1.04l.14-.08 4.77-2.76a.78.78 0 0 0 .39-.67v-6.73l2.02 1.16a.07.07 0 0 1 .04.06v5.58a4.49 4.49 0 0 1-4.49 4.49ZM3.61 18.36a4.47 4.47 0 0 1-.53-3.01l.14.08 4.77 2.76a.78.78 0 0 0 .78 0l5.83-3.37v2.33a.07.07 0 0 1-.03.06l-4.83 2.79a4.49 4.49 0 0 1-6.14-1.64ZM2.34 7.89A4.47 4.47 0 0 1 4.68 5.9v5.69a.78.78 0 0 0 .39.67l5.83 3.37-2.02 1.16a.07.07 0 0 1-.07 0L4 13.99a4.49 4.49 0 0 1-1.64-6.1Zm17.17 4-5.83-3.37 2.02-1.16a.07.07 0 0 1 .07 0l4.83 2.79a4.49 4.49 0 0 1-.69 8.1v-5.69a.78.78 0 0 0-.39-.67ZM21.5 8.65l-.14-.08-4.77-2.76a.78.78 0 0 0-.78 0l-5.83 3.37V6.85a.07.07 0 0 1 .03-.06l4.83-2.79a4.49 4.49 0 0 1 6.67 4.65ZM8.33 13.37l-2.02-1.16a.07.07 0 0 1-.04-.06V6.56a4.49 4.49 0 0 1 7.37-3.45l-.14.08-4.77 2.76a.78.78 0 0 0-.39.67v6.73ZM9.42 11l2.6-1.5 2.6 1.5v3l-2.6 1.5-2.6-1.5v-3Z" />
+            </svg>
+        ),
+    },
+    {
+        label: "Anthropic",
+        svg: (
+            <svg viewBox="0 0 24 24" width="36" height="36" fill="white">
+                <path d="M13.83 2H16.6l5.4 20h-2.77l-5.4-20Zm-3.66 0H7.4L2 22h2.77l1.35-5.03h6.5L13.98 22h2.77L11.35 2h-1.18Zm-.6 12.22L12 5.97l2.43 8.25H9.57Z" />
+            </svg>
+        ),
+    },
+    {
+        label: "Google Gemini",
+        svg: (
+            <svg viewBox="0 0 24 24" width="36" height="36">
+                <defs>
+                    <linearGradient id="gemGrad" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
+                        <stop stopColor="#4285F4" />
+                        <stop offset="1" stopColor="#886FBF" />
+                    </linearGradient>
+                </defs>
+                <path d="M12 24c0-6.63-5.37-12-12-12C6.63 12 12 6.63 12 0c0 6.63 5.37 12 12 12-6.63 0-12 5.37-12 12Z" fill="url(#gemGrad)" />
+            </svg>
+        ),
+    },
+    {
+        label: "xAI Grok",
+        svg: (
+            <svg viewBox="0 0 24 24" width="36" height="36" fill="white">
+                <path d="m3 2 7.5 10L3 22h2.25l6.75-9 6.75 9H21l-7.5-10L21 2h-2.25L12 11 5.25 2H3Z" />
+            </svg>
+        ),
+    },
+    {
+        label: "Perplexity",
+        svg: (
+            <svg viewBox="0 0 24 24" width="36" height="36" fill="white">
+                <path d="M12 1v7.5H5.5L12 1ZM12 1l6.5 7.5H12V1ZM4 9.5h7v7L4 9.5ZM13 9.5l7 7v-7h-7ZM4 9.5v7l7 7v-7L4 9.5ZM13 16.5v7l7-7h-7Z" />
+            </svg>
+        ),
+    },
+    {
+        label: "Meta AI",
+        svg: (
+            <svg viewBox="0 0 24 24" width="36" height="36" fill="white">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2Zm4.64 14.19c-.42.72-1.02 1.06-1.64 1.06-.64 0-1.18-.38-1.64-1.18L12 13.6l-1.36 2.47c-.46.8-1 1.18-1.64 1.18-.62 0-1.22-.34-1.64-1.06-.58-1-1.06-2.9-1.06-4.48 0-1.7.56-2.71 1.5-2.71.78 0 1.42.62 2.14 1.86l1.06 1.82 1.06-1.82c.72-1.24 1.36-1.86 2.14-1.86.94 0 1.5 1.01 1.5 2.71 0 1.58-.48 3.48-1.06 4.48Z" />
+            </svg>
+        ),
+    },
 ];
 
 export default function HomeIntegration() {
@@ -61,15 +109,8 @@ export default function HomeIntegration() {
                                     boxShadow: "0px 6px 24px 0px rgba(181,92,255,0.25)",
                                 }}
                             >
-                                <div className="w-[72px] h-[72px] rounded-[20px] bg-ad-surface flex items-center justify-center">
-                                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                                    <img
-                                        src={`https://framerusercontent.com/images/${icon.src}`}
-                                        alt=""
-                                        width={icon.w}
-                                        height={icon.h}
-                                        className="opacity-90"
-                                    />
+                                <div className="w-[72px] h-[72px] rounded-[20px] bg-ad-surface flex items-center justify-center" title={icon.label}>
+                                    {icon.svg}
                                 </div>
                             </div>
                         ))}

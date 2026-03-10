@@ -8,30 +8,29 @@ import { cn } from "@/lib/utils";
 const navLinks = [
     { label: "How It Works", href: "#how-it-works" },
     { label: "Pricing", href: "/pricing" },
-    { label: "For Agencies", href: "/contact" },
+    { label: "For Agencies", href: "/agencies" },
 ];
 
 export default function Navbar() {
-    const [scrolled, setScrolled] = useState(false);
+    const [visible, setVisible] = useState(false);
     const [mobileOpen, setMobileOpen] = useState(false);
 
     useEffect(() => {
-        const handleScroll = () => setScrolled(window.scrollY > 20);
+        const handleScroll = () => setVisible(window.scrollY > window.innerHeight * 0.85);
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
     return (
-        <header className="fixed top-0 left-0 right-0 z-50 animate-slide-down">
-            <div className="mx-auto max-w-[1200px] px-5 md:px-10 pt-4">
-                {/* Desktop: 3 separate pills side by side */}
-                <div className="hidden md:flex items-center justify-between">
-                    {/* Logo pill */}
-                    <Link
-                        href="/"
-                        className="flex items-center px-3 py-2 rounded-full"
-                        style={{ backdropFilter: "blur(10px)", WebkitBackdropFilter: "blur(10px)" }}
-                    >
+        <header
+            className="fixed top-0 left-0 right-0 z-50 transition-colors duration-500"
+            style={{ background: visible ? "#000" : "transparent" }}
+        >
+            <div className="mx-auto max-w-[1200px] px-5 md:px-10">
+                {/* Desktop */}
+                <div className="hidden md:flex items-center justify-between w-full py-4">
+                    {/* Logo */}
+                    <Link href="/" className="flex items-center">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
                             src="/adray-logo.svg"
@@ -41,16 +40,8 @@ export default function Navbar() {
                         />
                     </Link>
 
-                    {/* Links pill */}
-                    <nav
-                        className="relative flex items-center gap-7 px-6 py-4 rounded-full"
-                        style={{
-                            backdropFilter: "blur(24px) saturate(1.6)",
-                            WebkitBackdropFilter: "blur(24px) saturate(1.6)",
-                            background: "rgba(15, 10, 25, 0.85)",
-                            boxShadow: "inset -3px -2px 8px 0px rgba(255, 255, 255, 0.07)",
-                        }}
-                    >
+                    {/* Links */}
+                    <nav className="flex items-center gap-7">
                         {navLinks.map((link) => (
                             <div key={link.href} className="relative group">
                                 <Link
@@ -62,16 +53,6 @@ export default function Navbar() {
                                 </Link>
                             </div>
                         ))}
-                        {/* Masked gradient border overlay */}
-                        <div
-                            className="absolute inset-0 rounded-full pointer-events-none"
-                            style={{
-                                border: "0.5px solid rgb(255, 255, 255)",
-                                borderRadius: "999px",
-                                mask: "linear-gradient(160deg, #000 0%, transparent 39%, transparent 69%, #000 100%)",
-                                WebkitMask: "linear-gradient(160deg, #000 0%, transparent 39%, transparent 69%, #000 100%)",
-                            }}
-                        />
                     </nav>
 
                     {/* CTA button */}
@@ -83,13 +64,8 @@ export default function Navbar() {
                     </a>
                 </div>
 
-                {/* Mobile: single pill with hamburger */}
-                <div
-                    className={cn(
-                        "flex md:hidden items-center justify-between rounded-full px-4 py-3 transition-all duration-300",
-                        "glass border border-ad-border"
-                    )}
-                >
+                {/* Mobile */}
+                <div className="flex md:hidden items-center justify-between py-3">
                     <Link href="/" className="flex items-center gap-2 flex-shrink-0">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
@@ -108,14 +84,18 @@ export default function Navbar() {
                 </div>
             </div>
 
+            {/* Bottom border */}
+            <div className="w-full h-px transition-opacity duration-500" style={{ background: "rgba(255,255,255,0.1)", opacity: visible ? 1 : 0 }} />
+
             {/* Mobile Menu */}
             <div
                 className={cn(
                     "md:hidden overflow-hidden transition-all duration-300",
                     mobileOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
                 )}
+                style={{ background: "#000" }}
             >
-                <nav className="glass border border-ad-border mx-5 mt-2 rounded-2xl p-6 flex flex-col gap-4">
+                <nav className="mx-5 py-4 flex flex-col gap-4">
                     {navLinks.map((link) => (
                         <Link
                             key={link.href}

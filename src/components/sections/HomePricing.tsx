@@ -161,6 +161,9 @@ export default function HomePricing() {
                                             {plan.subtitle}
                                         </p>
                                     )}
+                                    {!plan.subtitle && (
+                                        <div className="mt-2 t-p-sm">&nbsp;</div>
+                                    )}
 
                                     <div className="mt-6 mb-8">
                                         <Button
@@ -172,7 +175,7 @@ export default function HomePricing() {
                                         </Button>
                                     </div>
 
-                                    <ul className="space-y-3 flex-1">
+                                    <ul className="space-y-3">
                                         {plan.features.map((feat) => (
                                             <li key={feat} className="flex items-start gap-3">
                                                 <span
