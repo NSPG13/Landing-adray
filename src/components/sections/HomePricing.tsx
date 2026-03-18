@@ -13,11 +13,12 @@ const plans = [
         monthlyPrice: 0,
         subtitle: null,
         features: [
-            "Meta, Google, GA4 & Shopify connectors",
-            "Secure portable data link",
+            "Meta, Google Ads, and GA4 connectors",
+            "Daily Signal PDF",
             "Works in any AI",
-            "Pre-built prompt templates",
+            "Pre-built prompt library",
             "60-day rolling data window",
+            "Unlimited seats",
         ],
         trust: null,
         cta: "Get Started Free",
@@ -27,7 +28,7 @@ const plans = [
     {
         name: "Pro",
         monthlyPrice: 49,
-        subtitle: "+ 0.3% of ad spend (capped at $1,250/mo)",
+        subtitle: "+ 0.3% of ad spend (capped at $2,000/mo)",
         features: [
             "Everything in Free",
             "Unlimited data history",

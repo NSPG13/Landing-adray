@@ -10,9 +10,9 @@ const tabs = [
         id: "precomputed",
         label: "Precomputed",
         iconSvg: "01d6Xos4x3sbU293TmKaFduYFAc.svg",
-        title: "Precomputed, AI-Ready Snapshots",
+        title: "Precomputed, AI-Ready Signal",
         description:
-            "Not raw API dumps. Structured, normalized, compressed data your AI can actually work with — resulting in better outputs, fewer wasted tokens, and more accurate answers.",
+            "Your platforms report what they want you to see. Adray computes what\u2019s true \u2014 ROAS on net revenue, blended CAC against verified new customers, anomaly flags, and campaign-level truth. Structured for AI to read.",
         tags: [
             { label: "Structured" },
             { label: "Normalized" },
@@ -29,12 +29,11 @@ const tabs = [
         iconSvg: "DzDW9qxLWt1R7V7DL7f89IPJfk.svg",
         title: "Cross-Platform Normalization",
         description:
-            "Meta, Google, GA4, and Shopify speaking the same language before your AI sees a single number. No more conflicting metrics or platform bias.",
+            "Meta, Google, and GA4 measure differently, attribute differently, and report differently. Adray speaks all three languages \u2014 then translates them into one reconciled view before your AI sees a single number. No more conflicting metrics. No more platform bias.",
         tags: [
             { label: "Meta" },
             { label: "Google" },
             { label: "GA4" },
-            { label: "Shopify" },
         ],
         cta: { label: "Get Started", href: "/pricing" },
         image:
@@ -46,7 +45,7 @@ const tabs = [
         iconSvg: "Akgvq4ROltzdkv9bMr9wLtsd5c.svg",
         title: "The Adray Intelligence Pixel",
         description:
-            "Want even richer data? The pixel is an enrichment layer — not a requirement. Install it and your attribution gets significantly deeper. Works on any website. Install via Google Tag Manager in two clicks, or paste a single script.",
+            "Want even richer data? Install the Adray pixel and your attribution gets significantly deeper. Server-side events, first-party identity, deduplication, session stitching \u2014 all flowing back into your Signal. Works on any website. Two clicks via Google Tag Manager, or paste a single script.",
         tags: [
             { label: "Server-Side" },
             { label: "First-Party" },
@@ -76,7 +75,7 @@ export default function FeaturesTabs() {
                             </svg>
                         }
                         title="Using your marketing data in AI is painful. We fixed that."
-                        subtitle="Adray gives you a secure, preformatted data link in one click. Connect your platforms, get your link, drop it in any AI. Done."
+                        subtitle="Adray reconciles your ad spend, normalizes it across platforms, and structures it so your AI can actually reason with it. Not raw API dumps. Not dashboard screenshots. A verified, precomputed Signal PDF \u2014 delivered every day."
                     />
                 </AnimatedSection>
 

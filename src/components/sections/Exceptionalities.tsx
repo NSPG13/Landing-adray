@@ -25,14 +25,14 @@ const cards = [
     {
         title: "Portable Everywhere",
         description:
-            "One secure link. Works in any AI \u2014 ChatGPT, Claude, Gemini, WhatsApp Meta AI, Grok, Manus, Copilot, Perplexity, or wherever you already work. Refreshes automatically every day.",
+            "One Signal PDF. Works in any AI \u2014 Claude, ChatGPT, Gemini, Grok, Manus, Copilot, Perplexity \u2014 wherever you already work. Refreshed automatically every day.",
         bgImage:
             "https://framerusercontent.com/images/UoZeXgrLVIo07yWMmdM4MO8F0.webp",
     },
     {
         title: "Instant Value",
         description:
-            "Your data link is ready the moment your first platform connects. You don\u2019t need a complete setup to get started.",
+            "Your Signal starts building the moment your first platform connects. You don\u2019t need a complete stack to get started.",
         bgImage:
             "https://framerusercontent.com/images/TdhDQYxz25yRgOwLKeC05FZVk.webp",
     },

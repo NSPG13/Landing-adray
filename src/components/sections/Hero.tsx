@@ -92,7 +92,7 @@ export default function Hero() {
                             animate={{ opacity: 1 }}
                             transition={{ duration: 0.6, ease }}
                         >
-                            <Badge>Marketing data analytics for the generative era.</Badge>
+                            <Badge>Marketing intelligence for the generative era.</Badge>
                         </motion.div>
 
                         {/* Heading group — 24px gap between title/subtitle */}
@@ -113,12 +113,12 @@ export default function Hero() {
                             {/* Subtitle — white, weight 500, blur reveal, text-shadow */}
                             <div style={{ maxWidth: "640px", textShadow: "0 1px 2px rgba(0,0,0,0.32)" }} className="t-p-lg-medium text-white-100 tracking-[-0.03em] text-center">
                                 <BlurRevealText
-                                    text="Your full marketing stack: Meta, Google, GA4, Shopify in one secure link."
+                                    text="Your full marketing stack: Meta, Google, GA4 reconciled, AI-ready,"
                                     startDelay={0.4}
                                 />
                                 <br />
                                 <BlurRevealText
-                                    text="Drop it in any AI. Full context, instantly."
+                                    text="delivered every day for any AI you already use."
                                     startDelay={0.6}
                                 />
                             </div>

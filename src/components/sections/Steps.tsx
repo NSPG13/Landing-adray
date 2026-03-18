@@ -24,21 +24,21 @@ const steps = [
         title: "Connect your stack",
         description: "",
         bullets: [
-            "Connect Meta, Google, GA4, and Shopify.",
-            "No code, no credentials to copy-paste.",
-            "Your secure data link is generated instantly.",
+            "Connect Meta Ads, Google Ads, and GA4.",
+            "No code. No credentials to copy-paste.",
+            "Your Signal starts building the moment your first source connects.",
         ],
         image:
             "https://framerusercontent.com/images/1h2g2AnKRHxZzmSq2umWuiBsSys.png",
     },
     {
         number: "03",
-        title: "Drop your link into any AI",
+        title: "Deploy your Signal",
         description: "",
         bullets: [
-            "\"What\u2019s my real ROAS on Meta this month?\"",
-            "\"Which campaign is actually driving revenue?\"",
-            "\"Where should I cut spend right now?\"",
+            "Download your daily Signal PDF.",
+            "Attach it to Claude, ChatGPT, Gemini, or any AI you already use.",
+            "Ask real questions. Get answers backed by reconciled data.",
         ],
         image:
             "https://framerusercontent.com/images/8KzDLcSNotT5Lxj1UyWAsRCZu3E.png",
@@ -129,7 +129,7 @@ export default function Steps() {
                                 height={24}
                             />
                         }
-                        title="Three steps. One link. Any AI."
+                        title="Three steps. One Signal. Any AI."
                         subtitle=""
                     />
                 </AnimatedSection>

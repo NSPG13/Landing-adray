@@ -9,38 +9,34 @@ import AnimatedSection from "@/components/ui/AnimatedSection";
 const part1 = [
     {
         q: "What is Adray?",
-        a: "The first AI-native marketing data system. We reconcile your Meta, Google, GA4, and Shopify data into precomputed, AI-ready snapshots \u2014 then pack them into a secure portable link you drop into any AI. No dashboard. No new tool. Just your AI chat, with data it can actually work with. Native MCP connectors for Claude, ChatGPT, and Gemini \u2014 for real-time, conversational queries \u2014 arriving Q2 2026.",
+        a: "Adray is a marketing intelligence platform that connects to your ad accounts, reconciles spend against verified revenue, and delivers a structured daily Signal \u2014 ready to use in any AI you already work with. MCP connectors coming in Q2 2026.",
     },
     {
         q: "Who is Adray for?",
-        a: "Any business running digital ads \u2014 ecommerce brands, B2B companies, marketing agencies. If you\u2019re spending on Meta or Google and want your AI to help you make better decisions, Adray works for you. It runs on any website \u2014 Shopify, WooCommerce, custom builds, anything.",
+        a: "Any business running digital ads across Meta, Google, or GA4. Performance marketers, growth teams, media buyers, and agencies who need clean, AI-ready data without a new dashboard to manage.",
     },
     {
         q: "How is this different from Triple Whale?",
-        a: "Triple Whale is a dashboard \u2014 you log in, read charts, and leave. Adray is infrastructure \u2014 we pack your data into a portable link you drop into the AI you\u2019re already using. No new interface to learn. No monthly dashboard fee to justify. And because Adray precomputes and normalizes your data before it reaches any AI, you get better answers than you\u2019d ever get by connecting raw platform data. Different paradigm entirely.",
+        a: "Triple Whale is a Shopify-native analytics dashboard. Adray doesn\u2019t require Shopify, doesn\u2019t ask you to log into another interface, and delivers its intelligence directly to the AI you already use \u2014 not into another reporting tool.",
     },
     {
         q: "How is this different from Windsor.ai?",
-        a: "Windsor connects your ad platforms to AI \u2014 so does Adray. The difference is what happens before the AI sees your data. Windsor passes through raw platform numbers. Adray precomputes, normalizes, and reconciles them first \u2014 resolving conflicts between what Meta claims, what Google claims, and what actually happened. The result: your AI gives you answers you can act on, not just numbers to interpret. And with Adray\u2019s portable link, your data travels with you to any AI \u2014 you\u2019re not locked into one interface.",
+        a: "Windsor pulls raw data from your platforms and routes it to a destination. Adray reconciles it \u2014 removing refunded revenue, normalizing cross-platform metrics, and verifying buyer type \u2014 before it reaches your AI. The difference is data quality, not data volume.",
     },
 ];
 
 const part2 = [
     {
-        q: "How does the data link work?",
-        a: "The moment you connect your first platform, Adray generates a secure portable snapshot of your marketing data. Paste it into any AI and ask questions in plain language. Refreshes with every sync. Native MCP connectors \u2014 one-click deep integration \u2014 arriving Q2 2026.",
-    },
-    {
         q: "Do I need to install the pixel to get value?",
-        a: "No. Connect your ad platforms via OAuth and your data link is ready immediately. The pixel is an enrichment layer \u2014 install it and you unlock deeper attribution: reconciliation, deduplication, session-to-order stitching. But you don\u2019t need it to start.",
+        a: "No. Connect Meta, Google Ads, and GA4 via OAuth and your Signal starts building immediately. The pixel deepens attribution \u2014 it doesn\u2019t enable it.",
     },
     {
         q: "How does the pixel install work?",
-        a: "Via Google Tag Manager \u2014 Adray\u2019s agent installs the tag for you, you click Publish. Or paste a single script directly into your site. Works on any platform. No developer required.",
+        a: "Two clicks via Google Tag Manager, or paste a single script into your site. No developer required. Works on any website.",
     },
     {
         q: "How fast is setup?",
-        a: "Under 2 minutes to your first data link. Connect Meta, Google, GA4, or Shopify via OAuth \u2014 your link is ready as soon as the first one connects.",
+        a: "Account creation takes under 30 seconds. OAuth connection takes under two minutes. Your first Signal PDF is ready within the hour.",
     },
 ];
 

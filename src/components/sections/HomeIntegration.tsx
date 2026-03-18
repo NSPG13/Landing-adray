@@ -91,8 +91,8 @@ export default function HomeIntegration() {
                                 height={24}
                             />
                         }
-                        title="Connect Everything, Analyze Anywhere"
-                        subtitle="Adray connects your ad platforms and ecommerce store \u2014 then packs it into a portable link for any AI."
+                        title="Connect Everything, Analyze Anywhere."
+                        subtitle="Adray connects your ad platforms and ecommerce store then reconciles and packs your data into a Signal you can use on any AI."
                     />
                 </AnimatedSection>
 

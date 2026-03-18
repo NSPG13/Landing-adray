@@ -59,7 +59,7 @@ export default function Footer() {
                             <BlurRevealText text="Give it something real to work with." triggerOnScroll startDelay={0.4} />
                         </h2>
                         <p className="t-p-lg text-ad-muted max-w-xl mx-auto mb-10">
-                            Install free. Connect in 2 minutes. Ask your first real question.
+                            Install free. Connect in 2 minutes. Start getting answers.
                         </p>
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                             <Button variant="primary" size="lg" href="/pricing">
