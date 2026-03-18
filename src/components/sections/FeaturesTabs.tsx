@@ -21,7 +21,7 @@ const tabs = [
         ],
         cta: { label: "Get Started", href: "/pricing" },
         image:
-            "https://framerusercontent.com/images/DKhCP3xiqB8m3zBp2E6ysooT3SY.webp",
+            "/images/adray-analytics.png",
     },
     {
         id: "normalized",
@@ -37,7 +37,7 @@ const tabs = [
         ],
         cta: { label: "Get Started", href: "/pricing" },
         image:
-            "https://framerusercontent.com/images/4ABnXaFshXBVkaMyEU2NjeeqE.webp",
+            "/images/Cross-Platform Normalization.png",
     },
     {
         id: "enriched",
@@ -54,7 +54,7 @@ const tabs = [
         ],
         cta: { label: "Get Started", href: "/pricing" },
         image:
-            "https://framerusercontent.com/images/rYyqmKb6ZW8scPMDoDnkLicukfc.png",
+            "/images/The Adray Intelligence Pixel.png",
     },
 ];
 
