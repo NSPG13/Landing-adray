@@ -158,7 +158,7 @@ export default function Hero() {
                 >
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
-                        src="https://framerusercontent.com/images/A6N9GDN1T1HJbhYbb15VfR9Os.png"
+                        src="/images/C - 1.png"
                         alt="Adray Dashboard"
                         className="w-full h-auto"
                         style={{ aspectRatio: "1.6036" }}

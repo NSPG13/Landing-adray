@@ -17,7 +17,7 @@ const steps = [
             "Start connecting platforms immediately.",
         ],
         image:
-            "https://framerusercontent.com/images/vUiGHc7SR4A4SrQMUODr2UXNbY.png",
+            "/images/A - 2.png",
     },
     {
         number: "02",

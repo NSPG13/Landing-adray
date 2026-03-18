@@ -61,12 +61,9 @@ export default function Footer() {
                         <p className="t-p-lg text-ad-muted max-w-xl mx-auto mb-10">
                             Install free. Connect in 2 minutes. Start getting answers.
                         </p>
-                        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <div className="flex items-center justify-center">
                             <Button variant="primary" size="lg" href="/pricing">
                                 Get Started Free
-                            </Button>
-                            <Button variant="ghost" size="lg" href="/contact">
-                                Talk to Our Team
                             </Button>
                         </div>
                         <p className="mt-4 t-p-sm text-ad-muted">
@@ -127,7 +124,7 @@ export default function Footer() {
                     {/* Bottom bar */}
                     <div className="mt-12 pt-8 border-t border-ad-border flex flex-col sm:flex-row justify-between items-center gap-4">
                         <p className="t-p-sm text-ad-muted">
-                            Marketing data analytics for the generative era. &middot; All rights reserved.
+                            Marketing intelligence for the generative era. &middot; All rights reserved.
                         </p>
                         <p className="t-p-sm text-ad-deep">
                             Designed by{" "}
