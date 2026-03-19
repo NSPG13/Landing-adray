@@ -325,15 +325,268 @@ body {
   animation: progressFill 5s linear forwards;
 }
 
-@keyframes speed-line-float {
+@keyframes speed-line-travel {
   0% {
-    transform: translateX(0) translateY(0);
-    opacity: 0.3;
+    transform: translateX(0px);
+    opacity: 0;
+  }
+
+  5% {
+    opacity: 0.9;
+  }
+
+  95% {
+    opacity: 0.9;
   }
 
   100% {
-    transform: translateX(40px) translateY(-20px);
+    transform: translateX(var(--travel, 50cqi));
+    opacity: 0;
+  }
+}
+
+@keyframes slider-dot {
+  0% {
+    top: var(--dot-from, 10%);
+  }
+
+  100% {
+    top: var(--dot-to, 75%);
+  }
+}
+
+@keyframes signal-pulse {
+  0% {
+    transform: scale(0.2);
     opacity: 0.8;
+  }
+
+  80% {
+    opacity: 0.15;
+  }
+
+  100% {
+    transform: scale(1.1);
+    opacity: 0;
+  }
+}
+
+@keyframes beacon-glow {
+
+  0%,
+  100% {
+    box-shadow: 0 0 8px rgba(181, 92, 255, 0.6), 0 0 24px rgba(181, 92, 255, 0.3);
+    transform: scale(1);
+  }
+
+  50% {
+    box-shadow: 0 0 16px rgba(181, 92, 255, 1), 0 0 40px rgba(202, 138, 229, 0.5);
+    transform: scale(1.15);
+  }
+}
+
+@keyframes orbit-spin {
+  from {
+    transform: rotate(var(--orbit-start, 0deg));
+  }
+
+  to {
+    transform: rotate(calc(var(--orbit-start, 0deg) + 360deg));
+  }
+}
+
+/* === Instant Value: Plug + Tesla Lightning === */
+
+@keyframes plug-snap {
+
+  0%,
+  15% {
+    transform: translateY(-50%) translateX(-3em);
+    opacity: 0.4;
+  }
+
+  20% {
+    transform: translateY(-50%) translateX(-3em);
+    opacity: 0.8;
+  }
+
+  /* Snap! Instant click-in */
+  25% {
+    transform: translateY(-50%) translateX(0);
+    opacity: 1;
+  }
+
+  26% {
+    transform: translateY(-50%) translateX(0.08em);
+    opacity: 1;
+  }
+
+  27%,
+  82% {
+    transform: translateY(-50%) translateX(0);
+    opacity: 1;
+  }
+
+  95%,
+  100% {
+    transform: translateY(-50%) translateX(-3em);
+    opacity: 0.4;
+  }
+}
+
+@keyframes cable-glow {
+
+  0%,
+  20% {
+    opacity: 0.5;
+    filter: brightness(0.7);
+  }
+
+  28%,
+  82% {
+    opacity: 1;
+    filter: brightness(1.3);
+  }
+
+  95%,
+  100% {
+    opacity: 0.5;
+    filter: brightness(0.7);
+  }
+}
+
+@keyframes socket-glow {
+
+  0%,
+  24% {
+    opacity: 0;
+  }
+
+  28%,
+  82% {
+    opacity: 1;
+  }
+
+  95%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes tesla-arc {
+
+  0%,
+  24% {
+    stroke-dashoffset: 800;
+    opacity: 0;
+  }
+
+  26% {
+    opacity: 1;
+  }
+
+  /* Fast draw-on */
+  38% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+
+  /* Flicker */
+  42% {
+    opacity: 0.3;
+  }
+
+  44% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  52% {
+    opacity: 1;
+  }
+
+  58% {
+    opacity: 0.7;
+  }
+
+  60%,
+  78% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+
+  92%,
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes tesla-branch {
+
+  0%,
+  26% {
+    stroke-dashoffset: 300;
+    opacity: 0;
+  }
+
+  28% {
+    opacity: 0.9;
+  }
+
+  42% {
+    stroke-dashoffset: 0;
+    opacity: 0.9;
+  }
+
+  46% {
+    opacity: 0.2;
+  }
+
+  48% {
+    opacity: 0.8;
+  }
+
+  54% {
+    opacity: 0.4;
+  }
+
+  56%,
+  78% {
+    stroke-dashoffset: 0;
+    opacity: 0.8;
+  }
+
+  92%,
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes energy-ring {
+
+  0%,
+  24% {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 0.8;
+  }
+
+  70% {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
   }
 }
 
