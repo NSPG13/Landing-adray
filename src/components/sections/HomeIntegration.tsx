@@ -85,7 +85,7 @@ export default function HomeIntegration() {
                         tagIcon={
                             // eslint-disable-next-line @next/next/no-img-element
                             <img
-                                src="https://framerusercontent.com/images/A2kRK4SXq8SQGtD1igJ3QJKmUH4.svg"
+                                src="/images/svg/A2kRK4SXq8SQGtD1igJ3QJKmUH4.svg"
                                 alt=""
                                 width={24}
                                 height={24}

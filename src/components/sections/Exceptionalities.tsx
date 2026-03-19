@@ -48,7 +48,7 @@ export default function Exceptionalities() {
                         tagIcon={
                             // eslint-disable-next-line @next/next/no-img-element
                             <img
-                                src="https://framerusercontent.com/images/BZk5mbe8FBf9Lhl8okYcCei2g.svg"
+                                src="/images/svg/BZk5mbe8FBf9Lhl8okYcCei2g.svg"
                                 alt=""
                                 width={24}
                                 height={24}

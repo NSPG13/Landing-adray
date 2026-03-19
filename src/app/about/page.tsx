@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React from "react";
 import { motion } from "framer-motion";
@@ -64,7 +64,7 @@ export default function AboutPage() {
                 <Container className="relative z-10">
                     <div className="flex items-center gap-3 mb-6">
                         <img
-                            src="https://framerusercontent.com/images/eWJcm0cKj3Rsxetaz4suNQKuW8o.svg"
+                            src="/images/svg/eWJcm0cKj3Rsxetaz4suNQKuW8o.svg"
                             alt=""
                             width={24}
                             height={24}
@@ -133,7 +133,7 @@ export default function AboutPage() {
                             tag="OUR VALUES"
                             tagIcon={
                                 <img
-                                    src="https://framerusercontent.com/images/eS5b9sHb3EsbFgcgHgtjc8FZ1Y.svg"
+                                    src="/images/svg/eS5b9sHb3EsbFgcgHgtjc8FZ1Y.svg"
                                     alt=""
                                     width={24}
                                     height={24}
@@ -175,7 +175,7 @@ export default function AboutPage() {
                             tag="OUR FOUNDER"
                             tagIcon={
                                 <img
-                                    src="https://framerusercontent.com/images/JkTqK8jhgMOxUyl4OCizgeYU.svg"
+                                    src="/images/svg/JkTqK8jhgMOxUyl4OCizgeYU.svg"
                                     alt=""
                                     width={24}
                                     height={24}
@@ -231,7 +231,7 @@ export default function AboutPage() {
                             tag="PILLARS"
                             tagIcon={
                                 <img
-                                    src="https://framerusercontent.com/images/QauTQfLJbX1ivAkVbcLLwuMoHQ.svg"
+                                    src="/images/svg/QauTQfLJbX1ivAkVbcLLwuMoHQ.svg"
                                     alt=""
                                     width={24}
                                     height={24}
@@ -277,7 +277,7 @@ export default function AboutPage() {
                             tag="JOIN US"
                             tagIcon={
                                 <img
-                                    src="https://framerusercontent.com/images/3UiRUIAjek5XnV6oCtR4F5HwgOU.svg"
+                                    src="/images/svg/3UiRUIAjek5XnV6oCtR4F5HwgOU.svg"
                                     alt=""
                                     width={24}
                                     height={24}

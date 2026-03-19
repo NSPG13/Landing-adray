@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
@@ -181,7 +181,7 @@ export default function PricingPage() {
                         transition={{ duration: 0.6, ease }}
                     >
                         <img
-                            src="https://framerusercontent.com/images/3UovOTKirX07vhyWYJGSliEt1E4.svg"
+                            src="/images/svg/3UovOTKirX07vhyWYJGSliEt1E4.svg"
                             alt=""
                             width={24}
                             height={24}
@@ -218,7 +218,7 @@ export default function PricingPage() {
                             subtitle="Start free. Upgrade when you need the full workflow or agent stack."
                             tagIcon={
                                 <img
-                                    src="https://framerusercontent.com/images/jQJ8TgGax14f2upuHQKSjpr1jmg.svg"
+                                    src="/images/svg/jQJ8TgGax14f2upuHQKSjpr1jmg.svg"
                                     alt=""
                                     width={24}
                                     height={24}
@@ -332,7 +332,7 @@ export default function PricingPage() {
                             tag="COMPARISON"
                             tagIcon={
                                 <img
-                                    src="https://framerusercontent.com/images/X5M3y8eb51ZE3hAx5kOkcLqc83U.svg"
+                                    src="/images/svg/X5M3y8eb51ZE3hAx5kOkcLqc83U.svg"
                                     alt=""
                                     width={24}
                                     height={24}
@@ -417,7 +417,7 @@ export default function PricingPage() {
                             tag="FAQ"
                             tagIcon={
                                 <img
-                                    src="https://framerusercontent.com/images/mH5OKmjNShfPxiFuUqwazYgcLNQ.svg"
+                                    src="/images/svg/mH5OKmjNShfPxiFuUqwazYgcLNQ.svg"
                                     alt=""
                                     width={24}
                                     height={24}

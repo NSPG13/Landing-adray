@@ -6,9 +6,9 @@ import Container from "@/components/ui/Container";
 import ScrollTextColor from "@/components/ui/ScrollTextColor";
 
 const cyclingLogos = [
-    { src: "https://framerusercontent.com/images/rHi83QNHLWfMpfg2vj176ghopo.svg", width: 49, height: 68 },
-    { src: "https://framerusercontent.com/images/eULxkhSvgmgm7XIuguu97va5Pqo.svg", width: 49, height: 68 },
-    { src: "https://framerusercontent.com/images/eGiPk2ZSpnUFip5An5clXOnq40.svg", width: 40, height: 68 },
+    { src: "/images/svg/rHi83QNHLWfMpfg2vj176ghopo.svg", width: 49, height: 68 },
+    { src: "/images/svg/eULxkhSvgmgm7XIuguu97va5Pqo.svg", width: 49, height: 68 },
+    { src: "/images/svg/eGiPk2ZSpnUFip5An5clXOnq40.svg", width: 40, height: 68 },
 ];
 
 export default function HighlightedText() {

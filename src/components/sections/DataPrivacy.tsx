@@ -28,7 +28,7 @@ export default function DataPrivacy() {
                         tagIcon={
                             // eslint-disable-next-line @next/next/no-img-element
                             <img
-                                src="https://framerusercontent.com/images/TRt8OkZ1B4j7B4TuuIPjZZ0f8.svg"
+                                src="/images/svg/TRt8OkZ1B4j7B4TuuIPjZZ0f8.svg"
                                 alt=""
                                 width={24}
                                 height={24}

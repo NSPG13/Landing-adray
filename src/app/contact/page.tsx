@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
@@ -131,7 +131,7 @@ export default function ContactPage() {
                         transition={{ duration: 0.6, ease }}
                     >
                         <img
-                            src="https://framerusercontent.com/images/xDPyxO9KaHgkC204pqOjJmGbwk.svg"
+                            src="/images/svg/xDPyxO9KaHgkC204pqOjJmGbwk.svg"
                             alt=""
                             width={24}
                             height={24}
@@ -194,7 +194,7 @@ export default function ContactPage() {
                                             className="absolute inset-0 w-full h-full object-cover"
                                         />
                                         <img
-                                            src="https://framerusercontent.com/images/xHfPV4X6jypeMN7rcPFFyCwnhg.svg"
+                                            src="/images/svg/xHfPV4X6jypeMN7rcPFFyCwnhg.svg"
                                             alt=""
                                             width={40}
                                             height={40}
@@ -222,7 +222,7 @@ export default function ContactPage() {
                                             className="absolute inset-0 w-full h-full object-cover"
                                         />
                                         <img
-                                            src="https://framerusercontent.com/images/zR2pRh2KGfrgsBHUSXxBBrc6Os.svg"
+                                            src="/images/svg/zR2pRh2KGfrgsBHUSXxBBrc6Os.svg"
                                             alt=""
                                             width={40}
                                             height={40}
@@ -254,7 +254,7 @@ export default function ContactPage() {
                                 tag="SUPPORT"
                                 tagIcon={
                                     <img
-                                        src="https://framerusercontent.com/images/ovrqK10uB6vuZpVvC1WLvsJNHFU.svg"
+                                        src="/images/svg/ovrqK10uB6vuZpVvC1WLvsJNHFU.svg"
                                         alt=""
                                         width={24}
                                         height={24}
@@ -279,7 +279,7 @@ export default function ContactPage() {
                                                 className="absolute inset-0 w-full h-full object-cover"
                                             />
                                             <img
-                                                src="https://framerusercontent.com/images/ZWTVawMwhcN0IIzbO291BWd5c.svg"
+                                                src="/images/svg/ZWTVawMwhcN0IIzbO291BWd5c.svg"
                                                 alt=""
                                                 width={34}
                                                 height={34}
@@ -296,7 +296,7 @@ export default function ContactPage() {
                                                 className="absolute inset-0 w-full h-full object-cover"
                                             />
                                             <img
-                                                src="https://framerusercontent.com/images/ochO9ePlZvXdFfWVus3LbO0Yw.svg"
+                                                src="/images/svg/ochO9ePlZvXdFfWVus3LbO0Yw.svg"
                                                 alt=""
                                                 width={34}
                                                 height={34}
@@ -383,7 +383,7 @@ export default function ContactPage() {
                             tag="OFFICES"
                             tagIcon={
                                 <img
-                                    src="https://framerusercontent.com/images/3UiRUIAjek5XnV6oCtR4F5HwgOU.svg"
+                                    src="/images/svg/3UiRUIAjek5XnV6oCtR4F5HwgOU.svg"
                                     alt=""
                                     width={24}
                                     height={24}
@@ -462,7 +462,7 @@ export default function ContactPage() {
                             tag="FAQ"
                             tagIcon={
                                 <img
-                                    src="https://framerusercontent.com/images/mH5OKmjNShfPxiFuUqwazYgcLNQ.svg"
+                                    src="/images/svg/mH5OKmjNShfPxiFuUqwazYgcLNQ.svg"
                                     alt=""
                                     width={24}
                                     height={24}

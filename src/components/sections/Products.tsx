@@ -53,22 +53,22 @@ const products = [
     {
         name: "Attribution",
         description: "Know exactly which ads drive real revenue.",
-        icon: "https://framerusercontent.com/images/UhzKcwOlsFcygmiTZBSV1TlJWI.svg",
+        icon: "/images/svg/UhzKcwOlsFcygmiTZBSV1TlJWI.svg",
     },
     {
         name: "ROAS Tracking",
         description: "See your true return on ad spend across platforms.",
-        icon: "https://framerusercontent.com/images/xjQCmHyjo6JeuuaTw7eNj6Rnz0.svg",
+        icon: "/images/svg/xjQCmHyjo6JeuuaTw7eNj6Rnz0.svg",
     },
     {
         name: "Ad Intelligence",
         description: "Cross-platform insights for smarter ad decisions.",
-        icon: "https://framerusercontent.com/images/g03jLOH8iFVEwvrXTl5O92yNWI.svg",
+        icon: "/images/svg/g03jLOH8iFVEwvrXTl5O92yNWI.svg",
     },
     {
         name: "Budget Optimization",
         description: "AI agents that manage your ad spend 24/7.",
-        icon: "https://framerusercontent.com/images/s0leRkmxKn90KJPse58Uwi0gmwA.svg",
+        icon: "/images/svg/s0leRkmxKn90KJPse58Uwi0gmwA.svg",
     },
 ];
 
@@ -110,7 +110,7 @@ export default function Products() {
                         tagIcon={
                             // eslint-disable-next-line @next/next/no-img-element
                             <img
-                                src="https://framerusercontent.com/images/MRmuOBoDk7tTbd9wZjGly9VAk.svg"
+                                src="/images/svg/MRmuOBoDk7tTbd9wZjGly9VAk.svg"
                                 alt=""
                                 width={24}
                                 height={24}

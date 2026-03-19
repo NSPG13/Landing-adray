@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React from "react";
 import { motion } from "framer-motion";
@@ -60,7 +60,7 @@ export default function AISolutionsPage() {
                         transition={{ duration: 0.6, ease }}
                     >
                         <img
-                            src="https://framerusercontent.com/images/kSe62iNOdnrgkLKL07t29GUEak.svg"
+                            src="/images/svg/kSe62iNOdnrgkLKL07t29GUEak.svg"
                             alt=""
                             width={24}
                             height={24}

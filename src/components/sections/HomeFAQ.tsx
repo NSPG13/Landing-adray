@@ -82,7 +82,7 @@ export default function HomeFAQ() {
                         tagIcon={
                             // eslint-disable-next-line @next/next/no-img-element
                             <img
-                                src="https://framerusercontent.com/images/mH5OKmjNShfPxiFuUqwazYgcLNQ.svg"
+                                src="/images/svg/mH5OKmjNShfPxiFuUqwazYgcLNQ.svg"
                                 alt=""
                                 width={24}
                                 height={24}

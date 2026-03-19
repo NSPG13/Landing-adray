@@ -123,7 +123,7 @@ export default function Steps() {
                         tagIcon={
                             // eslint-disable-next-line @next/next/no-img-element
                             <img
-                                src="https://framerusercontent.com/images/lwNa4WCrpY0HtXMtN0IteQrJig.svg"
+                                src="/images/svg/lwNa4WCrpY0HtXMtN0IteQrJig.svg"
                                 alt=""
                                 width={24}
                                 height={24}

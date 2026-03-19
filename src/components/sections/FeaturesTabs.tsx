@@ -93,7 +93,7 @@ export default function FeaturesTabs() {
                             >
                                 {/* eslint-disable-next-line @next/next/no-img-element */}
                                 <img
-                                    src={`https://framerusercontent.com/images/${tab.iconSvg}`}
+                                    src={`/images/svg/${tab.iconSvg}`}
                                     alt=""
                                     width={18}
                                     height={18}

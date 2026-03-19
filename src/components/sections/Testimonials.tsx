@@ -88,7 +88,7 @@ export default function Testimonials() {
                         tagIcon={
                             // eslint-disable-next-line @next/next/no-img-element
                             <img
-                                src="https://framerusercontent.com/images/BbcmkQqb9ghruMNQHqLHlo3xDs.svg"
+                                src="/images/svg/BbcmkQqb9ghruMNQHqLHlo3xDs.svg"
                                 alt=""
                                 width={24}
                                 height={24}
@@ -152,7 +152,7 @@ export default function Testimonials() {
                         >
                             {/* eslint-disable-next-line @next/next/no-img-element */}
                             <img
-                                src="https://framerusercontent.com/images/6tTbkXggWgQCAJ4DO2QEdXXmgM.svg"
+                                src="/images/svg/6tTbkXggWgQCAJ4DO2QEdXXmgM.svg"
                                 alt="Previous"
                                 width={20}
                                 height={20}
@@ -166,7 +166,7 @@ export default function Testimonials() {
                         >
                             {/* eslint-disable-next-line @next/next/no-img-element */}
                             <img
-                                src="https://framerusercontent.com/images/11KSGbIZoRSg4pjdnUoif6MKHI.svg"
+                                src="/images/svg/11KSGbIZoRSg4pjdnUoif6MKHI.svg"
                                 alt="Next"
                                 width={20}
                                 height={20}

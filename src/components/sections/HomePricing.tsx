@@ -81,7 +81,7 @@ export default function HomePricing() {
                         tagIcon={
                             // eslint-disable-next-line @next/next/no-img-element
                             <img
-                                src="https://framerusercontent.com/images/3UovOTKirX07vhyWYJGSliEt1E4.svg"
+                                src="/images/svg/3UovOTKirX07vhyWYJGSliEt1E4.svg"
                                 alt=""
                                 width={24}
                                 height={24}

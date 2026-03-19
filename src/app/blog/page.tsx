@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React from "react";
 import { motion } from "framer-motion";
@@ -65,7 +65,7 @@ export default function BlogPage() {
                         transition={{ duration: 0.6, ease }}
                     >
                         <img
-                            src="https://framerusercontent.com/images/Hviy65FJn8RtNZbKss87zkB2E.svg"
+                            src="/images/svg/Hviy65FJn8RtNZbKss87zkB2E.svg"
                             alt=""
                             width={24}
                             height={24}
