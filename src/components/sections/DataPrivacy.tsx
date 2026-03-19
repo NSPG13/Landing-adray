@@ -53,34 +53,36 @@ export default function DataPrivacy() {
                     </div>
                 </AnimatedSection>
 
-                {/* Overlapping perspective layer cards with light pass */}
+                {/* Overlapping perspective layer cards with discrete light flash */}
                 <AnimatedSection delay={0.2}>
                     <div className="flex justify-center">
                         <div
                             style={{
                                 position: "relative",
-                                width: "min(32rem, 90%)",
-                                aspectRatio: "4 / 3",
-                                perspective: "50rem",
+                                width: "min(34rem, 90%)",
+                                height: "22rem",
+                                perspective: "60rem",
+                                perspectiveOrigin: "40% 50%",
                             }}
                         >
                             {layerImages.map((src, i) => {
-                                const zOffset = i * -3.5;
-                                const xShift = i * 4;
+                                /* 4 cards fanning out in Z — front card (i=0) is closest */
+                                const reverseI = 3 - i;
                                 return (
                                     <div
                                         key={i}
                                         style={{
                                             position: "absolute",
-                                            top: "5%",
-                                            bottom: "5%",
-                                            left: `${8 + xShift}%`,
-                                            width: "55%",
-                                            transform: `rotateY(-18deg) translateZ(${zOffset}rem)`,
+                                            top: 0,
+                                            left: `${i * 14}%`,
+                                            width: "48%",
+                                            height: "100%",
+                                            transform: `rotateY(-20deg) translateZ(${reverseI * 2}rem)`,
                                             transformStyle: "preserve-3d",
                                             borderRadius: "0.75rem",
                                             overflow: "hidden",
-                                            border: "0.06rem solid rgba(255,255,255,0.08)",
+                                            border: "0.06rem solid rgba(255,255,255,0.1)",
+                                            background: "rgba(0,0,0,0.3)",
                                         }}
                                     >
                                         {/* Base image */}
@@ -93,38 +95,35 @@ export default function DataPrivacy() {
                                                 height: "100%",
                                                 objectFit: "cover",
                                                 display: "block",
-                                                filter: `brightness(${i === 0 ? 1.9 : i === 1 ? 1.6 : 1}) sepia(1) hue-rotate(230deg) saturate(2)`,
-                                                opacity: i <= 1 ? 1 : 0.5,
+                                                filter: "sepia(1) hue-rotate(230deg) saturate(2)",
+                                                opacity: i === 0 ? 0.9 : i === 1 ? 0.7 : 0.5,
                                                 maskImage:
-                                                    "linear-gradient(0deg, rgba(0,0,0,0.37) 6%, rgb(0,0,0) 17%, rgba(0,0,0,1) 100%)",
+                                                    "linear-gradient(0deg, rgba(0,0,0,0.3) 0%, rgb(0,0,0) 15%, rgba(0,0,0,1) 100%)",
                                                 WebkitMaskImage:
-                                                    "linear-gradient(0deg, rgba(0,0,0,0.37) 6%, rgb(0,0,0) 17%, rgba(0,0,0,1) 100%)",
+                                                    "linear-gradient(0deg, rgba(0,0,0,0.3) 0%, rgb(0,0,0) 15%, rgba(0,0,0,1) 100%)",
                                             }}
                                         />
 
-                                        {/* Light pass overlay — sweeps through this layer */}
+                                        {/* Discrete light flash — full card lights up then off */}
                                         <div
                                             style={{
                                                 position: "absolute",
                                                 inset: 0,
-                                                background:
-                                                    "linear-gradient(180deg, transparent 0%, rgba(181,92,255,0.25) 40%, rgba(202,138,229,0.35) 50%, rgba(181,92,255,0.25) 60%, transparent 100%)",
-                                                backgroundSize: "100% 300%",
-                                                animation: `layer-light-pass 3.5s ease-in-out ${i * 0.5}s infinite`,
-                                                mixBlendMode: "screen",
+                                                background: "radial-gradient(ellipse at 40% 40%, rgba(202,138,229,0.4) 0%, rgba(181,92,255,0.2) 50%, transparent 80%)",
+                                                animation: `layer-flash 4s ease-in-out ${i * 0.6}s infinite`,
                                                 pointerEvents: "none",
                                             }}
                                         />
 
-                                        {/* Edge highlight glow */}
+                                        {/* Border glow on flash */}
                                         <div
                                             style={{
                                                 position: "absolute",
                                                 inset: 0,
                                                 borderRadius: "inherit",
                                                 boxShadow:
-                                                    "inset 0 0 1.5rem rgba(181,92,255,0.15), inset 0 0 3rem rgba(202,138,229,0.08)",
-                                                animation: `layer-edge-glow 3.5s ease-in-out ${i * 0.5}s infinite`,
+                                                    "inset 0 0 2rem rgba(181,92,255,0.15), 0 0 1rem rgba(181,92,255,0.08)",
+                                                animation: `layer-flash 4s ease-in-out ${i * 0.6}s infinite`,
                                                 pointerEvents: "none",
                                             }}
                                         />
@@ -136,13 +135,13 @@ export default function DataPrivacy() {
                             <div
                                 style={{
                                     position: "absolute",
-                                    top: "20%",
-                                    left: "25%",
-                                    width: "50%",
-                                    height: "60%",
-                                    background: "radial-gradient(ellipse, rgba(181,92,255,0.12) 0%, transparent 70%)",
+                                    top: "15%",
+                                    left: "20%",
+                                    width: "60%",
+                                    height: "70%",
+                                    background: "radial-gradient(ellipse, rgba(181,92,255,0.1) 0%, transparent 70%)",
                                     filter: "blur(2rem)",
-                                    animation: "layer-ambient 3.5s ease-in-out infinite",
+                                    animation: "layer-ambient 4s ease-in-out infinite",
                                     pointerEvents: "none",
                                     zIndex: -1,
                                 }}
