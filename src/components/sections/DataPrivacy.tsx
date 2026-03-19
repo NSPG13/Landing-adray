@@ -53,30 +53,101 @@ export default function DataPrivacy() {
                     </div>
                 </AnimatedSection>
 
-                {/* Layered images */}
+                {/* Overlapping perspective layer cards with light pass */}
                 <AnimatedSection delay={0.2}>
-                    <div className="flex justify-center gap-4 md:gap-6">
-                        {layerImages.map((src, i) => (
+                    <div className="flex justify-center">
+                        <div
+                            style={{
+                                position: "relative",
+                                width: "min(32rem, 90%)",
+                                aspectRatio: "4 / 3",
+                                perspective: "50rem",
+                            }}
+                        >
+                            {layerImages.map((src, i) => {
+                                const zOffset = i * -3.5;
+                                const xShift = i * 4;
+                                return (
+                                    <div
+                                        key={i}
+                                        style={{
+                                            position: "absolute",
+                                            top: "5%",
+                                            bottom: "5%",
+                                            left: `${8 + xShift}%`,
+                                            width: "55%",
+                                            transform: `rotateY(-18deg) translateZ(${zOffset}rem)`,
+                                            transformStyle: "preserve-3d",
+                                            borderRadius: "0.75rem",
+                                            overflow: "hidden",
+                                            border: "0.06rem solid rgba(255,255,255,0.08)",
+                                        }}
+                                    >
+                                        {/* Base image */}
+                                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                                        <img
+                                            src={src}
+                                            alt={`Security Layer ${i + 1}`}
+                                            style={{
+                                                width: "100%",
+                                                height: "100%",
+                                                objectFit: "cover",
+                                                display: "block",
+                                                filter: `brightness(${i === 0 ? 1.9 : i === 1 ? 1.6 : 1}) sepia(1) hue-rotate(230deg) saturate(2)`,
+                                                opacity: i <= 1 ? 1 : 0.5,
+                                                maskImage:
+                                                    "linear-gradient(0deg, rgba(0,0,0,0.37) 6%, rgb(0,0,0) 17%, rgba(0,0,0,1) 100%)",
+                                                WebkitMaskImage:
+                                                    "linear-gradient(0deg, rgba(0,0,0,0.37) 6%, rgb(0,0,0) 17%, rgba(0,0,0,1) 100%)",
+                                            }}
+                                        />
+
+                                        {/* Light pass overlay — sweeps through this layer */}
+                                        <div
+                                            style={{
+                                                position: "absolute",
+                                                inset: 0,
+                                                background:
+                                                    "linear-gradient(180deg, transparent 0%, rgba(181,92,255,0.25) 40%, rgba(202,138,229,0.35) 50%, rgba(181,92,255,0.25) 60%, transparent 100%)",
+                                                backgroundSize: "100% 300%",
+                                                animation: `layer-light-pass 3.5s ease-in-out ${i * 0.5}s infinite`,
+                                                mixBlendMode: "screen",
+                                                pointerEvents: "none",
+                                            }}
+                                        />
+
+                                        {/* Edge highlight glow */}
+                                        <div
+                                            style={{
+                                                position: "absolute",
+                                                inset: 0,
+                                                borderRadius: "inherit",
+                                                boxShadow:
+                                                    "inset 0 0 1.5rem rgba(181,92,255,0.15), inset 0 0 3rem rgba(202,138,229,0.08)",
+                                                animation: `layer-edge-glow 3.5s ease-in-out ${i * 0.5}s infinite`,
+                                                pointerEvents: "none",
+                                            }}
+                                        />
+                                    </div>
+                                );
+                            })}
+
+                            {/* Ambient glow behind the stack */}
                             <div
-                                key={i}
-                                className="relative flex-1 max-w-[200px]"
                                 style={{
-                                    opacity: i === 0 ? 1 : 0.5,
-                                    maskImage:
-                                        "linear-gradient(0deg, rgba(0,0,0,0.37) 6%, rgb(0,0,0) 17%, rgba(0,0,0,1) 100%)",
-                                    WebkitMaskImage:
-                                        "linear-gradient(0deg, rgba(0,0,0,0.37) 6%, rgb(0,0,0) 17%, rgba(0,0,0,1) 100%)",
+                                    position: "absolute",
+                                    top: "20%",
+                                    left: "25%",
+                                    width: "50%",
+                                    height: "60%",
+                                    background: "radial-gradient(ellipse, rgba(181,92,255,0.12) 0%, transparent 70%)",
+                                    filter: "blur(2rem)",
+                                    animation: "layer-ambient 3.5s ease-in-out infinite",
+                                    pointerEvents: "none",
+                                    zIndex: -1,
                                 }}
-                            >
-                                {/* eslint-disable-next-line @next/next/no-img-element */}
-                                <img
-                                    src={src}
-                                    alt={`Security Layer ${i + 1}`}
-                                    className="w-full h-auto rounded-2xl"
-                                    style={{ filter: "sepia(1) hue-rotate(230deg) saturate(2)" }}
-                                />
-                            </div>
-                        ))}
+                            />
+                        </div>
                     </div>
                 </AnimatedSection>
             </Container>
