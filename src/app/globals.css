@@ -744,23 +744,38 @@ body {
 
 @media (max-width: 809px) {
   .t-h1 {
-    font-size: 46px;
+    font-size: 36px;
   }
 
   .t-h2 {
-    font-size: 32px;
+    font-size: 28px;
   }
 
   .t-h3 {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   .t-h3-lg {
-    font-size: 30px;
+    font-size: 26px;
   }
 
   .t-h4 {
-    font-size: 22px;
+    font-size: 20px;
+  }
+
+  .t-p-lg-medium,
+  .t-p-lg {
+    font-size: 16px;
+  }
+
+  .t-p,
+  .t-p-medium,
+  .t-p-semibold {
+    font-size: 15px;
+  }
+
+  .t-p-sm {
+    font-size: 13px;
   }
 }
 

@@ -20,12 +20,12 @@ const ease = [0.12, 0.23, 0.5, 1] as const;
 
 export default function Hero() {
     return (
-        <section className="relative flex flex-col bg-black-100" style={{ padding: "160px 0 20px", gap: "25px" }}>
+        <section className="relative flex flex-col bg-black-100 pt-[100px] md:pt-[160px] pb-5" style={{ gap: "25px" }}>
             {/* ── Video Container — 857px, 3 layers (video + frost + noise) ── */}
             <div
                 className="absolute top-0 left-0 right-0 overflow-hidden"
                 style={{
-                    height: "857px",
+                    height: "clamp(500px, 80vh, 857px)",
                     zIndex: 1,
                     background: "#000",
                     mask: "linear-gradient(#000 0% 85.6929%, #0000 100%)",
@@ -82,9 +82,9 @@ export default function Hero() {
             </div>
 
             {/* ── Main Content ── */}
-            <div className="relative z-[2] w-full max-w-[1200px] mx-auto px-5 md:px-10" style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "130px" }}>
+            <div className="relative z-[2] w-full max-w-[1200px] mx-auto px-5 md:px-10 gap-[60px] md:gap-[130px]" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
                 {/* Content block — 40px gap between children */}
-                <div className="flex flex-col items-center text-center w-full" style={{ gap: "40px" }}>
+                <div className="flex flex-col items-center text-center w-full gap-6 md:gap-10">
                     {/* Badge — 10px gap to heading group */}
                     <div className="flex flex-col items-center" style={{ gap: "10px" }}>
                         <motion.div
@@ -103,23 +103,16 @@ export default function Hero() {
                                 animate={{ opacity: 1, y: 0, scale: 1 }}
                                 transition={{ duration: 0.8, delay: 0.1, ease }}
                             >
-                                <h1 className="t-h1 text-white-100 text-center" style={{ maxWidth: "780px" }}>
-                                    <BlurRevealText text="The first marketing" startDelay={0.15} />
-                                    <br />
-                                    <BlurRevealText text="data system built for AI" startDelay={0.6} />
+                                <h1 className="t-h1 text-white-100 text-center max-w-[780px]">
+                                    <BlurRevealText text="The first marketing data system built for AI" startDelay={0.15} />
                                 </h1>
                             </motion.div>
 
                             {/* Subtitle — white, weight 500, blur reveal, text-shadow */}
-                            <div style={{ maxWidth: "640px", textShadow: "0 1px 2px rgba(0,0,0,0.32)" }} className="t-p-lg-medium text-white-100 tracking-[-0.03em] text-center">
+                            <div className="t-p-lg-medium text-white-100 tracking-[-0.03em] text-center max-w-[640px] px-2" style={{ textShadow: "0 1px 2px rgba(0,0,0,0.32)" }}>
                                 <BlurRevealText
-                                    text="Your full marketing stack: Meta, Google, GA4 reconciled, AI-ready,"
+                                    text="Your full marketing stack: Meta, Google, GA4 reconciled, AI-ready, delivered every day for any AI you already use."
                                     startDelay={0.4}
-                                />
-                                <br />
-                                <BlurRevealText
-                                    text="delivered every day for any AI you already use."
-                                    startDelay={0.6}
                                 />
                             </div>
                         </div>
