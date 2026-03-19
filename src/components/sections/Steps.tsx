@@ -29,7 +29,7 @@ const steps = [
             "Your Signal starts building the moment your first source connects.",
         ],
         image:
-            "https://framerusercontent.com/images/1h2g2AnKRHxZzmSq2umWuiBsSys.png",
+            "/images/ro 5.jpg",
     },
     {
         number: "03",
