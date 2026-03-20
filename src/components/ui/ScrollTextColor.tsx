@@ -18,7 +18,7 @@ interface ScrollTextColorProps {
 
 export default function ScrollTextColor({
     content = "Hello World",
-    colorStart = "#CCCCCC",
+    colorStart = "#8A7DA8",
     colorEnd = "#000000",
     trigger = "layer-in-view",
     animationStart = "bottom",

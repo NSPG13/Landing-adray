@@ -47,7 +47,7 @@
   /* ── Adray Color Tokens ── */
   --white-100: #FFFFFF;
   --white-90: #E1D8F3;
-  --white-80: #CCCCCC;
+  --white-80: #B0A4C4;
   --white-40: rgba(255, 255, 255, 0.4);
   --white-10: rgba(255, 255, 255, 0.1);
   --white-7: rgba(255, 255, 255, 0.07);
@@ -62,7 +62,7 @@
   --ad-tag: #8A7DA8;
   --ad-subtitle: #C4B5E0;
   --ad-primary: #CA8AE5;
-  --red: #FF2244;
+
   --ad-deep-accent: #3E286F;
   --ad-accent: #B55CFF;
 
@@ -90,7 +90,6 @@
   --color-ad-tag: var(--ad-tag);
   --color-ad-subtitle: var(--ad-subtitle);
   --color-ad-primary: var(--ad-primary);
-  --color-red: var(--red);
   --color-ad-deep-accent: var(--ad-deep-accent);
   --color-ad-accent: var(--ad-accent);
   --font-sans: "UlmGrotesk", "Inter", ui-sans-serif, system-ui;

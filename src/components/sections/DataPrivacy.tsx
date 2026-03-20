@@ -76,10 +76,10 @@ export default function DataPrivacy() {
                             >
                                 {[0, 1, 2, 3].map((i) => {
                                     const gradients = [
-                                        "radial-gradient(ellipse at 30% 50%, #a855f7 0%, #7c3aed 30%, #4c1d95 60%, #1e1b4b 100%)",
-                                        "radial-gradient(ellipse at 40% 40%, #c084fc 0%, #8b5cf6 35%, #5b21b6 65%, #1e1b4b 100%)",
-                                        "radial-gradient(ellipse at 50% 50%, #d8b4fe 0%, #a78bfa 30%, #6d28d9 60%, #2e1065 100%)",
-                                        "radial-gradient(ellipse at 60% 60%, #e9d5ff 0%, #c4b5fd 30%, #7c3aed 60%, #3b0764 100%)",
+                                        "radial-gradient(ellipse at 30% 50%, #CA8AE5 0%, #B55CFF 30%, #3E286F 60%, #0F0B14 100%)",
+                                        "radial-gradient(ellipse at 40% 40%, #E1D8F3 0%, #CA8AE5 35%, #3E286F 65%, #0F0B14 100%)",
+                                        "radial-gradient(ellipse at 50% 50%, #E1D8F3 0%, #B55CFF 30%, #3E286F 60%, #100C12 100%)",
+                                        "radial-gradient(ellipse at 60% 60%, #E1D8F3 0%, #CA8AE5 30%, #B55CFF 60%, #3E286F 100%)",
                                     ];
                                     const opacities = [1, 0.85, 0.65, 0.45];
                                     return (
@@ -105,7 +105,7 @@ export default function DataPrivacy() {
                                                 style={{
                                                     position: "absolute",
                                                     inset: 0,
-                                                    background: "radial-gradient(ellipse at 40% 40%, rgba(216,180,254,0.5) 0%, rgba(168,85,247,0.25) 50%, transparent 80%)",
+                                                    background: "radial-gradient(ellipse at 40% 40%, rgba(225,216,243,0.5) 0%, rgba(202,138,229,0.25) 50%, transparent 80%)",
                                                     animation: `layer-flash 4s ease-in-out ${i * 0.6}s infinite`,
                                                     pointerEvents: "none",
                                                 }}
@@ -118,7 +118,7 @@ export default function DataPrivacy() {
                                                     inset: 0,
                                                     borderRadius: "inherit",
                                                     boxShadow:
-                                                        "inset 0 0 2rem rgba(168,85,247,0.2), 0 0 1.5rem rgba(168,85,247,0.12)",
+                                                        "inset 0 0 2rem rgba(202,138,229,0.2), 0 0 1.5rem rgba(181,92,255,0.12)",
                                                     animation: `layer-flash 4s ease-in-out ${i * 0.6}s infinite`,
                                                     pointerEvents: "none",
                                                 }}
@@ -135,7 +135,7 @@ export default function DataPrivacy() {
                                         left: "15%",
                                         width: "70%",
                                         height: "80%",
-                                        background: "radial-gradient(ellipse, rgba(168,85,247,0.18) 0%, transparent 70%)",
+                                        background: "radial-gradient(ellipse, rgba(202,138,229,0.18) 0%, transparent 70%)",
                                         filter: "blur(2.5rem)",
                                         animation: "layer-ambient 4s ease-in-out infinite",
                                         pointerEvents: "none",

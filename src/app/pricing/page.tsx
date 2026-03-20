@@ -253,8 +253,8 @@ export default function PricingPage() {
                             >
                                 Yearly
                                 <span
-                                    className="text-xs font-semibold"
-                                    style={{ color: "rgb(255,172,10)" }}
+                                    className="px-1.5 py-0.5 rounded text-xs font-semibold"
+                                    style={{ background: "rgba(62,40,111,0.4)", color: "#CA8AE5" }}
                                 >
                                     30%off
                                 </span>

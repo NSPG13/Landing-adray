@@ -130,7 +130,7 @@ export default function BlogPage() {
             {/* ── Divider ── */}
             <section className="pb-12 relative">
                 <Container>
-                    <div className="h-px w-full" style={{ background: "rgba(125, 164, 255, 0.16)" }} />
+                    <div className="h-px w-full" style={{ background: "rgba(62, 40, 111, 0.35)" }} />
                 </Container>
             </section>
 

@@ -30,8 +30,8 @@ const integrationIcons = [
             <svg viewBox="0 0 24 24" width="36" height="36">
                 <defs>
                     <linearGradient id="gemGrad" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
-                        <stop stopColor="#4285F4" />
-                        <stop offset="1" stopColor="#886FBF" />
+                        <stop stopColor="#CA8AE5" />
+                        <stop offset="1" stopColor="#3E286F" />
                     </linearGradient>
                 </defs>
                 <path d="M12 24c0-6.63-5.37-12-12-12C6.63 12 12 6.63 12 0c0 6.63 5.37 12 12 12-6.63 0-12 5.37-12 12Z" fill="url(#gemGrad)" />
