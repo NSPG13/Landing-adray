@@ -68,7 +68,7 @@ export default function AgenciesPage() {
                         FOR AGENCIES
                     </motion.p>
                     <motion.h1
-                        className="t-h1 text-white-90 mb-6"
+                        className="t-h1 text-white-100 mb-6"
                         initial={{ opacity: 0, y: 40 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.1, ease }}
@@ -106,7 +106,7 @@ export default function AgenciesPage() {
             <section className="py-20 relative">
                 <Container>
                     <AnimatedSection>
-                        <h2 className="t-h2 text-white-90 text-center mb-4">
+                        <h2 className="t-h2 text-white-100 text-center mb-4">
                             How it works for agencies
                         </h2>
                     </AnimatedSection>
@@ -133,7 +133,7 @@ export default function AgenciesPage() {
                 <Container>
                     <AnimatedSection>
                         <div className="card p-10 md:p-16 max-w-3xl mx-auto text-center">
-                            <h2 className="t-h2 text-white-90 mb-6">
+                            <h2 className="t-h2 text-white-100 mb-6">
                                 The agency workflow, reimagined
                             </h2>
                             <p className="t-p text-ad-muted leading-relaxed max-w-2xl mx-auto">
@@ -152,7 +152,7 @@ export default function AgenciesPage() {
                 <Container>
                     <AnimatedSection>
                         <div className="card p-10 md:p-16 max-w-2xl mx-auto">
-                            <h2 className="t-h2 text-white-90 mb-8 text-center">
+                            <h2 className="t-h2 text-white-100 mb-8 text-center">
                                 Pricing for agencies
                             </h2>
                             <ul className="space-y-4">
@@ -187,7 +187,7 @@ export default function AgenciesPage() {
                 <Container>
                     <AnimatedSection>
                         <div className="max-w-3xl mx-auto text-center">
-                            <h2 className="t-h2 text-white-90 mb-6">
+                            <h2 className="t-h2 text-white-100 mb-6">
                                 Built for how agencies actually work
                             </h2>
                             <p className="t-p text-ad-muted leading-relaxed mb-4">
