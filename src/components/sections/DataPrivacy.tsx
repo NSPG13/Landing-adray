@@ -5,13 +5,6 @@ import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 
-const layerImages = [
-    "https://framerusercontent.com/images/BOO9YkJWPlVaXJACHcXHqAPuBw.png",
-    "https://framerusercontent.com/images/FFx9tCFoevPxrcvXSaMFTcT8.png",
-    "https://framerusercontent.com/images/rugS4hRgm7Cf9IUsK51bzhuf4h8.png",
-    "https://framerusercontent.com/images/6YZCTbgTJSkogwFP5MNM5Z254gQ.png",
-];
-
 const features = [
     {
         icon: "/images/svg/TRt8OkZ1B4j7B4TuuIPjZZ0f8.svg",
@@ -69,20 +62,26 @@ export default function DataPrivacy() {
                     </div>
 
                     {/* Right — perspective layer cards */}
-                    <div className="flex-1 min-w-0 flex justify-center">
+                    <div className="flex-1 min-w-0 flex justify-end">
                         <AnimatedSection delay={0.2}>
                             <div
                                 style={{
                                     position: "relative",
-                                    width: "min(34rem, 90%)",
-                                    height: "22rem",
+                                    width: "min(34rem, 90vw)",
+                                    height: "24rem",
                                     perspective: "60rem",
-                                    perspectiveOrigin: "40% 50%",
+                                    perspectiveOrigin: "50% 50%",
+                                    marginRight: "-2rem",
                                 }}
                             >
-                                {layerImages.map((src, i) => {
-                                    /* 4 cards fanning out in Z — front card (i=0) is closest */
-                                    const reverseI = 3 - i;
+                                {[0, 1, 2, 3].map((i) => {
+                                    const gradients = [
+                                        "radial-gradient(ellipse at 30% 50%, #a855f7 0%, #7c3aed 30%, #4c1d95 60%, #1e1b4b 100%)",
+                                        "radial-gradient(ellipse at 40% 40%, #c084fc 0%, #8b5cf6 35%, #5b21b6 65%, #1e1b4b 100%)",
+                                        "radial-gradient(ellipse at 50% 50%, #d8b4fe 0%, #a78bfa 30%, #6d28d9 60%, #2e1065 100%)",
+                                        "radial-gradient(ellipse at 60% 60%, #e9d5ff 0%, #c4b5fd 30%, #7c3aed 60%, #3b0764 100%)",
+                                    ];
+                                    const opacities = [1, 0.85, 0.65, 0.45];
                                     return (
                                         <div
                                             key={i}
@@ -92,39 +91,21 @@ export default function DataPrivacy() {
                                                 left: `${i * 14}%`,
                                                 width: "48%",
                                                 height: "100%",
-                                                transform: `rotateY(-20deg) translateZ(${reverseI * 2}rem)`,
+                                                transform: `rotateY(-20deg) translateZ(${(3 - i) * 2}rem)`,
                                                 transformStyle: "preserve-3d",
                                                 borderRadius: "0.75rem",
                                                 overflow: "hidden",
-                                                border: "0.06rem solid rgba(255,255,255,0.1)",
-                                                background: "rgba(0,0,0,0.3)",
+                                                border: "0.06rem solid rgba(255,255,255,0.12)",
+                                                background: gradients[i],
+                                                opacity: opacities[i],
                                             }}
                                         >
-                                            {/* Base image */}
-                                            {/* eslint-disable-next-line @next/next/no-img-element */}
-                                            <img
-                                                src={src}
-                                                alt={`Security Layer ${i + 1}`}
-                                                style={{
-                                                    width: "100%",
-                                                    height: "100%",
-                                                    objectFit: "cover",
-                                                    display: "block",
-                                                    filter: "sepia(1) hue-rotate(230deg) saturate(2)",
-                                                    opacity: i === 0 ? 0.9 : i === 1 ? 0.7 : 0.5,
-                                                    maskImage:
-                                                        "linear-gradient(0deg, rgba(0,0,0,0.3) 0%, rgb(0,0,0) 15%, rgba(0,0,0,1) 100%)",
-                                                    WebkitMaskImage:
-                                                        "linear-gradient(0deg, rgba(0,0,0,0.3) 0%, rgb(0,0,0) 15%, rgba(0,0,0,1) 100%)",
-                                                }}
-                                            />
-
-                                            {/* Discrete light flash — full card lights up then off */}
+                                            {/* Glow flash overlay */}
                                             <div
                                                 style={{
                                                     position: "absolute",
                                                     inset: 0,
-                                                    background: "radial-gradient(ellipse at 40% 40%, rgba(202,138,229,0.4) 0%, rgba(181,92,255,0.2) 50%, transparent 80%)",
+                                                    background: "radial-gradient(ellipse at 40% 40%, rgba(216,180,254,0.5) 0%, rgba(168,85,247,0.25) 50%, transparent 80%)",
                                                     animation: `layer-flash 4s ease-in-out ${i * 0.6}s infinite`,
                                                     pointerEvents: "none",
                                                 }}
@@ -137,7 +118,7 @@ export default function DataPrivacy() {
                                                     inset: 0,
                                                     borderRadius: "inherit",
                                                     boxShadow:
-                                                        "inset 0 0 2rem rgba(181,92,255,0.15), 0 0 1rem rgba(181,92,255,0.08)",
+                                                        "inset 0 0 2rem rgba(168,85,247,0.2), 0 0 1.5rem rgba(168,85,247,0.12)",
                                                     animation: `layer-flash 4s ease-in-out ${i * 0.6}s infinite`,
                                                     pointerEvents: "none",
                                                 }}
@@ -150,12 +131,12 @@ export default function DataPrivacy() {
                                 <div
                                     style={{
                                         position: "absolute",
-                                        top: "15%",
-                                        left: "20%",
-                                        width: "60%",
-                                        height: "70%",
-                                        background: "radial-gradient(ellipse, rgba(181,92,255,0.1) 0%, transparent 70%)",
-                                        filter: "blur(2rem)",
+                                        top: "10%",
+                                        left: "15%",
+                                        width: "70%",
+                                        height: "80%",
+                                        background: "radial-gradient(ellipse, rgba(168,85,247,0.18) 0%, transparent 70%)",
+                                        filter: "blur(2.5rem)",
                                         animation: "layer-ambient 4s ease-in-out infinite",
                                         pointerEvents: "none",
                                         zIndex: -1,

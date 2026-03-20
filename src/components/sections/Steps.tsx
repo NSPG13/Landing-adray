@@ -29,7 +29,7 @@ const steps = [
             "Your Signal starts building the moment your first source connects.",
         ],
         image:
-            "/images/ro 1.png",
+            "/images/1.jpg",
     },
     {
         number: "03",
@@ -41,7 +41,7 @@ const steps = [
             "Ask real questions. Get answers backed by reconciled data.",
         ],
         image:
-            "https://framerusercontent.com/images/8KzDLcSNotT5Lxj1UyWAsRCZu3E.png",
+            "/images/adraygpt.png",
     },
 ];
 
@@ -134,11 +134,11 @@ export default function Steps() {
                     />
                 </AnimatedSection>
 
-                {/* Desktop: 2-column (sticky numbers left, cards right) */}
-                <div className="hidden lg:flex gap-20">
-                    {/* Left: sticky numbers sidebar */}
-                    <div className="w-[22%] flex-shrink-0 sticky top-[120px] self-start">
-                        <div className="flex items-center">
+                {/* Desktop: full-width number bar + stacking cards */}
+                <div className="hidden lg:block">
+                    {/* Sticky number bar */}
+                    <div className="sticky top-0 z-20 bg-[var(--background)] pt-20 pb-6">
+                        <div className="flex items-center max-w-md mx-auto">
                             {steps.map((step, i) => (
                                 <span
                                     key={step.number}
@@ -150,7 +150,7 @@ export default function Steps() {
                             ))}
                         </div>
                         {/* Beam line */}
-                        <div className="relative h-[2px] mt-4 overflow-hidden rounded-full" style={{ background: "rgba(62, 40, 111, 0.35)" }}>
+                        <div className="relative h-[2px] mt-4 overflow-hidden rounded-full max-w-md mx-auto" style={{ background: "rgba(62, 40, 111, 0.35)" }}>
                             <motion.div
                                 className="absolute inset-y-0 w-1/3"
                                 style={{
@@ -162,14 +162,21 @@ export default function Steps() {
                         </div>
                     </div>
 
-                    {/* Right: stacked cards */}
-                    <div className="flex-1 space-y-8">
-                        {steps.map((step) => (
-                            <AnimatedSection key={step.number} delay={0.1}>
-                                <StepCard step={step} />
-                            </AnimatedSection>
-                        ))}
-                    </div>
+                    {/* Stacking cards — all sticky elements must be siblings in the same parent */}
+                    {steps.map((step, i) => (
+                        <React.Fragment key={step.number}>
+                            <div
+                                className="sticky top-[160px]"
+                                style={{ zIndex: 10 + i }}
+                            >
+                                <div className="bg-[var(--background)] pt-2 pb-6">
+                                    <StepCard step={step} />
+                                </div>
+                            </div>
+                            {/* Spacer between cards for scroll room — not on the last card */}
+                            {i < steps.length - 1 && <div className="h-[40vh]" />}
+                        </React.Fragment>
+                    ))}
                 </div>
 
                 {/* Mobile: stacked vertically */}
