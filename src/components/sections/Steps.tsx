@@ -50,7 +50,7 @@ function StepCard({ step }: { step: (typeof steps)[0] }) {
         <div className="card overflow-hidden flex flex-col md:flex-row">
             {/* Text content */}
             <div className="flex-1 p-6 md:p-8">
-                <h3 className="t-h4 text-white-90 mb-4">{step.title}</h3>
+                <h3 className="t-h4 text-white-100 mb-4">{step.title}</h3>
                 {step.description && <p className="t-p text-ad-muted mb-6">{step.description}</p>}
                 <ul className="space-y-3">
                     {step.bullets.map((bullet) => (
