@@ -13,9 +13,9 @@ export default function Home() {
     <>
       <Hero />
       <HighlightedText />
-      <Steps />
-      <FeaturesTabs />
       <Exceptionalities />
+      <FeaturesTabs />
+      <Steps />
       <DataPrivacy />
       <HomePricing />
       <HomeFAQ />
