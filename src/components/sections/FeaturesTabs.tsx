@@ -120,7 +120,7 @@ export default function FeaturesTabs() {
                         </span>
                     </div>
                     <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14">
-                        <h2 className="t-h2 text-white-100 lg:max-w-[50%]">
+                        <h2 className="t-h2 text-white-90 lg:max-w-[50%]">
                             Using your marketing data in AI is painful. We fixed that.
                         </h2>
                         <p className="t-p text-ad-muted lg:max-w-[42%] lg:text-right">
@@ -147,7 +147,7 @@ export default function FeaturesTabs() {
                                         className="h-full rounded-full"
                                         style={{
                                             width: bars[i],
-                                            background: "linear-gradient(90deg, #B55CFF, #CA8AE5)",
+                                            background: "linear-gradient(90deg, #B55CFF, #3E286F)",
                                         }}
                                     />
                                 </div>
@@ -165,7 +165,7 @@ export default function FeaturesTabs() {
                             >
                                 <div className="card p-6 md:p-8 flex flex-col md:flex-row gap-8 items-start">
                                     <div className="flex-1">
-                                        <h3 className="t-h4 text-white-100 mb-3">{brandify(tab.title)}</h3>
+                                        <h3 className="t-h4 text-white-90 mb-3">{brandify(tab.title)}</h3>
                                         <p className="t-p text-ad-muted mb-6">{brandify(tab.description)}</p>
                                         <div className="flex flex-wrap gap-2 mb-6">
                                             {tab.tags.map((tag) => (

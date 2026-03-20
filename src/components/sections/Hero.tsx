@@ -104,13 +104,13 @@ export default function Hero() {
                                 animate={{ opacity: 1, y: 0, scale: 1 }}
                                 transition={{ duration: 0.8, delay: 0.1, ease }}
                             >
-                                <h1 className="t-h1 text-white-100 text-center max-w-[780px]">
+                                <h1 className="t-h1 text-white-90 text-center max-w-[780px]">
                                     <BlurRevealText text="The first marketing data system built for AI" startDelay={0.15} />
                                 </h1>
                             </motion.div>
 
                             {/* Subtitle — white, weight 500, blur reveal, text-shadow */}
-                            <div className="t-p-lg-medium text-white-100 tracking-[-0.03em] text-center max-w-[640px] px-2" style={{ textShadow: "0 1px 2px rgba(0,0,0,0.32)" }}>
+                            <div className="t-p-lg-medium text-white-90 tracking-[-0.03em] text-center max-w-[640px] px-2" style={{ textShadow: "0 1px 2px rgba(0,0,0,0.32)" }}>
                                 <BlurRevealText
                                     text="Your full marketing stack: Meta, Google, GA4 reconciled, AI-ready, delivered every day for any AI you already use."
                                     startDelay={0.4}
@@ -179,7 +179,7 @@ export default function Hero() {
                                     className="w-6 h-6 object-contain"
                                     style={{ filter: "brightness(0) invert(1)" }}
                                 />
-                                <span className="text-white-100 text-sm font-semibold tracking-wide whitespace-nowrap" style={{ fontFamily: "var(--font-brand)" }}>
+                                <span className="text-white-90 text-sm font-semibold tracking-wide whitespace-nowrap" style={{ fontFamily: "var(--font-brand)" }}>
                                     {logo.name}
                                 </span>
                             </div>

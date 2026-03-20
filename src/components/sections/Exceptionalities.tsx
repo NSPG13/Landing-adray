@@ -683,7 +683,7 @@ export default function Exceptionalities() {
 
                                 {/* Content */}
                                 <div className="relative z-10">
-                                    <h3 className="t-h4 text-white-100 mb-3">{card.title}</h3>
+                                    <h3 className="t-h4 text-white-90 mb-3">{card.title}</h3>
                                     <p className="t-p text-ad-muted">{brandify(card.description)}</p>
                                 </div>
                             </Card>
@@ -694,7 +694,7 @@ export default function Exceptionalities() {
                 {/* CTA Card */}
                 <AnimatedSection delay={0.4}>
                     <Card className="mt-6 text-center py-12">
-                        <h3 className="t-h4 text-white-100 mb-2">
+                        <h3 className="t-h4 text-white-90 mb-2">
                             Zero new tools to learn.
                         </h3>
                         <p className="t-p text-ad-muted mb-8">

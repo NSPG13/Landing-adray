@@ -52,7 +52,7 @@ function AccordionItem({ q, a }: { q: string; a: string }) {
                 onClick={() => setOpen(!open)}
                 className="w-full flex items-center justify-between p-6 text-left cursor-pointer"
             >
-                <span className="t-p font-medium text-white-100 pr-4">{brandify(q)}</span>
+                <span className="t-p font-medium text-white-90 pr-4">{brandify(q)}</span>
                 <span className="w-8 h-8 rounded-full bg-white-7 border border-ad-border flex items-center justify-center flex-shrink-0">
                     {open ? (
                         <Minus size={14} className="text-white-90" />

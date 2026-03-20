@@ -66,7 +66,7 @@ export default function ChangelogPage() {
             <section className="relative pt-40 pb-20 overflow-hidden">
                 <Container className="relative z-10 text-center">
                     <motion.div
-                        className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white-7 text-white-100 t-p-sm mb-6"
+                        className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white-7 text-white-90 t-p-sm mb-6"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.6, ease }}
@@ -74,7 +74,7 @@ export default function ChangelogPage() {
                         CHANGELOG
                     </motion.div>
                     <motion.h1
-                        className="t-h1 text-white-100 mb-6"
+                        className="t-h1 text-white-90 mb-6"
                         initial={{ opacity: 0, y: 40 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.1, ease }}
@@ -110,7 +110,7 @@ export default function ChangelogPage() {
                                     </div>
 
                                     {/* Title */}
-                                    <h2 className="t-h2 text-white-100 mb-6">
+                                    <h2 className="t-h2 text-white-90 mb-6">
                                         {entry.title}
                                     </h2>
 

@@ -138,7 +138,7 @@ function AccordionItem({ q, a }: { q: string; a: string }) {
                 onClick={() => setOpen(!open)}
                 className="w-full flex items-center justify-between p-6 text-left cursor-pointer"
             >
-                <span className="t-p font-medium text-white-100 pr-4">{brandify(q)}</span>
+                <span className="t-p font-medium text-white-90 pr-4">{brandify(q)}</span>
                 <span className="w-8 h-8 rounded-full bg-white-7 border border-ad-border flex items-center justify-center flex-shrink-0">
                     {open ? <Minus size={14} className="text-white-90" /> : <Plus size={14} className="text-white-90" />}
                 </span>
@@ -188,10 +188,10 @@ export default function PricingPage() {
                             height={24}
                             className="opacity-80"
                         />
-                        <span className="t-p-sm uppercase tracking-widest text-white-100">PRICING</span>
+                        <span className="t-p-sm uppercase tracking-widest text-white-90">PRICING</span>
                     </motion.div>
                     <motion.h1
-                        className="t-h1 text-white-100 mb-6"
+                        className="t-h1 text-white-90 mb-6"
                         initial={{ opacity: 0, y: 40 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.1, ease }}
@@ -276,7 +276,7 @@ export default function PricingPage() {
                                     <div className="relative z-10 p-8 flex flex-col h-full">
                                         {plan.monthlyPrice !== null ? (
                                             <>
-                                                <h3 className="t-h4 text-white-100">{plan.name}</h3>
+                                                <h3 className="t-h4 text-white-90">{plan.name}</h3>
                                                 <div className="mt-3 flex items-baseline gap-1">
                                                     <span className="text-4xl font-bold text-white-90">
                                                         ${getPrice(plan.monthlyPrice)}
@@ -289,7 +289,7 @@ export default function PricingPage() {
                                         ) : (
                                             <>
                                                 <p className="t-h4 text-gradient">Per agent pricing</p>
-                                                <h3 className="t-h3 text-white-100 mt-2">{plan.name}</h3>
+                                                <h3 className="t-h3 text-white-90 mt-2">{plan.name}</h3>
                                             </>
                                         )}
 
@@ -351,9 +351,9 @@ export default function PricingPage() {
                                     <thead>
                                         <tr className="border-b border-ad-border">
                                             <th className="p-6 t-p-sm text-ad-muted font-medium w-1/3">Feature</th>
-                                            <th className="p-6 t-p-sm text-white-100 font-semibold text-center">Free</th>
-                                            <th className="p-6 t-p-sm text-white-100 font-semibold text-center">Pro</th>
-                                            <th className="p-6 t-p-sm text-white-100 font-semibold text-center">Agent Stack</th>
+                                            <th className="p-6 t-p-sm text-white-90 font-semibold text-center">Free</th>
+                                            <th className="p-6 t-p-sm text-white-90 font-semibold text-center">Pro</th>
+                                            <th className="p-6 t-p-sm text-white-90 font-semibold text-center">Agent Stack</th>
                                         </tr>
                                     </thead>
                                     <tbody>

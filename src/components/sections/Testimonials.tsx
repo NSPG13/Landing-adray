@@ -134,7 +134,7 @@ export default function Testimonials() {
                                         &ldquo;{brandify(t.quote)}&rdquo;
                                     </blockquote>
                                     <div>
-                                        <p className="t-p font-semibold text-white-100">
+                                        <p className="t-p font-semibold text-white-90">
                                             {t.author}
                                         </p>
                                         <p className="t-p-sm text-ad-muted mt-1">{t.role}</p>

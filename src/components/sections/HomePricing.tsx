@@ -140,7 +140,7 @@ export default function HomePricing() {
                                     style={{ filter: "sepia(1) hue-rotate(230deg) saturate(2)" }}
                                 />
                                 <div className="relative z-10 p-8 flex flex-col h-full">
-                                    <h3 className="t-h4 text-white-100">{plan.name}</h3>
+                                    <h3 className="t-h4 text-white-90">{plan.name}</h3>
 
                                     {plan.monthlyPrice !== null ? (
                                         <div className="mt-3 flex items-baseline gap-1">
@@ -183,7 +183,7 @@ export default function HomePricing() {
                                                     className="w-5 h-5 rounded-full bg-white-10 flex items-center justify-center flex-shrink-0 mt-0.5"
                                                     style={{
                                                         boxShadow:
-                                                            "inset 0 0 0 1px rgba(255,255,255,0.4)",
+                                                            "inset 0 0 0 1px rgba(62,40,111,0.6)",
                                                     }}
                                                 >
                                                     <Check size={10} className="text-white-100" />

@@ -80,7 +80,7 @@ export default function BlogPostPage() {
         return (
             <section className="pt-40 pb-20">
                 <Container className="text-center">
-                    <h1 className="t-h1 text-white-100 mb-6">Post Not Found</h1>
+                    <h1 className="t-h1 text-white-90 mb-6">Post Not Found</h1>
                     <p className="t-p text-ad-muted mb-8">
                         The blog post you&apos;re looking for doesn&apos;t exist.
                     </p>
@@ -112,7 +112,7 @@ export default function BlogPostPage() {
                             ← Back to Blog
                         </Link>
                         <p className="t-p-sm text-ad-tag mb-4">{post.date}</p>
-                        <h1 className="t-h1 text-white-100 mb-8 max-w-3xl">
+                        <h1 className="t-h1 text-white-90 mb-8 max-w-3xl">
                             {post.title}
                         </h1>
                     </motion.div>

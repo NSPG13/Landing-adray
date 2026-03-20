@@ -66,7 +66,7 @@ export default function IntegrationPage() {
             <section className="relative pt-40 pb-20 overflow-hidden">
                 <Container className="relative z-10 text-center">
                     <motion.div
-                        className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white-7 text-white-100 t-p-sm mb-6"
+                        className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white-7 text-white-90 t-p-sm mb-6"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.6, ease }}
@@ -74,7 +74,7 @@ export default function IntegrationPage() {
                         INTEGRATION
                     </motion.div>
                     <motion.h1
-                        className="t-h1 text-white-100 mb-6"
+                        className="t-h1 text-white-90 mb-6"
                         initial={{ opacity: 0, y: 40 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.1, ease }}
@@ -98,7 +98,7 @@ export default function IntegrationPage() {
                     <div className="flex flex-col gap-16">
                         {categories.map((cat, ci) => (
                             <AnimatedSection key={cat.name} delay={ci * 0.1}>
-                                <h3 className="t-h4 text-white-100 text-center mb-8">
+                                <h3 className="t-h4 text-white-90 text-center mb-8">
                                     {cat.name}
                                 </h3>
                                 {/* Scrolling marquee row */}

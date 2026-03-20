@@ -133,7 +133,7 @@ export default function Products() {
                                     className={`px-5 py-2.5 rounded-full border text-sm font-medium transition-all duration-200 cursor-pointer
                                         ${i === active
                                             ? "bg-white-100 text-black-100 border-ad-border"
-                                            : "bg-white-7 text-white-100 border-ad-border hover:bg-white-10"
+                                            : "bg-white-7 text-white-90 border-ad-border hover:bg-white-10"
                                         }`}
                                 >
                                     {t.label}
@@ -149,7 +149,7 @@ export default function Products() {
                     >
                         {/* Left: text */}
                         <div className="flex-1 p-6 md:p-8 lg:p-10 flex flex-col justify-center">
-                            <h4 className="t-h4 text-white-100 mb-3">{tab.title}</h4>
+                            <h4 className="t-h4 text-white-90 mb-3">{tab.title}</h4>
                             <p className="t-p text-ad-subtitle mb-8">{tab.description}</p>
 
                             <div className="flex flex-col gap-3">
@@ -198,8 +198,8 @@ export default function Products() {
                                     className="rounded-3xl p-[1px] flex-shrink-0"
                                     style={{
                                         background:
-                                            "linear-gradient(40deg, rgb(202,138,229) 0%, rgb(15,11,20) 45%, rgb(181,92,255) 100%)",
-                                        boxShadow: "0px 6px 24px 0px rgba(181,92,255,0.25)",
+                                            "linear-gradient(40deg, rgb(62,40,111) 0%, rgb(15,11,20) 45%, rgb(181,92,255) 100%)",
+                                        boxShadow: "0px 6px 24px 0px rgba(62,40,111,0.35)",
                                     }}
                                 >
                                     <div
@@ -218,7 +218,7 @@ export default function Products() {
                                 </div>
                                 {/* Text */}
                                 <div className="flex flex-col gap-1">
-                                    <h4 className="text-white-100 font-semibold text-sm">{product.name}</h4>
+                                    <h4 className="text-white-90 font-semibold text-sm">{product.name}</h4>
                                     <p className="text-ad-tag text-xs leading-relaxed">{product.description}</p>
                                 </div>
                             </div>

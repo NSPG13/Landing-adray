@@ -70,7 +70,7 @@ export default function AIForWorkPage() {
                         AI FOR WORK
                     </motion.p>
                     <motion.h1
-                        className="t-h1 text-white-100 mb-6"
+                        className="t-h1 text-white-90 mb-6"
                         initial={{ opacity: 0, y: 40 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.1, ease }}
@@ -121,7 +121,7 @@ export default function AIForWorkPage() {
                         {features.map((f, i) => (
                             <AnimatedSection key={f.title} delay={i * 0.1}>
                                 <div className="card p-8 h-full">
-                                    <h3 className="t-h4 text-white-100 mb-3">{f.title}</h3>
+                                    <h3 className="t-h4 text-white-90 mb-3">{f.title}</h3>
                                     <p className="t-p-sm text-ad-muted leading-relaxed">
                                         {f.description}
                                     </p>
@@ -137,7 +137,7 @@ export default function AIForWorkPage() {
                 <Container>
                     <AnimatedSection>
                         <div className="card p-10 md:p-16 max-w-2xl mx-auto">
-                            <h2 className="t-h2 text-white-100 mb-8 text-center">
+                            <h2 className="t-h2 text-white-90 mb-8 text-center">
                                 Why AI for Work?
                             </h2>
                             <ul className="space-y-4">

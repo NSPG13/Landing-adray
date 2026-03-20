@@ -59,7 +59,7 @@ export default function BlogPage() {
             <section className="relative pt-40 pb-20 overflow-hidden">
                 <Container className="relative z-10 text-center">
                     <motion.div
-                        className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white-7 text-white-100 t-p-sm mb-6"
+                        className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white-7 text-white-90 t-p-sm mb-6"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.6, ease }}
@@ -74,7 +74,7 @@ export default function BlogPage() {
                         BLOGS
                     </motion.div>
                     <motion.h1
-                        className="t-h1 text-white-100 mb-6"
+                        className="t-h1 text-white-90 mb-6"
                         initial={{ opacity: 0, y: 40 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.1, ease }}
@@ -117,7 +117,7 @@ export default function BlogPage() {
                                 </div>
                                 <div className="p-6">
                                     <p className="t-p-sm text-ad-tag mb-2">{featured.date}</p>
-                                    <h2 className="t-h4 text-white-100">
+                                    <h2 className="t-h4 text-white-90">
                                         {featured.title}
                                     </h2>
                                 </div>
@@ -162,7 +162,7 @@ export default function BlogPage() {
                                             <p className="t-p-sm text-ad-tag mb-2">
                                                 {post.date}
                                             </p>
-                                            <h3 className="t-p-semibold text-white-100 leading-snug">
+                                            <h3 className="t-p-semibold text-white-90 leading-snug">
                                                 {post.title}
                                             </h3>
                                         </div>

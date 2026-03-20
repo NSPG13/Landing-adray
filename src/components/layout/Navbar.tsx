@@ -32,7 +32,7 @@ export default function Navbar() {
                     {/* Logo */}
                     <Link href="/" className="flex items-center">
                         <span
-                            className="text-2xl font-bold tracking-[-0.02em] text-white-100"
+                            className="text-2xl font-bold tracking-[-0.02em] text-white-90"
                             style={{ fontFamily: 'var(--font-brand)' }}
                         >
                             ADRAY
@@ -45,7 +45,7 @@ export default function Navbar() {
                             <div key={link.href} className="relative group">
                                 <Link
                                     href={link.href}
-                                    className="relative flex items-center gap-1 t-p-sm font-semibold text-white-100 hover:text-white-100 transition-colors duration-200 py-1"
+                                    className="relative flex items-center gap-1 t-p-sm font-semibold text-white-90 hover:text-white-90 transition-colors duration-200 py-1"
                                 >
                                     {link.label}
                                     <span className="nav-link-underline" />
@@ -67,14 +67,14 @@ export default function Navbar() {
                 <div className="flex md:hidden items-center justify-between py-3">
                     <Link href="/" className="flex items-center gap-2 flex-shrink-0">
                         <span
-                            className="text-2xl font-bold tracking-[-0.02em] text-white-100"
+                            className="text-2xl font-bold tracking-[-0.02em] text-white-90"
                             style={{ fontFamily: 'var(--font-brand)' }}
                         >
                             ADRAY
                         </span>
                     </Link>
                     <button
-                        className="text-white-100 p-2"
+                        className="text-white-90 p-2"
                         onClick={() => setMobileOpen(!mobileOpen)}
                         aria-label="Toggle menu"
                     >

@@ -78,7 +78,7 @@ export default function AboutPage() {
                     </div>
 
                     <motion.h1
-                        className="t-h1 text-white-100 mb-6"
+                        className="t-h1 text-white-90 mb-6"
                         initial={{ opacity: 0, y: 40 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.1, ease }}
@@ -115,8 +115,8 @@ export default function AboutPage() {
                 <Container className="max-w-4xl">
                     <ScrollTextColor
                         content="Every ad platform tells a different story. Merchants deserve a single source of truth. We built Adray to be the invisible data layer that reconciles it all — then hands it to the AI tools merchants already use."
-                        colorStart="#CA8AE5"
-                        colorEnd="#FFFFFF"
+                        colorStart="#B55CFF"
+                        colorEnd="#E1D8F3"
                         trigger="layer-in-view"
                         animationStart="center"
                         animationEnd="bottom"
@@ -156,7 +156,7 @@ export default function AboutPage() {
                                         style={{ filter: "sepia(1) hue-rotate(230deg) saturate(2)" }}
                                     />
                                     <div className="relative z-10 p-8 flex flex-col h-full">
-                                        <h3 className="t-h4 text-white-100 mb-3">{v.title}</h3>
+                                        <h3 className="t-h4 text-white-90 mb-3">{v.title}</h3>
                                         <p className="t-p-sm text-ad-muted leading-relaxed mt-auto">
                                             {v.description}
                                         </p>
@@ -260,7 +260,7 @@ export default function AboutPage() {
                                         }}
                                     />
                                     <div className="absolute bottom-0 left-0 right-0 p-5">
-                                        <p className="t-p-semibold text-white-100">{m.name}</p>
+                                        <p className="t-p-semibold text-white-90">{m.name}</p>
                                         <p className="t-p-sm text-ad-muted">{m.role}</p>
                                     </div>
                                 </div>

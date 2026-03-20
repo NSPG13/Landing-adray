@@ -105,7 +105,7 @@ function AccordionItem({ q, a }: { q: string; a: string }) {
                 onClick={() => setOpen(!open)}
                 className="w-full flex items-center justify-between p-6 text-left cursor-pointer"
             >
-                <span className="t-p font-medium text-white-100 pr-4">{brandify(q)}</span>
+                <span className="t-p font-medium text-white-90 pr-4">{brandify(q)}</span>
                 <span className="w-8 h-8 rounded-full bg-white-7 border border-ad-border flex items-center justify-center flex-shrink-0">
                     {open ? <Minus size={14} className="text-white-90" /> : <Plus size={14} className="text-white-90" />}
                 </span>
@@ -126,7 +126,7 @@ export default function ContactPage() {
             <section className="relative pt-40 pb-20 overflow-hidden">
                 <Container className="relative z-10 text-center">
                     <motion.div
-                        className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white-7 text-white-100 t-p-sm mb-6"
+                        className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white-7 text-white-90 t-p-sm mb-6"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.6, ease }}
@@ -141,7 +141,7 @@ export default function ContactPage() {
                         CONTACT
                     </motion.div>
                     <motion.h1
-                        className="t-h1 text-white-100 mb-6"
+                        className="t-h1 text-white-90 mb-6"
                         initial={{ opacity: 0, y: 40 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.1, ease }}
@@ -173,7 +173,7 @@ export default function ContactPage() {
                                     style={{ filter: "sepia(1) hue-rotate(230deg) saturate(2)" }}
                                 />
                                 <div className="p-8 flex flex-col flex-1">
-                                    <h3 className="t-h4 text-white-100 mb-3">Get Onboarding Help</h3>
+                                    <h3 className="t-h4 text-white-90 mb-3">Get Onboarding Help</h3>
                                     <p className="t-p-sm text-ad-muted leading-relaxed mb-6 flex-1">
                                         Need a hand connecting your Shopify store, Meta, or Google Ads? Our team will walk you through setup and make sure your data is flowing.
                                     </p>
@@ -203,7 +203,7 @@ export default function ContactPage() {
                                         />
                                     </div>
                                     <div>
-                                        <h3 className="t-h4 text-white-100 mb-2">Press &amp; Media Inquiries</h3>
+                                        <h3 className="t-h4 text-white-90 mb-2">Press &amp; Media Inquiries</h3>
                                         <p className="t-p-sm text-ad-muted leading-relaxed mb-4">
                                             For interviews, articles, and media requests.
                                         </p>
@@ -231,7 +231,7 @@ export default function ContactPage() {
                                         />
                                     </div>
                                     <div>
-                                        <h3 className="t-h4 text-white-100 mb-2">Agency &amp; Integration Partners</h3>
+                                        <h3 className="t-h4 text-white-90 mb-2">Agency &amp; Integration Partners</h3>
                                         <p className="t-p-sm text-ad-muted leading-relaxed mb-4">
                                             Run an agency or build ecommerce tools? Let&apos;s explore how <span style={{ fontFamily: 'var(--font-brand)' }}>Adray</span>&apos;s data layer fits your stack.
                                         </p>
@@ -287,7 +287,7 @@ export default function ContactPage() {
                                                 className="relative z-10"
                                             />
                                         </div>
-                                        <span className="t-p text-white-100 group-hover:text-ad-primary transition-colors">+1 844 924 8973</span>
+                                        <span className="t-p text-white-90 group-hover:text-ad-primary transition-colors">+1 844 924 8973</span>
                                     </a>
                                     <a href="mailto:support@adray.com" className="flex items-center gap-4 group">
                                         <div className="relative flex-shrink-0 w-[34px] h-[34px] rounded-xl bg-black overflow-hidden">
@@ -304,7 +304,7 @@ export default function ContactPage() {
                                                 className="relative z-10"
                                             />
                                         </div>
-                                        <span className="t-p text-white-100 group-hover:text-ad-primary transition-colors">support@adray.com</span>
+                                        <span className="t-p text-white-90 group-hover:text-ad-primary transition-colors">support@adray.com</span>
                                     </a>
                                 </div>
                             </div>
@@ -442,7 +442,7 @@ export default function ContactPage() {
                                         />
                                     )}
                                     <div className="flex-1">
-                                        <h4 className="t-p-semibold text-white-100 mb-1">{brandify(offices[selectedOffice].company)}</h4>
+                                        <h4 className="t-p-semibold text-white-90 mb-1">{brandify(offices[selectedOffice].company)}</h4>
                                         <p className="t-p-sm text-ad-muted">{offices[selectedOffice].description}</p>
                                     </div>
                                     <Button variant="primary" href={offices[selectedOffice].mapUrl} className="flex-shrink-0">

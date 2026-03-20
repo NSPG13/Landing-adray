@@ -38,7 +38,7 @@ export default function SectionHeading({
                 </div>
             )}
             <h2
-                className="t-h2 text-white-100"
+                className="t-h2 text-white-90"
                 dangerouslySetInnerHTML={{ __html: title }}
             />
             {subtitle && (

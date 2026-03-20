@@ -50,7 +50,7 @@ function StepCard({ step }: { step: (typeof steps)[0] }) {
         <div className="card overflow-hidden flex flex-col md:flex-row">
             {/* Text content */}
             <div className="flex-1 p-6 md:p-8">
-                <h3 className="t-h4 text-white-100 mb-4">{step.title}</h3>
+                <h3 className="t-h4 text-white-90 mb-4">{step.title}</h3>
                 {step.description && <p className="t-p text-ad-muted mb-6">{step.description}</p>}
                 <ul className="space-y-3">
                     {step.bullets.map((bullet) => (
@@ -59,8 +59,8 @@ function StepCard({ step }: { step: (typeof steps)[0] }) {
                                 <svg width="10" height="8" viewBox="0 0 10 8" fill="none">
                                     <defs>
                                         <linearGradient id="checkGrad" x1="0" y1="0" x2="10" y2="8" gradientUnits="userSpaceOnUse">
-                                            <stop stopColor="#B55CFF" />
-                                            <stop offset="1" stopColor="#CA8AE5" />
+                                            <stop stopColor="#CA8AE5" />
+                                            <stop offset="1" stopColor="#3E286F" />
                                         </linearGradient>
                                     </defs>
                                     <path
@@ -155,7 +155,7 @@ export default function Steps() {
                                 className="absolute inset-y-0 w-1/3"
                                 style={{
                                     x: beamX,
-                                    background: "linear-gradient(90deg, #b55cff 0%, #ca8ae5 100%)",
+                                    background: "linear-gradient(90deg, #B55CFF 0%, #3E286F 100%)",
                                     height: "2px",
                                 }}
                             />
@@ -191,7 +191,7 @@ export default function Steps() {
                                     <div
                                         className="absolute inset-y-0 left-0 w-16 animate-beam"
                                         style={{
-                                            background: "linear-gradient(90deg, transparent, #CA8AE5, transparent)",
+                                            background: "linear-gradient(90deg, transparent, #B55CFF, transparent)",
                                         }}
                                     />
                                 </div>

@@ -53,7 +53,7 @@ export default function Footer() {
 
                 <Container className="relative z-10 text-center">
                     <div>
-                        <h2 className="t-h2 text-white-100 mb-6">
+                        <h2 className="t-h2 text-white-90 mb-6">
                             <BlurRevealText text="Your AI is ready." triggerOnScroll startDelay={0} />
                             <br />
                             <BlurRevealText text="Give it something real to work with." triggerOnScroll startDelay={0.4} />
@@ -74,19 +74,19 @@ export default function Footer() {
                     {/* Large wordmark display */}
                     <div className="mt-20 flex items-center justify-center gap-8" style={{ mixBlendMode: "difference" }}>
                         <span
-                            className="text-[32px] md:text-[40px] font-bold tracking-[-0.02em] text-white-100 opacity-20 select-none"
+                            className="text-[32px] md:text-[40px] font-bold tracking-[-0.02em] text-white-90 opacity-20 select-none"
                             style={{ fontFamily: 'var(--font-brand)' }}
                         >
                             ADRAY
                         </span>
                         <span
-                            className="text-[48px] md:text-[64px] font-bold tracking-[-0.02em] text-white-100 select-none"
+                            className="text-[48px] md:text-[64px] font-bold tracking-[-0.02em] text-white-90 select-none"
                             style={{ fontFamily: 'var(--font-brand)' }}
                         >
                             ADRAY
                         </span>
                         <span
-                            className="text-[32px] md:text-[40px] font-bold tracking-[-0.02em] text-white-100 opacity-20 select-none"
+                            className="text-[32px] md:text-[40px] font-bold tracking-[-0.02em] text-white-90 opacity-20 select-none"
                             style={{ fontFamily: 'var(--font-brand)' }}
                         >
                             ADRAY
@@ -101,7 +101,7 @@ export default function Footer() {
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                         {Object.entries(footerLinks).map(([title, links]) => (
                             <div key={title}>
-                                <h4 className="t-p-semibold text-white-100 mb-4">{title}</h4>
+                                <h4 className="t-p-semibold text-white-90 mb-4">{title}</h4>
                                 <ul className="space-y-3">
                                     {links.map((link) => (
                                         <li key={link.label}>
