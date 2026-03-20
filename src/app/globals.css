@@ -12,6 +12,7 @@
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: "UlmGrotesk";
   src: url("/fonts/UlmGrotesk-Bold.otf") format("opentype");
@@ -19,6 +20,7 @@
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: "UlmGrotesk";
   src: url("/fonts/UlmGrotesk-Bold.otf") format("opentype");
@@ -26,6 +28,7 @@
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: "UlmGrotesk";
   src: url("/fonts/UlmGrotesk-Bold.otf") format("opentype");
