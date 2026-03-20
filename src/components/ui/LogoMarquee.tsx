@@ -33,7 +33,7 @@ export default function LogoMarquee({ className }: LogoMarqueeProps) {
                             className="w-5 h-5 object-contain"
                             style={{ filter: "brightness(0) invert(1)" }}
                         />
-                        <span className="text-white-100 text-sm font-semibold tracking-wide whitespace-nowrap select-none">
+                        <span className="text-white-100 text-sm font-semibold tracking-wide whitespace-nowrap select-none" style={{ fontFamily: "var(--font-brand)" }}>
                             {logo.name}
                         </span>
                     </div>

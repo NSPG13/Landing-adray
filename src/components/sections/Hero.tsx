@@ -179,7 +179,7 @@ export default function Hero() {
                                     className="w-6 h-6 object-contain"
                                     style={{ filter: "brightness(0) invert(1)" }}
                                 />
-                                <span className="text-white-100 text-sm font-semibold tracking-wide whitespace-nowrap" style={{ fontFamily: "var(--font-sans)" }}>
+                                <span className="text-white-100 text-sm font-semibold tracking-wide whitespace-nowrap" style={{ fontFamily: "var(--font-brand)" }}>
                                     {logo.name}
                                 </span>
                             </div>
