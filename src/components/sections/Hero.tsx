@@ -93,7 +93,7 @@ export default function Hero() {
                             animate={{ opacity: 1 }}
                             transition={{ duration: 0.6, ease }}
                         >
-                            <Badge>Marketing intelligence for the generative era.</Badge>
+                            <Badge className="text-white-100">Marketing intelligence for the generative era.</Badge>
                         </motion.div>
 
                         {/* Heading group — 24px gap between title/subtitle */}

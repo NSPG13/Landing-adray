@@ -165,7 +165,7 @@ export default function FeaturesTabs() {
                             >
                                 <div className="card p-6 md:p-8 flex flex-col md:flex-row gap-8 items-start">
                                     <div className="flex-1">
-                                        <h3 className="t-h4 text-white-90 mb-3">{brandify(tab.title)}</h3>
+                                        <h3 className="t-h4 text-white-100 mb-3">{brandify(tab.title)}</h3>
                                         <p className="t-p text-ad-muted mb-6">{brandify(tab.description)}</p>
                                         <div className="flex flex-wrap gap-2 mb-6">
                                             {tab.tags.map((tag) => (
