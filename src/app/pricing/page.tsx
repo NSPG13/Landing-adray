@@ -191,7 +191,7 @@ export default function PricingPage() {
                         <span className="t-p-sm uppercase tracking-widest text-white-90">PRICING</span>
                     </motion.div>
                     <motion.h1
-                        className="t-h1 text-white-90 mb-6"
+                        className="t-h1 text-white-100 mb-6"
                         initial={{ opacity: 0, y: 40 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.1, ease }}
@@ -217,6 +217,7 @@ export default function PricingPage() {
                             tag="PLANS"
                             title="Pick Your Plan"
                             subtitle="Start free. Upgrade when you need the full workflow or agent stack."
+                            titleClassName="text-white-100"
                             tagIcon={
                                 <img
                                     src="/images/svg/jQJ8TgGax14f2upuHQKSjpr1jmg.svg"
@@ -426,6 +427,7 @@ export default function PricingPage() {
                             }
                             title="Curious About Adray?"
                             subtitle="Answers to common questions about our ecommerce data platform."
+                            titleClassName="text-white-100"
                         />
                     </AnimatedSection>
 

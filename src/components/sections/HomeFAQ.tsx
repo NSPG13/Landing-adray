@@ -91,6 +91,7 @@ export default function HomeFAQ() {
                         }
                         title="Commonly asked questions"
                         subtitle=""
+                        titleClassName="text-white-100"
                     />
                 </AnimatedSection>
 

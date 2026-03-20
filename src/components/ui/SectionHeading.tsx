@@ -7,6 +7,7 @@ interface SectionHeadingProps {
     title: string;
     subtitle?: React.ReactNode;
     className?: string;
+    titleClassName?: string;
     align?: "left" | "center";
 }
 
@@ -16,6 +17,7 @@ export default function SectionHeading({
     title,
     subtitle,
     className,
+    titleClassName,
     align = "center",
 }: SectionHeadingProps) {
     return (
@@ -38,7 +40,7 @@ export default function SectionHeading({
                 </div>
             )}
             <h2
-                className="t-h2 text-white-90"
+                className={cn("t-h2 text-white-90", titleClassName)}
                 dangerouslySetInnerHTML={{ __html: title }}
             />
             {subtitle && (

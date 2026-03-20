@@ -94,6 +94,7 @@ export default function HomeIntegration() {
                         }
                         title="Connect Everything, Analyze Anywhere."
                         subtitle={brandify("Adray connects your ad platforms and ecommerce store then reconciles and packs your data into a Signal you can use on any AI.")}
+                        titleClassName="text-white-100"
                     />
                 </AnimatedSection>
 

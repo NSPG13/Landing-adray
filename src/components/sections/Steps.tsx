@@ -131,6 +131,7 @@ export default function Steps() {
                         }
                         title="Three steps. One Signal. Any AI."
                         subtitle=""
+                        titleClassName="text-white-100"
                     />
                 </AnimatedSection>
 

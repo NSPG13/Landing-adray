@@ -120,7 +120,7 @@ export default function FeaturesTabs() {
                         </span>
                     </div>
                     <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14">
-                        <h2 className="t-h2 text-white-90 lg:max-w-[50%]">
+                        <h2 className="t-h2 text-white-100 lg:max-w-[50%]">
                             Using your marketing data in AI is painful. We fixed that.
                         </h2>
                         <p className="t-p text-ad-muted lg:max-w-[42%] lg:text-right">

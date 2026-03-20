@@ -41,6 +41,7 @@ export default function DataPrivacy() {
                                 }
                                 title="Multi-Layer Security"
                                 subtitle="Protect your enterprise with multi-layered AI security. From data encryption to behavior monitoring, every layer works together."
+                                titleClassName="text-white-100"
                                 align="left"
                             />
                         </AnimatedSection>

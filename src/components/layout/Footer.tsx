@@ -53,7 +53,7 @@ export default function Footer() {
 
                 <Container className="relative z-10 text-center">
                     <div>
-                        <h2 className="t-h2 text-white-90 mb-6">
+                        <h2 className="t-h2 text-white-100 mb-6">
                             <BlurRevealText text="Your AI is ready." triggerOnScroll startDelay={0} />
                             <br />
                             <BlurRevealText text="Give it something real to work with." triggerOnScroll startDelay={0.4} />

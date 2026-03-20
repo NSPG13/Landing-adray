@@ -89,6 +89,7 @@ export default function HomePricing() {
                         }
                         title="Free to start. Built to scale."
                         subtitle="No dashboards to pay for. Just your data, ready for AI."
+                        titleClassName="text-white-100"
                     />
                 </AnimatedSection>
 

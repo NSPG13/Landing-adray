@@ -208,7 +208,7 @@ export default function AgenciesPage() {
             <section className="py-20 relative">
                 <Container className="text-center">
                     <AnimatedSection>
-                        <h2 className="t-h2 text-white-90 mb-4">
+                        <h2 className="t-h2 text-white-100 mb-4">
                             Your AI is ready. Give it something real to work with.
                         </h2>
                         <p className="t-p-lg text-ad-muted max-w-xl mx-auto mb-10">

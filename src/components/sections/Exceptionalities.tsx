@@ -57,6 +57,7 @@ export default function Exceptionalities() {
                         }
                         title="Built different. From the data layer up."
                         subtitle=""
+                        titleClassName="text-white-100"
                     />
                 </AnimatedSection>
 
