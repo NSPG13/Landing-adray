@@ -105,7 +105,7 @@ export default function FeaturesTabs() {
     useMotionValueEvent(sp2, "change", detectActive);
 
     return (
-        <section className="py-20 relative overflow-x-clip">
+        <section className="py-20 relative">
             <Container>
                 {/* Header */}
                 <AnimatedSection>
@@ -155,7 +155,7 @@ export default function FeaturesTabs() {
                     </div>
 
                     {/* Scrolling cards */}
-                    <div className="flex-1 flex flex-col gap-20">
+                    <div className="flex-1 flex flex-col gap-20 overflow-x-clip">
                         {tabs.map((tab, i) => (
                             <motion.div
                                 key={tab.id}
