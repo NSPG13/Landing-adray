@@ -181,8 +181,10 @@ function ScrollWord({
 
     const color = useTransform(wordProgress, [0, 1], [colorStart, colorEnd]);
 
+    const isAdray = /^Adray$/i.test(word.trim());
+
     return (
-        <motion.span style={{ color, display: "inline" }}>
+        <motion.span style={{ color, display: "inline", ...(isAdray ? { fontFamily: "var(--font-brand)" } : {}) }}>
             {word}
         </motion.span>
     );

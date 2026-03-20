@@ -8,6 +8,7 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import Button from "@/components/ui/Button";
 import BlurRevealText from "@/components/ui/BlurRevealText";
+import { brandify } from "@/lib/utils";
 
 /* ── Offices ── */
 const offices = [
@@ -104,13 +105,13 @@ function AccordionItem({ q, a }: { q: string; a: string }) {
                 onClick={() => setOpen(!open)}
                 className="w-full flex items-center justify-between p-6 text-left cursor-pointer"
             >
-                <span className="t-p font-medium text-white-100 pr-4">{q}</span>
+                <span className="t-p font-medium text-white-100 pr-4">{brandify(q)}</span>
                 <span className="w-8 h-8 rounded-full bg-white-7 border border-ad-border flex items-center justify-center flex-shrink-0">
                     {open ? <Minus size={14} className="text-white-90" /> : <Plus size={14} className="text-white-90" />}
                 </span>
             </button>
             <div className={`overflow-hidden transition-all duration-300 ${open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}`}>
-                <p className="px-6 pb-6 t-p-sm text-ad-muted leading-relaxed">{a}</p>
+                <p className="px-6 pb-6 t-p-sm text-ad-muted leading-relaxed">{brandify(a)}</p>
             </div>
         </div>
     );
@@ -232,7 +233,7 @@ export default function ContactPage() {
                                     <div>
                                         <h3 className="t-h4 text-white-100 mb-2">Agency &amp; Integration Partners</h3>
                                         <p className="t-p-sm text-ad-muted leading-relaxed mb-4">
-                                            Run an agency or build ecommerce tools? Let’s explore how Adray’s data layer fits your stack.
+                                            Run an agency or build ecommerce tools? Let&apos;s explore how <span style={{ fontFamily: 'var(--font-brand)' }}>Adray</span>&apos;s data layer fits your stack.
                                         </p>
                                         <Button variant="primary" href="mailto:support@adray.com" className="w-full">
                                             Let&apos;s Connect
@@ -441,7 +442,7 @@ export default function ContactPage() {
                                         />
                                     )}
                                     <div className="flex-1">
-                                        <h4 className="t-p-semibold text-white-100 mb-1">{offices[selectedOffice].company}</h4>
+                                        <h4 className="t-p-semibold text-white-100 mb-1">{brandify(offices[selectedOffice].company)}</h4>
                                         <p className="t-p-sm text-ad-muted">{offices[selectedOffice].description}</p>
                                     </div>
                                     <Button variant="primary" href={offices[selectedOffice].mapUrl} className="flex-shrink-0">
@@ -468,7 +469,7 @@ export default function ContactPage() {
                                     height={24}
                                 />
                             }
-                            title="Curious About Adray?"
+                            title="Curious About <span style='font-family:var(--font-brand)'>Adray</span>?"
                             subtitle="Answers to common questions about our ecommerce data infrastructure."
                         />
                     </AnimatedSection>

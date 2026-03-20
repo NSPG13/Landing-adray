@@ -5,7 +5,7 @@ interface SectionHeadingProps {
     tag?: string;
     tagIcon?: React.ReactNode;
     title: string;
-    subtitle?: string;
+    subtitle?: React.ReactNode;
     className?: string;
     align?: "left" | "center";
 }

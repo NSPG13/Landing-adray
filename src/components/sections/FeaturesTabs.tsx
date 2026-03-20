@@ -4,6 +4,7 @@ import React, { useRef, useState } from "react";
 import { motion, useScroll, useTransform, useMotionValueEvent } from "framer-motion";
 import Container from "@/components/ui/Container";
 import AnimatedSection from "@/components/ui/AnimatedSection";
+import { brandify } from "@/lib/utils";
 
 const tabs = [
     {
@@ -123,7 +124,7 @@ export default function FeaturesTabs() {
                             Using your marketing data in AI is painful. We fixed that.
                         </h2>
                         <p className="t-p text-ad-muted lg:max-w-[42%] lg:text-right">
-                            Adray reconciles your ad spend, normalizes it across platforms, and structures it so your AI can actually reason with it. Not raw API dumps. Not dashboard screenshots. A verified, precomputed Signal PDF&nbsp;&mdash; delivered every day.
+                            {brandify("Adray reconciles your ad spend, normalizes it across platforms, and structures it so your AI can actually reason with it. Not raw API dumps. Not dashboard screenshots. A verified, precomputed Signal PDF\u00a0\u2014 delivered every day.")}
                         </p>
                     </div>
                 </AnimatedSection>
@@ -164,8 +165,8 @@ export default function FeaturesTabs() {
                             >
                                 <div className="card p-6 md:p-8 flex flex-col md:flex-row gap-8 items-start">
                                     <div className="flex-1">
-                                        <h3 className="t-h4 text-white-100 mb-3">{tab.title}</h3>
-                                        <p className="t-p text-ad-muted mb-6">{tab.description}</p>
+                                        <h3 className="t-h4 text-white-100 mb-3">{brandify(tab.title)}</h3>
+                                        <p className="t-p text-ad-muted mb-6">{brandify(tab.description)}</p>
                                         <div className="flex flex-wrap gap-2 mb-6">
                                             {tab.tags.map((tag) => (
                                                 <span

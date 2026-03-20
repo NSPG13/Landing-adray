@@ -5,6 +5,7 @@ import { Plus, Minus } from "lucide-react";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import AnimatedSection from "@/components/ui/AnimatedSection";
+import { brandify } from "@/lib/utils";
 
 const part1 = [
     {
@@ -51,7 +52,7 @@ function AccordionItem({ q, a }: { q: string; a: string }) {
                 onClick={() => setOpen(!open)}
                 className="w-full flex items-center justify-between p-6 text-left cursor-pointer"
             >
-                <span className="t-p font-medium text-white-100 pr-4">{q}</span>
+                <span className="t-p font-medium text-white-100 pr-4">{brandify(q)}</span>
                 <span className="w-8 h-8 rounded-full bg-white-7 border border-ad-border flex items-center justify-center flex-shrink-0">
                     {open ? (
                         <Minus size={14} className="text-white-90" />
@@ -65,7 +66,7 @@ function AccordionItem({ q, a }: { q: string; a: string }) {
                     }`}
             >
                 <p className="px-6 pb-6 t-p-sm text-ad-muted leading-relaxed">
-                    {a}
+                    {brandify(a)}
                 </p>
             </div>
         </div>

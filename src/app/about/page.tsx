@@ -8,6 +8,7 @@ import AnimatedSection from "@/components/ui/AnimatedSection";
 import Button from "@/components/ui/Button";
 import BlurRevealText from "@/components/ui/BlurRevealText";
 import ScrollTextColor from "@/components/ui/ScrollTextColor";
+import { brandify } from "@/lib/utils";
 
 /* ── Data ── */
 const values = [
@@ -140,7 +141,7 @@ export default function AboutPage() {
                                 />
                             }
                             title="We are committed"
-                            subtitle="The principles that guide how we build Adray."
+                            subtitle={brandify("The principles that guide how we build Adray.")}
                         />
                     </AnimatedSection>
 
@@ -202,7 +203,7 @@ export default function AboutPage() {
                                 different story. Meta says 40x ROAS. Google says 8x. Shopify
                                 shows 12 orders. Nobody knows what&apos;s real. We stopped
                                 competing with AI interfaces and became the data layer they
-                                depend on. Today, Adray reconciles the truth across platforms
+                                depend on. Today, <span style={{ fontFamily: 'var(--font-brand)' }}>Adray</span> reconciles the truth across platforms
                                 and hands it to the AI tools merchants already use. The best
                                 infrastructure is invisible — and that&apos;s exactly what we&apos;re
                                 building.&rdquo;
@@ -237,7 +238,7 @@ export default function AboutPage() {
                                     height={24}
                                 />
                             }
-                            title="Meet the Adray Minds"
+                            title="Meet the <span style='font-family:var(--font-brand)'>Adray</span> Minds"
                             subtitle="A team of ecommerce data engineers, growth operators, and AI builders."
                         />
                     </AnimatedSection>

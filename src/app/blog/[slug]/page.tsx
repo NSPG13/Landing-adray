@@ -5,6 +5,7 @@ import { useParams } from "next/navigation";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Container from "@/components/ui/Container";
+import { brandify } from "@/lib/utils";
 
 /* ── Blog data store (mirrors blog listing) ── */
 const posts: Record<
@@ -147,7 +148,7 @@ export default function BlogPostPage() {
                     >
                         {post.body.map((p, i) => (
                             <p key={i} className="t-p-lg text-ad-muted leading-relaxed">
-                                {p}
+                                {brandify(p)}
                             </p>
                         ))}
                     </motion.div>

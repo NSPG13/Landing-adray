@@ -5,6 +5,7 @@ import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
 import AnimatedSection from "@/components/ui/AnimatedSection";
+import { brandify } from "@/lib/utils";
 
 const integrationIcons = [
     {
@@ -92,7 +93,7 @@ export default function HomeIntegration() {
                             />
                         }
                         title="Connect Everything, Analyze Anywhere."
-                        subtitle="Adray connects your ad platforms and ecommerce store then reconciles and packs your data into a Signal you can use on any AI."
+                        subtitle={brandify("Adray connects your ad platforms and ecommerce store then reconciles and packs your data into a Signal you can use on any AI.")}
                     />
                 </AnimatedSection>
 

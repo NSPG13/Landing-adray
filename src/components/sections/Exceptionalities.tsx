@@ -6,6 +6,7 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import Card from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
 import AnimatedSection from "@/components/ui/AnimatedSection";
+import { brandify } from "@/lib/utils";
 
 const cards = [
     {
@@ -683,7 +684,7 @@ export default function Exceptionalities() {
                                 {/* Content */}
                                 <div className="relative z-10">
                                     <h3 className="t-h4 text-white-100 mb-3">{card.title}</h3>
-                                    <p className="t-p text-ad-muted">{card.description}</p>
+                                    <p className="t-p text-ad-muted">{brandify(card.description)}</p>
                                 </div>
                             </Card>
                         </AnimatedSection>

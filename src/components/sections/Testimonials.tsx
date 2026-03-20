@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import AnimatedSection from "@/components/ui/AnimatedSection";
+import { brandify } from "@/lib/utils";
 
 const testimonials = [
     {
@@ -130,7 +131,7 @@ export default function Testimonials() {
                                 {/* Quote content */}
                                 <div className="flex-1 flex flex-col justify-between">
                                     <blockquote className="t-p md:text-lg text-white-90 leading-relaxed mb-8">
-                                        &ldquo;{t.quote}&rdquo;
+                                        &ldquo;{brandify(t.quote)}&rdquo;
                                     </blockquote>
                                     <div>
                                         <p className="t-p font-semibold text-white-100">

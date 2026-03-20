@@ -1,4 +1,5 @@
 import Container from "@/components/ui/Container";
+import { brandify } from "@/lib/utils";
 
 export const metadata = {
     title: "Terms and Conditions",
@@ -17,10 +18,7 @@ export default function TermsAndConditionsPage() {
                     <div>
                         <h2 className="t-h4 text-white-100 mb-3">1. Acceptance of Terms</h2>
                         <p className="t-p text-ad-muted leading-relaxed">
-                            By accessing or using the Adray platform, website, and any associated
-                            services (collectively, the &quot;Services&quot;), you agree to be bound by these
-                            Terms and Conditions. If you do not agree to all terms, you must not use
-                            the Services.
+                            {brandify("By accessing or using the Adray platform, website, and any associated services (collectively, the \"Services\"), you agree to be bound by these Terms and Conditions. If you do not agree to all terms, you must not use the Services.")}
                         </p>
                     </div>
 
@@ -45,19 +43,14 @@ export default function TermsAndConditionsPage() {
                     <div>
                         <h2 className="t-h4 text-white-100 mb-3">4. Intellectual Property</h2>
                         <p className="t-p text-ad-muted leading-relaxed">
-                            All content, features, and functionality of the Services are owned by
-                            Adray and are protected by international copyright, trademark, and other
-                            intellectual property laws. You may not reproduce, distribute, or create
-                            derivative works without our express written permission.
+                            {brandify("All content, features, and functionality of the Services are owned by Adray and are protected by international copyright, trademark, and other intellectual property laws. You may not reproduce, distribute, or create derivative works without our express written permission.")}
                         </p>
                     </div>
 
                     <div>
                         <h2 className="t-h4 text-white-100 mb-3">5. Limitation of Liability</h2>
                         <p className="t-p text-ad-muted leading-relaxed">
-                            Adray shall not be liable for any indirect, incidental, special,
-                            consequential, or punitive damages resulting from your use of or
-                            inability to use the Services.
+                            {brandify("Adray shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of or inability to use the Services.")}
                         </p>
                     </div>
 

@@ -32,7 +32,7 @@ export default function BlurRevealText({
                 charOffset += word.length + 1; // +1 for the space
                 return (
                     <React.Fragment key={wi}>
-                        <span className="inline-block">
+                        <span className="inline-block" style={/^(Adray|ADRAY)$/i.test(word) ? { fontFamily: 'var(--font-brand)' } : undefined}>
                             {word.split("").map((char, ci) => (
                                 <motion.span
                                     key={ci}

@@ -7,6 +7,7 @@ import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import Button from "@/components/ui/Button";
+import { brandify } from "@/lib/utils";
 
 /* ── Plans ── */
 const plans = [
@@ -137,13 +138,13 @@ function AccordionItem({ q, a }: { q: string; a: string }) {
                 onClick={() => setOpen(!open)}
                 className="w-full flex items-center justify-between p-6 text-left cursor-pointer"
             >
-                <span className="t-p font-medium text-white-100 pr-4">{q}</span>
+                <span className="t-p font-medium text-white-100 pr-4">{brandify(q)}</span>
                 <span className="w-8 h-8 rounded-full bg-white-7 border border-ad-border flex items-center justify-center flex-shrink-0">
                     {open ? <Minus size={14} className="text-white-90" /> : <Plus size={14} className="text-white-90" />}
                 </span>
             </button>
             <div className={`overflow-hidden transition-all duration-300 ${open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}`}>
-                <p className="px-6 pb-6 t-p-sm text-ad-muted leading-relaxed">{a}</p>
+                <p className="px-6 pb-6 t-p-sm text-ad-muted leading-relaxed">{brandify(a)}</p>
             </div>
         </div>
     );

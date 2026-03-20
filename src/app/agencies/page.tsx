@@ -6,6 +6,7 @@ import { Check } from "lucide-react";
 import Container from "@/components/ui/Container";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import Button from "@/components/ui/Button";
+import { brandify } from "@/lib/utils";
 
 const howItWorks = [
     {
@@ -81,7 +82,7 @@ export default function AgenciesPage() {
                         transition={{ duration: 0.7, delay: 0.25, ease }}
                     >
                         Stop switching between accounts, exporting reports, and rebuilding
-                        context every time a client asks a question. Adray gives your agency
+                        context every time a client asks a question. <span style={{ fontFamily: 'var(--font-brand)' }}>Adray</span> gives your agency
                         one place to manage every client&apos;s marketing data &mdash; with a
                         separate, secure data link for each one.
                     </motion.p>
@@ -191,7 +192,7 @@ export default function AgenciesPage() {
                             </h2>
                             <p className="t-p text-ad-muted leading-relaxed mb-4">
                                 Most tools make you log in as each client, manage separate
-                                dashboards, and manually compile reporting. Adray flips that
+                                dashboards, and manually compile reporting. <span style={{ fontFamily: 'var(--font-brand)' }}>Adray</span> flips that
                                 &mdash; your AI does the analysis, you do the strategy.
                             </p>
                             <p className="t-p text-ad-subtitle leading-relaxed">
