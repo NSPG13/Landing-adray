@@ -8,14 +8,13 @@ interface LogoMarqueeProps {
 }
 
 const logos = [
-    "Accenture",
-    "Deloitte",
-    "McKinsey",
-    "BCG",
-    "Oracle",
-    "SAP",
-    "Salesforce",
-    "IBM",
+    { name: "Meta Ads", icon: "/images/svg/meta.svg" },
+    { name: "Google Ads", icon: "/images/svg/google-ads.svg" },
+    { name: "Google Analytics", icon: "/images/svg/ga4.svg" },
+    { name: "Shopify", icon: "/images/svg/shopify.svg" },
+    { name: "ChatGPT", icon: "/images/svg/chatgpt.svg" },
+    { name: "Claude", icon: "/images/svg/claude.svg" },
+    { name: "Gemini", icon: "/images/svg/gemini.svg" },
 ];
 
 export default function LogoMarquee({ className }: LogoMarqueeProps) {
@@ -25,10 +24,17 @@ export default function LogoMarquee({ className }: LogoMarqueeProps) {
                 {[...logos, ...logos].map((logo, i) => (
                     <div
                         key={i}
-                        className="mx-8 flex items-center justify-center min-w-[120px]"
+                        className="mx-8 flex items-center gap-3 min-w-[140px] opacity-40"
                     >
-                        <span className="text-ad-muted/40 text-xl font-bold tracking-wider uppercase select-none">
-                            {logo}
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img
+                            src={logo.icon}
+                            alt={logo.name}
+                            className="w-5 h-5 object-contain"
+                            style={{ filter: "brightness(0) invert(1)" }}
+                        />
+                        <span className="text-white-100 text-sm font-semibold tracking-wide whitespace-nowrap select-none">
+                            {logo.name}
                         </span>
                     </div>
                 ))}

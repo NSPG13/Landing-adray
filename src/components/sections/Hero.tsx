@@ -8,12 +8,13 @@ import Button from "@/components/ui/Button";
 import BlurRevealText from "@/components/ui/BlurRevealText";
 
 const partnerLogos = [
-    "https://framerusercontent.com/images/eTOvR4ZuGGQENAaE3zs5ZqZxtks.png",
-    "https://framerusercontent.com/images/QvWxQDGRcrTJWGZp7OsUlI4k6w0.png",
-    "https://framerusercontent.com/images/ZrGThO8Gp1y7Hoki1Dmhr0Flw6U.png",
-    "https://framerusercontent.com/images/dTohPdySQSHpfv4TUIdRVoRdHBw.png",
-    "https://framerusercontent.com/images/WzG2yfwdF7vdqrjvFu4j7tyJ3Gs.png",
-    "https://framerusercontent.com/images/FkPCvWLJEloyx0AnJETPfPfMx4.png",
+    { name: "Meta Ads", icon: "/images/svg/meta.svg" },
+    { name: "Google Ads", icon: "/images/svg/google-ads.svg" },
+    { name: "Google Analytics", icon: "/images/svg/ga4.svg" },
+    { name: "Shopify", icon: "/images/svg/shopify.svg" },
+    { name: "ChatGPT", icon: "/images/svg/chatgpt.svg" },
+    { name: "Claude", icon: "/images/svg/claude.svg" },
+    { name: "Gemini", icon: "/images/svg/gemini.svg" },
 ];
 
 const ease = [0.12, 0.23, 0.5, 1] as const;
@@ -169,14 +170,18 @@ export default function Hero() {
                     }}
                 >
                     <div className="flex items-center gap-[74px] animate-marquee">
-                        {[...partnerLogos, ...partnerLogos].map((src, i) => (
-                            <div key={i} className="flex-shrink-0 w-[150px] h-[48px] flex items-center justify-center overflow-hidden" style={{ filter: "grayscale(1)" }}>
+                        {[...partnerLogos, ...partnerLogos].map((logo, i) => (
+                            <div key={i} className="flex-shrink-0 flex items-center gap-3 opacity-40 hover:opacity-60 transition-opacity">
                                 {/* eslint-disable-next-line @next/next/no-img-element */}
                                 <img
-                                    src={src}
-                                    alt="Partner"
-                                    className="w-full h-full object-cover"
+                                    src={logo.icon}
+                                    alt={logo.name}
+                                    className="w-6 h-6 object-contain"
+                                    style={{ filter: "brightness(0) invert(1)" }}
                                 />
+                                <span className="text-white-100 text-sm font-semibold tracking-wide whitespace-nowrap" style={{ fontFamily: "var(--font-sans)" }}>
+                                    {logo.name}
+                                </span>
                             </div>
                         ))}
                     </div>
