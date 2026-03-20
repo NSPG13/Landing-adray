@@ -75,19 +75,19 @@ export default function Footer() {
                     <div className="mt-20 flex items-center justify-center gap-8" style={{ mixBlendMode: "difference" }}>
                         <span
                             className="text-[32px] md:text-[40px] font-bold tracking-[-0.02em] text-white-100 opacity-20 select-none"
-                            style={{ fontFamily: '"Inter Display", Inter, sans-serif' }}
+                            style={{ fontFamily: 'var(--font-brand)' }}
                         >
                             ADRAY
                         </span>
                         <span
                             className="text-[48px] md:text-[64px] font-bold tracking-[-0.02em] text-white-100 select-none"
-                            style={{ fontFamily: '"Inter Display", Inter, sans-serif' }}
+                            style={{ fontFamily: 'var(--font-brand)' }}
                         >
                             ADRAY
                         </span>
                         <span
                             className="text-[32px] md:text-[40px] font-bold tracking-[-0.02em] text-white-100 opacity-20 select-none"
-                            style={{ fontFamily: '"Inter Display", Inter, sans-serif' }}
+                            style={{ fontFamily: 'var(--font-brand)' }}
                         >
                             ADRAY
                         </span>
@@ -122,20 +122,9 @@ export default function Footer() {
                     </div>
 
                     {/* Bottom bar */}
-                    <div className="mt-12 pt-8 border-t border-ad-border flex flex-col sm:flex-row justify-between items-center gap-4">
+                    <div className="mt-12 pt-8 border-t border-ad-border flex items-center justify-center">
                         <p className="t-p-sm text-ad-muted">
                             Marketing intelligence for the generative era. &middot; All rights reserved.
-                        </p>
-                        <p className="t-p-sm text-ad-deep">
-                            Designed by{" "}
-                            <a
-                                href="https://fremix.design"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="hover:text-ad-muted transition-colors"
-                            >
-                                Jitu Raut @fremix.design
-                            </a>
                         </p>
                     </div>
                 </Container>

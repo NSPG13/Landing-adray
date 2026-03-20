@@ -120,7 +120,7 @@ export default function AboutPage() {
                         animationStart="center"
                         animationEnd="bottom"
                         className="text-[clamp(1.25rem,2.5vw,1.75rem)] font-medium leading-relaxed text-center"
-                        style={{ fontFamily: '"Inter Display", var(--font-inter), Inter, sans-serif' }}
+                        style={{ fontFamily: 'var(--font-display)' }}
                     />
                 </Container>
             </section>

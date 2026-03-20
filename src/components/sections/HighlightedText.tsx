@@ -34,7 +34,7 @@ export default function HighlightedText() {
                         animationStart="center"
                         animationEnd="bottom"
                         className="t-h3-lg tracking-[-0.03em]"
-                        style={{ fontFamily: '"Inter Display", var(--font-inter), Inter, sans-serif' }}
+                        style={{ fontFamily: 'var(--font-display)' }}
                     />
                 </div>
 

@@ -31,13 +31,12 @@ export default function Navbar() {
                 <div className="hidden md:flex items-center justify-between w-full py-4">
                     {/* Logo */}
                     <Link href="/" className="flex items-center">
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img
-                            src="/adray-logo.svg"
-                            alt="Adray"
-                            className="h-6 w-auto"
-                            style={{ objectFit: "contain" }}
-                        />
+                        <span
+                            className="text-2xl font-bold tracking-[-0.02em] text-white-100"
+                            style={{ fontFamily: 'var(--font-brand)' }}
+                        >
+                            ADRAY
+                        </span>
                     </Link>
 
                     {/* Links */}
@@ -67,12 +66,12 @@ export default function Navbar() {
                 {/* Mobile */}
                 <div className="flex md:hidden items-center justify-between py-3">
                     <Link href="/" className="flex items-center gap-2 flex-shrink-0">
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img
-                            src="/adray-logo.svg"
-                            alt="Adray"
-                            className="h-6 w-auto"
-                        />
+                        <span
+                            className="text-2xl font-bold tracking-[-0.02em] text-white-100"
+                            style={{ fontFamily: 'var(--font-brand)' }}
+                        >
+                            ADRAY
+                        </span>
                     </Link>
                     <button
                         className="text-white-100 p-2"
