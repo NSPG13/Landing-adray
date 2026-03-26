@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   description:
     "Power your AI with your full marketing stack — Meta, Google, GA4, Shopify — packed into one secure, portable link.",
   keywords: [
-    "AI ",
+    "AI",
     "marketing",
     "analytics",
     "data",
