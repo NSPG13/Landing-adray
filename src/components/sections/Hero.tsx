@@ -15,6 +15,9 @@ const partnerLogos = [
     { name: "ChatGPT", icon: "/images/svg/chatgpt.svg" },
     { name: "Claude", icon: "/images/svg/claude.svg" },
     { name: "Gemini", icon: "/images/svg/gemini.svg" },
+    { name: "Copilot", icon: "/images/svg/copilot.svg" },
+    { name: "Grok", icon: "/images/svg/grok.svg" },
+    { name: "DeepSeek", icon: "/images/svg/deepseek.svg" },
 ];
 
 const ease = [0.12, 0.23, 0.5, 1] as const;

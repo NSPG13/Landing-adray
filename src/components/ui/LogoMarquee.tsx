@@ -15,6 +15,9 @@ const logos = [
     { name: "ChatGPT", icon: "/images/svg/chatgpt.svg" },
     { name: "Claude", icon: "/images/svg/claude.svg" },
     { name: "Gemini", icon: "/images/svg/gemini.svg" },
+    { name: "Copilot", icon: "/images/svg/copilot.svg" },
+    { name: "Grok", icon: "/images/svg/grok.svg" },
+    { name: "DeepSeek", icon: "/images/svg/deepseek.svg" },
 ];
 
 export default function LogoMarquee({ className }: LogoMarqueeProps) {

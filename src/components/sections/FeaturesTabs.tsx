@@ -184,18 +184,87 @@ export default function FeaturesTabs() {
                                             {tab.cta.label} &rarr;
                                         </a>
                                     </div>
-                                    <div className="flex-1 w-full">
-                                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                                        <img
-                                            src={tab.image}
-                                            alt={tab.title}
-                                            className="w-full h-auto rounded-2xl"
-                                            style={{
-                                                filter: "sepia(1) hue-rotate(230deg) saturate(2)",
-                                                maskImage: "linear-gradient(90deg, transparent 0%, black 15%, black 100%)",
-                                                WebkitMaskImage: "linear-gradient(90deg, transparent 0%, black 15%, black 100%)",
-                                            }}
-                                        />
+                                    <div className={`flex-1 w-full ${tab.id === "enriched" ? "relative flex items-center justify-center md:min-h-[320px] self-stretch" : ""}`}>
+                                        {tab.id === "enriched" ? (
+                                            <div className="relative w-full h-full min-h-[320px] flex items-center justify-center">
+                                                <div className="relative w-full h-full min-h-[320px]">
+                                                    <div
+                                                        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-0 pointer-events-none"
+                                                        style={{
+                                                            width: "95%",
+                                                            height: "95%",
+                                                            borderRadius: "9999px",
+                                                            background:
+                                                                "radial-gradient(circle, rgba(216,158,255,0.24) 0%, rgba(170,90,255,0.16) 20%, rgba(114,58,214,0.07) 34%, rgba(62,40,111,0.02) 46%, rgba(0,0,0,0) 58%)",
+                                                            filter: "blur(34px)",
+                                                        }}
+                                                    />
+
+                                                    <figure
+                                                        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-0 pointer-events-none"
+                                                        style={{ width: "134%", height: "134%" }}
+                                                    >
+                                                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                                                        <img
+                                                            src="/images/luz.webp"
+                                                            alt=""
+                                                            className="w-full h-full object-contain"
+                                                            style={{
+                                                                opacity: 0.62,
+                                                                mixBlendMode: "screen",
+                                                                filter: "blur(2px) hue-rotate(230deg) saturate(1.6)",
+                                                                maskImage: "radial-gradient(62% 62% at 50% 50%, #000 0%, rgba(0,0,0,0.72) 40%, rgba(0,0,0,0.22) 54%, rgba(0,0,0,0) 66%)",
+                                                                WebkitMaskImage: "radial-gradient(62% 62% at 50% 50%, #000 0%, rgba(0,0,0,0.72) 40%, rgba(0,0,0,0.22) 54%, rgba(0,0,0,0) 66%)",
+                                                            }}
+                                                        />
+                                                    </figure>
+
+                                                    <figure
+                                                        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-[2] pointer-events-none"
+                                                        style={{ width: "42%" }}
+                                                    >
+                                                        <div className="w-full text-center text-white-100 text-[clamp(24px,4vw,48px)] leading-none" style={{ fontFamily: "var(--font-brand)" }}>
+                                                            Adray
+                                                        </div>
+                                                    </figure>
+
+                                                    <figure
+                                                        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-[1] rounded-full animate-rotate"
+                                                        style={{
+                                                            width: "58%",
+                                                            aspectRatio: "1 / 1",
+                                                            filter: "brightness(1.22) drop-shadow(0 21px 11px rgba(0,0,0,0.43))",
+                                                            animationDuration: "11s",
+                                                            background:
+                                                                "conic-gradient(from 220deg at 50% 50%, #f2dcff 0deg, #b88cff 60deg, #8d5de7 145deg, #3e286f 220deg, #a86bff 300deg, #f2dcff 360deg)",
+                                                            boxShadow: "inset -16px -14px 34px rgba(29,10,52,0.45), inset 14px 12px 30px rgba(255,255,255,0.18)",
+                                                        }}
+                                                    >
+                                                        <div
+                                                            className="absolute inset-0 rounded-full"
+                                                            style={{
+                                                                background:
+                                                                    "radial-gradient(circle at 33% 28%, rgba(255,255,255,0.42) 0%, rgba(255,255,255,0.1) 34%, rgba(35,18,66,0.72) 74%, rgba(22,11,40,0.9) 100%)",
+                                                            }}
+                                                        />
+                                                    </figure>
+                                                </div>
+                                            </div>
+                                        ) : (
+                                            <>
+                                                {/* eslint-disable-next-line @next/next/no-img-element */}
+                                                <img
+                                                    src={tab.image}
+                                                    alt={tab.title}
+                                                    className="w-full h-auto rounded-2xl"
+                                                    style={{
+                                                        filter: "sepia(1) hue-rotate(230deg) saturate(2)",
+                                                        maskImage: "linear-gradient(90deg, transparent 0%, black 15%, black 100%)",
+                                                        WebkitMaskImage: "linear-gradient(90deg, transparent 0%, black 15%, black 100%)",
+                                                    }}
+                                                />
+                                            </>
+                                        )}
                                     </div>
                                 </div>
                             </motion.div>
