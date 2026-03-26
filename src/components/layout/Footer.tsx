@@ -77,19 +77,19 @@ export default function Footer() {
                             className="text-[32px] md:text-[40px] font-bold tracking-[-0.02em] text-white-90 opacity-20 select-none"
                             style={{ fontFamily: 'var(--font-brand)' }}
                         >
-                            ADRAY
+                            Adray
                         </span>
                         <span
                             className="text-[48px] md:text-[64px] font-bold tracking-[-0.02em] text-white-90 select-none"
                             style={{ fontFamily: 'var(--font-brand)' }}
                         >
-                            ADRAY
+                            Adray
                         </span>
                         <span
                             className="text-[32px] md:text-[40px] font-bold tracking-[-0.02em] text-white-90 opacity-20 select-none"
                             style={{ fontFamily: 'var(--font-brand)' }}
                         >
-                            ADRAY
+                            Adray
                         </span>
                     </div>
                 </Container>

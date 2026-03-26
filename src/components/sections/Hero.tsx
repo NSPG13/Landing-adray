@@ -21,12 +21,12 @@ const ease = [0.12, 0.23, 0.5, 1] as const;
 
 export default function Hero() {
     return (
-        <section className="relative flex flex-col bg-black-100 pt-[100px] md:pt-[160px] pb-5" style={{ gap: "25px" }}>
-            {/* ── Video Container — 857px, 3 layers (video + frost + noise) ── */}
+        <section className="relative flex flex-col bg-black-100 pt-[100px] md:pt-[160px] pb-8 md:pb-10" style={{ gap: "25px" }}>
+            {/* ── Video Container — taller backdrop (video + frost + noise) ── */}
             <div
                 className="absolute top-0 left-0 right-0 overflow-hidden"
                 style={{
-                    height: "clamp(500px, 80vh, 857px)",
+                    height: "clamp(600px, 92vh, 980px)",
                     zIndex: 1,
                     background: "#000",
                     mask: "linear-gradient(#000 0% 85.6929%, #0000 100%)",
@@ -83,7 +83,7 @@ export default function Hero() {
             </div>
 
             {/* ── Main Content ── */}
-            <div className="relative z-[2] w-full max-w-[1200px] mx-auto px-5 md:px-10 gap-[60px] md:gap-[130px]" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+            <div className="relative z-2 w-full max-w-[1200px] mx-auto px-5 md:px-10 gap-[60px] md:gap-[130px]" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
                 {/* Content block — 40px gap between children */}
                 <div className="flex flex-col items-center text-center w-full gap-6 md:gap-10">
                     {/* Badge — 10px gap to heading group */}
@@ -161,7 +161,7 @@ export default function Hero() {
             </div>
 
             {/* ── Logo Marquee ── */}
-            <div className="relative z-[2] pb-4 overflow-hidden" style={{ padding: "0 40px 40px" }}>
+            <div className="relative z-2 pb-4 overflow-hidden" style={{ padding: "0 40px 40px" }}>
                 <div
                     className="relative"
                     style={{
@@ -171,7 +171,7 @@ export default function Hero() {
                 >
                     <div className="flex items-center gap-[74px] animate-marquee">
                         {[...partnerLogos, ...partnerLogos].map((logo, i) => (
-                            <div key={i} className="flex-shrink-0 flex items-center gap-3 opacity-40 hover:opacity-60 transition-opacity">
+                            <div key={i} className="shrink-0 flex items-center gap-3 opacity-40 hover:opacity-60 transition-opacity">
                                 {/* eslint-disable-next-line @next/next/no-img-element */}
                                 <img
                                     src={logo.icon}

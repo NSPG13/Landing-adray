@@ -2,8 +2,12 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+
+// Usamos la ruta con espacios tal cual para evitar problemas con el loader de `next/image`.
+const HEADER_LOGO = "/images/Adray  LOGO-3.png";
 
 const navLinks = [
     { label: "How It Works", href: "#how-it-works" },
@@ -30,12 +34,20 @@ export default function Navbar() {
                 {/* Desktop */}
                 <div className="hidden md:flex items-center justify-between w-full py-4">
                     {/* Logo */}
-                    <Link href="/" className="flex items-center">
+                    <Link href="/" className="flex items-center gap-2.5">
+                        <Image
+                            src={HEADER_LOGO}
+                            alt="Adray"
+                            width={200}
+                            height={50}
+                            priority
+                            className="h-8 w-auto shrink-0 max-w-[min(200px,42vw)] object-contain object-left"
+                        />
                         <span
                             className="text-2xl font-bold tracking-[-0.02em] text-white-90"
                             style={{ fontFamily: 'var(--font-brand)' }}
                         >
-                            ADRAY
+                            Adray
                         </span>
                     </Link>
 
@@ -65,12 +77,20 @@ export default function Navbar() {
 
                 {/* Mobile */}
                 <div className="flex md:hidden items-center justify-between py-3">
-                    <Link href="/" className="flex items-center gap-2 flex-shrink-0">
+                    <Link href="/" className="flex items-center gap-2 shrink-0">
+                        <Image
+                            src={HEADER_LOGO}
+                            alt="Adray"
+                            width={200}
+                            height={50}
+                            priority
+                            className="h-7 w-auto shrink-0 max-w-[min(180px,55vw)] object-contain object-left"
+                        />
                         <span
                             className="text-2xl font-bold tracking-[-0.02em] text-white-90"
                             style={{ fontFamily: 'var(--font-brand)' }}
                         >
-                            ADRAY
+                            Adray
                         </span>
                     </Link>
                     <button
