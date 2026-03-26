@@ -96,33 +96,35 @@ export default function HomePricing() {
                 {/* Toggle — Framer pill-tab selector */}
                 <div className="flex items-center justify-center mb-12">
                     <div
-                        className="relative inline-flex items-center rounded-2xl border border-ad-border"
-                        style={{ background: "rgba(255,255,255,0.1)", padding: "4px" }}
+                        className="relative flex w-max max-w-full items-stretch rounded-2xl border border-ad-border p-1"
+                        style={{ background: "rgba(255,255,255,0.1)" }}
+                        role="group"
+                        aria-label="Billing period"
                     >
-                        {/* Sliding white selector */}
+                        {/* Sliding white selector — translate for smooth GPU animation */}
                         <div
-                            className="absolute top-1 bottom-1 rounded-[4px] bg-white-100 transition-all duration-300"
+                            className="pointer-events-none absolute inset-y-1 left-1 z-0 w-[calc(50%-4px)] rounded-md bg-white-100 transition-transform duration-300 ease-in-out motion-reduce:transition-none"
                             style={{
-                                width: "calc(50% - 4px)",
-                                left: yearly ? "calc(50% + 2px)" : "4px",
+                                transform: yearly ? "translateX(100%)" : "translateX(0)",
                             }}
                         />
                         <button
+                            type="button"
                             onClick={() => setYearly(false)}
-                            className={`relative z-10 px-6 py-2.5 t-p-sm font-medium rounded-[4px] transition-colors duration-200 cursor-pointer ${!yearly ? "text-black-100" : "text-white-90"}`}
+                            aria-pressed={!yearly}
+                            className={`relative z-10 flex flex-1 basis-0 min-w-0 items-center justify-center gap-2 px-5 py-2.5 t-p-sm font-medium rounded-md transition-colors duration-200 cursor-pointer ${!yearly ? "text-black-100" : "text-white-90"}`}
                         >
                             Monthly
                         </button>
                         <button
+                            type="button"
                             onClick={() => setYearly(true)}
-                            className={`relative z-10 px-6 py-2.5 t-p-sm font-medium rounded-[4px] transition-colors duration-200 cursor-pointer flex items-center gap-2 ${yearly ? "text-black-100" : "text-white-90"}`}
+                            aria-pressed={yearly}
+                            className={`relative z-10 flex flex-1 basis-0 min-w-0 items-center justify-center gap-2 px-5 py-2.5 t-p-sm font-medium rounded-md transition-colors duration-200 cursor-pointer ${yearly ? "text-black-100" : "text-white-90"}`}
                         >
                             Yearly
-                            <span
-                                className="px-1.5 py-0.5 rounded text-xs font-semibold"
-                                style={{ background: "rgba(62,40,111,0.4)", color: "#CA8AE5" }}
-                            >
-                                30%off
+                            <span className="shrink-0 rounded bg-ad-deep px-1.5 py-0.5 text-xs font-semibold text-white-100">
+                                30% off
                             </span>
                         </button>
                     </div>
@@ -171,7 +173,7 @@ export default function HomePricing() {
                                         <Button
                                             variant="primary"
                                             href="/contact"
-                                            className="w-full"
+                                            className="w-full whitespace-nowrap min-h-[48px]"
                                         >
                                             {plan.cta}
                                         </Button>
@@ -181,7 +183,7 @@ export default function HomePricing() {
                                         {plan.features.map((feat) => (
                                             <li key={feat} className="flex items-start gap-3">
                                                 <span
-                                                    className="w-5 h-5 rounded-full bg-white-10 flex items-center justify-center flex-shrink-0 mt-0.5"
+                                                        className="w-5 h-5 rounded-full bg-white-10 flex items-center justify-center shrink-0 mt-0.5"
                                                     style={{
                                                         boxShadow:
                                                             "inset 0 0 0 1px rgba(62,40,111,0.6)",
