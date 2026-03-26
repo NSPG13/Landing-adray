@@ -7,14 +7,14 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 /**
- * Replace every occurrence of "Adray" or "ADRAY" in a string with a
+ * Replace every occurrence of "Adray" in a string (case-insensitive) with a
  * <span> styled in the UlmGrotesk-Bold brand font.
  */
 export function brandify(text: string): React.ReactNode {
-    const parts = text.split(/(ADRAY|Adray)/g);
+    const parts = text.split(/(Adray)/gi);
     if (parts.length === 1) return text;
     return parts.map((part, i) =>
-        /^(ADRAY|Adray)$/i.test(part)
+        /^Adray$/i.test(part)
             ? React.createElement("span", { key: i, style: { fontFamily: "var(--font-brand)" } }, part)
             : part
     );
