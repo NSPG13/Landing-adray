@@ -139,7 +139,7 @@ function AccordionItem({ q, a }: { q: string; a: string }) {
                 className="w-full flex items-center justify-between p-6 text-left cursor-pointer"
             >
                 <span className="t-p font-medium text-white-90 pr-4">{brandify(q)}</span>
-                <span className="w-8 h-8 rounded-full bg-white-7 border border-ad-border flex items-center justify-center flex-shrink-0">
+                <span className="w-8 h-8 rounded-full bg-white-7 border border-ad-border flex items-center justify-center shrink-0">
                     {open ? <Minus size={14} className="text-white-90" /> : <Plus size={14} className="text-white-90" />}
                 </span>
             </button>
@@ -232,32 +232,34 @@ export default function PricingPage() {
                     {/* Toggle */}
                     <div className="flex items-center justify-center mb-12">
                         <div
-                            className="relative inline-flex items-center rounded-2xl border border-ad-border"
-                            style={{ background: "rgba(255,255,255,0.1)", padding: "4px" }}
+                            className="relative flex w-max max-w-full items-stretch rounded-2xl border border-ad-border p-1"
+                            style={{ background: "rgba(255,255,255,0.1)" }}
+                            role="group"
+                            aria-label="Billing period"
                         >
                             <div
-                                className="absolute top-1 bottom-1 rounded-[4px] bg-white-100 transition-all duration-300"
+                                className="pointer-events-none absolute inset-y-1 left-1 z-0 w-[calc(50%-4px)] rounded-md bg-white-100 transition-transform duration-300 ease-in-out motion-reduce:transition-none"
                                 style={{
-                                    width: "calc(50% - 4px)",
-                                    left: yearly ? "calc(50% + 2px)" : "4px",
+                                    transform: yearly ? "translateX(100%)" : "translateX(0)",
                                 }}
                             />
                             <button
+                                type="button"
                                 onClick={() => setYearly(false)}
-                                className={`relative z-10 px-6 py-2.5 t-p-sm font-medium rounded-[4px] transition-colors duration-200 cursor-pointer ${!yearly ? "text-black-100" : "text-white-90"}`}
+                                aria-pressed={!yearly}
+                                className={`relative z-10 flex flex-1 basis-0 min-w-0 items-center justify-center gap-2 px-5 py-2.5 t-p-sm font-medium rounded-md transition-colors duration-200 cursor-pointer ${!yearly ? "text-black-100" : "text-white-90"}`}
                             >
                                 Monthly
                             </button>
                             <button
+                                type="button"
                                 onClick={() => setYearly(true)}
-                                className={`relative z-10 px-6 py-2.5 t-p-sm font-medium rounded-[4px] transition-colors duration-200 cursor-pointer flex items-center gap-2 ${yearly ? "text-black-100" : "text-white-90"}`}
+                                aria-pressed={yearly}
+                                className={`relative z-10 flex flex-1 basis-0 min-w-0 items-center justify-center gap-2 px-5 py-2.5 t-p-sm font-medium rounded-md transition-colors duration-200 cursor-pointer ${yearly ? "text-black-100" : "text-white-90"}`}
                             >
                                 Yearly
-                                <span
-                                    className="px-1.5 py-0.5 rounded text-xs font-semibold"
-                                    style={{ background: "rgba(62,40,111,0.4)", color: "#CA8AE5" }}
-                                >
-                                    30%off
+                                <span className="shrink-0 rounded bg-ad-deep px-1.5 py-0.5 text-xs font-semibold text-white-100">
+                                    30% off
                                 </span>
                             </button>
                         </div>
@@ -299,7 +301,7 @@ export default function PricingPage() {
                                         )}
 
                                         <div className="mt-6 mb-8">
-                                            <Button variant="primary" href="/contact" className="w-full">
+                                            <Button variant="primary" href="/contact" className="w-full whitespace-nowrap min-h-[48px]">
                                                 Get Started
                                             </Button>
                                         </div>
@@ -307,7 +309,7 @@ export default function PricingPage() {
                                         <ul className="space-y-3 mt-auto">
                                             {plan.features.map((f) => (
                                                 <li key={f} className="flex items-start gap-3">
-                                                    <Check size={16} className="text-ad-primary flex-shrink-0 mt-0.5" />
+                                                    <Check size={16} className="text-ad-primary shrink-0 mt-0.5" />
                                                     <span className="t-p-sm text-white-90">{f}</span>
                                                 </li>
                                             ))}
