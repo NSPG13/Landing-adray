@@ -41,7 +41,7 @@ export default function Navbar() {
                             width={200}
                             height={50}
                             priority
-                            className="h-8 w-auto shrink-0 max-w-[min(200px,42vw)] object-contain object-left"
+                            className="h-8 w-auto shrink-0 max-w-[min(200px,42vw)] object-contain object-left brightness-0 invert"
                         />
                         <span
                             className="text-2xl font-bold tracking-[-0.02em] text-white-90"
@@ -84,7 +84,7 @@ export default function Navbar() {
                             width={200}
                             height={50}
                             priority
-                            className="h-7 w-auto shrink-0 max-w-[min(180px,55vw)] object-contain object-left"
+                            className="h-7 w-auto shrink-0 max-w-[min(180px,55vw)] object-contain object-left brightness-0 invert"
                         />
                         <span
                             className="text-2xl font-bold tracking-[-0.02em] text-white-90"
