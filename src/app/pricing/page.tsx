@@ -151,18 +151,6 @@ function AccordionItem({ q, a }: { q: string; a: string }) {
 }
 
 export default function PricingPage() {
-    const [yearly, setYearly] = useState(false);
-
-    const getPrice = (monthly: number | null) => {
-        if (monthly === null) return null;
-        return yearly ? Math.round(monthly * 12 * 0.7) : monthly;
-    };
-
-    const getPeriod = (monthly: number | null) => {
-        if (monthly === null) return "";
-        return yearly ? "/year" : "/month";
-    };
-
     return (
         <>
             {/* ── Hero ── */}
@@ -229,42 +217,6 @@ export default function PricingPage() {
                         />
                     </AnimatedSection>
 
-                    {/* Toggle */}
-                    <div className="flex items-center justify-center mb-12">
-                        <div
-                            className="relative flex w-max max-w-full items-stretch rounded-2xl border border-ad-border p-1"
-                            style={{ background: "rgba(255,255,255,0.1)" }}
-                            role="group"
-                            aria-label="Billing period"
-                        >
-                            <div
-                                className="pointer-events-none absolute inset-y-1 left-1 z-0 w-[calc(50%-4px)] rounded-md bg-white-100 transition-transform duration-300 ease-in-out motion-reduce:transition-none"
-                                style={{
-                                    transform: yearly ? "translateX(100%)" : "translateX(0)",
-                                }}
-                            />
-                            <button
-                                type="button"
-                                onClick={() => setYearly(false)}
-                                aria-pressed={!yearly}
-                                className={`relative z-10 flex flex-1 basis-0 min-w-0 items-center justify-center gap-2 px-5 py-2.5 t-p-sm font-medium rounded-md transition-colors duration-200 cursor-pointer ${!yearly ? "text-black-100" : "text-white-90"}`}
-                            >
-                                Monthly
-                            </button>
-                            <button
-                                type="button"
-                                onClick={() => setYearly(true)}
-                                aria-pressed={yearly}
-                                className={`relative z-10 flex flex-1 basis-0 min-w-0 items-center justify-center gap-2 px-5 py-2.5 t-p-sm font-medium rounded-md transition-colors duration-200 cursor-pointer ${yearly ? "text-black-100" : "text-white-90"}`}
-                            >
-                                Yearly
-                                <span className="shrink-0 rounded bg-ad-deep px-1.5 py-0.5 text-xs font-semibold text-white-100">
-                                    30% off
-                                </span>
-                            </button>
-                        </div>
-                    </div>
-
                     {/* Plan cards */}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         {plans.map((plan, i) => (
@@ -282,10 +234,10 @@ export default function PricingPage() {
                                                 <h3 className="t-h4 text-white-90">{plan.name}</h3>
                                                 <div className="mt-3 flex items-baseline gap-1">
                                                     <span className="text-4xl font-bold text-white-90">
-                                                        ${getPrice(plan.monthlyPrice)}
+                                                        ${plan.monthlyPrice}
                                                     </span>
                                                     <span className="text-ad-muted t-p-sm">
-                                                        {getPeriod(plan.monthlyPrice)}
+                                                        /month
                                                     </span>
                                                 </div>
                                             </>
