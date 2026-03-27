@@ -46,6 +46,8 @@ const steps = [
 ];
 
 function StepCard({ step }: { step: (typeof steps)[0] }) {
+    const isVideo = step.image.toLowerCase().endsWith(".webm");
+
     return (
         <div className="card overflow-hidden flex flex-col md:flex-row">
             {/* Text content */}
@@ -55,7 +57,7 @@ function StepCard({ step }: { step: (typeof steps)[0] }) {
                 <ul className="space-y-3">
                     {step.bullets.map((bullet) => (
                         <li key={bullet} className="flex items-start gap-3">
-                            <div className="w-5 h-5 rounded-full bg-white-10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <div className="w-5 h-5 rounded-full bg-white-10 flex items-center justify-center shrink-0 mt-0.5">
                                 <svg width="10" height="8" viewBox="0 0 10 8" fill="none">
                                     <defs>
                                         <linearGradient id="checkGrad" x1="0" y1="0" x2="10" y2="8" gradientUnits="userSpaceOnUse">
@@ -85,13 +87,25 @@ function StepCard({ step }: { step: (typeof steps)[0] }) {
                     WebkitMaskImage: "linear-gradient(90deg, transparent 0%, black 11%, black 100%)",
                 }}
             >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                    src={step.image}
-                    alt={step.title}
-                    className="w-full h-full object-cover"
-                    style={{ filter: "brightness(1.5) sepia(1) hue-rotate(230deg) saturate(2)" }}
-                />
+                {isVideo ? (
+                    <video
+                        src={step.image}
+                        className="w-full h-full object-cover"
+                        style={{ filter: "brightness(1.5) sepia(1) hue-rotate(230deg) saturate(2)" }}
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                    />
+                ) : (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                        src={step.image}
+                        alt={step.title}
+                        className="w-full h-full object-cover"
+                        style={{ filter: "brightness(1.5) sepia(1) hue-rotate(230deg) saturate(2)" }}
+                    />
+                )}
             </div>
         </div>
     );
@@ -138,7 +152,7 @@ export default function Steps() {
                 {/* Desktop: full-width number bar + stacking cards */}
                 <div className="hidden lg:block">
                     {/* Sticky number bar */}
-                    <div className="sticky top-0 z-20 bg-[var(--background)] pt-20 pb-6">
+                    <div className="sticky top-0 z-20 bg-background pt-20 pb-6">
                         <div className="flex items-center max-w-md mx-auto">
                             {steps.map((step, i) => (
                                 <span
@@ -170,7 +184,7 @@ export default function Steps() {
                                 className="sticky top-[160px]"
                                 style={{ zIndex: 10 + i }}
                             >
-                                <div className="bg-[var(--background)] pt-2 pb-6">
+                                <div className="bg-background pt-2 pb-6">
                                     <StepCard step={step} />
                                 </div>
                             </div>
