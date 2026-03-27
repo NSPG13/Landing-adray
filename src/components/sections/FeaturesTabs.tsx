@@ -37,7 +37,7 @@ const tabs = [
             "Meta, Google, and GA4 measure differently, attribute differently, and report differently. Adray speaks all three languages \u2014 then translates them into one reconciled view before your AI sees a single number. No more conflicting metrics. No more platform bias.",
         tags: ["Meta", "Google", "GA4"],
         cta: { label: "Get Started", href: "/pricing" },
-        image: "/images/Cross-Platform Normalization.png",
+        image: "/images/1d9ow-ra20u.webm",
     },
     {
         id: "enriched",
@@ -132,14 +132,14 @@ export default function FeaturesTabs() {
                 {/* Sticky sidebar + scrolling cards */}
                 <div className="flex flex-col lg:flex-row gap-10 lg:gap-16">
                     {/* Sticky sidebar — desktop only */}
-                    <div className="hidden lg:flex flex-col gap-8 lg:sticky lg:top-32 self-start w-[200px] flex-shrink-0 pt-4">
+                    <div className="hidden lg:flex flex-col gap-8 lg:sticky lg:top-32 self-start w-[200px] shrink-0 pt-4">
                         {tabs.map((tab, i) => (
                             <div key={tab.id}>
                                 <div
                                     className={`flex items-center gap-2.5 mb-3 transition-all duration-300 ${activeTab === i ? "text-white-100" : "text-ad-muted opacity-40"
                                         }`}
                                 >
-                                    <span className="flex-shrink-0">{tab.icon}</span>
+                                    <span className="shrink-0">{tab.icon}</span>
                                     <span className="t-p font-medium">{tab.label}</span>
                                 </div>
                                 <div className="h-[2px] rounded-full overflow-hidden" style={{ background: "#3E286F" }}>
@@ -219,17 +219,14 @@ export default function FeaturesTabs() {
                                                         />
                                                     </figure>
 
-                                                    <figure
-                                                        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-[2] pointer-events-none"
-                                                        style={{ width: "42%" }}
-                                                    >
+                                                    <figure className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-2 pointer-events-none" style={{ width: "42%" }}>
                                                         <div className="w-full text-center text-white-100 text-[clamp(24px,4vw,48px)] leading-none" style={{ fontFamily: "var(--font-brand)" }}>
                                                             Adray
                                                         </div>
                                                     </figure>
 
                                                     <figure
-                                                        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-[1] rounded-full animate-rotate"
+                                                        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-1 rounded-full animate-rotate"
                                                         style={{
                                                             width: "58%",
                                                             aspectRatio: "1 / 1",
@@ -252,17 +249,33 @@ export default function FeaturesTabs() {
                                             </div>
                                         ) : (
                                             <>
-                                                {/* eslint-disable-next-line @next/next/no-img-element */}
-                                                <img
-                                                    src={tab.image}
-                                                    alt={tab.title}
-                                                    className="w-full h-auto rounded-2xl"
-                                                    style={{
-                                                        filter: "sepia(1) hue-rotate(230deg) saturate(2)",
-                                                        maskImage: "linear-gradient(90deg, transparent 0%, black 15%, black 100%)",
-                                                        WebkitMaskImage: "linear-gradient(90deg, transparent 0%, black 15%, black 100%)",
-                                                    }}
-                                                />
+                                                {tab.image.toLowerCase().endsWith(".webm") ? (
+                                                    <video
+                                                        src={tab.image}
+                                                        autoPlay
+                                                        loop
+                                                        muted
+                                                        playsInline
+                                                        className="w-full h-auto rounded-2xl"
+                                                        style={{
+                                                            filter: "sepia(1) hue-rotate(230deg) saturate(2)",
+                                                            maskImage: "linear-gradient(90deg, transparent 0%, black 15%, black 100%)",
+                                                            WebkitMaskImage: "linear-gradient(90deg, transparent 0%, black 15%, black 100%)",
+                                                        }}
+                                                    />
+                                                ) : (
+                                                    // eslint-disable-next-line @next/next/no-img-element
+                                                    <img
+                                                        src={tab.image}
+                                                        alt={tab.title}
+                                                        className="w-full h-auto rounded-2xl"
+                                                        style={{
+                                                            filter: "sepia(1) hue-rotate(230deg) saturate(2)",
+                                                            maskImage: "linear-gradient(90deg, transparent 0%, black 15%, black 100%)",
+                                                            WebkitMaskImage: "linear-gradient(90deg, transparent 0%, black 15%, black 100%)",
+                                                        }}
+                                                    />
+                                                )}
                                             </>
                                         )}
                                     </div>
