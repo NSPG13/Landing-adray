@@ -52,3 +52,5 @@ Open [http://localhost:3000](http://localhost:3000).
 npm run build
 npm start
 ```
+
+Chore: tiny non-functional change for commit test.
