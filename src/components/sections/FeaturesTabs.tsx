@@ -21,7 +21,7 @@ const tabs = [
             "Your platforms report what they want you to see. Adray computes what\u2019s true \u2014 ROAS on net revenue, blended CAC against verified new customers, anomaly flags, and campaign-level truth. Structured for AI to read.",
         tags: ["Structured", "Normalized", "Compressed", "AI-Ready"],
         cta: { label: "Get Started", href: "/pricing" },
-        image: "/images/adray-analytics.png",
+        image: "/Connect.png",
     },
     {
         id: "normalized",
@@ -163,7 +163,18 @@ export default function FeaturesTabs() {
                                 ref={cardRefs[i]}
                                 style={{ x: xs[i], opacity: os[i] }}
                             >
-                                <div className="card p-6 md:p-8 flex flex-col md:flex-row gap-8 items-start">
+                                <div
+                                    className="card p-6 md:p-8 flex flex-col md:flex-row gap-8 items-start"
+                                    style={tab.id === "precomputed"
+                                        ? {
+                                            backgroundImage:
+                                                "linear-gradient(90deg, rgba(8,7,13,0.92) 0%, rgba(8,7,13,0.76) 35%, rgba(8,7,13,0.2) 62%, rgba(8,7,13,0.08) 100%), url('/Connect.png')",
+                                            backgroundSize: "cover",
+                                            backgroundPosition: "center",
+                                            backgroundRepeat: "no-repeat",
+                                        }
+                                        : undefined}
+                                >
                                     <div className="flex-1">
                                         <h3 className="t-h4 text-white-100 mb-3">{brandify(tab.title)}</h3>
                                         <p className="t-p text-ad-muted mb-6">{brandify(tab.description)}</p>
@@ -247,6 +258,8 @@ export default function FeaturesTabs() {
                                                     </figure>
                                                 </div>
                                             </div>
+                                        ) : tab.id === "precomputed" ? (
+                                            <div className="hidden md:block w-full h-full min-h-[260px]" />
                                         ) : (
                                             <>
                                                 {tab.image.toLowerCase().endsWith(".webm") ? (
