@@ -8,26 +8,18 @@ import BlurRevealText from "@/components/ui/BlurRevealText";
 
 const footerLinks = {
     Navigation: [
-        { label: "Home", href: "/" },
-        { label: "About", href: "/about" },
-        { label: "Integration", href: "/integration" },
+        { label: "How It Works", href: "/#how-it-works" },
+        { label: "Pricing", href: "/pricing" },
+        { label: "For Agencies", href: "/agencies" },
         { label: "Contact", href: "/contact" },
     ],
     Documentation: [
-        { label: "Blogs", href: "/blog" },
-        { label: "Changelog", href: "/changelog" },
         { label: "Privacy Policy", href: "/privacy-policy" },
         { label: "Terms and Conditions", href: "/privacy-policy/terms-and-conditions" },
     ],
-    "Other Pages": [
-        { label: "Launching Soon", href: "/launching-soon" },
-        { label: "404", href: "/404" },
-    ],
     "Social Connect": [
         { label: "Instagram", href: "https://www.instagram.com/jitu.ux/" },
-        { label: "X / Twitter", href: "https://x.com/jituux" },
         { label: "LinkedIn", href: "https://www.linkedin.com/in/jitendra-raut/" },
-        { label: "Reddit", href: "https://www.reddit.com/" },
     ],
 };
 

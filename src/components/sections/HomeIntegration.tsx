@@ -73,8 +73,9 @@ export default function HomeIntegration() {
                 style={{
                     backgroundImage:
                         "url(https://framerusercontent.com/images/FMpJMmyNTqRd8oGYputAzs8cso.webp)",
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
+                    backgroundSize: "110% auto",
+                    backgroundRepeat: "no-repeat",
+                    backgroundPosition: "35% center",
                     filter: "sepia(1) hue-rotate(230deg) saturate(2)",
                 }}
             />
@@ -95,6 +96,7 @@ export default function HomeIntegration() {
                         title="Connect Everything, Analyze Anywhere."
                         subtitle={brandify("Adray connects your ad platforms and ecommerce store then reconciles and packs your data into a Signal you can use on any AI.")}
                         titleClassName="text-white-100"
+                        className="[&>div:first-child]:justify-center [&_.tag-line]:hidden"
                     />
                 </AnimatedSection>
 
