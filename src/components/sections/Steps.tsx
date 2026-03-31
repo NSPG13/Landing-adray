@@ -16,7 +16,7 @@ const steps = [
             "Account ready in under 30 seconds.",
             "Start connecting platforms immediately.",
         ],
-        image: "/1.svg",
+        image: "/Connect.zip%20-%202.png",
     },
     {
         number: "02",
