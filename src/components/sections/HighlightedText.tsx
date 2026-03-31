@@ -5,15 +5,20 @@ import Container from "@/components/ui/Container";
 import ScrollTextColor from "@/components/ui/ScrollTextColor";
 
 export default function HighlightedText() {
-    const [centerLogo, setCenterLogo] = React.useState<"openai" | "claude">("openai");
+    const centerLogos = [
+        { key: "openai", src: "/images/svg/chatgpt.svg", alt: "OpenAI" },
+        { key: "claude", src: "/claude.svg", alt: "Claude" },
+        { key: "gemini", src: "/images/svg/gemini.svg", alt: "Gemini" },
+    ] as const;
+    const [centerLogoIndex, setCenterLogoIndex] = React.useState(0);
 
     React.useEffect(() => {
         const interval = window.setInterval(() => {
-            setCenterLogo((prev) => (prev === "openai" ? "claude" : "openai"));
+            setCenterLogoIndex((prev) => (prev + 1) % centerLogos.length);
         }, 3000);
 
         return () => window.clearInterval(interval);
-    }, []);
+    }, [centerLogos.length]);
 
     return (
         <section className="py-20 relative">
@@ -53,8 +58,8 @@ export default function HighlightedText() {
                         >
                             {/* eslint-disable-next-line @next/next/no-img-element */}
                             <img
-                                src={centerLogo === "openai" ? "/images/svg/chatgpt.svg" : "/claude.svg"}
-                                alt={centerLogo === "openai" ? "OpenAI" : "Claude"}
+                                src={centerLogos[centerLogoIndex].src}
+                                alt={centerLogos[centerLogoIndex].alt}
                                 className="h-8 w-8 object-contain invert brightness-0 md:h-10 md:w-10"
                             />
                         </div>
