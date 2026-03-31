@@ -5,6 +5,16 @@ import Container from "@/components/ui/Container";
 import ScrollTextColor from "@/components/ui/ScrollTextColor";
 
 export default function HighlightedText() {
+    const [centerLogo, setCenterLogo] = React.useState<"openai" | "claude">("openai");
+
+    React.useEffect(() => {
+        const interval = window.setInterval(() => {
+            setCenterLogo((prev) => (prev === "openai" ? "claude" : "openai"));
+        }, 3000);
+
+        return () => window.clearInterval(interval);
+    }, []);
+
     return (
         <section className="py-20 relative">
             <Container className="flex flex-col lg:flex-row items-center gap-16">
@@ -43,8 +53,8 @@ export default function HighlightedText() {
                         >
                             {/* eslint-disable-next-line @next/next/no-img-element */}
                             <img
-                                src="/images/svg/chatgpt.svg"
-                                alt="OpenAI"
+                                src={centerLogo === "openai" ? "/images/svg/chatgpt.svg" : "/claude.svg"}
+                                alt={centerLogo === "openai" ? "OpenAI" : "Claude"}
                                 className="h-8 w-8 object-contain invert brightness-0 md:h-10 md:w-10"
                             />
                         </div>
