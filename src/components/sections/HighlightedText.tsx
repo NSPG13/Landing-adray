@@ -1,38 +1,10 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
 import Container from "@/components/ui/Container";
 import ScrollTextColor from "@/components/ui/ScrollTextColor";
 
-const toolLogos = [
-    { name: "ChatGPT", src: "/images/svg/chatgpt.svg" },
-    { name: "Claude", src: "/claude-app-icon.webp" },
-    { name: "Gemini", src: "/images/svg/gemini.svg" },
-    { name: "Copilot", src: "/images/svg/copilot.svg" },
-    { name: "Grok", src: "/images/svg/grok.svg" },
-    { name: "DeepSeek", src: "/images/svg/deepseek.svg" },
-] as const;
-
 export default function HighlightedText() {
-    const rotatingLogos = ["ChatGPT", "Claude", "DeepSeek"] as const;
-    const [rotationStep, setRotationStep] = React.useState(0);
-
-    React.useEffect(() => {
-        const interval = window.setInterval(() => {
-            setRotationStep((prev) => (prev + 1) % rotatingLogos.length);
-        }, 1200);
-
-        return () => window.clearInterval(interval);
-    }, [rotatingLogos.length]);
-
-    const getRotatingLogo = (name: string) => {
-        const idx = rotatingLogos.indexOf(name as (typeof rotatingLogos)[number]);
-        if (idx === -1) return null;
-        const targetName = rotatingLogos[(idx + rotationStep) % rotatingLogos.length];
-        return toolLogos.find((logo) => logo.name === targetName) ?? null;
-    };
-
     return (
         <section className="py-20 relative">
             <Container className="flex flex-col lg:flex-row items-center gap-16">
@@ -60,69 +32,20 @@ export default function HighlightedText() {
                         className="absolute inset-0 w-full h-full object-contain animate-rotate"
                         style={{ animationDuration: "8s", filter: "brightness(1.33) sepia(1) hue-rotate(230deg) saturate(2)" }}
                     />
-                    {/* Tool logos inside the disk */}
                     <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="relative w-[260px] h-[260px] md:w-[300px] md:h-[300px]">
-                            {/* soft glass base */}
-                            <div
-                                className="absolute inset-0 rounded-full"
-                                style={{
-                                    background:
-                                        "radial-gradient(circle at 35% 30%, rgba(255,255,255,0.14) 0%, rgba(255,255,255,0.06) 35%, rgba(0,0,0,0.0) 70%)",
-                                    boxShadow: "0 20px 60px rgba(0,0,0,0.25) inset",
-                                }}
-                            />
-
-                            {toolLogos.map((logo, i) => {
-                                const rotatingLogo = getRotatingLogo(logo.name);
-                                const displayedLogo = rotatingLogo ?? logo;
-                                const count = toolLogos.length;
-                                const angle = (i / count) * Math.PI * 2 - Math.PI / 2;
-                                const r = 92; // intentionally huge spacing for visual confirmation
-                                const x = Math.cos(angle) * r;
-                                const y = Math.sin(angle) * r;
-
-                                return (
-                                    <motion.div
-                                        key={logo.name}
-                                        className="absolute left-1/2 top-1/2"
-                                        style={{ transform: `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))` }}
-                                        initial={{ opacity: 0, scale: 0.85 }}
-                                        whileInView={{ opacity: 1, scale: 1 }}
-                                        viewport={{ once: true, amount: 0.6 }}
-                                        transition={{ duration: 0.5, delay: i * 0.06 }}
-                                    >
-                                        <div
-                                            className="w-20 h-20 md:w-24 md:h-24 rounded-full flex items-center justify-center border border-white/10"
-                                            style={{
-                                                background: "rgba(255,255,255,0.06)",
-                                                backdropFilter: "blur(10px)",
-                                                WebkitBackdropFilter: "blur(10px)",
-                                            }}
-                                        >
-                                            {/* eslint-disable-next-line @next/next/no-img-element */}
-                                            <img
-                                                src={displayedLogo.src}
-                                                alt={displayedLogo.name}
-                                                className="w-12 h-12 md:w-14 md:h-14 object-contain"
-                                            />
-                                        </div>
-                                    </motion.div>
-                                );
-                            })}
-
-                            {/* center dot */}
-                            <motion.div
-                                className="absolute left-1/2 top-1/2 w-9 h-9 md:w-10 md:h-10 rounded-full -translate-x-1/2 -translate-y-1/2 border border-white/10"
-                                style={{
-                                    background: "rgba(255,255,255,0.05)",
-                                    backdropFilter: "blur(10px)",
-                                    WebkitBackdropFilter: "blur(10px)",
-                                }}
-                                initial={{ opacity: 0, scale: 0.9 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                viewport={{ once: true, amount: 0.6 }}
-                                transition={{ duration: 0.55, delay: 0.15 }}
+                        <div
+                            className="flex h-16 w-16 items-center justify-center rounded-full border border-white/10 md:h-20 md:w-20"
+                            style={{
+                                background: "rgba(0,0,0,0.35)",
+                                backdropFilter: "blur(8px)",
+                                WebkitBackdropFilter: "blur(8px)",
+                            }}
+                        >
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img
+                                src="/images/svg/chatgpt.svg"
+                                alt="OpenAI"
+                                className="h-8 w-8 object-contain invert brightness-0 md:h-10 md:w-10"
                             />
                         </div>
                     </div>
