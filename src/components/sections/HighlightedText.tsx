@@ -7,7 +7,7 @@ import ScrollTextColor from "@/components/ui/ScrollTextColor";
 
 const toolLogos = [
     { name: "ChatGPT", src: "/images/svg/chatgpt.svg" },
-    { name: "Claude", src: "/images/svg/claude.svg" },
+    { name: "Claude", src: "/claude-app-icon.webp" },
     { name: "Gemini", src: "/images/svg/gemini.svg" },
     { name: "Copilot", src: "/images/svg/copilot.svg" },
     { name: "Grok", src: "/images/svg/grok.svg" },
@@ -15,13 +15,31 @@ const toolLogos = [
 ] as const;
 
 export default function HighlightedText() {
+    const rotatingLogos = ["ChatGPT", "Claude", "DeepSeek"] as const;
+    const [rotationStep, setRotationStep] = React.useState(0);
+
+    React.useEffect(() => {
+        const interval = window.setInterval(() => {
+            setRotationStep((prev) => (prev + 1) % rotatingLogos.length);
+        }, 1200);
+
+        return () => window.clearInterval(interval);
+    }, [rotatingLogos.length]);
+
+    const getRotatingLogo = (name: string) => {
+        const idx = rotatingLogos.indexOf(name as (typeof rotatingLogos)[number]);
+        if (idx === -1) return null;
+        const targetName = rotatingLogos[(idx + rotationStep) % rotatingLogos.length];
+        return toolLogos.find((logo) => logo.name === targetName) ?? null;
+    };
+
     return (
         <section className="py-20 relative">
             <Container className="flex flex-col lg:flex-row items-center gap-16">
                 {/* Text — scroll-animated color */}
                 <div className="flex-1">
                     <ScrollTextColor
-                        content="Your AI chat is now your marketing analytics. No new tool to learn. No dashboard to log into. Just your data — reconciled, packed, and ready — wherever you already work."
+                        content="Your AI chat is now your marketing analytics. No new tool to learn. No dashboard to log into. Just your data, reconciled, packed, and ready, wherever you already work."
                         colorStart="#3E286F"
                         colorEnd="#FFFFFF"
                         trigger="layer-in-view"
@@ -44,7 +62,7 @@ export default function HighlightedText() {
                     />
                     {/* Tool logos inside the disk */}
                     <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="relative w-[168px] h-[168px] md:w-[196px] md:h-[196px]">
+                        <div className="relative w-[260px] h-[260px] md:w-[300px] md:h-[300px]">
                             {/* soft glass base */}
                             <div
                                 className="absolute inset-0 rounded-full"
@@ -56,9 +74,11 @@ export default function HighlightedText() {
                             />
 
                             {toolLogos.map((logo, i) => {
+                                const rotatingLogo = getRotatingLogo(logo.name);
+                                const displayedLogo = rotatingLogo ?? logo;
                                 const count = toolLogos.length;
                                 const angle = (i / count) * Math.PI * 2 - Math.PI / 2;
-                                const r = 68; // px
+                                const r = 92; // intentionally huge spacing for visual confirmation
                                 const x = Math.cos(angle) * r;
                                 const y = Math.sin(angle) * r;
 
@@ -73,7 +93,7 @@ export default function HighlightedText() {
                                         transition={{ duration: 0.5, delay: i * 0.06 }}
                                     >
                                         <div
-                                            className="w-10 h-10 md:w-11 md:h-11 rounded-full flex items-center justify-center border border-white/10"
+                                            className="w-20 h-20 md:w-24 md:h-24 rounded-full flex items-center justify-center border border-white/10"
                                             style={{
                                                 background: "rgba(255,255,255,0.06)",
                                                 backdropFilter: "blur(10px)",
@@ -81,7 +101,11 @@ export default function HighlightedText() {
                                             }}
                                         >
                                             {/* eslint-disable-next-line @next/next/no-img-element */}
-                                            <img src={logo.src} alt={logo.name} className="w-6 h-6 object-contain" />
+                                            <img
+                                                src={displayedLogo.src}
+                                                alt={displayedLogo.name}
+                                                className="w-12 h-12 md:w-14 md:h-14 object-contain"
+                                            />
                                         </div>
                                     </motion.div>
                                 );

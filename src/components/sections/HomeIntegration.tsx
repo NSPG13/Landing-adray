@@ -19,9 +19,19 @@ const integrationIcons = [
     {
         label: "Anthropic",
         svg: (
-            <svg viewBox="0 0 24 24" width="36" height="36" fill="white">
-                <path d="M13.83 2H16.6l5.4 20h-2.77l-5.4-20Zm-3.66 0H7.4L2 22h2.77l1.35-5.03h6.5L13.98 22h2.77L11.35 2h-1.18Zm-.6 12.22L12 5.97l2.43 8.25H9.57Z" />
-            </svg>
+            <div
+                className="h-9 w-9 bg-white"
+                style={{
+                    maskImage: "url('/claude.svg')",
+                    WebkitMaskImage: "url('/claude.svg')",
+                    maskRepeat: "no-repeat",
+                    WebkitMaskRepeat: "no-repeat",
+                    maskPosition: "center",
+                    WebkitMaskPosition: "center",
+                    maskSize: "contain",
+                    WebkitMaskSize: "contain",
+                }}
+            />
         ),
     },
     {
@@ -41,17 +51,26 @@ const integrationIcons = [
     {
         label: "xAI Grok",
         svg: (
-            <svg viewBox="0 0 24 24" width="36" height="36" fill="white">
-                <path d="m3 2 7.5 10L3 22h2.25l6.75-9 6.75 9H21l-7.5-10L21 2h-2.25L12 11 5.25 2H3Z" />
-            </svg>
+            // eslint-disable-next-line @next/next/no-img-element
+            <img src="/icongrok.webp" alt="xAI Grok" className="h-9 w-9 object-contain" />
         ),
     },
     {
-        label: "Perplexity",
+        label: "DeepSeek",
         svg: (
-            <svg viewBox="0 0 24 24" width="36" height="36" fill="white">
-                <path d="M12 1v7.5H5.5L12 1ZM12 1l6.5 7.5H12V1ZM4 9.5h7v7L4 9.5ZM13 9.5l7 7v-7h-7ZM4 9.5v7l7 7v-7L4 9.5ZM13 16.5v7l7-7h-7Z" />
-            </svg>
+            <div
+                className="h-9 w-9 bg-white"
+                style={{
+                    maskImage: "url('/deepseek-icon.svg')",
+                    WebkitMaskImage: "url('/deepseek-icon.svg')",
+                    maskRepeat: "no-repeat",
+                    WebkitMaskRepeat: "no-repeat",
+                    maskPosition: "center",
+                    WebkitMaskPosition: "center",
+                    maskSize: "contain",
+                    WebkitMaskSize: "contain",
+                }}
+            />
         ),
     },
     {

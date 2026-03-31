@@ -11,8 +11,8 @@ export default function PrivacyPolicyPage() {
     return (
         <section className="pt-32 pb-24">
             <Container>
-                <h1 className="t-h2 text-white-90 mb-4">Privacy Policy</h1>
-                <p className="t-p text-ad-muted mb-8">
+                <h1 className="t-h2 text-white-95 mb-4">Privacy Policy</h1>
+                <p className="t-p text-white-80 mb-8">
                     This policy is embedded directly from Termly.
                 </p>
 
