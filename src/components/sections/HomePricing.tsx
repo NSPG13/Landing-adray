@@ -7,7 +7,16 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 
-const plans = [
+const plans: Array<{
+    name: string;
+    monthlyPrice: number | null;
+    subtitle: string | null;
+    features: string[];
+    trust: string | null;
+    cta: string;
+    ctaHref: string;
+    bgImage: string;
+}> = [
     {
         name: "Free",
         monthlyPrice: 0,
@@ -22,6 +31,7 @@ const plans = [
         ],
         trust: null,
         cta: "Get Started Free",
+        ctaHref: "/login.html",
         bgImage:
             "https://framerusercontent.com/images/XXSw2JqvtikgOcaexTTozzVsO54.webp",
     },
@@ -38,6 +48,7 @@ const plans = [
         ],
         trust: null,
         cta: "Start Pro",
+        ctaHref: "/contact",
         bgImage:
             "https://framerusercontent.com/images/4fEwCxLuKCW6ZaczMzoeCElmzBg.webp",
     },
@@ -54,6 +65,7 @@ const plans = [
         ],
         trust: null,
         cta: "Talk to Us",
+        ctaHref: "/contact",
         bgImage:
             "https://framerusercontent.com/images/K53jEm1inmwk6lcSyDVU5W7rvLM.webp",
     },
@@ -123,7 +135,7 @@ export default function HomePricing() {
                                     <div className={`${plan.monthlyPrice === null ? "mt-8" : "mt-6"} mb-8`}>
                                         <Button
                                             variant="primary"
-                                            href="/contact"
+                                            href={plan.ctaHref}
                                             className="w-full whitespace-nowrap min-h-[48px]"
                                         >
                                             {plan.cta}

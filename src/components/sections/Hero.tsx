@@ -129,7 +129,7 @@ export default function Hero() {
                         transition={{ duration: 0.7, delay: 0.5, ease }}
                         className="flex flex-col items-center gap-4"
                     >
-                        <Button variant="primary" size="lg" href="/pricing">
+                        <Button variant="primary" size="lg" href="/login.html">
                             Get Started Free
                         </Button>
                         <p className="t-p-sm text-white-70">Free forever · No credit card · Works on any website · Now live</p>

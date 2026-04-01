@@ -64,7 +64,7 @@ export default function Exceptionalities() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {cards.map((card, i) => (
                         <AnimatedSection key={card.title} delay={i * 0.1}>
-                            <Card className={`h-full relative overflow-hidden ${i === 0 ? "min-h-[16.25rem]" : "min-h-[23.75rem]"}`}>
+                            <Card className={`h-full relative overflow-hidden ${i === 0 ? "min-h-65" : "min-h-95"}`}>
                                 {/* Background image */}
                                 {/* eslint-disable-next-line @next/next/no-img-element */}
                                 <img
@@ -702,7 +702,7 @@ export default function Exceptionalities() {
                             No new UI. No weekly logins. No clunky integrations. Your AI does the work.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Button variant="primary" href="/pricing">
+                            <Button variant="primary" href="/login.html">
                                 Get Started Free
                             </Button>
                             <Button variant="ghost" href="/contact">

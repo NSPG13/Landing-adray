@@ -10,7 +10,15 @@ import Button from "@/components/ui/Button";
 import { brandify } from "@/lib/utils";
 
 /* ── Plans ── */
-const plans = [
+const plans: Array<{
+    name: string;
+    monthlyPrice: number | null;
+    subtitle?: string;
+    features: string[];
+    trust: string | null;
+    bgImage: string;
+    ctaHref: string;
+}> = [
     {
         name: "Free",
         monthlyPrice: 0,
@@ -25,6 +33,7 @@ const plans = [
         trust: "850+ merchants connected",
         bgImage:
             "https://framerusercontent.com/images/XXSw2JqvtikgOcaexTTozzVsO54.webp",
+        ctaHref: "/login.html",
     },
     {
         name: "Pro",
@@ -40,6 +49,7 @@ const plans = [
         trust: "For growing brands",
         bgImage:
             "https://framerusercontent.com/images/4fEwCxLuKCW6ZaczMzoeCElmzBg.webp",
+        ctaHref: "/login.html",
     },
     {
         name: "Agent Stack",
@@ -55,6 +65,7 @@ const plans = [
         trust: null,
         bgImage:
             "https://framerusercontent.com/images/K53jEm1inmwk6lcSyDVU5W7rvLM.webp",
+        ctaHref: "/contact",
     },
 ];
 
@@ -253,7 +264,7 @@ export default function PricingPage() {
                                         )}
 
                                         <div className="mt-6 mb-8">
-                                            <Button variant="primary" href="/contact" className="w-full whitespace-nowrap min-h-[48px]">
+                                            <Button variant="primary" href={plan.ctaHref} className="w-full whitespace-nowrap min-h-[48px]">
                                                 Get Started
                                             </Button>
                                         </div>

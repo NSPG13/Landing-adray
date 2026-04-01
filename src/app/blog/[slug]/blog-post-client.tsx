@@ -65,7 +65,7 @@ export default function BlogPostClient() {
             <img
               src={post.image}
               alt={post.title}
-              className="w-full aspect-[2/1] object-cover"
+              className="w-full aspect-2/1 object-cover"
             />
           </motion.div>
         </Container>
