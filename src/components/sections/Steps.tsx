@@ -28,8 +28,7 @@ const steps = [
             "No code. No credentials to copy-paste.",
             "Your Signal starts building the moment your first source connects.",
         ],
-        image:
-            "/images/1.jpg",
+        image: "/images/Connect.zip%20-%201.png",
     },
     {
         number: "03",
