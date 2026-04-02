@@ -16,8 +16,7 @@ const steps = [
             "Account ready in under 30 seconds.",
             "Start connecting platforms immediately.",
         ],
-        image:
-            "/images/A - 2.png",
+        image: "/images/Connect.zip%20-%202.png",
     },
     {
         number: "02",
@@ -39,8 +38,7 @@ const steps = [
             "Attach it to Claude, ChatGPT, Gemini, or any AI you already use.",
             "Ask real questions. Get answers backed by reconciled data.",
         ],
-        image:
-            "/images/adraygpt.png",
+        image: "/images/Connect.zip%20-%204.png",
     },
 ];
 
