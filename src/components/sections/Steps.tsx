@@ -16,7 +16,7 @@ const steps = [
             "Account ready in under 30 seconds.",
             "Start connecting platforms immediately.",
         ],
-        image: "/Connect.zip%20-%202.png",
+        image: "/images/Connect.zip%20-%202.png",
     },
     {
         number: "02",
@@ -27,7 +27,7 @@ const steps = [
             "No code. No credentials to copy-paste.",
             "Your Signal starts building the moment your first source connects.",
         ],
-        image: "/2.svg",
+        image: "/images/Connect.zip%20-%201.png",
     },
     {
         number: "03",
@@ -38,7 +38,7 @@ const steps = [
             "Attach it to Claude, ChatGPT, Gemini, or any AI you already use.",
             "Ask real questions. Get answers backed by reconciled data.",
         ],
-        image: "/3.svg",
+        image: "/images/Connect.zip%20-%203.png",
     },
 ];
 

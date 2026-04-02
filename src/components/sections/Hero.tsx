@@ -25,7 +25,7 @@ const ease = [0.12, 0.23, 0.5, 1] as const;
 export default function Hero() {
     return (
         <section className="relative flex flex-col bg-black-100 pt-[100px] md:pt-[160px] pb-8 md:pb-10" style={{ gap: "25px" }}>
-            {/* ── Video Container — taller backdrop (video + frost + noise) ── */}
+            {/* ── Video container — fondo Pikaso (requiere media-src en CSP del servidor) ── */}
             <div
                 className="absolute top-0 left-0 right-0 overflow-hidden"
                 style={{
@@ -36,7 +36,7 @@ export default function Hero() {
                     WebkitMask: "linear-gradient(#000 0% 85.6929%, #0000 100%)",
                 }}
             >
-                {/* Layer 0 — video (forced into purple monochrome via filter chain) */}
+                {/* Layer 0 — vídeo (filtros púrpura como diseño) */}
                 <motion.video
                     autoPlay
                     loop
@@ -129,7 +129,7 @@ export default function Hero() {
                         transition={{ duration: 0.7, delay: 0.5, ease }}
                         className="flex flex-col items-center gap-4"
                     >
-                        <Button variant="primary" size="lg" href="/pricing">
+                        <Button variant="primary" size="lg" href="/login.html">
                             Get Started Free
                         </Button>
                         <p className="t-p-sm text-white-70">Free forever · No credit card · Works on any website · Now live</p>
@@ -155,7 +155,7 @@ export default function Hero() {
                 >
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
-                        src="/images/C - 1.png"
+                        src="/images/adray-dashboard-hero.png"
                         alt="Adray Dashboard"
                         className="w-full h-auto"
                         style={{ aspectRatio: "1.6036" }}

@@ -23,6 +23,7 @@ const interTight = Inter_Tight({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://adray.ai"),
   title: {
     default: "Adray — Marketing data analytics for the generative era.",
     template: "%s | Adray",
@@ -46,6 +47,8 @@ export const metadata: Metadata = {
       "Power your AI with your full marketing stack — Meta, Google, GA4, Shopify — packed into one secure, portable link.",
     type: "website",
     locale: "en_US",
+    url: "https://adray.ai",
+    siteName: "Adray",
   },
 };
 

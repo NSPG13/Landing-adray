@@ -142,7 +142,7 @@ export default function HomeIntegration() {
 
                 <AnimatedSection delay={0.3}>
                     <div className="text-center">
-                        <Button variant="primary" href="/integration">
+                        <Button variant="primary" href="/login.html">
                             Get Started Free
                         </Button>
                     </div>

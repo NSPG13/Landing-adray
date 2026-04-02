@@ -91,7 +91,7 @@ export default function AIForServicePage() {
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.7, delay: 0.4, ease }}
                     >
-                        <Button variant="primary" size="lg" href="/pricing">
+                        <Button variant="primary" size="lg" href="/login.html">
                             Get Started
                         </Button>
                     </motion.div>
@@ -148,7 +148,7 @@ export default function AIForServicePage() {
                                     >
                                         <Check
                                             size={18}
-                                            className="text-ad-primary flex-shrink-0 mt-0.5"
+                                            className="text-ad-primary shrink-0 mt-0.5"
                                         />
                                         {b}
                                     </li>

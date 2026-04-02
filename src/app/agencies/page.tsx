@@ -92,7 +92,7 @@ export default function AgenciesPage() {
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.7, delay: 0.4, ease }}
                     >
-                        <Button variant="primary" size="lg" href="/pricing">
+                        <Button variant="primary" size="lg" href="/login.html">
                             Get Started Free
                         </Button>
                         <Button variant="ghost" size="lg" href="/contact">
@@ -163,14 +163,14 @@ export default function AgenciesPage() {
                                     >
                                         <Check
                                             size={18}
-                                            className="text-ad-primary flex-shrink-0 mt-0.5"
+                                            className="text-ad-primary shrink-0 mt-0.5"
                                         />
                                         {point}
                                     </li>
                                 ))}
                             </ul>
                             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-                                <Button variant="primary" href="/pricing">
+                                <Button variant="primary" href="/login.html">
                                     Get Started Free
                                 </Button>
                                 <Button variant="ghost" href="/contact">
@@ -215,7 +215,7 @@ export default function AgenciesPage() {
                             Install free. Connect in 2 minutes. Ask your first real question.
                         </p>
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                            <Button variant="primary" size="lg" href="/pricing">
+                            <Button variant="primary" size="lg" href="/login.html">
                                 Get Started Free
                             </Button>
                             <Button variant="ghost" size="lg" href="/contact">
