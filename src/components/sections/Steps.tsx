@@ -38,7 +38,7 @@ const steps = [
             "Attach it to Claude, ChatGPT, Gemini, or any AI you already use.",
             "Ask real questions. Get answers backed by reconciled data.",
         ],
-        image: "/images/Connect.zip%20-%204.png",
+        image: "/images/Connect.zip%20-%203.png",
     },
 ];
 

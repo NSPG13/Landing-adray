@@ -21,7 +21,7 @@ const tabs = [
             "Your platforms report what they want you to see. Adray computes what\u2019s true \u2014 ROAS on net revenue, blended CAC against verified new customers, anomaly flags, and campaign-level truth. Structured for AI to read.",
         tags: ["Structured", "Normalized", "Compressed", "AI-Ready"],
         cta: { label: "Get Started", href: "/login.html" },
-        image: "/images/adray-analytics.png",
+        image: "/images/Connect.zip%20-%204.png",
     },
     {
         id: "normalized",
@@ -163,6 +163,54 @@ export default function FeaturesTabs() {
                                 ref={cardRefs[i]}
                                 style={{ x: xs[i], opacity: os[i] }}
                             >
+                                {tab.id === "precomputed" ? (
+                                    /* Altura de la tarjeta = solo el contenido; la imagen es fondo full-bleed (inset-0) para no dejar hueco abajo */
+                                    <div className="card relative overflow-hidden p-6 md:p-8">
+                                        <div className="pointer-events-none absolute inset-0 z-0" aria-hidden>
+                                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                                            <img
+                                                src={tab.image}
+                                                alt=""
+                                                className="absolute inset-0 h-full w-full object-cover object-center md:object-right"
+                                                decoding="async"
+                                            />
+                                            <div
+                                                className="absolute inset-0 md:hidden"
+                                                style={{
+                                                    background:
+                                                        "linear-gradient(180deg, rgba(16,12,18,0.94) 0%, rgba(16,12,18,0.72) 40%, rgba(16,12,18,0.35) 70%, rgba(16,12,18,0.1) 100%)",
+                                                }}
+                                            />
+                                            <div
+                                                className="absolute inset-0 hidden md:block"
+                                                style={{
+                                                    background:
+                                                        "linear-gradient(90deg, #100C12 0%, rgba(16,12,18,0.95) 36%, rgba(16,12,18,0.5) 54%, rgba(16,12,18,0.12) 72%, rgba(16,12,18,0) 92%)",
+                                                }}
+                                            />
+                                        </div>
+                                        <div className="relative z-10 min-w-0 max-w-full md:max-w-[min(100%,480px)] lg:max-w-[min(100%,50%)]">
+                                            <h3 className="t-h4 text-white-100 mb-3">{brandify(tab.title)}</h3>
+                                            <p className="t-p text-ad-muted mb-6">{brandify(tab.description)}</p>
+                                            <div className="flex flex-wrap gap-2 mb-6">
+                                                {tab.tags.map((tag) => (
+                                                    <span
+                                                        key={tag}
+                                                        className="px-3 py-1.5 rounded-full t-p-sm bg-white-7 text-white-90 border border-ad-border"
+                                                    >
+                                                        {tag}
+                                                    </span>
+                                                ))}
+                                            </div>
+                                            <a
+                                                href={tab.cta.href}
+                                                className="inline-flex items-center gap-2 text-gradient t-p-sm font-semibold hover:opacity-80 transition-opacity"
+                                            >
+                                                {tab.cta.label} &rarr;
+                                            </a>
+                                        </div>
+                                    </div>
+                                ) : (
                                 <div className="card p-6 md:p-8 flex flex-col md:flex-row gap-8 items-start">
                                     <div className="flex-1">
                                         <h3 className="t-h4 text-white-100 mb-3">{brandify(tab.title)}</h3>
@@ -280,6 +328,7 @@ export default function FeaturesTabs() {
                                         )}
                                     </div>
                                 </div>
+                                )}
                             </motion.div>
                         ))}
                     </div>
