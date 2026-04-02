@@ -33,7 +33,7 @@ const plans: Array<{
         trust: "850+ merchants connected",
         bgImage:
             "https://framerusercontent.com/images/XXSw2JqvtikgOcaexTTozzVsO54.webp",
-        ctaHref: "/login.html",
+        ctaHref: "/login",
     },
     {
         name: "Pro",
@@ -49,7 +49,7 @@ const plans: Array<{
         trust: "For growing brands",
         bgImage:
             "https://framerusercontent.com/images/4fEwCxLuKCW6ZaczMzoeCElmzBg.webp",
-        ctaHref: "/login.html",
+        ctaHref: "/login",
     },
     {
         name: "Agent Stack",

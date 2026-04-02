@@ -68,7 +68,7 @@ export default function Navbar() {
 
                     {/* CTA button */}
                     <a
-                        href="/login.html"
+                        href="/login"
                         className="inline-flex items-center justify-center px-5 py-2.5 t-p-sm font-semibold rounded-[15px] bg-black-100 text-white-100 border border-white-40 glow-btn hover:scale-105 transition-transform duration-300"
                     >
                         Get Started Free
@@ -126,7 +126,7 @@ export default function Navbar() {
                         </Link>
                     ))}
                     <a
-                        href="/login.html"
+                        href="/login"
                         className="mt-2 inline-flex items-center justify-center px-6 py-3 t-p-sm font-semibold rounded-[15px] bg-black-100 text-white-100 border border-white-40 glow-btn"
                     >
                         Get Started Free

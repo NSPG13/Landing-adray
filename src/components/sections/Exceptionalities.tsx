@@ -702,7 +702,7 @@ export default function Exceptionalities() {
                             No new UI. No weekly logins. No clunky integrations. Your AI does the work.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Button variant="primary" href="/login.html">
+                            <Button variant="primary" href="/login">
                                 Get Started Free
                             </Button>
                             <Button variant="ghost" href="/contact">

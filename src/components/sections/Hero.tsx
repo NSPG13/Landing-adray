@@ -108,7 +108,7 @@ export default function Hero() {
                                 transition={{ duration: 0.8, delay: 0.1, ease }}
                             >
                                 <h1 className="t-h1 text-white-100 text-center max-w-[900px] text-[clamp(1.9rem,4.6vw,3.7rem)]">
-                                    <BlurRevealText text="" startDelay={0.15} />
+                                    <BlurRevealText text="The first marketing data system built for AI" startDelay={0.15} />
                                 </h1>
                             </motion.div>
 
@@ -129,7 +129,7 @@ export default function Hero() {
                         transition={{ duration: 0.7, delay: 0.5, ease }}
                         className="flex flex-col items-center gap-4"
                     >
-                        <Button variant="primary" size="lg" href="/login.html">
+                        <Button variant="primary" size="lg" href="/login">
                             Get Started Free
                         </Button>
                         <p className="t-p-sm text-white-70">Free forever · No credit card · Works on any website · Now live</p>
