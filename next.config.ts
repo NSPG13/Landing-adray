@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 import path from "path";
 
+/** Debe coincidir con `pub()` en `src/lib/paths.ts` y con el deploy en adray.ai */
 const landingBasePath = "/landing";
 
 const nextConfig: NextConfig = {
@@ -10,7 +11,8 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
 
-  // La landing se sirve bajo /landing (Next dev + estático en monorepo vía public/landing)
+  // Export en `public/landing/`. En adray.ai: `express.static(public)` resuelve `/landing/_next/*`
+  // y la home pública sigue en `/` (ver backend/index.js → LANDING_PUBLIC).
   basePath: landingBasePath,
   assetPrefix: `${landingBasePath}/`,
 

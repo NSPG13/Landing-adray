@@ -68,13 +68,21 @@ export default function Navbar() {
                         ))}
                     </nav>
 
-                    {/* CTA button */}
-                    <a
-                        href="/login"
-                        className="inline-flex items-center justify-center px-5 py-2.5 t-p-sm font-semibold rounded-[15px] bg-black-100 text-white-100 border border-white-40 glow-btn hover:scale-105 transition-transform duration-300"
-                    >
-                        Get Started Free
-                    </a>
+                    {/* CTA buttons */}
+                    <div className="flex items-center gap-3 shrink-0">
+                        <a
+                            href="/login"
+                            className="inline-flex items-center justify-center px-5 py-2.5 t-p-sm font-semibold rounded-[15px] text-white-90 border border-white-40 hover:bg-white/10 transition-colors duration-200"
+                        >
+                            Login
+                        </a>
+                        <a
+                            href="/login"
+                            className="inline-flex items-center justify-center px-5 py-2.5 t-p-sm font-semibold rounded-[15px] bg-black-100 text-white-100 border border-white-40 glow-btn hover:scale-105 transition-transform duration-300"
+                        >
+                            Get Started Free
+                        </a>
+                    </div>
                 </div>
 
                 {/* Mobile */}
@@ -129,7 +137,15 @@ export default function Navbar() {
                     ))}
                     <a
                         href="/login"
-                        className="mt-2 inline-flex items-center justify-center px-6 py-3 t-p-sm font-semibold rounded-[15px] bg-black-100 text-white-100 border border-white-40 glow-btn"
+                        onClick={() => setMobileOpen(false)}
+                        className="mt-2 inline-flex items-center justify-center px-6 py-3 t-p-sm font-semibold rounded-[15px] text-white-90 border border-white-40"
+                    >
+                        Login
+                    </a>
+                    <a
+                        href="/login"
+                        onClick={() => setMobileOpen(false)}
+                        className="inline-flex items-center justify-center px-6 py-3 t-p-sm font-semibold rounded-[15px] bg-black-100 text-white-100 border border-white-40 glow-btn"
                     >
                         Get Started Free
                     </a>
