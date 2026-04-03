@@ -6,6 +6,10 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import { brandify } from "@/lib/utils";
+import { pub } from "@/lib/paths";
+
+const claudeMaskUrl = pub("/images/svg/claude.svg");
+const deepseekMaskUrl = pub("/deepseek-icon.svg");
 
 const integrationIcons = [
     {
@@ -22,8 +26,8 @@ const integrationIcons = [
             <div
                 className="h-9 w-9 bg-white"
                 style={{
-                    maskImage: "url('/claude.svg')",
-                    WebkitMaskImage: "url('/claude.svg')",
+                    maskImage: `url('${claudeMaskUrl}')`,
+                    WebkitMaskImage: `url('${claudeMaskUrl}')`,
                     maskRepeat: "no-repeat",
                     WebkitMaskRepeat: "no-repeat",
                     maskPosition: "center",
@@ -52,7 +56,7 @@ const integrationIcons = [
         label: "xAI Grok",
         svg: (
             // eslint-disable-next-line @next/next/no-img-element
-            <img src="/icongrok.webp" alt="xAI Grok" className="h-9 w-9 object-contain" />
+            <img src={pub("/images/svg/grok.svg")} alt="xAI Grok" className="h-9 w-9 object-contain" />
         ),
     },
     {
@@ -61,8 +65,8 @@ const integrationIcons = [
             <div
                 className="h-9 w-9 bg-white"
                 style={{
-                    maskImage: "url('/deepseek-icon.svg')",
-                    WebkitMaskImage: "url('/deepseek-icon.svg')",
+                    maskImage: `url('${deepseekMaskUrl}')`,
+                    WebkitMaskImage: `url('${deepseekMaskUrl}')`,
                     maskRepeat: "no-repeat",
                     WebkitMaskRepeat: "no-repeat",
                     maskPosition: "center",
@@ -106,7 +110,7 @@ export default function HomeIntegration() {
                         tagIcon={
                             // eslint-disable-next-line @next/next/no-img-element
                             <img
-                                src="/images/svg/A2kRK4SXq8SQGtD1igJ3QJKmUH4.svg"
+                                src={pub("/images/svg/A2kRK4SXq8SQGtD1igJ3QJKmUH4.svg")}
                                 alt=""
                                 width={24}
                                 height={24}

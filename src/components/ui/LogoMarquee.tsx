@@ -2,22 +2,23 @@
 
 import React from "react";
 import { cn } from "@/lib/utils";
+import { pub } from "@/lib/paths";
 
 interface LogoMarqueeProps {
     className?: string;
 }
 
 const logos = [
-    { name: "Meta Ads", icon: "/images/svg/meta.svg" },
-    { name: "Google Ads", icon: "/images/svg/google-ads.svg" },
-    { name: "Google Analytics", icon: "/images/svg/ga4.svg" },
-    { name: "Shopify", icon: "/images/svg/shopify.svg" },
-    { name: "ChatGPT", icon: "/images/svg/chatgpt.svg" },
-    { name: "Claude", icon: "/images/svg/claude.svg" },
-    { name: "Gemini", icon: "/images/svg/gemini.svg" },
-    { name: "Copilot", icon: "/images/svg/copilot.svg" },
-    { name: "Grok", icon: "/images/svg/grok.svg" },
-    { name: "DeepSeek", icon: "/images/svg/deepseek.svg" },
+    { name: "Meta Ads", icon: pub("/images/svg/meta.svg") },
+    { name: "Google Ads", icon: pub("/images/svg/google-ads.svg") },
+    { name: "Google Analytics", icon: pub("/images/svg/ga4.svg") },
+    { name: "Shopify", icon: pub("/images/svg/shopify.svg") },
+    { name: "ChatGPT", icon: pub("/images/svg/chatgpt.svg") },
+    { name: "Claude", icon: pub("/images/svg/claude.svg") },
+    { name: "Gemini", icon: pub("/images/svg/gemini.svg") },
+    { name: "Copilot", icon: pub("/images/svg/copilot.svg") },
+    { name: "Grok", icon: pub("/images/svg/grok.svg") },
+    { name: "DeepSeek", icon: pub("/images/svg/deepseek.svg") },
 ];
 
 export default function LogoMarquee({ className }: LogoMarqueeProps) {

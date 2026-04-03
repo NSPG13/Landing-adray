@@ -5,38 +5,7 @@
    UlmGrotesk reserved for "Adray" brand text
    ═══════════════════════════════════════════ */
 
-/* UlmGrotesk — registered at all weights used on site (single Bold file) */
-@font-face {
-  font-family: "UlmGrotesk";
-  src: url("/fonts/UlmGrotesk-Bold.otf") format("opentype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "UlmGrotesk";
-  src: url("/fonts/UlmGrotesk-Bold.otf") format("opentype");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "UlmGrotesk";
-  src: url("/fonts/UlmGrotesk-Bold.otf") format("opentype");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "UlmGrotesk";
-  src: url("/fonts/UlmGrotesk-Bold.otf") format("opentype");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
+/* UlmGrotesk: @font-face in layout.tsx (rutas con basePath /landing) */
 
 :root {
   /* ── Font Tokens — Inter as default, UlmGrotesk only for "Adray" brand ── */

@@ -3,13 +3,15 @@
 import React from "react";
 import Container from "@/components/ui/Container";
 import ScrollTextColor from "@/components/ui/ScrollTextColor";
+import { pub } from "@/lib/paths";
+
+const centerLogos = [
+    { key: "openai", src: pub("/images/svg/chatgpt.svg"), alt: "OpenAI" },
+    { key: "claude", src: pub("/images/svg/claude.svg"), alt: "Claude" },
+    { key: "gemini", src: pub("/images/svg/gemini.svg"), alt: "Gemini" },
+] as const;
 
 export default function HighlightedText() {
-    const centerLogos = [
-        { key: "openai", src: "/images/svg/chatgpt.svg", alt: "OpenAI" },
-        { key: "claude", src: "/claude.svg", alt: "Claude" },
-        { key: "gemini", src: "/images/svg/gemini.svg", alt: "Gemini" },
-    ] as const;
     const [centerLogoIndex, setCenterLogoIndex] = React.useState(0);
 
     React.useEffect(() => {

@@ -5,6 +5,7 @@ import { motion, useScroll, useTransform, useMotionValueEvent } from "framer-mot
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import AnimatedSection from "@/components/ui/AnimatedSection";
+import { pub } from "@/lib/paths";
 
 const steps = [
     {
@@ -16,7 +17,7 @@ const steps = [
             "Account ready in under 30 seconds.",
             "Start connecting platforms immediately.",
         ],
-        image: "/images/Connect.zip%20-%202.png",
+        image: pub("/images/Connect.zip%20-%202.png"),
     },
     {
         number: "02",
@@ -27,7 +28,7 @@ const steps = [
             "No code. No credentials to copy-paste.",
             "Your Signal starts building the moment your first source connects.",
         ],
-        image: "/images/Connect.zip%20-%201.png",
+        image: pub("/images/Connect.zip%20-%201.png"),
     },
     {
         number: "03",
@@ -38,7 +39,7 @@ const steps = [
             "Attach it to Claude, ChatGPT, Gemini, or any AI you already use.",
             "Ask real questions. Get answers backed by reconciled data.",
         ],
-        image: "/images/Connect.zip%20-%203.png",
+        image: pub("/images/Connect.zip%20-%203.png"),
     },
 ];
 
@@ -134,7 +135,7 @@ export default function Steps() {
                         tagIcon={
                             // eslint-disable-next-line @next/next/no-img-element
                             <img
-                                src="/images/svg/lwNa4WCrpY0HtXMtN0IteQrJig.svg"
+                                src={pub("/images/svg/lwNa4WCrpY0HtXMtN0IteQrJig.svg")}
                                 alt=""
                                 width={24}
                                 height={24}

@@ -107,7 +107,7 @@ export default function IntegrationPage() {
                                         {[...cat.logos, ...cat.logos].map((url, j) => (
                                             <div
                                                 key={j}
-                                                className="flex-shrink-0 w-24 h-24 rounded-2xl bg-white-7 border border-ad-border flex items-center justify-center p-4"
+                                                className="shrink-0 w-24 h-24 rounded-2xl bg-white-7 border border-ad-border flex items-center justify-center p-4"
                                             >
                                                 <img
                                                     src={url}

@@ -6,6 +6,7 @@ import Link from "next/link";
 import Container from "@/components/ui/Container";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import BlurRevealText from "@/components/ui/BlurRevealText";
+import { pub } from "@/lib/paths";
 
 const blogs = [
     {
@@ -65,7 +66,7 @@ export default function BlogPage() {
                         transition={{ duration: 0.6, ease }}
                     >
                         <img
-                            src="/images/svg/Hviy65FJn8RtNZbKss87zkB2E.svg"
+                            src={pub("/images/svg/Hviy65FJn8RtNZbKss87zkB2E.svg")}
                             alt=""
                             width={24}
                             height={24}
@@ -151,7 +152,7 @@ export default function BlogPage() {
                             <AnimatedSection key={`${post.slug}-${i}`} delay={i * 0.08}>
                                 <Link href={`/blog/${post.slug}`} className="block group h-full">
                                     <div className="card overflow-hidden rounded-3xl h-full flex flex-col">
-                                        <div className="relative aspect-[16/10] overflow-hidden">
+                                        <div className="relative aspect-16/10 overflow-hidden">
                                             <img
                                                 src={post.image}
                                                 alt={post.title}

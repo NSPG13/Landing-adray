@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { Plus, Minus } from "lucide-react";
 import Container from "@/components/ui/Container";
+import { pub } from "@/lib/paths";
 import SectionHeading from "@/components/ui/SectionHeading";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import { brandify } from "@/lib/utils";
@@ -53,7 +54,7 @@ function AccordionItem({ q, a }: { q: string; a: string }) {
                 className="w-full flex items-center justify-between p-6 text-left cursor-pointer"
             >
                 <span className="t-p font-medium text-white-90 pr-4">{brandify(q)}</span>
-                <span className="w-8 h-8 rounded-full bg-white-7 border border-ad-border flex items-center justify-center flex-shrink-0">
+                <span className="w-8 h-8 rounded-full bg-white-7 border border-ad-border flex items-center justify-center shrink-0">
                     {open ? (
                         <Minus size={14} className="text-white-90" />
                     ) : (
@@ -83,7 +84,7 @@ export default function HomeFAQ() {
                         tagIcon={
                             // eslint-disable-next-line @next/next/no-img-element
                             <img
-                                src="/images/svg/mH5OKmjNShfPxiFuUqwazYgcLNQ.svg"
+                                src={pub("/images/svg/mH5OKmjNShfPxiFuUqwazYgcLNQ.svg")}
                                 alt=""
                                 width={24}
                                 height={24}

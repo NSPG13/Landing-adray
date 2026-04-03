@@ -3,6 +3,9 @@ import { Inter, Space_Grotesk, Inter_Tight } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import { pub } from "@/lib/paths";
+
+const ulmGroteskFontUrl = pub("/fonts/UlmGrotesk-Bold.otf");
 
 const inter = Inter({
   variable: "--font-inter",
@@ -60,6 +63,40 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className={`${inter.variable} ${spaceGrotesk.variable} ${interTight.variable} antialiased`}>
+        <style
+          dangerouslySetInnerHTML={{
+            __html: `
+@font-face {
+  font-family: "UlmGrotesk";
+  src: url("${ulmGroteskFontUrl}") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "UlmGrotesk";
+  src: url("${ulmGroteskFontUrl}") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "UlmGrotesk";
+  src: url("${ulmGroteskFontUrl}") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "UlmGrotesk";
+  src: url("${ulmGroteskFontUrl}") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+`,
+          }}
+        />
         <Navbar />
         <main className="min-h-screen">{children}</main>
         <Footer />

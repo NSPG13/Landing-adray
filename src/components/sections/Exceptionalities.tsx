@@ -4,6 +4,7 @@ import React from "react";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Card from "@/components/ui/Card";
+import { pub } from "@/lib/paths";
 import Button from "@/components/ui/Button";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import { brandify } from "@/lib/utils";
@@ -49,7 +50,7 @@ export default function Exceptionalities() {
                         tagIcon={
                             // eslint-disable-next-line @next/next/no-img-element
                             <img
-                                src="/images/svg/BZk5mbe8FBf9Lhl8okYcCei2g.svg"
+                                src={pub("/images/svg/BZk5mbe8FBf9Lhl8okYcCei2g.svg")}
                                 alt=""
                                 width={24}
                                 height={24}

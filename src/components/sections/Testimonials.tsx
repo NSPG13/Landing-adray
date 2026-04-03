@@ -3,6 +3,7 @@
 import React, { useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Container from "@/components/ui/Container";
+import { pub } from "@/lib/paths";
 import SectionHeading from "@/components/ui/SectionHeading";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import { brandify } from "@/lib/utils";
@@ -89,7 +90,7 @@ export default function Testimonials() {
                         tagIcon={
                             // eslint-disable-next-line @next/next/no-img-element
                             <img
-                                src="/images/svg/BbcmkQqb9ghruMNQHqLHlo3xDs.svg"
+                                src={pub("/images/svg/BbcmkQqb9ghruMNQHqLHlo3xDs.svg")}
                                 alt=""
                                 width={24}
                                 height={24}
@@ -118,7 +119,7 @@ export default function Testimonials() {
                                 className="flex flex-col md:flex-row gap-6 md:gap-8 items-stretch"
                             >
                                 {/* Portrait image */}
-                                <div className="w-full md:w-[280px] flex-shrink-0">
+                                <div className="w-full md:w-[280px] shrink-0">
                                     {/* eslint-disable-next-line @next/next/no-img-element */}
                                     <img
                                         src={t.image}
@@ -153,7 +154,7 @@ export default function Testimonials() {
                         >
                             {/* eslint-disable-next-line @next/next/no-img-element */}
                             <img
-                                src="/images/svg/6tTbkXggWgQCAJ4DO2QEdXXmgM.svg"
+                                src={pub("/images/svg/6tTbkXggWgQCAJ4DO2QEdXXmgM.svg")}
                                 alt="Previous"
                                 width={20}
                                 height={20}
@@ -167,7 +168,7 @@ export default function Testimonials() {
                         >
                             {/* eslint-disable-next-line @next/next/no-img-element */}
                             <img
-                                src="/images/svg/11KSGbIZoRSg4pjdnUoif6MKHI.svg"
+                                src={pub("/images/svg/11KSGbIZoRSg4pjdnUoif6MKHI.svg")}
                                 alt="Next"
                                 width={20}
                                 height={20}

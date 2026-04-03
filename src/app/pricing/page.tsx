@@ -8,6 +8,7 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import Button from "@/components/ui/Button";
 import { brandify } from "@/lib/utils";
+import { pub } from "@/lib/paths";
 
 /* ── Plans ── */
 const plans: Array<{
@@ -181,7 +182,7 @@ export default function PricingPage() {
                         transition={{ duration: 0.6, ease }}
                     >
                         <img
-                            src="/images/svg/3UovOTKirX07vhyWYJGSliEt1E4.svg"
+                            src={pub("/images/svg/3UovOTKirX07vhyWYJGSliEt1E4.svg")}
                             alt=""
                             width={24}
                             height={24}
@@ -219,7 +220,7 @@ export default function PricingPage() {
                             titleClassName="text-white-100"
                             tagIcon={
                                 <img
-                                    src="/images/svg/jQJ8TgGax14f2upuHQKSjpr1jmg.svg"
+                                    src={pub("/images/svg/jQJ8TgGax14f2upuHQKSjpr1jmg.svg")}
                                     alt=""
                                     width={24}
                                     height={24}
@@ -299,7 +300,7 @@ export default function PricingPage() {
                             tag="COMPARISON"
                             tagIcon={
                                 <img
-                                    src="/images/svg/X5M3y8eb51ZE3hAx5kOkcLqc83U.svg"
+                                    src={pub("/images/svg/X5M3y8eb51ZE3hAx5kOkcLqc83U.svg")}
                                     alt=""
                                     width={24}
                                     height={24}
@@ -384,7 +385,7 @@ export default function PricingPage() {
                             tag="FAQ"
                             tagIcon={
                                 <img
-                                    src="/images/svg/mH5OKmjNShfPxiFuUqwazYgcLNQ.svg"
+                                    src={pub("/images/svg/mH5OKmjNShfPxiFuUqwazYgcLNQ.svg")}
                                     alt=""
                                     width={24}
                                     height={24}

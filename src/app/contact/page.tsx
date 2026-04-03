@@ -8,6 +8,7 @@ import AnimatedSection from "@/components/ui/AnimatedSection";
 import Button from "@/components/ui/Button";
 import BlurRevealText from "@/components/ui/BlurRevealText";
 import { brandify } from "@/lib/utils";
+import { pub } from "@/lib/paths";
 
 const ease = [0.21, 0.47, 0.32, 0.98] as const;
 
@@ -24,7 +25,7 @@ export default function ContactPage() {
                         transition={{ duration: 0.6, ease }}
                     >
                         <img
-                            src="/images/svg/xDPyxO9KaHgkC204pqOjJmGbwk.svg"
+                            src={pub("/images/svg/xDPyxO9KaHgkC204pqOjJmGbwk.svg")}
                             alt=""
                             width={24}
                             height={24}
@@ -60,7 +61,7 @@ export default function ContactPage() {
                                 tag="SUPPORT"
                                 tagIcon={
                                     <img
-                                        src="/images/svg/ovrqK10uB6vuZpVvC1WLvsJNHFU.svg"
+                                        src={pub("/images/svg/ovrqK10uB6vuZpVvC1WLvsJNHFU.svg")}
                                         alt=""
                                         width={24}
                                         height={24}
@@ -85,7 +86,7 @@ export default function ContactPage() {
                                                 className="absolute inset-0 w-full h-full object-cover"
                                             />
                                             <img
-                                                src="/images/svg/ZWTVawMwhcN0IIzbO291BWd5c.svg"
+                                                src={pub("/images/svg/ZWTVawMwhcN0IIzbO291BWd5c.svg")}
                                                 alt=""
                                                 width={34}
                                                 height={34}
@@ -102,7 +103,7 @@ export default function ContactPage() {
                                                 className="absolute inset-0 w-full h-full object-cover"
                                             />
                                             <img
-                                                src="/images/svg/ochO9ePlZvXdFfWVus3LbO0Yw.svg"
+                                                src={pub("/images/svg/ochO9ePlZvXdFfWVus3LbO0Yw.svg")}
                                                 alt=""
                                                 width={34}
                                                 height={34}

@@ -6,6 +6,7 @@ import Link from "next/link";
 import Container from "@/components/ui/Container";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import BlurRevealText from "@/components/ui/BlurRevealText";
+import { pub } from "@/lib/paths";
 
 const solutions = [
     {
@@ -60,7 +61,7 @@ export default function AISolutionsPage() {
                         transition={{ duration: 0.6, ease }}
                     >
                         <img
-                            src="/images/svg/kSe62iNOdnrgkLKL07t29GUEak.svg"
+                            src={pub("/images/svg/kSe62iNOdnrgkLKL07t29GUEak.svg")}
                             alt=""
                             width={24}
                             height={24}
@@ -121,7 +122,7 @@ export default function AISolutionsPage() {
                                             {s.features.map((f) => (
                                                 <li key={f} className="flex items-center gap-3">
                                                     <span
-                                                        className="w-2 h-2 rounded-full flex-shrink-0"
+                                                        className="w-2 h-2 rounded-full shrink-0"
                                                         style={{ background: "linear-gradient(148deg, var(--ad-accent), var(--ad-primary))" }}
                                                     />
                                                     <span className="t-p text-ad-subtitle">{f}</span>

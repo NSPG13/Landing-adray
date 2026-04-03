@@ -31,7 +31,7 @@ export default function SectionHeading({
             {tag && (
                 <div className="flex items-center gap-3 mb-6 w-full">
                     {tagIcon && (
-                        <span className="w-6 h-6 text-ad-tag flex-shrink-0 opacity-80">{tagIcon}</span>
+                        <span className="w-6 h-6 text-ad-tag shrink-0 opacity-80">{tagIcon}</span>
                     )}
                     <span className="t-p-sm uppercase tracking-widest text-ad-tag">
                         {tag}

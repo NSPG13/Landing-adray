@@ -6,6 +6,7 @@ import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
 import AnimatedSection from "@/components/ui/AnimatedSection";
+import { pub } from "@/lib/paths";
 
 const plans: Array<{
     name: string;
@@ -81,7 +82,7 @@ export default function HomePricing() {
                         tagIcon={
                             // eslint-disable-next-line @next/next/no-img-element
                             <img
-                                src="/images/svg/3UovOTKirX07vhyWYJGSliEt1E4.svg"
+                                src={pub("/images/svg/3UovOTKirX07vhyWYJGSliEt1E4.svg")}
                                 alt=""
                                 width={24}
                                 height={24}

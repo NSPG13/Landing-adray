@@ -5,6 +5,9 @@ import { motion, useScroll, useTransform, useMotionValueEvent } from "framer-mot
 import Container from "@/components/ui/Container";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import { brandify } from "@/lib/utils";
+import { pub } from "@/lib/paths";
+
+const BUSCADOR_VIDEO = pub("/images/Buscador.webm");
 
 const tabs = [
     {
@@ -21,7 +24,7 @@ const tabs = [
             "Your platforms report what they want you to see. Adray computes what\u2019s true \u2014 ROAS on net revenue, blended CAC against verified new customers, anomaly flags, and campaign-level truth. Structured for AI to read.",
         tags: ["Structured", "Normalized", "Compressed", "AI-Ready"],
         cta: { label: "Get Started", href: "/login" },
-        image: "/images/Connect.zip%20-%204.png",
+        image: pub("/images/Connect.zip%20-%204.png"),
     },
     {
         id: "normalized",
@@ -37,7 +40,7 @@ const tabs = [
             "Meta, Google, and GA4 measure differently, attribute differently, and report differently. Adray speaks all three languages \u2014 then translates them into one reconciled view before your AI sees a single number. No more conflicting metrics. No more platform bias.",
         tags: ["Meta", "Google", "GA4"],
         cta: { label: "Get Started", href: "/login" },
-        image: "/images/1d9ow-ra20u.webm",
+        image: pub("/images/1d9ow-ra20u.webm"),
     },
     {
         id: "enriched",
@@ -53,7 +56,7 @@ const tabs = [
             "Want even richer data? Install the Adray pixel and your attribution gets significantly deeper. Server-side events, first-party identity, deduplication, session stitching \u2014 all flowing back into your Signal. Works on any website. Two clicks via Google Tag Manager, or paste a single script.",
         tags: ["Server-Side", "First-Party", "Deduplication", "Session Stitching"],
         cta: { label: "Get Started", href: "/login" },
-        image: "/images/The Adray Intelligence Pixel.png",
+        image: pub("/images/The Adray Intelligence Pixel.png"),
     },
 ];
 
@@ -164,8 +167,8 @@ export default function FeaturesTabs() {
                                 style={{ x: xs[i], opacity: os[i] }}
                             >
                                 {tab.id === "precomputed" ? (
-                                    /* Altura de la tarjeta = solo el contenido; la imagen es fondo full-bleed (inset-0) para no dejar hueco abajo */
-                                    <div className="card relative overflow-hidden p-6 md:p-8">
+                                    /* Tarjeta con fondo + vídeo Buscador: móvil debajo del copy; desktop esquina inferior derecha */
+                                    <div className="card relative overflow-hidden p-6 md:p-8 pb-8 md:pb-10 flex flex-col md:block md:min-h-[520px] lg:min-h-[560px]">
                                         <div className="pointer-events-none absolute inset-0 z-0" aria-hidden>
                                             {/* eslint-disable-next-line @next/next/no-img-element */}
                                             <img
@@ -208,6 +211,20 @@ export default function FeaturesTabs() {
                                             >
                                                 {tab.cta.label} &rarr;
                                             </a>
+                                        </div>
+                                        <div
+                                            className="relative z-10 mt-10 w-full max-w-sm mx-auto shrink-0 md:mt-0 md:mx-0 md:absolute md:bottom-6 md:right-6 lg:bottom-8 lg:right-8 md:max-w-[min(50vw,480px)] lg:max-w-[min(46vw,520px)] md:w-auto pointer-events-none"
+                                            aria-hidden
+                                        >
+                                            <video
+                                                src={BUSCADOR_VIDEO}
+                                                autoPlay
+                                                loop
+                                                muted
+                                                playsInline
+                                                preload="metadata"
+                                                className="w-full max-h-[220px] sm:max-h-[260px] rounded-xl shadow-[0_12px_40px_rgba(0,0,0,0.45)] object-contain object-bottom bg-black/20 md:max-h-[380px] lg:max-h-[440px] md:w-[min(100%,480px)] lg:w-[min(100%,520px)] md:h-auto md:object-contain md:object-center"
+                                            />
                                         </div>
                                     </div>
                                 ) : (
@@ -254,7 +271,7 @@ export default function FeaturesTabs() {
                                                     >
                                                         {/* eslint-disable-next-line @next/next/no-img-element */}
                                                         <img
-                                                            src="/images/luz.webp"
+                                                            src={pub("/images/luz.webp")}
                                                             alt=""
                                                             className="w-full h-full object-contain"
                                                             style={{

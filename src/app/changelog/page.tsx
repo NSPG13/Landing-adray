@@ -127,7 +127,7 @@ export default function ChangelogPage() {
                                     <ul className="space-y-3 mb-8">
                                         {entry.features.map((f) => (
                                             <li key={f} className="flex items-start gap-3">
-                                                <span className="w-1.5 h-1.5 rounded-full bg-ad-primary flex-shrink-0 mt-2" />
+                                                <span className="w-1.5 h-1.5 rounded-full bg-ad-primary shrink-0 mt-2" />
                                                 <span className="t-p text-white-90">{f}</span>
                                             </li>
                                         ))}

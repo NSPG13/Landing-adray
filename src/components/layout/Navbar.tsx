@@ -5,9 +5,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { pub } from "@/lib/paths";
 
 // Usamos la ruta con espacios tal cual para evitar problemas con el loader de `next/image`.
-const HEADER_LOGO = "/images/Adray  LOGO-3.png";
+const HEADER_LOGO = pub("/images/Adray  LOGO-3.png");
 
 const navLinks = [
     { label: "How It Works", href: "#how-it-works" },
@@ -29,6 +30,7 @@ export default function Navbar() {
         <header
             className="fixed top-0 left-0 right-0 z-50 transition-colors duration-500"
             style={{ background: visible ? "#000" : "transparent" }}
+            suppressHydrationWarning
         >
             <div className="mx-auto max-w-[1200px] px-5 md:px-10">
                 {/* Desktop */}

@@ -9,6 +9,7 @@ import Button from "@/components/ui/Button";
 import BlurRevealText from "@/components/ui/BlurRevealText";
 import ScrollTextColor from "@/components/ui/ScrollTextColor";
 import { brandify } from "@/lib/utils";
+import { pub } from "@/lib/paths";
 
 /* ── Data ── */
 const values = [
@@ -65,7 +66,7 @@ export default function AboutPage() {
                 <Container className="relative z-10">
                     <div className="flex items-center gap-3 mb-6">
                         <img
-                            src="/images/svg/eWJcm0cKj3Rsxetaz4suNQKuW8o.svg"
+                            src={pub("/images/svg/eWJcm0cKj3Rsxetaz4suNQKuW8o.svg")}
                             alt=""
                             width={24}
                             height={24}
@@ -134,7 +135,7 @@ export default function AboutPage() {
                             tag="OUR VALUES"
                             tagIcon={
                                 <img
-                                    src="/images/svg/eS5b9sHb3EsbFgcgHgtjc8FZ1Y.svg"
+                                    src={pub("/images/svg/eS5b9sHb3EsbFgcgHgtjc8FZ1Y.svg")}
                                     alt=""
                                     width={24}
                                     height={24}
@@ -176,7 +177,7 @@ export default function AboutPage() {
                             tag="OUR FOUNDER"
                             tagIcon={
                                 <img
-                                    src="/images/svg/JkTqK8jhgMOxUyl4OCizgeYU.svg"
+                                    src={pub("/images/svg/JkTqK8jhgMOxUyl4OCizgeYU.svg")}
                                     alt=""
                                     width={24}
                                     height={24}
@@ -232,7 +233,7 @@ export default function AboutPage() {
                             tag="PILLARS"
                             tagIcon={
                                 <img
-                                    src="/images/svg/QauTQfLJbX1ivAkVbcLLwuMoHQ.svg"
+                                    src={pub("/images/svg/QauTQfLJbX1ivAkVbcLLwuMoHQ.svg")}
                                     alt=""
                                     width={24}
                                     height={24}
@@ -246,7 +247,7 @@ export default function AboutPage() {
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                         {team.map((m, i) => (
                             <AnimatedSection key={m.name} delay={i * 0.08}>
-                                <div className="group relative rounded-3xl overflow-hidden aspect-[3/4]">
+                                <div className="group relative rounded-3xl overflow-hidden aspect-3/4">
                                     <img
                                         src={m.img}
                                         alt={m.name}
@@ -278,7 +279,7 @@ export default function AboutPage() {
                             tag="JOIN US"
                             tagIcon={
                                 <img
-                                    src="/images/svg/3UiRUIAjek5XnV6oCtR4F5HwgOU.svg"
+                                    src={pub("/images/svg/3UiRUIAjek5XnV6oCtR4F5HwgOU.svg")}
                                     alt=""
                                     width={24}
                                     height={24}
@@ -293,14 +294,14 @@ export default function AboutPage() {
                         <div className="grid grid-cols-2 gap-4 mb-10">
                             {/* Left column */}
                             <div className="flex flex-col gap-4">
-                                <div className="rounded-2xl overflow-hidden flex-[5]">
+                                <div className="rounded-2xl overflow-hidden flex-5">
                                     <img
                                         src="https://framerusercontent.com/images/Jp1l6nfzIznnFpz8xA77dr6ShY.jpg"
                                         alt=""
                                         className="w-full h-full object-cover"
                                     />
                                 </div>
-                                <div className="rounded-2xl overflow-hidden flex-[1]">
+                                <div className="rounded-2xl overflow-hidden flex-1">
                                     <img
                                         src="https://framerusercontent.com/images/G2e7HlhrS4QOvLT8fLk72DmOr5A.webp"
                                         alt=""
@@ -311,7 +312,7 @@ export default function AboutPage() {
                             </div>
                             {/* Right column */}
                             <div className="flex flex-col gap-4">
-                                <div className="rounded-2xl overflow-hidden flex-[1]">
+                                <div className="rounded-2xl overflow-hidden flex-1">
                                     <img
                                         src="https://framerusercontent.com/images/oXO7T72nyamuKTgGVuI0pWw26Ns.webp"
                                         alt=""
@@ -319,7 +320,7 @@ export default function AboutPage() {
                                         style={{ filter: "sepia(1) hue-rotate(230deg) saturate(2)" }}
                                     />
                                 </div>
-                                <div className="rounded-2xl overflow-hidden flex-[5]">
+                                <div className="rounded-2xl overflow-hidden flex-5">
                                     <img
                                         src="https://framerusercontent.com/images/j31VAapLRCe7cdp82p8kZi7nBS8.png"
                                         alt=""

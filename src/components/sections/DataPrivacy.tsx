@@ -4,18 +4,19 @@ import React from "react";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import AnimatedSection from "@/components/ui/AnimatedSection";
+import { pub } from "@/lib/paths";
 
 const features = [
     {
-        icon: "/images/svg/TRt8OkZ1B4j7B4TuuIPjZZ0f8.svg",
+        icon: pub("/images/svg/TRt8OkZ1B4j7B4TuuIPjZZ0f8.svg"),
         label: "Intelligent Protection",
     },
     {
-        icon: "/images/svg/TRt8OkZ1B4j7B4TuuIPjZZ0f8.svg",
+        icon: pub("/images/svg/TRt8OkZ1B4j7B4TuuIPjZZ0f8.svg"),
         label: "Real-Time Threat Detection",
     },
     {
-        icon: "/images/svg/TRt8OkZ1B4j7B4TuuIPjZZ0f8.svg",
+        icon: pub("/images/svg/TRt8OkZ1B4j7B4TuuIPjZZ0f8.svg"),
         label: "Seamless Compliance",
     },
 ];
@@ -33,7 +34,7 @@ export default function DataPrivacy() {
                                 tagIcon={
                                     // eslint-disable-next-line @next/next/no-img-element
                                     <img
-                                        src="/images/svg/TRt8OkZ1B4j7B4TuuIPjZZ0f8.svg"
+                                        src={pub("/images/svg/TRt8OkZ1B4j7B4TuuIPjZZ0f8.svg")}
                                         alt=""
                                         width={24}
                                         height={24}

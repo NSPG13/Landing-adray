@@ -6,24 +6,24 @@ import Container from "@/components/ui/Container";
 import Badge from "@/components/ui/Badge";
 import Button from "@/components/ui/Button";
 import BlurRevealText from "@/components/ui/BlurRevealText";
+import { pub } from "@/lib/paths";
 
 const partnerLogos = [
-    { name: "Meta Ads", icon: "/images/svg/meta.svg" },
-    { name: "Google Ads", icon: "/images/svg/google-ads.svg" },
-    { name: "Google Analytics", icon: "/images/svg/ga4.svg" },
-    { name: "Shopify", icon: "/images/svg/shopify.svg" },
-    { name: "ChatGPT", icon: "/images/svg/chatgpt.svg" },
-    { name: "Claude", icon: "/images/svg/claude.svg" },
-    { name: "Gemini", icon: "/images/svg/gemini.svg" },
-    { name: "Copilot", icon: "/images/svg/copilot.svg" },
-    { name: "Grok", icon: "/images/svg/grok.svg" },
-    { name: "DeepSeek", icon: "/images/svg/deepseek.svg" },
+    { name: "Meta Ads", icon: pub("/images/svg/meta.svg") },
+    { name: "Google Ads", icon: pub("/images/svg/google-ads.svg") },
+    { name: "Google Analytics", icon: pub("/images/svg/ga4.svg") },
+    { name: "Shopify", icon: pub("/images/svg/shopify.svg") },
+    { name: "ChatGPT", icon: pub("/images/svg/chatgpt.svg") },
+    { name: "Claude", icon: pub("/images/svg/claude.svg") },
+    { name: "Gemini", icon: pub("/images/svg/gemini.svg") },
+    { name: "Copilot", icon: pub("/images/svg/copilot.svg") },
+    { name: "Grok", icon: pub("/images/svg/grok.svg") },
+    { name: "DeepSeek", icon: pub("/images/svg/deepseek.svg") },
 ];
 
 const ease = [0.12, 0.23, 0.5, 1] as const;
 
-/** Vídeo en public/images/planeta.mp4 — con basePath /landing debe ser /landing/images/... */
-const HERO_BACKGROUND_VIDEO = `${process.env.NEXT_PUBLIC_LANDING_BASE_PATH ?? ""}/images/planeta.mp4`;
+const HERO_BACKGROUND_VIDEO = pub("/images/planeta.mp4");
 
 export default function Hero() {
     return (
@@ -159,7 +159,7 @@ export default function Hero() {
                 >
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
-                        src="/images/adray-dashboard-hero.png"
+                        src={pub("/images/adray-dashboard-hero.png")}
                         alt="Adray Dashboard"
                         className="w-full h-auto"
                         style={{ aspectRatio: "1.6036" }}

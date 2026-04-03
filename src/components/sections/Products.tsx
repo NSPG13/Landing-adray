@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Container from "@/components/ui/Container";
+import { pub } from "@/lib/paths";
 import SectionHeading from "@/components/ui/SectionHeading";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 
@@ -53,22 +54,22 @@ const products = [
     {
         name: "Attribution",
         description: "Know exactly which ads drive real revenue.",
-        icon: "/images/svg/UhzKcwOlsFcygmiTZBSV1TlJWI.svg",
+        icon: pub("/images/svg/UhzKcwOlsFcygmiTZBSV1TlJWI.svg"),
     },
     {
         name: "ROAS Tracking",
         description: "See your true return on ad spend across platforms.",
-        icon: "/images/svg/xjQCmHyjo6JeuuaTw7eNj6Rnz0.svg",
+        icon: pub("/images/svg/xjQCmHyjo6JeuuaTw7eNj6Rnz0.svg"),
     },
     {
         name: "Ad Intelligence",
         description: "Cross-platform insights for smarter ad decisions.",
-        icon: "/images/svg/g03jLOH8iFVEwvrXTl5O92yNWI.svg",
+        icon: pub("/images/svg/g03jLOH8iFVEwvrXTl5O92yNWI.svg"),
     },
     {
         name: "Budget Optimization",
         description: "AI agents that manage your ad spend 24/7.",
-        icon: "/images/svg/s0leRkmxKn90KJPse58Uwi0gmwA.svg",
+        icon: pub("/images/svg/s0leRkmxKn90KJPse58Uwi0gmwA.svg"),
     },
 ];
 
@@ -110,7 +111,7 @@ export default function Products() {
                         tagIcon={
                             // eslint-disable-next-line @next/next/no-img-element
                             <img
-                                src="/images/svg/MRmuOBoDk7tTbd9wZjGly9VAk.svg"
+                                src={pub("/images/svg/MRmuOBoDk7tTbd9wZjGly9VAk.svg")}
                                 alt=""
                                 width={24}
                                 height={24}
@@ -160,7 +161,7 @@ export default function Products() {
                                     >
                                         <span className="t-p text-white-90 flex-1">{bullet}</span>
                                         <span
-                                            className="w-7 h-7 rounded-[10px] flex items-center justify-center flex-shrink-0"
+                                            className="w-7 h-7 rounded-[10px] flex items-center justify-center shrink-0"
                                             style={{
                                                 background: "rgba(255,255,255,0.1)",
                                                 boxShadow: "inset 0px 0px 4px 0px rgba(255,255,255,0.31)",
@@ -195,7 +196,7 @@ export default function Products() {
                             <div className="flex flex-col md:flex-row items-start md:items-center gap-4 p-5">
                                 {/* Icon with gradient border */}
                                 <div
-                                    className="rounded-3xl p-[1px] flex-shrink-0"
+                                    className="rounded-3xl p-px shrink-0"
                                     style={{
                                         background:
                                             "linear-gradient(40deg, rgb(62,40,111) 0%, rgb(15,11,20) 45%, rgb(181,92,255) 100%)",
