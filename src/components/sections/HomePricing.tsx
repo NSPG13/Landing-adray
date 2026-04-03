@@ -32,7 +32,7 @@ const plans: Array<{
         ],
         trust: null,
         cta: "Get Started Free",
-        ctaHref: "/login",
+        ctaHref: "/getstarted",
         bgImage:
             "https://framerusercontent.com/images/XXSw2JqvtikgOcaexTTozzVsO54.webp",
     },
