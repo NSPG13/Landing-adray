@@ -22,8 +22,8 @@ const partnerLogos = [
 
 const ease = [0.12, 0.23, 0.5, 1] as const;
 
-/** Vídeo de fondo del hero (public/images/… — mismo origen, sin CDN externo) */
-const HERO_BACKGROUND_VIDEO = `/images/${encodeURIComponent("PLANETA ADRAY.mp4")}`;
+/** Vídeo en public/images/planeta.mp4 — con basePath /landing debe ser /landing/images/... */
+const HERO_BACKGROUND_VIDEO = `${process.env.NEXT_PUBLIC_LANDING_BASE_PATH ?? ""}/images/planeta.mp4`;
 
 export default function Hero() {
     return (

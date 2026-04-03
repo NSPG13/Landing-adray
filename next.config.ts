@@ -1,6 +1,8 @@
 import type { NextConfig } from "next";
 import path from "path";
 
+const landingBasePath = "/landing";
+
 const nextConfig: NextConfig = {
   output: "export",
   trailingSlash: true,
@@ -8,9 +10,14 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
 
-  // La landing se servirá desde https://adray.ai/landing
-  basePath: "/landing",
-  assetPrefix: "/landing/",
+  // La landing se sirve bajo /landing (Next dev + estático en monorepo vía public/landing)
+  basePath: landingBasePath,
+  assetPrefix: `${landingBasePath}/`,
+
+  env: {
+    // Cliente: rutas absolutas a /public (p. ej. vídeo del hero) deben incluir el basePath
+    NEXT_PUBLIC_LANDING_BASE_PATH: landingBasePath,
+  },
 
   // Mantener esto por el monorepo padre
   turbopack: {
