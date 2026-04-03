@@ -22,10 +22,13 @@ const partnerLogos = [
 
 const ease = [0.12, 0.23, 0.5, 1] as const;
 
+/** Vídeo de fondo del hero (public/images/… — mismo origen, sin CDN externo) */
+const HERO_BACKGROUND_VIDEO = `/images/${encodeURIComponent("PLANETA ADRAY.mp4")}`;
+
 export default function Hero() {
     return (
         <section className="relative flex flex-col bg-black-100 pt-[100px] md:pt-[160px] pb-8 md:pb-10" style={{ gap: "25px" }}>
-            {/* ── Video container — fondo Pikaso (requiere media-src en CSP del servidor) ── */}
+            {/* ── Video container — fondo local (capa 0 + overlays) ── */}
             <div
                 className="absolute top-0 left-0 right-0 overflow-hidden"
                 style={{
@@ -38,16 +41,17 @@ export default function Hero() {
             >
                 {/* Layer 0 — vídeo (filtros púrpura como diseño) */}
                 <motion.video
+                    src={HERO_BACKGROUND_VIDEO}
                     autoPlay
                     loop
                     muted
                     playsInline
+                    preload="auto"
                     className="absolute inset-0 w-full h-full object-cover"
                     style={{ zIndex: 0, filter: "grayscale(1) sepia(0.8) hue-rotate(230deg) saturate(1.6) brightness(0.75)" }}
                     initial={{ opacity: 0, y: 80, scale: 1.1 }}
                     animate={{ opacity: 1, y: 0, scale: 1 }}
                     transition={{ duration: 1.2, ease }}
-                    src="https://pikaso.cdnpk.net/private/production/2290455794/59751519-c5a8-4e4b-b8dd-94ffbfa08aa8-0.mp4?token=exp=1775001600~hmac=946fe13b73c600580de2f6d03194555735d752048382e42b0ebe1dcdf4a376b6"
                 />
                 {/* Layer 0b — purple tint overlay reinforcing Adray palette */}
                 <div
